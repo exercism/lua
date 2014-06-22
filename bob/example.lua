@@ -13,7 +13,7 @@ local function question(say)
 end
 
 function bob.hey( say )
-  if (nothing(say)) then return 'Fine, be that way.' end
+  if (nothing(say))  then return 'Fine, be that way.' end
   if (shouting(say)) then return "Woah, chill out!" end
   if (question(say)) then return "Sure" end
   return "Whatever"
