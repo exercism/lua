@@ -4,12 +4,13 @@
   "repository": "https://github.com/exercism/xlua",
   "active": false,
   "problems": [
-    "bob"
+    "bob",
+    "anagram"
   ],
   "deprecated": [
 
   ],
   "ignore": [
-
+    
   ]
 }
