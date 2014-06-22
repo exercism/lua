@@ -10,7 +10,10 @@
   "deprecated": [
 
   ],
-  "ignore": [
-    
+  "ignored": [
+
+  ],
+  "foregone": [
+
   ]
 }
