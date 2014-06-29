@@ -5,7 +5,9 @@
   "active": false,
   "problems": [
     "bob",
-    "anagram"
+    "anagram",
+    "word-count",
+    "beer-song"
   ],
   "deprecated": [
 
