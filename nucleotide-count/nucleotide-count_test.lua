@@ -1,6 +1,6 @@
 local DNA = require('nucleotide-count')
 
-describe('DNA', function() 
+describe('DNA', function()
 
   it('has no nucleotides', function()
     local expected =  { A = 0, T = 0, C = 0, G = 0 }
@@ -42,13 +42,6 @@ describe('DNA', function()
     expected = 2
     result = dna:count('T')
     assert.are.same(expected,result)
-  end)
-
-  it('has no uracil', function()
-    local dna = DNA:new('GGTTGG')
-     expected = 0
-     result = dna:count('U')
-     assert.are.same(expected,result)
   end)
 
   it('validates nucleotides', function()
