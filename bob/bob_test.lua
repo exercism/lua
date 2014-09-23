@@ -7,7 +7,7 @@ describe("Bob", function()
   end)
   it("shouting", function () 
       local result = bob.hey('WATCH OUT!')
-      assert.are.equals('Woah, chill out!', result)
+      assert.are.equals('Whoa, chill out!', result)
   end)
 
   it("asking a question", function () 
@@ -22,12 +22,12 @@ describe("Bob", function()
 
   it("shouting numbers", function () 
       local result = bob.hey('1, 2, 3 GO!')
-      assert.are.equals('Woah, chill out!', result)
+      assert.are.equals('Whoa, chill out!', result)
   end)
 
   it("shouting with special characters", function () 
       local result = bob.hey('ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!')
-      assert.are.equals('Woah, chill out!', result)
+      assert.are.equals('Whoa, chill out!', result)
   end)
 
   it("silence", function () 
