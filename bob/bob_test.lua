@@ -18,7 +18,7 @@ describe('Bob', function()
   end)
 
   it('talking forcefully', function ()
-      local result = bob.hey('Let's go make out behind the gym!')
+      local result = bob.hey("Let's go make out behind the gym!")
       assert.are.equals('Whatever', result)
   end)
 
