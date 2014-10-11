@@ -4,6 +4,7 @@ describe('Food Chain', function ()
 
   it('fly', function ()
     local expected = "I know an old lady who swallowed a fly.\nI don't know why she swallowed the fly. Perhaps she'll die.\n"
+
     assert.are.equal(expected, song.verse(1))
   end)
 
@@ -89,8 +90,8 @@ describe('Food Chain', function ()
   it('multiple verses', function ()
     local expected = ""
 
-    expected = "I know an old lady who swallowed a fly.\nI don't know why she swallowed the fly. Perhaps she'll die.\n\n"
-    expected = expected .."I know an old lady who swallowed a spider.\nIt wriggled and jiggled and tickled inside her.\n" ..
+    expected = "I know an old lady who swallowed a fly.\nI don't know why she swallowed the fly. Perhaps she'll die.\n\n" ..
+      "I know an old lady who swallowed a spider.\nIt wriggled and jiggled and tickled inside her.\n" ..
       "She swallowed the spider to catch the fly.\n" ..
       "I don't know why she swallowed the fly. Perhaps she'll die.\n\n"
 
