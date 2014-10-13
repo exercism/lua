@@ -18,7 +18,7 @@ describe("to_rna()", function()
     assert.are.equals(to_rna('T'), 'A')
   end)
 
-  it("transcribes all dna nucleotides to their RNA complements", function()
+  it("transcribes all DNA nucleotides to their RNA complements", function()
     assert.are.equals(to_rna('ACGTGGTCTTAA'), 'UGCACCAGAAUU')
   end)
 
