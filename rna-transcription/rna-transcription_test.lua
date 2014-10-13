@@ -3,23 +3,23 @@ local to_rna = require('./rna-transcription')
 describe("to_rna()", function()
 
   it("transcribes cytosine to guanosine", function()
-    assert.are.equals(to_rna('C'), 'G')
+    assert.are.equal('G', to_rna('C'))
   end)
 
   it("transcribes guanosine to cytosine", function()
-    assert.are.equals(to_rna('G'), 'C')
+    assert.are.equal('C', to_rna('G'))
   end)
 
   it("transcribes adenosine to uracil", function()
-    assert.are.equals(to_rna('A'), 'U')
+    assert.are.equal('U', to_rna('A'))
   end)
 
   it("transcribes thymidine to adenosine", function()
-    assert.are.equals(to_rna('T'), 'A')
+    assert.are.equal('A', to_rna('T'))
   end)
 
   it("transcribes all DNA nucleotides to their RNA complements", function()
-    assert.are.equals(to_rna('ACGTGGTCTTAA'), 'UGCACCAGAAUU')
+    assert.are.equal('UGCACCAGAAUU', to_rna('ACGTGGTCTTAA'))
   end)
 
 end)
