@@ -16,7 +16,7 @@ describe('DNA', function()
     assert.are.same(expected, result)
  end)
 
-  it('repetitive cytidine gets counts', function()
+  it('repetitive cytosine gets counts', function()
     local dna = DNA:new('CCCCC')
     local expected = 5
     result = dna:count('C')
@@ -30,7 +30,7 @@ describe('DNA', function()
     assert.are.same(expected, result)
   end)
 
-  it('counts only thymidine', function()
+  it('counts only thymine', function()
     local dna = DNA:new('GGGGTAACCCGG')
     expected = 1
     result = dna:count('T')
