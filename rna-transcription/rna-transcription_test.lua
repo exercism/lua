@@ -14,7 +14,7 @@ describe("to_rna()", function()
     assert.are.equal('U', to_rna('A'))
   end)
 
-  it("transcribes thymidine to adenosine", function()
+  it("transcribes thymine to adenosine", function()
     assert.are.equal('A', to_rna('T'))
   end)
 
