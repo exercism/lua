@@ -20,7 +20,8 @@
     "grains",
     "gigasecond",
     "triangle",
-    "clock"
+    "clock",
+    "scrabble-score"
   ],
   "deprecated": [
 
