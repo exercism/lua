@@ -22,7 +22,8 @@
     "triangle",
     "clock",
     "scrabble-score",
-    "roman-numerals"
+    "roman-numerals",
+    "circular-buffer"
   ],
   "deprecated": [
 
