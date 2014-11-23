@@ -60,8 +60,7 @@ function Clock:equals(other)
 end
 
 function Clock.at(hour, minute)
-    local c = Clock:new(hour, minute)
-    return c
+    return Clock:new(hour, minute)
 end
 
 return Clock
