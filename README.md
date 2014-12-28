@@ -30,6 +30,7 @@ Run the test
     $ busted bob_test.lua 
         
 Rename bob.lua to example.lua, add test to config.json
+
     → ls -l
     total 16
     -rw-r--r--@ 1 aarti  staff  1111 Nov 25 14:05 bob_test.lua
