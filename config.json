@@ -23,7 +23,8 @@
     "clock",
     "scrabble-score",
     "roman-numerals",
-    "circular-buffer"
+    "circular-buffer",
+    "binary"
   ],
   "deprecated": [
 
