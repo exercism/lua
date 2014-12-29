@@ -24,7 +24,8 @@
     "scrabble-score",
     "roman-numerals",
     "circular-buffer",
-    "binary"
+    "binary",
+    "prime-factors"
   ],
   "deprecated": [
 
