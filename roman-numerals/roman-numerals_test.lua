@@ -1,4 +1,4 @@
-local toRoman = require('./roman-numerals')
+local toRoman = require('roman-numerals')
 
 describe("toRoman()", function()
     it("converts 1", function()

@@ -1,4 +1,4 @@
-local clock = require('./clock')
+local clock = require('clock')
 
 describe("Clock", function()
 

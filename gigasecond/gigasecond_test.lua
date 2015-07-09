@@ -1,4 +1,4 @@
-local Gigasecond = require('./gigasecond')
+local Gigasecond = require('gigasecond')
 
 describe("Gigasecond", function()
 

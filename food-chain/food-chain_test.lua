@@ -1,4 +1,4 @@
-local song = require('./food-chain')
+local song = require('food-chain')
 
 describe('Food Chain', function ()
 

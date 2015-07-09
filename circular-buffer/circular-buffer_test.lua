@@ -1,4 +1,4 @@
-local CircularBuffer = require('./circular-buffer')
+local CircularBuffer = require('circular-buffer')
 
 describe("CircularBuffer", function()
 

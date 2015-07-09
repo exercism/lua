@@ -1,4 +1,4 @@
-local School = require('./grade-school')
+local School = require('grade-school')
 
 describe('School', function()
 
