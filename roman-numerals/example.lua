@@ -57,4 +57,4 @@ local toRoman = function(number)
     return roman_number
 end
 
-return toRoman
+return {toRoman = toRoman}
