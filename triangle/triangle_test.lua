@@ -1,4 +1,4 @@
-local Triangle = require('./triangle')
+local Triangle = require('triangle')
 
 describe("Triangle", function()
 

@@ -1,4 +1,4 @@
-local SpaceAge = require('./space-age')
+local SpaceAge = require('space-age')
 
 describe('Space Age', function()
 

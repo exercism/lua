@@ -1,4 +1,4 @@
-local isLeapYear = require('./leap')
+local isLeapYear = require('leap')
 
 describe('Year', function()
 

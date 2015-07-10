@@ -1,4 +1,4 @@
-local Robot = require('./robot-name')
+local Robot = require('robot-name')
 
 describe('Robot', function()
 

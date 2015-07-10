@@ -1,4 +1,4 @@
-local Grains = require('./grains')
+local Grains = require('grains')
 
 describe('Grains', function()
 

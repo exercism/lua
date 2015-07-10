@@ -1,4 +1,4 @@
-local score = require('./scrabble-score')
+local score = require('scrabble-score')
 
 describe('Scrabble', function()
     it("scores an empty word as zero", function()

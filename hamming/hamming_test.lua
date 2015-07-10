@@ -1,4 +1,4 @@
-local compute = require('./hamming').compute
+local compute = require('hamming').compute
 
 describe('Hamming', function ()
 

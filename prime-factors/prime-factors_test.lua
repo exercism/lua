@@ -1,4 +1,4 @@
-local primeFactors = require('./prime-factors')
+local primeFactors = require('prime-factors')
 
 describe('primeFactors', function() 
 

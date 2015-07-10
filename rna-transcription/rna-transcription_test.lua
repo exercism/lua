@@ -1,4 +1,4 @@
-local to_rna = require('./rna-transcription')
+local to_rna = require('rna-transcription')
 
 describe("to_rna()", function()
 

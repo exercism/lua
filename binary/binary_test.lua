@@ -1,4 +1,4 @@
-local Binary = require('./binary')
+local Binary = require('binary')
 
 describe('binary', function() 
 
