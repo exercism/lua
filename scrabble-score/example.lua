@@ -1,4 +1,4 @@
-local Score = function(word)
+local function score(word)
     local letterValue = {
         A = 1,
         B = 3,
@@ -35,4 +35,5 @@ local Score = function(word)
     end
     return total
 end
-return Score
+
+return {score = score}
