@@ -1,7 +1,7 @@
 local Grains = {}
 
 function Grains.square(n)
-    return 2 ^ (n - 1)
+    return (1 << (n - 1))
 end
 
 function Grains.total()
