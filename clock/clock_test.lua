@@ -54,6 +54,6 @@ describe("Clock", function()
 
     it("wraps around midnight backwards", function()
         local clock = clock.at(0, 3):minus(4)
-        assert.are.equals("23:59", clock:tostring())
+        assert.are.equals("23:59", tostring(clock))
     end)
 end)
