@@ -1,4 +1,4 @@
-function PrimeFactors(input)
+local function PrimeFactors(input)
   local pf = {}
   local i = 2
   while (input ~= 1) do
