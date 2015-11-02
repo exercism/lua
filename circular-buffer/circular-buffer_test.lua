@@ -79,6 +79,15 @@ describe("CircularBuffer", function()
         assert.has_error((function() buffer:read() end), "buffer is empty")
     end)
 
+    it("forced writes act like normal writes in a non-full buffer", function()
+        local buffer = CircularBuffer:new(2)
+        buffer:write('1')
+        buffer:forceWrite('2')
+        assert.are.equals('1', buffer:read())
+        assert.are.equals('2', buffer:read())
+        assert.has_error((function() buffer:read() end), "buffer is empty")
+    end)
+
     it("alternate force write and read into full buffer", function()
         local buffer = CircularBuffer:new(5)
         for i = 1, 3 do
