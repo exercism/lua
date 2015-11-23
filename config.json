@@ -26,7 +26,8 @@
     "roman-numerals",
     "circular-buffer",
     "binary",
-    "prime-factors"
+    "prime-factors",
+    "acronym"
   ],
   "deprecated": [
 
