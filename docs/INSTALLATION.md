@@ -1,37 +1,15 @@
-## Installing Lua
+First install lua using [homebrew][1]
 
-### Mac
-First install lua using [homebrew](http://brew.sh/)
+    $ brew install lua
 
-```bash
-brew install lua
-```
+Then install [luarocks][2] to install packages for lua
 
-Then install [luarocks][1] to install packages for lua:
+    $ brew install luarocks
 
-```bash
-brew install luarocks
-```
+Then install [busted][3] testing framework for lua
 
-### Linux
-First install lua using apt-get:
+    $ luarocks install busted
 
-```bash
-apt-get install lua5.2
-```
-
-Then install [luarocks][1] to install packages for lua:
-
-```bash
-apt-get install luarocks
-```
-
-### Test framework
-
-To run the tests, you need to install [busted](http://olivinelabs.com/busted/) testing framework for lua:
-
-```bash
-luarocks install busted
-```
-
-[1]: http://luarocks.org/
+[1]: http://brew.sh/
+[2]: http://luarocks.org/
+[3]: http://olivinelabs.com/busted/
