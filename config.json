@@ -22,6 +22,7 @@
     "gigasecond",
     "triangle",
     "clock",
+    "atbash-cipher",
     "scrabble-score",
     "roman-numerals",
     "circular-buffer",
