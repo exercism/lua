@@ -4,8 +4,8 @@
   "repository": "https://github.com/exercism/xlua",
   "active": true,
   "problems": [
-    "accumulate",
     "hello-world",
+    "accumulate",
     "hamming",
     "bob",
     "anagram",
