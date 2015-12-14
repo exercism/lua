@@ -20,4 +20,10 @@ describe('accumulate', function()
     assert.are.same({ 'HELLO', 'WORLD' }, accumulate({ 'hello', 'world' }, string.upper))
   end)
 
+  it('should not modify the input array', function()
+    local input = { 1, 2, 3 }
+    accumulate(input, square)
+    assert.are.same({ 1, 2, 3 }, input)
+  end)
+
 end)
