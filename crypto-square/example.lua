@@ -3,11 +3,7 @@ local function normalized_plaintext(plaintext)
 end
 
 local function size(plaintext)
-  local normalized_length = #normalized_plaintext(plaintext)
-
-  for i = 1, math.huge do
-    if i ^ 2 >= normalized_length then return i end
-  end
+  return math.ceil(math.sqrt(#normalized_plaintext(plaintext)))
 end
 
 local function segments(plaintext)
