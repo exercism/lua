@@ -8,6 +8,7 @@
     "accumulate",
     "hamming",
     "bob",
+    "difference-of-squares",
     "anagram",
     "binary-search",
     "bracket-push",
