@@ -1,4 +1,4 @@
-local encode = require('atbash_cipher').encode
+local encode = require('atbash-cipher').encode
 
 describe('atbash cipher', function()
 
