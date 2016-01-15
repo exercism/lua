@@ -5,11 +5,10 @@ return function(array, target)
     end
 
     local search_index = math.floor((end_index + start_index) / 2)
-    local element = array[search_index]
 
-    if element == target then
+    if array[search_index] == target then
       return search_index
-    elseif element > target then
+    elseif array[search_index] > target then
       return aux(start_index, search_index - 1)
     else
       return aux(search_index + 1, end_index)
