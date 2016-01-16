@@ -28,6 +28,7 @@
     "grains",
     "custom-set",
     "gigasecond",
+    "luhn",
     "triangle",
     "clock",
     "crypto-square",
