@@ -1,0 +1,52 @@
+local Garden = require('kindergarten-garden')
+
+describe('kindergarten garden', function()
+
+  it('should be able to parse a garden with only one student', function()
+    local garden = Garden('RC\nGG')
+    assert.same({ 'radishes', 'clover', 'grass', 'grass' }, garden.alice)
+  end)
+
+  it('should be able to parse a graden with more than one student', function()
+    local garden = Garden('VVCG\nVVRC')
+    assert.same({ 'violets', 'violets', 'violets', 'violets' }, garden.alice)
+    assert.same({ 'clover', 'grass', 'radishes', 'clover' }, garden.bob)
+  end)
+
+  it('should be able to parse a garden with plants for all students', function()
+    local garden = Garden('VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV')
+    assert.same({ 'violets', 'radishes', 'violets', 'radishes' }, garden.alice)
+    assert.same({ 'clover', 'grass', 'clover', 'clover' }, garden.bob)
+    assert.same({ 'violets', 'violets', 'clover', 'grass' }, garden.charlie)
+    assert.same({ 'radishes', 'violets', 'clover', 'radishes' }, garden.david)
+    assert.same({ 'clover', 'grass', 'radishes', 'grass' }, garden.eve)
+    assert.same({ 'grass', 'clover', 'violets', 'clover' }, garden.fred)
+    assert.same({ 'clover', 'grass', 'grass', 'clover' }, garden.ginny)
+    assert.same({ 'violets', 'radishes', 'radishes', 'violets' }, garden.harriet)
+    assert.same({ 'grass', 'clover', 'violets', 'clover' }, garden.ileana)
+    assert.same({ 'violets', 'clover', 'violets', 'grass' }, garden.joseph)
+    assert.same({ 'grass', 'clover', 'clover', 'grass' }, garden.kincaid)
+    assert.same({ 'grass', 'violets', 'clover', 'violets' }, garden.larry)
+  end)
+
+  it('should return an empty result for students that are not present', function()
+    local garden = Garden('RC\nGG')
+    assert.same({}, garden.bob)
+  end)
+
+  it('should return an empty result for students that do not exist', function()
+    local garden = Garden('RC\nGG')
+    assert.same({}, garden.katrina)
+  end)
+
+  it('should ignore case for gardens', function()
+    local garden = Garden('Rc\ngG')
+    assert.same({ 'radishes', 'clover', 'grass', 'grass' }, garden.alice)
+  end)
+
+  it('should ignore case for students', function()
+    local garden = Garden('RC\nGG')
+    assert.same({ 'radishes', 'clover', 'grass', 'grass' }, garden.ALICE)
+  end)
+
+end)
