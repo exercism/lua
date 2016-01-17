@@ -1,12 +1,13 @@
 return function(s)
   local rows = {}
-  s:gsub('[%w ]+', function(row_string)
+
+  for line in s:gmatch('[%w ]+') do
     local row = {}
-    row_string:gsub('%w+', function(v)
-      table.insert(row, tonumber(v))
-    end)
+    for element in line:gmatch('%w+') do
+      table.insert(row, tonumber(element))
+    end
     table.insert(rows, row)
-  end)
+  end
 
   return {
     row = function(which)
