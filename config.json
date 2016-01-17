@@ -33,6 +33,7 @@
     "crypto-square",
     "atbash-cipher",
     "scrabble-score",
+    "largest-series-product",
     "roman-numerals",
     "circular-buffer",
     "binary-search-tree",
