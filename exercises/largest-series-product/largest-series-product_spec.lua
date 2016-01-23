@@ -58,6 +58,12 @@ describe('largest series product', function()
     end)
   end)
 
+  it('should reject no digits and non-zero span', function()
+    assert.has_error(function()
+      lsp({ digits = '', span = 1 })
+    end)
+  end)
+
   it('should reject negative spans', function()
     assert.has_error(function()
       lsp({ digits = '12345', span = -1 })
