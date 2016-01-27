@@ -1,9 +1,9 @@
 return function(s)
   local rows = {}
 
-  for line in s:gmatch('[%w ]+') do
+  for line in s:gmatch('[%d ]+') do
     local row = {}
-    for element in line:gmatch('%w+') do
+    for element in line:gmatch('%d+') do
       table.insert(row, tonumber(element))
     end
     table.insert(rows, row)
