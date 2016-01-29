@@ -33,6 +33,7 @@
     "luhn",
     "triangle",
     "clock",
+    "ocr-numbers",
     "crypto-square",
     "list-ops",
     "atbash-cipher",
