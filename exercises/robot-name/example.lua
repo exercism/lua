@@ -1,40 +1,40 @@
 local Robot = {}
 
-function buildName()
+function build_name()
   return string.char(math.random(65,90))..string.char(math.random(65,90))..math.random(100,999)
 end
 
-function nameExists(names,name)
+function name_exists(names,name)
   if (names.length ~=nil) then
     for i = 1, #names do
       if names[i] == name then
         return true
-      end  
+      end
     end
   end
-  return false    
-end  
+  return false
+end
 
 function Robot:new()
   self.__index = self
   local names = {}
-  local name = buildName()
-  if (nameExists(names, name)) then
-    name = buildName()
+  local name = build_name()
+  if (name_exists(names, name)) then
+    name = build_name()
   end
   names[#names] = name
   return setmetatable({ name = name, names = names }, self)
 end
 
 function Robot:reset()
-  local name  = buildName()
+  local name  = build_name()
   local names = self.names
-  if (nameExists(names, name)) then
-    name = buildName()
+  if (name_exists(names, name)) then
+    name = build_name()
   end
   names[#names] = name
   self.names = names
   self.name = name
-end  
+end
 
 return Robot

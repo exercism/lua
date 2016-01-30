@@ -81,7 +81,6 @@ that ate the malt
 that lay in the house that Jack built.]]
 }
 
-
 describe('house', function()
 
   it('should correctly generate the first verse', function()

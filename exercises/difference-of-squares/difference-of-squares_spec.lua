@@ -1,6 +1,6 @@
 local diff = require('difference-of-squares')
 
-describe('Difference of squares', function()
+describe('difference-of-squares', function()
 
   describe('square_of_sums', function()
 

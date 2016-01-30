@@ -1,9 +1,9 @@
-Year = function(number)
-    local function isDivisibleBy(a_number)
-        return number % a_number == 0
-    end
+local leap_year = function(number)
+  local function is_divisible_by(a_number)
+    return number % a_number == 0
+  end
 
-    return isDivisibleBy(400) or (isDivisibleBy(4) and (not isDivisibleBy(100)))
+  return is_divisible_by(400) or (is_divisible_by(4) and (not is_divisible_by(100)))
 end
 
-return Year
+return leap_year

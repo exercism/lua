@@ -1,4 +1,4 @@
-local function toDecimal(input)
+local function to_decimal(input)
   if (string.match(input,"%D")) then
     return 0
   end
@@ -11,8 +11,6 @@ local function toDecimal(input)
   return decimal
 end
 
-
 return {
-  toDecimal = toDecimal
+  to_decimal = to_decimal
 }
-

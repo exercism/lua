@@ -1,6 +1,6 @@
 local BowlingScorer = require('bowling')
 
-describe('Bowling Scorer', function()
+describe('bowling', function()
 
   local scorer
 

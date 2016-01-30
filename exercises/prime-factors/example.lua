@@ -1,4 +1,4 @@
-local function PrimeFactors(input)
+return function(input)
   local pf = {}
   local i = 2
   while (input ~= 1) do
@@ -11,5 +11,3 @@ local function PrimeFactors(input)
   end
   return pf
 end
-
-return PrimeFactors

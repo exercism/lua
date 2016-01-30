@@ -1,6 +1,6 @@
 local BinarySearchTree = require('binary-search-tree')
 
-describe('Binary Search Tree', function()
+describe('binary-search-tree', function()
 
   it('should maintain a value for each node', function()
     assert.equal(4, BinarySearchTree:new(4).value)
