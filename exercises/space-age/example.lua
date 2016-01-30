@@ -22,7 +22,7 @@ function SpaceAge:new(seconds)
   local meta_tbl = { seconds = seconds }
   for k, v in pairs(SpaceAge.ORBITAL_PERIODS) do
     local val = round(seconds / SpaceAge.EARTH_ORBITAL_PERIOD / v, 2)
-    meta_tbl['on_' .. k] = loadstring('return ' .. val)
+    meta_tbl['on_' .. k] = load('return ' .. val)
   end
 
   return setmetatable(meta_tbl, self)
