@@ -1,5 +1,7 @@
 # xLua
 
+[![Build Status](https://travis-ci.org/exercism/xlua.svg?branch=master)](https://travis-ci.org/exercism/xlua)
+
 Exercism exercises in Lua
 
 ## Setup Dev environment for contributing

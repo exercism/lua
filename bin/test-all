@@ -1,0 +1,21 @@
+RESULT=0
+
+cd exercises
+
+for i in *
+do
+  if test -d "$i"
+  then
+    echo Testing $i...
+    cd $i
+    cp example.lua $i.lua
+    busted --verbose .
+    if [ $? -ne 0 ]; then
+      RESULT=1
+    fi
+    rm $i.lua
+    cd ..
+  fi
+done
+
+exit $RESULT

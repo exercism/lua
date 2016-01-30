@@ -1,5 +1,29 @@
-language: bash
+language: python
+sudo: false
 
-script:
+env:
+  - LUA="lua=5.1"
+  - LUA="lua=5.2"
+  - LUA="lua=5.3"
+
+before_install:
+  - pip install hererocks
+  - hererocks bin/lua_install -r^ --$LUA
+  - export PATH=$PATH:$PWD/bin/lua_install/bin
+
+install:
+  - luarocks install busted
+
+before_script:
   - bin/fetch-configlet
   - bin/configlet .
+
+script:
+  - bin/test-all
+
+# Primary target is Lua 5.3, but the results in Lua 5.1 and 5.2 are provided for
+# curiosity's sake
+matrix:
+  allow_failures:
+    - env: LUA="lua=5.1"
+    - env: LUA="lua=5.2"
