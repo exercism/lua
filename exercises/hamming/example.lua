@@ -1,4 +1,4 @@
-Hamming = {}
+local Hamming = {}
 
 function Hamming.compute(a,b)
   local distance = 0

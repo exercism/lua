@@ -1,6 +1,6 @@
 local compute = require('hamming').compute
 
-describe('Hamming', function ()
+describe('hamming', function ()
 
   it('no difference between identical strands', function ()
      assert.are.equals(0, compute('A', 'A'))

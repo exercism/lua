@@ -1,7 +1,7 @@
 local find = require('binary-search')
 local TracedArray = require('TracedArray')
 
-describe('Binary Search', function()
+describe('binary-search', function()
 
   it('should return -1 when an empty array is searched', function()
     local array = TracedArray{}

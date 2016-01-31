@@ -1,6 +1,6 @@
 local BankAccount = require('bank-account')
 
-describe('Bank Account', function()
+describe('bank-ccount', function()
 
   it('should have a balance of zero after opening a new account', function()
     local account = BankAccount:new()

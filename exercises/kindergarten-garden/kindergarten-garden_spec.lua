@@ -1,6 +1,6 @@
 local Garden = require('kindergarten-garden')
 
-describe('kindergarten garden', function()
+describe('kindergarten-garden', function()
 
   it('should be able to parse a garden with only one student', function()
     local garden = Garden('RC\nGG')

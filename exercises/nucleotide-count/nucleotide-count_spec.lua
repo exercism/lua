@@ -1,6 +1,6 @@
 local DNA = require('nucleotide-count')
 
-describe('DNA', function()
+describe('nucleotide-count', function()
 
   it('has no nucleotides', function()
     local expected =  { A = 0, T = 0, C = 0, G = 0 }

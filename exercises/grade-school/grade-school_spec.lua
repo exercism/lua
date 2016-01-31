@@ -1,6 +1,6 @@
 local School = require('grade-school')
 
-describe('School', function()
+describe('grade-school', function()
 
   it('a new school has an empty roster', function()
     local school = School:new()

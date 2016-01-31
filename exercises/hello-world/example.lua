@@ -1,8 +1,8 @@
-HelloWorld = {}
+local hello_world = {}
 
-function HelloWorld.hello( name )
+function hello_world.hello( name )
   if not name or name == '' then name = 'world' end
   return 'Hello, ' .. name .. '!'
 end
 
-return HelloWorld
+return hello_world

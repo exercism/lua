@@ -1,6 +1,6 @@
 local Anagram = require('anagram')
 
-describe('Anagram', function()
+describe('anagram', function()
 
   it('no result', function()
     local detector = Anagram:new('diaper')

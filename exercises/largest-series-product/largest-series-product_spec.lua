@@ -1,6 +1,6 @@
 local lsp = require('largest-series-product')
 
-describe('largest series product', function()
+describe('largest-series-product', function()
 
   it('should be able to find the largest product of 2 with ordered digits', function()
     assert.equals(72, lsp({ digits = '0123456789', span = 2 }))
@@ -55,6 +55,12 @@ describe('largest series product', function()
   it('should reject spans larger than the string length', function()
     assert.has_error(function()
       lsp({ digits = '123', span = 4 })
+    end)
+  end)
+
+  it('should reject no digits and non-zero span', function()
+    assert.has_error(function()
+      lsp({ digits = '', span = 1 })
     end)
   end)
 

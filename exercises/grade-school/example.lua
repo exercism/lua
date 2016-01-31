@@ -2,26 +2,26 @@ local School = {}
 
 function School:new()
   self.__index = self
-  return setmetatable({db = {}}, self)
+  return setmetatable({ db = {} }, self)
 end
 
 function School:roster()
   return self.db
-end  
+end
 
-function School:add(name,grade)  
-  if (self.db[grade]) then
-    table.insert(self.db[grade],name)
+function School:add(name, grade)
+  if self.db[grade] then
+    table.insert(self.db[grade], name)
     table.sort(self.db[grade])
-  else 
-     self.db[grade] = { name }    
+  else
+    self.db[grade] = { name }
   end
 end
-  
+
 function School:grade(grade)
-  if (self.db[grade]) then
+  if self.db[grade] then
     return self.db[grade]
-  end  
+  end
   return {}
 end
 

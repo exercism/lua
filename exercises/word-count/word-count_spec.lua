@@ -1,6 +1,6 @@
-local word_count = require('words').word_count
+local word_count = require('word-count').word_count
 
-describe('Words', function()
+describe('word-count', function()
 
   it('counts one word', function()
     local result = word_count('word')
@@ -16,7 +16,7 @@ describe('Words', function()
 
   it('counts multiple occurrences', function()
     local result = word_count('one fish two fish red fish blue fish')
-    local expected = { one= 1, fish = 4, two = 1, red = 1, blue = 1 }
+    local expected = { one = 1, fish = 4, two = 1, red = 1, blue = 1 }
     assert.are.same(expected, result)
   end)
 
