@@ -15,6 +15,7 @@
     "binary-search",
     "bracket-push",
     "word-count",
+    "pangram",
     "matrix",
     "beer-song",
     "etl",
