@@ -59,7 +59,7 @@ local function populate_letter_map(letter_map, letters, values)
 end
 
 local function evaluates_true(solution)
-  return loadstring('return ' .. solution)()
+  return load('return ' .. solution)()
 end
 
 local function has_no_leading_zeros(solution)
