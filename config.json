@@ -3,6 +3,7 @@
   "language": "Lua",
   "repository": "https://github.com/exercism/xlua",
   "active": true,
+  "test_pattern": ".*_spec[.]lua$",
   "problems": [
     "hello-world",
     "accumulate",
