@@ -10,13 +10,7 @@ local function create(...)
 end
 
 function Set:equals(other)
-  for k in pairs(self._contents) do
-    if not other._contents[k] then return false end
-  end
-  for k in pairs(other._contents) do
-    if not self._contents[k] then return false end
-  end
-  return true
+  return self:is_subset(other) and other:is_subset(self)
 end
 
 function Set:add(element)
@@ -45,17 +39,17 @@ end
 
 function Set:is_subset(other)
   for k in pairs(self._contents) do
-    if not other._contents[k] then return false end
+    if not other:contains(k) then return false end
   end
   return true
 end
 
 function Set:is_disjoint(other)
   for k in pairs(self._contents) do
-    if other._contents[k] then return false end
+    if other:contains(k) then return false end
   end
   for k in pairs(other._contents) do
-    if self._contents[k] then return false end
+    if self:contains(k) then return false end
   end
   return true
 end
@@ -63,7 +57,7 @@ end
 function Set:intersection(other)
   local intersection = create()
   for k in pairs(self._contents) do
-    if other._contents[k] then intersection:add(k) end
+    if other:contains(k) then intersection:add(k) end
   end
   return intersection
 end
