@@ -55,10 +55,6 @@ describe('triangle', function()
   end)
 
   it('triangles violating triangle inequality are illegal 2', function()
-    assert.has_error(function() triangle.kind(2, 4, 2) end, 'Input Error')
-  end)
-
-  it('triangles violating triangle inequality are illegal 3', function()
     assert.has_error(function() triangle.kind(7, 3, 2) end, 'Input Error')
   end)
 
