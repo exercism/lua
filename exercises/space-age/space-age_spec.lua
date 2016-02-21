@@ -1,7 +1,6 @@
 local SpaceAge = require('space-age')
 
 describe('space-age', function()
-
   it('age in seconds', function()
     local age = SpaceAge:new(1000000)
     assert.are.equal(1000000, age.seconds)
@@ -53,5 +52,4 @@ describe('space-age', function()
     assert.are.equal(260.16, age.on_earth())
     assert.are.equal(1.58, age.on_neptune())
   end)
-
 end)

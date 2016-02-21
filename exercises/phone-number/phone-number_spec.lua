@@ -1,7 +1,6 @@
 local PhoneNumber = require('phone-number')
 
 describe('phone-number', function()
-
   it('cleans the number (123) 456-7890', function()
     local phone = PhoneNumber:new('(123) 456-7890')
     assert.are.equals('1234567890', phone.number)
@@ -36,5 +35,4 @@ describe('phone-number', function()
     local phone = PhoneNumber:new('1234567890')
     assert.are.equals('(123) 456-7890', tostring(phone))
   end)
-
 end)

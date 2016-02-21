@@ -1,7 +1,6 @@
 local gigasecond = require('gigasecond')
 
 describe('gigasecond', function()
-
   it('test 1', function()
     local actual = gigasecond.anniversary(os.time({ year = 2011, month = 3, day = 25, hour = 0, min = 0, sec = 0 }))
     local expectedDate = os.date('%x', os.time({ year = 2042, month = 12, day = 1, hour = 0, min = 0, sec = 0 }))
@@ -25,5 +24,4 @@ describe('gigasecond', function()
     local expectedDate = os.date('%x', os.time({ year = 2025, month = 4, day = 25 }))
     assert.are.equals(expectedDate, actual)
   end)
-
 end)

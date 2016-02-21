@@ -1,7 +1,6 @@
 local binary = require('binary')
 
 describe('binary', function()
-
   it('1 is decimal 1', function()
     local expected = 1
     local actual = binary.to_decimal('1')
@@ -49,5 +48,4 @@ describe('binary', function()
     local actual = binary.to_decimal('carrot')
     assert.are.equals(expected, actual)
   end)
-
 end)

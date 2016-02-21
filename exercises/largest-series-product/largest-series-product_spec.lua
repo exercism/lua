@@ -1,7 +1,6 @@
 local lsp = require('largest-series-product')
 
 describe('largest-series-product', function()
-
   it('should be able to find the largest product of 2 with ordered digits', function()
     assert.equals(72, lsp({ digits = '0123456789', span = 2 }))
   end)
@@ -75,5 +74,4 @@ describe('largest-series-product', function()
       lsp({ digits = '1234a5', span = 2 })
     end)
   end)
-
 end)

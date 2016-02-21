@@ -1,7 +1,6 @@
 local ocr = require('ocr-numbers')
 
 describe('ocr-numbers', function()
-
   it('should recognize zero', function()
     local actual = ocr.convert(
       ' _ \n' ..
@@ -159,5 +158,4 @@ describe('ocr-numbers', function()
     )
     assert.equal('123,456,789', actual)
   end)
-
 end)

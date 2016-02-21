@@ -1,7 +1,6 @@
 local CircularBuffer = require('circular-buffer')
 
 describe('circular-buffer', function()
-
   it('reading an empty buffer throws a BufferEmptyException', function()
     local buffer = CircularBuffer:new(1)
     assert.has_error((function() buffer:read() end), 'buffer is empty')
@@ -109,5 +108,4 @@ describe('circular-buffer', function()
     assert.are.equals('B', buffer:read())
     assert.has_error((function() buffer:read() end), 'buffer is empty')
   end)
-
 end)

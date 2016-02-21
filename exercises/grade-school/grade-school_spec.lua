@@ -1,7 +1,6 @@
 local School = require('grade-school')
 
 describe('grade-school', function()
-
   it('a new school has an empty roster', function()
     local school = School:new()
     local expected = {}
@@ -67,5 +66,4 @@ describe('grade-school', function()
     local result = school:roster()
     assert.are.same(expected, result)
   end)
-
 end)

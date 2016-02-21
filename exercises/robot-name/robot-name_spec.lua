@@ -1,7 +1,6 @@
 local Robot = require('robot-name')
 
 describe('Robot', function()
-
   it('has a name', function()
     local robot = Robot:new()
     -- lua does not support fixed patterns like %w{2}%d{3}
@@ -25,5 +24,4 @@ describe('Robot', function()
     robot:reset()
     assert.are_not.equal(originalName, robot.name)
   end)
-
 end)

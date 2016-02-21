@@ -1,7 +1,6 @@
 local BinarySearchTree = require('binary-search-tree')
 
 describe('binary-search-tree', function()
-
   it('should maintain a value for each node', function()
     assert.equal(4, BinarySearchTree:new(4).value)
   end)
@@ -76,5 +75,4 @@ describe('binary-search-tree', function()
 
     assert.same(expected, actual)
   end)
-
 end)

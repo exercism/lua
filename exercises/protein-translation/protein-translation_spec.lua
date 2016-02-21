@@ -1,9 +1,7 @@
 local translate = require('protein-translation')
 
 describe('protein-translation', function()
-
   describe('translate.codon', function()
-
     it('should translate AUG to Methionine', function()
       assert.equal('Methionine', translate.codon('AUG'))
     end)
@@ -48,11 +46,9 @@ describe('protein-translation', function()
     it('should raise an error when an unknown codon is translated', function()
       assert.has_error(function() translate.codon('MIA') end)
     end)
-
   end)
 
   describe('translate.rna_strand', function()
-
     it('should translate each codon in a strand into the corresponding protein', function()
       assert.same({ 'Methionine', 'Phenylalanine', 'Tryptophan' }, translate.rna_strand('AUGUUUUGG'))
     end)
@@ -69,7 +65,5 @@ describe('protein-translation', function()
     it('should not raise an error when an unknown codon occurs after a STOP codon', function()
       assert.same({ 'Cysteine' }, translate.rna_strand('UGUUGACARROT'))
     end)
-
   end)
-
 end)

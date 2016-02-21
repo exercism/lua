@@ -1,7 +1,6 @@
 local BowlingScorer = require('bowling')
 
 describe('bowling', function()
-
   local scorer
 
   before_each(function()
@@ -142,5 +141,4 @@ describe('bowling', function()
     assert.equal(60, s1.score())
     assert.equal(40, s2.score())
   end)
-
 end)

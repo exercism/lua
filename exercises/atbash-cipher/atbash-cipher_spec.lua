@@ -1,7 +1,6 @@
 local encode = require('atbash-cipher').encode
 
 describe('atbash-cipher', function()
-
   it('should encode single letter plaintexts', function()
     assert.are.equal('m', encode('n'))
   end)
@@ -36,5 +35,4 @@ describe('atbash-cipher', function()
       encode('The quick brown fox jumps over the lazy dog.')
     )
   end)
-
 end)

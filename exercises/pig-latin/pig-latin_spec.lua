@@ -1,7 +1,6 @@
 local translate = require('pig-latin')
 
 describe('pig-latin', function()
-
   it('should append "ay" to words beginning with a vowel', function()
     assert.equal('appleay', translate('apple'))
     assert.equal('earay', translate('ear'))
@@ -65,5 +64,4 @@ describe('pig-latin', function()
   it('should retain all whitespace', function()
     assert.equal('abstay\tanday   pacessay', translate('tabs\tand   spaces'))
   end)
-
 end)

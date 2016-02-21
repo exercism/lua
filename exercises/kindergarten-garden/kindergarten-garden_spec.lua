@@ -1,7 +1,6 @@
 local Garden = require('kindergarten-garden')
 
 describe('kindergarten-garden', function()
-
   it('should be able to parse a garden with only one student', function()
     local garden = Garden('RC\nGG')
     assert.same({ 'radishes', 'clover', 'grass', 'grass' }, garden.alice)
@@ -48,5 +47,4 @@ describe('kindergarten-garden', function()
     local garden = Garden('RC\nGG')
     assert.same({ 'radishes', 'clover', 'grass', 'grass' }, garden.ALICE)
   end)
-
 end)

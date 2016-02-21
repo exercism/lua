@@ -1,7 +1,6 @@
 local word_count = require('word-count').word_count
 
 describe('word-count', function()
-
   it('counts one word', function()
     local result = word_count('word')
     local expected = { word = 1 }
@@ -37,5 +36,4 @@ describe('word-count', function()
     local expected = { go = 3 }
     assert.are.same(expected, result)
   end)
-
 end)

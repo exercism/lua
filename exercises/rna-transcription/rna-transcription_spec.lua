@@ -1,7 +1,6 @@
 local to_rna = require('rna-transcription')
 
 describe('rna-transcription', function()
-
   it('transcribes cytosine to guanosine', function()
     assert.are.equal('G', to_rna('C'))
   end)
@@ -21,5 +20,4 @@ describe('rna-transcription', function()
   it('transcribes all DNA nucleotides to their RNA complements', function()
     assert.are.equal('UGCACCAGAAUU', to_rna('ACGTGGTCTTAA'))
   end)
-
 end)

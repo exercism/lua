@@ -1,7 +1,6 @@
 local etl = require('etl')
 
 describe('etl', function()
-
   it('should correctly transform a dataset with a single mapping', function()
     local old = { [1] = { 'A' } }
     local expected = { a = 1 }
@@ -60,5 +59,4 @@ describe('etl', function()
     }
     assert.same(expected, etl.transform(old))
   end)
-
 end)

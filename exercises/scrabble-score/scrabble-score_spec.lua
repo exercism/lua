@@ -1,7 +1,6 @@
 local score = require('scrabble-score').score
 
 describe('scrabble-score', function()
-
   it('scores an empty word as zero', function()
     assert.are.equal(0, score(''))
   end)
@@ -25,5 +24,4 @@ describe('scrabble-score', function()
   it('scores case insensitive words', function()
     assert.are.equal(20, score('MULTIBILLIONAIRE'))
   end)
-
 end)

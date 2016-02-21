@@ -1,7 +1,6 @@
 local triangle = require('triangle')
 
 describe('triangle', function()
-
   it('equilateral triangles have equal sides', function()
     assert.are.equals('equilateral', triangle.kind(2, 2, 2))
   end)
@@ -57,5 +56,4 @@ describe('triangle', function()
   it('triangles violating triangle inequality are illegal 2', function()
     assert.has_error(function() triangle.kind(7, 3, 2) end, 'Input Error')
   end)
-
 end)

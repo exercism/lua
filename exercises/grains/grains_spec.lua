@@ -1,7 +1,6 @@
 local grains = require('grains')
 
 describe('grains', function()
-
   it('square 1', function()
     assert.are.equals(1, grains.square(1))
   end)
@@ -33,5 +32,4 @@ describe('grains', function()
   it('total', function()
     assert.are.equals(18446744073709551615, grains.total())
   end)
-
 end)

@@ -1,7 +1,6 @@
 local perfect_numbers = require('perfect-numbers')
 
 describe('perfect-numbers', function()
-
   it('should be able to calculate the Aliquot sum of a number with no divisors', function()
     assert.equal(0, perfect_numbers.aliquot_sum(1))
   end)
@@ -29,5 +28,4 @@ describe('perfect-numbers', function()
   it('should classify numbers whose Aliquot sum is greater than itself as abundant', function()
     assert.equal('abundant', perfect_numbers.classify(12))
   end)
-
 end)

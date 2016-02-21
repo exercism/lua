@@ -1,7 +1,6 @@
 local allergies = require('allergies')
 
 describe('allergies', function()
-
   it('should return an empty list of allergies for a score of 0', function()
     assert.same({}, allergies.list(0))
   end)
@@ -84,5 +83,4 @@ describe('allergies', function()
     assert.is_true(allergies.allergic_to(5, 'shellfish'))
     assert.is_false(allergies.allergic_to(5, 'peanuts'))
   end)
-
 end)

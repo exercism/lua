@@ -1,7 +1,6 @@
 local is_leap_year = require('leap')
 
 describe('leap', function()
-
   it('a known leap year', function()
     assert.is_true(is_leap_year(1996))
   end)
@@ -17,5 +16,4 @@ describe('leap', function()
   it('turn of the 21st century', function()
     assert.is_true(is_leap_year(2400))
   end)
-
 end)

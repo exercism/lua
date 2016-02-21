@@ -1,7 +1,6 @@
 local Luhn = require('luhn')
 
 describe('luhn', function()
-
   it('should give the last digit of a number as the check digit', function()
     assert.equal(7, Luhn.new('34567'):check_digit())
     assert.equal(0, Luhn.new('91370'):check_digit())
@@ -49,5 +48,4 @@ describe('luhn', function()
       Luhn.create('34598754109846124372104312349048732432143214732140498237142')
     )
   end)
-
 end)

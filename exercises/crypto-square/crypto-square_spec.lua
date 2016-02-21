@@ -1,9 +1,7 @@
 local cs = require('crypto-square')
 
 describe('crypto-square', function()
-
   describe('normalized_plaintext', function()
-
     it('should convert all uppercase letters to lowercase', function()
       assert.equal('abcdefg', cs.normalized_plaintext('AbcDEfG'))
     end)
@@ -20,11 +18,9 @@ describe('crypto-square', function()
     it('should retain numbers', function()
       assert.equal('hello123', cs.normalized_plaintext('hello123'))
     end)
-
   end)
 
   describe('size', function()
-
     it('should determine the size of a small perfect square', function()
       assert.equal(2, cs.size('1234'))
     end)
@@ -40,11 +36,9 @@ describe('crypto-square', function()
     it('should determine the size based on normalized plaintext', function()
       assert.equal(4, cs.size('Oh hey, this is nuts!'))
     end)
-
   end)
 
   describe('segments', function()
-
     it('should split plaintext into segments of size', function()
       assert.same(
         { 'neverv', 'exthin', 'eheart', 'withid', 'lewoes' },
@@ -58,11 +52,9 @@ describe('crypto-square', function()
         cs.segments('ZOMG! ZOMBIES!!!')
       )
     end)
-
   end)
 
   describe('ciphertext', function()
-
     it('should generate ciphertext for a string', function()
       assert.equal(
         'wneiaweoreneawssciliprerlneoidktcms',
@@ -76,11 +68,9 @@ describe('crypto-square', function()
         cs.ciphertext('Time is an illusion. Lunchtime doubly so.')
       )
     end)
-
   end)
 
   describe('normalized_ciphertext', function()
-
     it('should generate normalized ciphertext', function()
       assert.equal(
         'vrel aepe mset paoo irpo',
@@ -98,7 +88,5 @@ describe('crypto-square', function()
     it('should generate normalized ciphertext when just less than a full square', function()
       assert.equal('im a', cs.normalized_ciphertext('I am'))
     end)
-
   end)
-
 end)

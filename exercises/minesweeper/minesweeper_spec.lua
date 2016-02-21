@@ -1,7 +1,6 @@
 local minesweeper = require('minesweeper')
 
 describe('minesweeper', function()
-
   it('should be able to transform a 1x1 board with a single mine', function()
     local input = {
       '*-*',
@@ -133,5 +132,4 @@ describe('minesweeper', function()
       minesweeper.transform(input)
     end)
   end)
-
 end)

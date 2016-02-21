@@ -1,7 +1,6 @@
 local clock = require('clock')
 
 describe('clock', function()
-
   it('prints the hour', function()
     assert.are.equals('08:00', tostring(clock.at(8)))
     assert.are.equals('09:00', tostring(clock.at(9)))
@@ -56,5 +55,4 @@ describe('clock', function()
     local clock = clock.at(0, 3):minus(4)
     assert.are.equals('23:59', tostring(clock))
   end)
-
 end)
