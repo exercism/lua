@@ -1,6 +1,6 @@
 local Robot = require('robot-name')
 
-describe('Robot', function()
+describe('robot-name', function()
 
   it('has a name', function()
     local robot = Robot:new()
