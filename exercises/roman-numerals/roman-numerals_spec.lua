@@ -1,7 +1,6 @@
 local to_roman = require('roman-numerals').to_roman
 
 describe('roman-numerals', function()
-
   it('converts 1', function()
     assert.are.equal('I', to_roman(1))
   end)
@@ -73,5 +72,4 @@ describe('roman-numerals', function()
   it('converts 3000', function()
     assert.are.equal('MMM', to_roman(3000))
   end)
-
 end)

@@ -1,9 +1,7 @@
 local Set = require('custom-set')
 
 describe('custom-set', function()
-
   describe('equality', function()
-
     it('should ignore order', function()
       assert.is_true(Set(1, 3):equals(Set(3, 1)))
     end)
@@ -36,11 +34,9 @@ describe('custom-set', function()
     it('should not consider sets that have a large but incomplete intersection to be equal', function()
       assert.is_false(Set(1, 2, 3, 4):equals(Set(2, 3, 4, 5)))
     end)
-
   end)
 
   describe('add', function()
-
     it('should allow an element to be added to an empty set', function()
       local s = Set()
       s:add(3)
@@ -58,11 +54,9 @@ describe('custom-set', function()
       s:add(3)
       assert.is_true(s:equals(Set(1, 2, 3)))
     end)
-
   end)
 
   describe('delete', function()
-
     it('should allow an element to be deleted from a set', function()
       local s = Set(3, 2, 1)
       s:remove(2)
@@ -74,11 +68,9 @@ describe('custom-set', function()
       s:remove(4)
       assert.is_true(s:equals(Set(1, 2, 3)))
     end)
-
   end)
 
   describe('is_empty', function()
-
     it('should indicate that an empty set is empty', function()
       assert.is_true(Set():is_empty())
     end)
@@ -90,11 +82,9 @@ describe('custom-set', function()
     it('should indicate that a set with multiple elements is non-empty', function()
       assert.is_false(Set(1, 2, 3):is_empty())
     end)
-
   end)
 
   describe('size', function()
-
     it('should give the size of an empty set as 0', function()
       assert.equals(0, Set():size())
     end)
@@ -106,11 +96,9 @@ describe('custom-set', function()
     it('should ignore duplicate elements', function()
       assert.equals(3, Set(1, 2, 3, 2):size())
     end)
-
   end)
 
   describe('contains', function()
-
     it('should indicate that nothing is an element of an empty set', function()
       assert.is_false(Set():contains(1))
     end)
@@ -124,11 +112,9 @@ describe('custom-set', function()
     it('should indicate that an element that is not in a set is not contained in the set', function()
       assert.is_false(Set(1, 2, 3, 2):contains(4))
     end)
-
   end)
 
   describe('is_subset', function()
-
     it('should indicate that an empty set is a subset of itself', function()
       assert.is_true(Set():is_subset(Set()))
     end)
@@ -160,11 +146,9 @@ describe('custom-set', function()
     it('should not indicate that a set is a subset of a set with different but more elements', function()
       assert.is_false(Set(1, 2, 3, 11):is_subset(Set(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)))
     end)
-
   end)
 
   describe('is_disjoint', function()
-
     it('should indicate that the empty set is disjoint with itself', function()
       assert.is_true(Set():is_disjoint(Set()))
     end)
@@ -184,11 +168,9 @@ describe('custom-set', function()
     it('should indicate that sets with no elements in common are disjoint', function()
       assert.is_true(Set(1, 2):is_disjoint(Set(3, 4)))
     end)
-
   end)
 
   describe('intersection', function()
-
     it('should give the empty set as the intersection of two empty sets', function()
       assert.is_true(Set():intersection(Set()):equals(Set()))
     end)
@@ -220,11 +202,9 @@ describe('custom-set', function()
     it('should intersect sets with no elements in common', function()
       assert.is_true(Set(1, 2, 3):intersection(Set(4, 5, 6)):equals(Set()))
     end)
-
   end)
 
   describe('union', function()
-
     it('should produce the empty set as the union of two empty sets', function()
       assert.is_true(Set():union(Set()):equals(Set()))
     end)
@@ -244,11 +224,9 @@ describe('custom-set', function()
       assert.is_true(Set(1, 3):union(Set(2, 3)):equals(Set(1, 2, 3)))
       assert.is_true(Set(1, 2, 3, 4):union(Set(3, 2, 5)):equals(Set(1, 2, 3, 4, 5)))
     end)
-
   end)
 
   describe('difference', function()
-
     it('should give the difference of two empty sets as the empty set', function()
       assert.is_true(Set():difference(Set()):equals(Set()))
     end)
@@ -269,11 +247,9 @@ describe('custom-set', function()
       assert.is_true(Set(3, 2, 1):difference(Set(2, 4)):equals(Set(1, 3)))
       assert.is_true(Set(1, 2, 3, 4):difference(Set(3, 2, 5)):equals(Set(1, 4)))
     end)
-
   end)
 
   describe('symmetric_difference', function()
-
     it('should give the symmetric difference of two empty sets as the empty set', function()
       assert.is_true(Set():symmetric_difference(Set()):equals(Set()))
     end)
@@ -293,16 +269,12 @@ describe('custom-set', function()
     it('should give the symmetric difference of sets with elements in common', function()
       assert.is_true(Set(3, 2, 1):symmetric_difference(Set(2, 4)):equals(Set(1, 3, 4)))
     end)
-
   end)
 
   describe('mixed types', function()
-
     it('should support non-numeric types', function()
       assert.is_true(Set('a', 'b', 'c'):intersection(Set('a', 'c', 'd')):equals(Set('a', 'c')))
       assert.is_true(Set('a', 'b', 'c'):union(Set('a', 'c', 'd')):equals(Set('a', 'b', 'c', 'd')))
     end)
-
   end)
-
 end)

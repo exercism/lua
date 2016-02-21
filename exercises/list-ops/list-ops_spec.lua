@@ -3,11 +3,9 @@ local reduce = require('list-ops').reduce
 local filter = require('list-ops').filter
 
 describe('list-ops', function()
-
   local function should_not_be_called() error('unexpected call') end
 
   describe('map', function()
-
     local function identity(x) return x end
     local function square(x) return x * x end
 
@@ -28,7 +26,6 @@ describe('list-ops', function()
       map(xs, square)
       assert.same({ 1, 2, 3, 4 }, xs)
     end)
-
   end)
 
   describe('reduce', function()
@@ -61,11 +58,9 @@ describe('list-ops', function()
       reduce(xs, 0, sum)
       assert.same({ 1, 2, 3, 4 }, xs)
     end)
-
   end)
 
   describe('filter', function()
-
     local function always_true() return true end
     local function always_false() return false end
     local function is_even(x) return x %2 == 0 end
@@ -91,7 +86,5 @@ describe('list-ops', function()
       filter(xs, is_even)
       assert.same({ 1, 2, 3, 4 }, xs)
     end)
-
   end)
-
 end)

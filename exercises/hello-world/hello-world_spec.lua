@@ -1,7 +1,6 @@
 local hello_world = require('hello-world')
 
 describe('hello-world', function()
-
   it('says hello world with no name', function()
     local result = hello_world.hello()
     assert.are.equals('Hello, world!', result)

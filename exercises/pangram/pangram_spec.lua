@@ -1,7 +1,6 @@
 local is_pangram = require('pangram')
 
 describe('pangram', function()
-
   it('should not consider the empty string to be a pangram', function()
     assert.is_false(is_pangram(''))
   end)
@@ -37,5 +36,4 @@ describe('pangram', function()
   it('should not consider non-ASCII characters to be letters', function()
     assert.is_false(is_pangram('äbcdefghijklmnopqrstuvwxyz'))
   end)
-
 end)

@@ -1,7 +1,6 @@
 local bob = require('bob')
 
 describe('bob', function()
-
   it('stating something', function()
     local result = bob.hey('Tom-ay-to, tom-aaaah-to.')
     assert.are.equals('Whatever', result)
@@ -36,5 +35,4 @@ describe('bob', function()
     local result = bob.hey('')
     assert.are.equals('Fine, be that way.', result)
   end)
-
 end)

@@ -1,7 +1,6 @@
 local Octal = require('./octal')
 
 describe('octal', function()
-
   it('should convert 1 to decimal 1', function()
     assert.equal(1, Octal('1').to_decimal())
   end)
@@ -43,5 +42,4 @@ describe('octal', function()
     assert.equal(0, Octal('8').to_decimal())
     assert.equal(0, Octal('9').to_decimal())
   end)
-
 end)

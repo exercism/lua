@@ -1,7 +1,6 @@
 local Anagram = require('anagram')
 
 describe('anagram', function()
-
   it('no result', function()
     local detector = Anagram:new('diaper')
     local result = detector:match({ 'hello', 'world', 'zombies', 'pants' })
@@ -57,5 +56,4 @@ describe('anagram', function()
     local expected = { 'Carthorse' }
     assert.are.same(expected, result)
   end)
-
 end)

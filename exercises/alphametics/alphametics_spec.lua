@@ -1,7 +1,6 @@
 local alphametics = require('alphametics')
 
 describe('alphametics', function()
-
   it('should solve short puzzles', function()
     local actual = alphametics.solve('I + BB == ILL')
     local expected = { I = 1, B = 9, L = 0 }
@@ -25,5 +24,4 @@ describe('alphametics', function()
     local expected = { P = 9, I = 6, R = 7, A = 4, E = 0 }
     assert.same(expected, actual)
   end)
-
 end)

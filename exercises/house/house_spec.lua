@@ -82,7 +82,6 @@ that lay in the house that Jack built.]]
 }
 
 describe('house', function()
-
   it('should correctly generate the first verse', function()
     assert.equal(verses[1], house.verse(1))
   end)
@@ -96,5 +95,4 @@ describe('house', function()
   it('should recite the entire song', function()
     assert.equal(table.concat(verses, '\n'), house.recite())
   end)
-
 end)

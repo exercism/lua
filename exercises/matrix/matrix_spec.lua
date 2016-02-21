@@ -1,7 +1,6 @@
 local Matrix = require('matrix')
 
 describe('matrix', function()
-
   it('should allow rows to be extracted', function()
     local matrix = Matrix('1 2 3\n4 5 6\n7 8 9')
     assert.same({ 1, 2, 3 }, matrix.row(1))
@@ -27,5 +26,4 @@ describe('matrix', function()
     assert.same({ 3, 4 }, matrix.row(2))
     assert.same({ 2, 4, 6 }, matrix.column(2))
   end)
-
 end)

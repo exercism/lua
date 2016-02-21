@@ -1,7 +1,6 @@
 local beer = require('beer-song')
 
 describe('beer-song', function()
-
   it('prints an arbitrary verse', function()
     local expected = '8 bottles of beer on the wall, 8 bottles of beer.\nTake one down and pass it around, 7 bottles of beer on the wall.\n'
     local result = beer.verse(8)
@@ -31,5 +30,4 @@ describe('beer-song', function()
     local result = beer.sing(3)
     assert.are.equal(expected, result)
   end)
-
 end)

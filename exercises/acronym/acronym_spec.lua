@@ -1,7 +1,6 @@
 local acronym = require('acronym')
 
 describe('acronym', function()
-
   it('should generate single-letter acronyms', function()
     assert.equal('L', acronym('Lua'))
   end)
@@ -25,5 +24,4 @@ describe('acronym', function()
   it('should not split words that are all uppercase', function()
     assert.equal('PHP', acronym('PHP: Hypertext Processor'))
   end)
-
 end)

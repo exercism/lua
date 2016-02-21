@@ -1,7 +1,6 @@
 local nth = require('nth-prime')
 
 describe('nth-prime', function()
-
   local function benchmark(f)
     local start = os.clock()
     f()
@@ -41,5 +40,4 @@ describe('nth-prime', function()
       nth(-1)
     end)
   end)
-
 end)

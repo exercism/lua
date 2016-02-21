@@ -1,7 +1,6 @@
 local prime_factors = require('prime-factors')
 
 describe('prime-factors', function()
-
   it('returns an empty array for 1', function()
     assert.are.same({}, prime_factors(1))
   end)
@@ -45,5 +44,4 @@ describe('prime-factors', function()
   it('factors 93819012551', function()
     assert.are.same({ 11, 9539, 894119 }, prime_factors(93819012551))
   end)
-
 end)

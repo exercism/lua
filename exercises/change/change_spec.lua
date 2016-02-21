@@ -1,7 +1,6 @@
 local change = require('change')
 
 describe('change', function()
-
   it('should generate the correct change when there is only one type of coin', function()
     assert.same({ 5 }, change(5, { 1 }))
   end)
@@ -26,5 +25,4 @@ describe('change', function()
   it('should generate the correct change for large values with many coins', function()
     assert.same({ 3, 1, 0, 1, 1 }, change(133, { 1, 5, 10, 25, 100 }))
   end)
-
 end)

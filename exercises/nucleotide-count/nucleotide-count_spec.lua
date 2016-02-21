@@ -1,7 +1,6 @@
 local DNA = require('nucleotide-count')
 
 describe('nucleotide-count', function()
-
   it('has no nucleotides', function()
     local expected =  { A = 0, T = 0, C = 0, G = 0 }
     dna = DNA:new('')
@@ -56,5 +55,4 @@ describe('nucleotide-count', function()
     result = dna.nucleotideCounts
     assert.are.same(expected, result)
   end)
-
 end)

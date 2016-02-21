@@ -1,7 +1,6 @@
 local song = require('food-chain')
 
 describe('food-hain', function ()
-
   it('fly', function ()
     local expected = "I know an old lady who swallowed a fly.\nI don't know why she swallowed the fly. Perhaps she'll die.\n"
 
@@ -101,5 +100,4 @@ describe('food-hain', function ()
   it('the whole song', function ()
     assert.are.equal(song.verses(1, 8), song.sing())
   end)
-
 end)

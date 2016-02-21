@@ -1,7 +1,6 @@
 local brackets = require('bracket-push')
 
 describe('bracket-push', function()
-
   it('should accept an empty string', function()
     assert.is_true(brackets.valid(''))
   end)
@@ -73,5 +72,4 @@ describe('bracket-push', function()
   it('should ignore non-bracket characters', function()
     assert.is_true(brackets.valid('{hello[]([a()])b}c'))
   end)
-
 end)

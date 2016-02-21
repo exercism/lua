@@ -1,7 +1,6 @@
 local BankAccount = require('bank-account')
 
 describe('bank-ccount', function()
-
   it('should have a balance of zero after opening a new account', function()
     local account = BankAccount:new()
     assert.equal(0, account:balance())
@@ -93,5 +92,4 @@ describe('bank-ccount', function()
       account:withdraw(1)
     end)
   end)
-
 end)

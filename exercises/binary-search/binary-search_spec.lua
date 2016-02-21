@@ -2,7 +2,6 @@ local find = require('binary-search')
 local TracedArray = require('TracedArray')
 
 describe('binary-search', function()
-
   it('should return -1 when an empty array is searched', function()
     local array = TracedArray{}
 
@@ -64,5 +63,4 @@ describe('binary-search', function()
     assert.equal(-1, find(array, 54323))
     assert(array.access_count <= 4)
   end)
-
 end)
