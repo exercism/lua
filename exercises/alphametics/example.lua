@@ -1,4 +1,4 @@
-function generate_combinations(a, n, offset)
+local function generate_combinations(a, n, offset)
   if n > (#a - offset) then
     return
   end
@@ -18,11 +18,11 @@ function generate_combinations(a, n, offset)
   end
 end
 
-function combinations(a, n, offset)
+local function combinations(a, n, offset)
   return coroutine.wrap(function() generate_combinations(a, n, offset or 0) end)
 end
 
-function generate_permutations(a, n)
+local function generate_permutations(a, n)
   if n == 0 then
     coroutine.yield(a)
   else
@@ -34,7 +34,7 @@ function generate_permutations(a, n)
   end
 end
 
-function permutations(a)
+local function permutations(a)
   return coroutine.wrap(function () generate_permutations(a, #a) end)
 end
 
