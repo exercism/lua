@@ -1,3 +1,5 @@
+local combinations
+
 local function generate_combinations(a, n, offset)
   if n > (#a - offset) then
     return
@@ -18,7 +20,7 @@ local function generate_combinations(a, n, offset)
   end
 end
 
-local function combinations(a, n, offset)
+function combinations(a, n, offset)
   return coroutine.wrap(function() generate_combinations(a, n, offset or 0) end)
 end
 
