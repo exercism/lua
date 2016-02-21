@@ -50,6 +50,7 @@
     "atbash-cipher",
     "scrabble-score",
     "largest-series-product",
+    "rail-fence-cipher",
     "roman-numerals",
     "circular-buffer",
     "binary-search-tree",
