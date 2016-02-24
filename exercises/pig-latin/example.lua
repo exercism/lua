@@ -17,5 +17,5 @@ local function translate(word)
 end
 
 return function(phrase)
-  return phrase:gsub('%a+', function(word) return translate(word) end)
+  return phrase:gsub('%a+', translate)
 end
