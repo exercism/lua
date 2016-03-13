@@ -91,6 +91,7 @@ describe('custom-set', function()
 
     it('should determine the size of a non-empty set', function()
       assert.equals(3, Set(1, 2, 3):size())
+      assert.equals(3, Set(4, 5, 6):size())
     end)
 
     it('should ignore duplicate elements', function()
