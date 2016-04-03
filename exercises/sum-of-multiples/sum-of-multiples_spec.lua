@@ -17,11 +17,6 @@ describe('sum-of-multiples', function()
     assert.same(23, sum_of_multiples({ 3, 5 }).to(10))
   end)
 
-  it('should assume { 3, 5 } when no numbers are provided', function()
-    assert.same(33, sum_of_multiples().to(11))
-    assert.same(60, sum_of_multiples().to(16))
-  end)
-
   it('should not include a multiple more than once', function()
     assert.same(35, sum_of_multiples({ 2, 5 }).to(11))
     assert.same(sum_of_multiples({ 2 }).to(11), sum_of_multiples({ 2, 4 }).to(11))
