@@ -1,6 +1,4 @@
 return function(numbers)
-  numbers = numbers or { 3, 5 }
-
   return {
     to = function(limit)
       local multiples = {}
