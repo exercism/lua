@@ -54,7 +54,7 @@ describe('pig-latin', function()
   end)
 
   it('should ignore capitalization when translating', function()
-    assert.equal('uickQay aStFay Unray', translate('Quick FaSt rUn'))
+    assert.equal('ickQuay aStFay Unray', translate('Quick FaSt rUn'))
   end)
 
   it('should retain punctuation in translated phrases', function()
