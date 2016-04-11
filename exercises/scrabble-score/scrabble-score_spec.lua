@@ -22,6 +22,6 @@ describe('scrabble-score', function()
   end)
 
   it('scores case insensitive words', function()
-    assert.are.equal(20, score('MULTIBILLIONAIRE'))
+    assert.are.equal(41, score('OXYPHENBUTAZONE'))
   end)
 end)
