@@ -25,7 +25,7 @@ Then create a folder for a new test, test class and the implementation.
 
 Run the test    
 
-    $ busted bob_test.lua
+    $ busted .
 
 Rename bob.lua to example.lua, add test to config.json
 
