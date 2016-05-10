@@ -9,7 +9,7 @@ Then install [busted][3] testing framework for lua
 
 Then run your test
 
-    $ busted bob_test.lua
+    $ busted .
 
 Other resources
 
