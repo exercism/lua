@@ -25,14 +25,6 @@ function Set:is_empty()
   return self:equals(create())
 end
 
-function Set:size()
-  local size = 0
-  for _ in pairs(self._contents) do
-    size = size + 1
-  end
-  return size
-end
-
 function Set:contains(element)
   return self._contents[element] ~= nil
 end
@@ -79,17 +71,6 @@ function Set:difference(other)
     difference:remove(k)
   end
   return difference
-end
-
-function Set:symmetric_difference(other)
-  local symmetric_difference = create()
-  for k in pairs(self._contents) do
-    if not other:contains(k) then symmetric_difference:add(k) end
-  end
-  for k in pairs(other._contents) do
-    if not self:contains(k) then symmetric_difference:add(k) end
-  end
-  return symmetric_difference
 end
 
 return create
