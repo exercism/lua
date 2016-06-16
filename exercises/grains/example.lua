@@ -1,15 +1,11 @@
 local grains = {}
 
 function grains.square(n)
-  return (1 << (n - 1))
+  return 2 ^ (n - 1)
 end
 
 function grains.total()
-  local sum = 0
-  for i = 1, 64 do
-    sum = sum + grains.square(i)
-  end
-  return sum
+  return grains.square(65) - 1
 end
 
 return grains
