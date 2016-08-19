@@ -1,61 +1,70 @@
-local foodchain = {}
-
-foodchain.CREATURES = {"fly", "spider", "bird", "cat", "dog", "goat", "cow", "horse"}
-foodchain.LINE_1 = "I know an old lady who swallowed a"
-foodchain.LINE_2 = {
-  fly = "I don't know why she swallowed the fly. Perhaps she'll die.",
-  spider = "It wriggled and jiggled and tickled inside her.",
-  bird = "How absurd to swallow a bird!",
-  cat = "Imagine that, to swallow a cat!",
-  dog = "What a hog, to swallow a dog!",
-  goat = "Just opened her throat and swallowed a goat!",
-  cow = "I don't know how she swallowed a cow!",
-  horse = "She's dead, of course!"
+local data = {
+  {
+    thing = 'fly',
+    why = "I don't know why she swallowed the fly. Perhaps she'll die."
+  },
+  {
+    thing = 'spider',
+    quip = 'It wriggled and jiggled and tickled inside her.'
+  },
+  {
+    thing = 'bird',
+    quip = 'How absurd to swallow a bird!',
+    why = 'She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.'
+  },
+  {
+    thing = 'cat',
+    quip = 'Imagine that, to swallow a cat!'
+  },
+  {
+    thing = 'dog',
+    quip = 'What a hog, to swallow a dog!'
+  },
+  {
+    thing = 'goat',
+    quip = 'Just opened her throat and swallowed a goat!'
+  },
+  {
+    thing = 'cow',
+    quip = "I don't know how she swallowed a cow!"
+  },
+  {
+    thing = 'horse',
+    quip = "She's dead, of course!",
+    terminal = true
+  }
 }
-foodchain.LINE_3_1 = "She swallowed the"
-foodchain.LINE_3_2 = "to catch the"
-foodchain.SPIDER_SPECIAL = "that wriggled and jiggled and tickled inside her"
 
-function foodchain.verse(i)
-  local c = foodchain.CREATURES[i]
-  local a_verse = ""
-  a_verse = a_verse..foodchain.LINE_1
-                   .. " "
-                   .. c
-                   .. ".\n"
-                   .. foodchain.LINE_2[c]
-                   .. "\n"
-  if (c ~= "fly" and c ~= "horse") then
-    for j = i, 2, -1 do
-      a_verse = a_verse..foodchain.LINE_3_1
-                       .. " "
-                       .. foodchain.CREATURES[j]
-                       .. " "
-                       .. foodchain.LINE_3_2
-                       .. " "
-                       .. foodchain.CREATURES[j-1]
-      if (foodchain.CREATURES[j - 1] == "spider") then
-         a_verse = a_verse .. " "
-                          .. foodchain.SPIDER_SPECIAL
-      end
-      a_verse = a_verse .. ".\n"
+local function verse(which)
+  local verse = {
+    'I know an old lady who swallowed a ' .. data[which].thing .. '.',
+    data[which].quip
+  }
+
+  if not data[which].terminal then
+    for i = which, 1, -1 do
+      local why = 'She swallowed the %s to catch the %s.'
+      table.insert(verse, data[i].why or why:format(data[i].thing, data[i - 1].thing))
     end
-    a_verse = a_verse..foodchain.LINE_2["fly"]
-                     .. "\n"
   end
-  return a_verse
+
+  return table.concat(verse, '\n') .. '\n'
 end
 
-function foodchain.verses(m, n)
-  song = ""
-  for i = m, n do
-    song = song .. foodchain.verse(i) .. "\n"
+local function verses(from, to)
+  local verses = {}
+  for i = from, to do
+    table.insert(verses, verse(i))
   end
-  return song
+  return table.concat(verses, '\n') .. '\n'
 end
 
-function foodchain.sing()
-  return foodchain.verses(1, 8)
+local function sing()
+  return verses(1, #data)
 end
 
-return foodchain
+return {
+  verse = verse,
+  verses = verses,
+  sing = sing
+}
