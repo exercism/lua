@@ -1,13 +1,13 @@
 return function(input)
-  local pf = {}
+  local prime_factors = {}
   local i = 2
-  while (input ~= 1) do
-    if (input % i == 0) then
+  while input ~= 1 do
+    if input % i == 0 then
       input = input / i
-      table.insert(pf, i)
+      table.insert(prime_factors, i)
     else
       i = i + 1
     end
   end
-  return pf
+  return prime_factors
 end
