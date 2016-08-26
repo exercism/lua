@@ -20,6 +20,7 @@
     "pangram",
     "matrix",
     "beer-song",
+    "isogram",
     "perfect-numbers",
     "etl",
     "nucleotide-count",
@@ -189,6 +190,14 @@
     "topics": [
       "strings",
       "text formatting",
+      "control-flow (if-else statements)",
+      "control-flow (loops)"
+    ]
+  }, {
+    "slug": "isogram",
+    "difficulty": 2,
+    "topics": [
+      "strings",
       "control-flow (if-else statements)",
       "control-flow (loops)"
     ]
