@@ -16,6 +16,7 @@
     "octal",
     "binary-search",
     "bracket-push",
+    "flatten-array",
     "word-count",
     "pangram",
     "matrix",
@@ -157,6 +158,16 @@
     "topics": [
       "stacks",
       "strings",
+      "algorithms",
+      "control-flow (if-else statements)",
+      "control-flow (loops)"
+    ]
+  }, {
+    "slug": "flatten-array",
+    "difficulty": 5,
+    "topics": [
+      "arrays",
+      "recursion",
       "algorithms",
       "control-flow (if-else statements)",
       "control-flow (loops)"
