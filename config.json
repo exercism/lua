@@ -32,6 +32,7 @@
     "protein-translation",
     "grade-school",
     "nth-prime",
+    "diamond",
     "run-length-encoding",
     "sublist",
     "robot-name",
@@ -287,6 +288,15 @@
       "control-flow (if-else statements)",
       "control-flow (loops)",
       "exception handling"
+    ]
+  }, {
+    "slug": "diamond",
+    "difficulty": 4,
+    "topics": [
+      "control-flow (loops)",
+      "strings",
+      "text formatting",
+      "algorithms"
     ]
   }, {
     "slug": "run-length-encoding",
