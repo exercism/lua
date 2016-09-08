@@ -63,6 +63,7 @@
     "largest-series-product",
     "rail-fence-cipher",
     "roman-numerals",
+    "transpose",
     "circular-buffer",
     "binary-search-tree",
     "bowling",
@@ -532,6 +533,14 @@
     "topics": [
       "strings",
       "text formatting",
+      "control-flow (loops)"
+    ]
+  }, {
+    "slug": "transpose",
+    "difficulty": 7,
+    "topics": [
+      "strings",
+      "algorithms",
       "control-flow (loops)"
     ]
   }, {
