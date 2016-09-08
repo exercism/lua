@@ -71,6 +71,7 @@
     "alphametics",
     "prime-factors",
     "acronym",
+    "all-your-base",
     "rectangles",
     "allergies",
     "pov",
@@ -602,6 +603,14 @@
     "difficulty": 4,
     "topics": [
       "strings",
+      "control-flow (loops)"
+    ]
+  }, {
+    "slug": "all-your-base",
+    "difficulty": 4,
+    "topics": [
+      "mathematics",
+      "arrays",
       "control-flow (loops)"
     ]
   }, {
