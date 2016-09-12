@@ -643,9 +643,8 @@
     ]
   }, {
     "slug": "change",
-    "difficulty": 7,
+    "difficulty": 4,
     "topics": [
-      "recursion",
       "control-flow (if-else statements)",
       "control-flow (loops)"
     ]
