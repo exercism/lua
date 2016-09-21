@@ -23,7 +23,7 @@ Then create a folder for a new test, test class and the implementation.
     -rw-r--r--@ 1 aarti  staff  1111 Nov 25 14:05 bob_test.lua
     -rw-r--r--@ 1 aarti  staff   453 Nov 25 14:05 bob.lua
 
-Run the test    
+Run the test
 
     $ busted .
 
@@ -48,6 +48,9 @@ Please see the [contributing guide](https://github.com/exercism/x-api/blob/maste
 The MIT License (MIT)
 
 Copyright (c) 2014 Katrina Owen, _@kytrinyx.com
+
+### Lua icon
+The Lua icon is inspired by the [Lua logo](http://www.lua.org/images/), which was designed by Alexandre Nakonechnyj.
 
 [1]: http://brew.sh/
 [2]: http://luarocks.org/
