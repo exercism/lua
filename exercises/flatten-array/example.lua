@@ -6,7 +6,8 @@ end
 
 local function flatten(input)
   local flattened = {}
-  for _, element in ipairs(input) do
+  for i=1, #input do
+    local element = input[i]
     if type(element) == 'table' then
       append(flattened, flatten(element))
     else

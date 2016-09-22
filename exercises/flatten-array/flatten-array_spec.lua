@@ -33,4 +33,11 @@ describe('flatten-array', function()
       flatten({ { { {  } } }, { { } } })
     )
   end)
+
+  it('should flatten array from readme example', function()
+    assert.are.same(
+      {1,2,3,4,5},
+      flatten({1,{2,3,nil,4},{null},5})
+    )
+  end)
 end)
