@@ -2,9 +2,7 @@ local pov_from = require('pov').pov_from
 local path_from = require('pov').path_from
 
 describe('pov', function()
-
   describe('pov_from.of', function()
-
     it('should give the POV of a singleton as the singleton', function()
       assert.same({ 'x' }, pov_from('x').of({ 'x' }))
     end)
@@ -124,11 +122,9 @@ describe('pov', function()
       pov_from('leaf').of(tree)
       assert.same(original_tree, tree)
     end)
-
   end)
 
   describe('path_from.to.of', function()
-
     it('should be able to give the path from a leaf to the root of a simple tree', function()
       local simple_tree =
         { 'parent', {
@@ -189,7 +185,5 @@ describe('pov', function()
       path_from('leaf').to('parent').of(tree)
       assert.same(original_tree, tree)
     end)
-
   end)
-
 end)
