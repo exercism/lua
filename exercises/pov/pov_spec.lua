@@ -20,13 +20,6 @@ describe('pov', function()
       assert.same(expected, pov_from('leaf').of(simple_tree))
     end)
 
-    it('should be able give the POV of a leaf in a simple tree', function()
-      local simple_tree = { 'parent', {{ 'sibling' }, { 'leaf' }}}
-      local expected = { 'leaf', {{ 'parent', {{ 'sibling' }}}}}
-
-      assert.same(expected, pov_from('leaf').of(simple_tree))
-    end)
-
     it('should be able give the POV of the leaf of a deeply nested tree', function()
       local deeply_nested_tree =
         { 'level1', {
