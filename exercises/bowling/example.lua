@@ -22,6 +22,7 @@ return function()
       table.insert(current, pins)
 
       if #current == 3 and strike() then
+        assert(current[2] == 10 or current[2] + current[3] <= 10, 'illegal roll')
         table.insert(frames, current[1] + current[2] + current[3])
         table.remove(current, 1)
       end
@@ -33,7 +34,9 @@ return function()
       end
 
       if #frames < 10 and #current == 2 and not spare() and not strike() then
-        table.insert(frames, current[1] + current[2])
+        local total = current[1] + current[2]
+        assert(total <= 10, 'illegal roll')
+        table.insert(frames, total)
         table.remove(current, 1)
         table.remove(current, 1)
       end
