@@ -575,6 +575,14 @@
       "control-flow (if-else statements)",
       "control-flow (loops)"
     ]
+  }, {
+    "slug": "secret-handshake",
+    "difficulty": 3,
+    "topics": [
+      "control-flow (if-else statements)",
+      "arrays",
+      "bitwise operations"
+    ]
   }],
   "deprecated": [
 
