@@ -559,6 +559,14 @@
       "control-flow (loops)"
     ]
   }, {
+    "slug": "say",
+    "difficulty": 7,
+    "topics": [
+      "strings",
+      "text formatting",
+      "control-flow (loops)"
+    ]
+  }, {
     "slug": "pov",
     "difficulty": 9,
     "topics": [
