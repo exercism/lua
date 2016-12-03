@@ -1,17 +1,68 @@
 ### Getting started
-First install lua and [luarocks][2] using [homebrew][1]
+#### MacOS
+First install Lua and [Luarocks][2] using [Homebrew][1]:
 
-    $ brew install lua
+```shell
+$ brew install lua
+```
 
-Then install [busted][3] testing framework for lua
+Then install the [Busted][3] testing framework for Lua:
 
-    $ luarocks install busted
+```shell
+$ luarocks install busted
+```
 
-Then run your test
+Then run your tests:
 
-    $ busted .
+```shell
+$ busted .
+```
 
-Other resources
+#### Ubuntu
+First install Lua and [Luarocks][2] using [Apt][6]:
+
+```shell
+$ sudo apt-get install lua5.3 luarocks
+```
+
+Then install the [Busted][3] testing framework for Lua:
+
+```shell
+$ luarocks install busted
+```
+
+If this fails, you may need to use `sudo`:
+
+```shell
+$ sudo luarocks install busted
+```
+
+Then run your tests:
+
+```shell
+$ busted .
+```
+
+#### Windows
+First install Lua and [Luarocks][2] using [Chocolatey][7]:
+
+```
+C:\> choco install lua
+```
+
+Then install the [Busted][3] testing framework for Lua:
+
+```
+C:\> luarocks install busted
+```
+
+Then run your tests:
+
+```
+C:\> busted .
+```
+
+#### Other resources
 
   1. [Lua Style Guide][4]
   2. [Learn Lua in 15 minutes][5]
@@ -21,3 +72,5 @@ Other resources
 [3]: http://olivinelabs.com/busted/
 [4]: https://github.com/Olivine-Labs/lua-style-guide
 [5]: http://tylerneylon.com/a/learn-lua/
+[6]: https://help.ubuntu.com/lts/serverguide/apt.html
+[7]: http://chocolatey.org/
