@@ -67,7 +67,7 @@ end
 return function(n)
   if n < 0 or n > 999999999999 then return -1 end
 
-  local blahs = {}
+  local groups = {}
   local group_index = 0
 
   while n > 0 do
@@ -77,16 +77,16 @@ return function(n)
       if group_name[group_index] then
         group = group .. ' ' .. group_name[group_index]
       end
-      table.insert(blahs, 1, group)
+      table.insert(groups, 1, group)
     end
 
     n = n // 1000
     group_index = group_index + 1
   end
 
-  if #blahs == 0 then
+  if #groups == 0 then
     return 'zero'
   else
-    return table.concat(blahs, ' ')
+    return table.concat(groups, ' ')
   end
 end
