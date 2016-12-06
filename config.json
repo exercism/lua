@@ -55,6 +55,15 @@
       "mathematics"
     ]
   }, {
+    "slug": "variable-length-quantity",
+    "difficulty": 6,
+    "topics": [
+      "control-flow (if-else statements)",
+      "control-flow (loops)",
+      "bitwise operations",
+      "arrays"
+    ]
+  }, {
     "slug": "anagram",
     "difficulty": 6,
     "topics": [
