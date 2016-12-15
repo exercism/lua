@@ -434,6 +434,14 @@
       "control-flow (loops)"
     ]
   }, {
+    "slug": "meetup",
+    "difficulty": 6,
+    "topics": [
+      "time",
+      "control-flow (if-statements)",
+      "control-flow (loops)"
+    ]
+  }, {
     "slug": "atbash-cipher",
     "difficulty": 3,
     "topics": [
