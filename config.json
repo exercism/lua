@@ -489,6 +489,16 @@
       "control-flow (loops)"
     ]
   }, {
+    "slug": "tournament",
+    "difficulty": 5,
+    "topics": [
+      "arrays",
+      "strings",
+      "text formatting",
+      "text parsing",
+      "control-flow (loops)"
+    ]
+  }, {
     "slug": "circular-buffer",
     "difficulty": 4,
     "topics": [
