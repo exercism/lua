@@ -1,3 +1,3 @@
-run your tests with
+Run your tests with
 
     $ busted .
