@@ -66,6 +66,7 @@ local row_pattern = ('[^\n]+\n'):rep(4) .. '*'
 local function lines(s)
   local lines = {}
   for line in s:gmatch('[^\n]+') do
+    assert(#line % 3 == 0)
     table.insert(lines, line)
   end
   return lines
@@ -74,6 +75,9 @@ end
 local function parse(row)
   local result = ''
   local lines = lines(row)
+  assert(#lines[1] == #lines[2] and
+         #lines[2] == #lines[3] and
+         #lines[3] == #lines[4])
   for i = 1, #lines[1], 3 do
     local character = ''
     for line = 1, 4 do
