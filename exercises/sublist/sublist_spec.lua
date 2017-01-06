@@ -13,6 +13,10 @@ describe('sublist', function()
     assert.equal(true, is_sublist({ 1, 2, 3 }, { 1, 2, 3 }))
   end)
 
+  it('should not consider a subset to be a sublist', function()
+    assert.equal(false, is_sublist({ 1, 2, 3 }, { 2, 1, 3 }))
+  end)
+
   it('should find a sublist at the beginning of a list', function()
     assert.equal(true, is_sublist({ 11, 22, 33 }, { 11, 22, 33, 44, 55 }))
   end)
