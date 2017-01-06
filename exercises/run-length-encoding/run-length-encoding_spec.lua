@@ -5,8 +5,16 @@ describe('run-length-encoding', function()
     assert.equal('2A3B4C', rle.encode('AABBBCCCC'))
   end)
 
+  it('should encode strings with multi-digit run lengths', function()
+    assert.equal('2A10B4C', rle.encode('AABBBBBBBBBBCCCC'))
+  end)
+
   it('should decode simple strings', function()
     assert.equal('AABBBCCCC', rle.decode('2A3B4C'))
+  end)
+
+  it('should decode strings with multi-digit run lengths', function()
+    assert.equal('AABBBBBBBBBBCCCC', rle.decode('2A10B4C'))
   end)
 
   it('should not encode characters with a run length of 1', function()
