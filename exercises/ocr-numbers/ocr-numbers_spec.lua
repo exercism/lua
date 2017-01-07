@@ -158,4 +158,24 @@ describe('ocr-numbers', function()
     )
     assert.equal('123,456,789', actual)
   end)
+
+  it('should generate error if input is incorrectly sized', function()
+      assert.has_error(function() ocr.convert(
+        ' _ \n' ..
+        '||\n' ..
+        '|_|\n' ..
+        '   ') end)
+
+      assert.has_error(function() ocr.convert(
+        '     _ \n' ..
+        '  | _| _|\n' ..
+        '  |_  _|\n' ..
+        '         \n') end)
+
+      assert.has_error(function() ocr.convert(
+        '    _  _ \n' ..
+        '  | _| _|\n' ..
+        '  ||_ \n' ..
+        '         \n') end)
+  end)
 end)
