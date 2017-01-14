@@ -1,3 +1,14 @@
+--[[-
+Note that because ipairs and the length operator work correctly only for sequences
+in Lua, no arrays with nils are included in these tests. This means that the provided
+example is not included here:
+
+  input: [1,[2,3,null,4],[null],5]
+  output: [1,2,3,4,5]
+
+See https://www.lua.org/manual/5.3/manual.html#3.4.7 for more information.
+]]
+
 local flatten = require 'flatten-array'
 
 describe('flatten-array', function()
