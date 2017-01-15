@@ -1,0 +1,1 @@
+Lua is a very small language and you can [learn the basics of the language in 15 minutes](tylerneylon.com/a/learn-lua/). For an exhaustive look at the language, written by the authors of Lua, you can read [Programming in Lua](https://www.lua.org/pil/) (the first edition which covers Lua 5.1 [is available online for free](https://www.lua.org/pil/contents.html)).

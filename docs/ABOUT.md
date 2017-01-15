@@ -4,6 +4,6 @@ Lua supports procedural, object-oriented, functional, data-driven programming an
 
 Lua has been used in [many industrial applications](https://sites.google.com/site/marbux/home/where-lua-is-used#8S4UcLlroV5fq8i3WSheIA) with an emphasis on embedded systems and games.
 
-The home page for Lua is [Lua.org](https://www.lua.org/). You can [learn the language in 15 minutes](tylerneylon.com/a/learn-lua/). Enjoy!
+The home page for Lua is [Lua.org](https://www.lua.org/). Enjoy!
 
 (Taken from https://www.lua.org/about.html)
