@@ -1,7 +1,7 @@
 local function Grid(s)
   local width = 0
   local rows = {}
-  for row in s:gmatch('([^\n]*)\n?') do
+  for row in s:gmatch('[^\n]*') do
     table.insert(rows, row)
     width = math.max(width, #row)
   end
