@@ -17,6 +17,22 @@ describe('transpose', function()
     assert.are.equal('S\ni\nn\ng\nl\ne\n \nl\ni\nn\ne\n.', transpose('Single line.'))
   end)
 
+  it('should transpose a string with empty lines', function()
+    local input =
+      '\n' ..
+      'Line 2\n' ..
+      '\n' ..
+      'L4'
+    local expected =
+      ' L L\n' ..
+      ' i 4\n' ..
+      ' n\n' ..
+      ' e\n' ..
+      '  \n' ..
+      ' 2'
+    assert.are.equal(expected, transpose(input))
+  end)
+
   it('should transpose a string with the first line longer than the second', function()
     local input =
       'The fourth line.\n' ..
