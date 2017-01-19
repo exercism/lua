@@ -63,7 +63,7 @@ describe('list-ops', function()
   describe('filter', function()
     local function always_true() return true end
     local function always_false() return false end
-    local function is_even(x) return x %2 == 0 end
+    local function is_even(x) return x % 2 == 0 end
 
     it('should return an empty array and not call the predicate when the input is an empty array', function()
       assert.same({}, filter({}, should_not_be_called))
