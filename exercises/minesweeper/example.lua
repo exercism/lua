@@ -53,10 +53,6 @@ function board:empty_spaces()
   end)
 end
 
-function board:__tostring()
-  return self.rep
-end
-
 local function transform(board)
   local board = Board(board)
 
@@ -68,7 +64,7 @@ local function transform(board)
     if mines > 0 then board:set(x, y, tostring(mines)) end
   end
 
-  return tostring(board)
+  return board.rep
 end
 
 return {
