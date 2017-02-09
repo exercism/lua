@@ -12,7 +12,6 @@ There are many great free online resources for Lua including:
     -   [luacheck][12]
     -   [Detecting Undefined Variables][13]
 
-
 [4]: https://github.com/Olivine-Labs/lua-style-guide
 [5]: http://tylerneylon.com/a/learn-lua/
 [6]: http://www.lua.org/pil/
