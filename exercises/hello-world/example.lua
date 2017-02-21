@@ -1,8 +1,7 @@
 local hello_world = {}
 
-function hello_world.hello( name )
-  if not name or name == '' then name = 'world' end
-  return 'Hello, ' .. name .. '!'
+function hello_world.hello()
+  return 'Hello, World!'
 end
 
 return hello_world
