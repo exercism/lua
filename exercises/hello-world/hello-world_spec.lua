@@ -1,18 +1,11 @@
 local hello_world = require('hello-world')
 
+-- Define a module named hello-world. This module should contain a single
+-- function named hello that takes no arguments and returns a string.
+
 describe('hello-world', function()
-  it('says hello world with no name', function()
+  it('says hello world', function()
     local result = hello_world.hello()
-    assert.are.equal('Hello, world!', result)
-  end)
-
-  it('says hello to Bob', function()
-    local result = hello_world.hello('Bob')
-    assert.are.equal('Hello, Bob!', result)
-  end)
-
-  it('says hello to Sally', function()
-    local result = hello_world.hello('Sally')
-    assert.are.equal('Hello, Sally!', result)
+    assert.are.equal('Hello, World!', result)
   end)
 end)
