@@ -13,13 +13,6 @@
       "text formatting"
     ]
   }, {
-    "slug": "accumulate",
-    "difficulty": 2,
-    "topics": [
-      "arrays",
-      "control-flow (loops)"
-    ]
-  }, {
     "slug": "hamming",
     "difficulty": 2,
     "topics": [
@@ -620,7 +613,7 @@
     ]
   }],
   "deprecated": [
-
+    "accumulate"
   ],
   "ignored": [
     "docs"
