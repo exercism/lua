@@ -53,11 +53,6 @@ existing problems and adding new problems.
 
 Pleases see the [Useful Lua Resources][7] page.
 
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2014 Katrina Owen, _@kytrinyx.com
 
 ## Lua icon
 The Lua icon is inspired by the [Lua logo](http://www.lua.org/images/), which was designed by Alexandre Nakonechnyj.
