@@ -4,614 +4,690 @@
   "repository": "https://github.com/exercism/xlua",
   "active": true,
   "test_pattern": ".*spec[.]lua$",
-  "exercises": [{
-    "slug": "hello-world",
-    "difficulty": 1,
-    "topics": [
-      "control-flow (if-statements)",
-      "optional values",
-      "text formatting"
-    ]
-  }, {
-    "slug": "hamming",
-    "difficulty": 2,
-    "topics": [
-      "strings",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "house",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "text formatting",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "raindrops",
-    "difficulty": 1,
-    "topics": [
-      "strings",
-      "control-flow (if-else statements)"
-    ]
-  }, {
-    "slug": "bob",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "control-flow (if-else statements)"
-    ]
-  }, {
-    "slug": "difference-of-squares",
-    "difficulty": 2,
-    "topics": [
-      "mathematics"
-    ]
-  }, {
-    "slug": "variable-length-quantity",
-    "difficulty": 6,
-    "topics": [
-      "control-flow (if-else statements)",
-      "control-flow (loops)",
-      "bitwise operations",
-      "arrays"
-    ]
-  }, {
-    "slug": "anagram",
-    "difficulty": 6,
-    "topics": [
-      "strings",
-      "algorithms",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "octal",
-    "difficulty": 4,
-    "topics": [
-      "strings",
-      "bitwise operations",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "binary-search",
-    "difficulty": 4,
-    "topics": [
-      "arrays",
-      "algorithms",
-      "searching",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "bracket-push",
-    "difficulty": 5,
-    "topics": [
-      "stacks",
-      "strings",
-      "algorithms",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "flatten-array",
-    "difficulty": 5,
-    "topics": [
-      "arrays",
-      "recursion",
-      "algorithms",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "word-count",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "pangram",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "matrix",
-    "difficulty": 3,
-    "topics": [
-      "matrices",
-      "arrays",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "beer-song",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "text formatting",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "isogram",
-    "difficulty": 2,
-    "topics": [
-      "strings",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "perfect-numbers",
-    "difficulty": 3,
-    "topics": [
-      "mathematics",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "etl",
-    "difficulty": 3,
-    "topics": [
-      "transforming",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "nucleotide-count",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "exception handling",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "food-chain",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "sum-of-multiples",
-    "difficulty": 2,
-    "topics": [
-      "mathematics",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "rna-transcription",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "transforming",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "phone-number",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "text formatting",
-      "control-flow (if-else statements)"
-    ]
-  }, {
-    "slug": "bank-account",
-    "difficulty": 3,
-    "topics": [
-      "classes",
-      "control-flow (if-else statements)"
-    ]
-  }, {
-    "slug": "protein-translation",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "control-flow (if-else statements)",
-      "control-flow (loops)",
-      "exception handling"
-    ]
-  }, {
-    "slug": "grade-school",
-    "difficulty": 4,
-    "topics": [
-      "classes",
-      "control-flow (if-else statements)"
-    ]
-  }, {
-    "slug": "nth-prime",
-    "difficulty": 4,
-    "topics": [
-      "mathematics",
-      "control-flow (if-else statements)",
-      "control-flow (loops)",
-      "exception handling"
-    ]
-  }, {
-    "slug": "diamond",
-    "difficulty": 4,
-    "topics": [
-      "control-flow (loops)",
-      "strings",
-      "text formatting",
-      "algorithms"
-    ]
-  }, {
-    "slug": "run-length-encoding",
-    "difficulty": 5,
-    "topics": [
-      "strings",
-      "algorithms",
-      "text formatting",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "sublist",
-    "difficulty": 4,
-    "topics": [
-      "arrays",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "robot-name",
-    "difficulty": 4,
-    "topics": [
-      "strings",
-      "randomness",
-      "text formatting"
-    ]
-  }, {
-    "slug": "robot-simulator",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "classes",
-      "exception handling"
-    ]
-  }, {
-    "slug": "pythagorean-triplet",
-    "difficulty": 3,
-    "topics": [
-      "mathematics",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "leap",
-    "difficulty": 1,
-    "topics": [
-      "logic",
-      "control-flow (if-else statements)"
-    ]
-  }, {
-    "slug": "space-age",
-    "difficulty": 2,
-    "topics": [
-      "classes"
-    ]
-  }, {
-    "slug": "pascals-triangle",
-    "difficulty": 5,
-    "topics": [
-      "mathematics",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "sieve",
-    "difficulty": 4,
-    "topics": [
-      "mathematics",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "grains",
-    "difficulty": 2,
-    "topics": [
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "kindergarten-garden",
-    "difficulty": 5,
-    "topics": [
-      "strings",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "custom-set",
-    "difficulty": 6,
-    "topics": [
-      "classes",
-      "sets",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "gigasecond",
-    "difficulty": 2,
-    "topics": [
-      "time"
-    ]
-  }, {
-    "slug": "word-search",
-    "difficulty": 7,
-    "topics": [
-      "strings",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "luhn",
-    "difficulty": 4,
-    "topics": [
-      "strings",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "triangle",
-    "difficulty": 3,
-    "topics": [
-      "control-flow (if-else statements)",
-      "exception handling"
-    ]
-  }, {
-    "slug": "clock",
-    "difficulty": 3,
-    "topics": [
-      "classes"
-    ]
-  }, {
-    "slug": "series",
-    "difficulty": 4,
-    "topics": [
-      "coroutines",
-      "arrays",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "linked-list",
-    "difficulty": 4,
-    "topics": [
-      "classes",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "ocr-numbers",
-    "difficulty": 7,
-    "topics": [
-      "strings",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "pig-latin",
-    "difficulty": 5,
-    "topics": [
-      "strings",
-      "text formatting",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "minesweeper",
-    "difficulty": 7,
-    "topics": [
-      "arrays",
-      "strings",
-      "control-flow (if-else statements)",
-      "control-flow (loops)",
-      "exception handling"
-    ]
-  }, {
-    "slug": "crypto-square",
-    "difficulty": 5,
-    "topics": [
-      "strings",
-      "text formatting",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "list-ops",
-    "difficulty": 4,
-    "topics": [
-      "arrays",
-      "filtering",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "meetup",
-    "difficulty": 6,
-    "topics": [
-      "time",
-      "control-flow (if-statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "atbash-cipher",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "text formatting",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "scrabble-score",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "largest-series-product",
-    "difficulty": 5,
-    "topics": [
-      "control-flow (loops)",
-      "exception handling"
-    ]
-  }, {
-    "slug": "rail-fence-cipher",
-    "difficulty": 7,
-    "topics": [
-      "strings",
-      "text formatting",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "roman-numerals",
-    "difficulty": 4,
-    "topics": [
-      "strings",
-      "text formatting",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "transpose",
-    "difficulty": 7,
-    "topics": [
-      "strings",
-      "algorithms",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "tournament",
-    "difficulty": 5,
-    "topics": [
-      "arrays",
-      "strings",
-      "text formatting",
-      "text parsing",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "circular-buffer",
-    "difficulty": 4,
-    "topics": [
-      "classes",
-      "control-flow (if-else statements)",
-      "exception handling"
-    ]
-  }, {
-    "slug": "binary-search-tree",
-    "difficulty": 5,
-    "topics": [
-      "coroutines",
-      "trees",
-      "algorithms",
-      "searching",
-      "recursion",
-      "exception handling"
-    ]
-  }, {
-    "slug": "bowling",
-    "difficulty": 4,
-    "topics": [
-      "algorithms",
-      "control-flow (if-else statements)",
-      "exception handling"
-    ]
-  }, {
-    "slug": "binary",
-    "difficulty": 3,
-    "topics": [
-      "strings",
-      "bitwise operations",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "alphametics",
-    "difficulty": 8,
-    "topics": [
-      "strings",
-      "algorithms",
-      "performance",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "prime-factors",
-    "difficulty": 4,
-    "topics": [
-      "mathematics",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "acronym",
-    "difficulty": 4,
-    "topics": [
-      "strings",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "all-your-base",
-    "difficulty": 4,
-    "topics": [
-      "mathematics",
-      "arrays",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "rectangles",
-    "difficulty": 8,
-    "topics": [
-      "strings",
-      "performance",
-      "control-flow (if-else statements)",
-      "control-flow (loops)",
-      "algorithms"
-    ]
-  }, {
-    "slug": "allergies",
-    "difficulty": 4,
-    "topics": [
-      "bitwise operations",
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "say",
-    "difficulty": 7,
-    "topics": [
-      "strings",
-      "text formatting",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "pov",
-    "difficulty": 9,
-    "topics": [
-      "graphs",
-      "algorithms",
-      "control-flow (if-else statements)",
-      "control-flow (loops)",
-      "exception handling"
-    ]
-  }, {
-    "slug": "change",
-    "difficulty": 4,
-    "topics": [
-      "control-flow (if-else statements)",
-      "control-flow (loops)"
-    ]
-  }, {
-    "slug": "secret-handshake",
-    "difficulty": 3,
-    "topics": [
-      "control-flow (if-else statements)",
-      "arrays",
-      "bitwise operations"
-    ]
-  }],
+  "exercises": [
+    {
+      "slug": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "control-flow (if-statements)",
+        "optional values",
+        "text formatting"
+      ]
+    },
+    {
+      "slug": "hamming",
+      "difficulty": 2,
+      "topics": [
+        "strings",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "house",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "text formatting",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "raindrops",
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "control-flow (if-else statements)"
+      ]
+    },
+    {
+      "slug": "bob",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "control-flow (if-else statements)"
+      ]
+    },
+    {
+      "slug": "difference-of-squares",
+      "difficulty": 2,
+      "topics": [
+        "mathematics"
+      ]
+    },
+    {
+      "slug": "variable-length-quantity",
+      "difficulty": 6,
+      "topics": [
+        "control-flow (if-else statements)",
+        "control-flow (loops)",
+        "bitwise operations",
+        "arrays"
+      ]
+    },
+    {
+      "slug": "anagram",
+      "difficulty": 6,
+      "topics": [
+        "strings",
+        "algorithms",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "octal",
+      "difficulty": 4,
+      "topics": [
+        "strings",
+        "bitwise operations",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "binary-search",
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "algorithms",
+        "searching",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "bracket-push",
+      "difficulty": 5,
+      "topics": [
+        "stacks",
+        "strings",
+        "algorithms",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "flatten-array",
+      "difficulty": 5,
+      "topics": [
+        "arrays",
+        "recursion",
+        "algorithms",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "word-count",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "pangram",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "matrix",
+      "difficulty": 3,
+      "topics": [
+        "matrices",
+        "arrays",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "beer-song",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "text formatting",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "isogram",
+      "difficulty": 2,
+      "topics": [
+        "strings",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "perfect-numbers",
+      "difficulty": 3,
+      "topics": [
+        "mathematics",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "etl",
+      "difficulty": 3,
+      "topics": [
+        "transforming",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "nucleotide-count",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "exception handling",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "food-chain",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "sum-of-multiples",
+      "difficulty": 2,
+      "topics": [
+        "mathematics",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "rna-transcription",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "transforming",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "phone-number",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "text formatting",
+        "control-flow (if-else statements)"
+      ]
+    },
+    {
+      "slug": "bank-account",
+      "difficulty": 3,
+      "topics": [
+        "classes",
+        "control-flow (if-else statements)"
+      ]
+    },
+    {
+      "slug": "protein-translation",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "control-flow (if-else statements)",
+        "control-flow (loops)",
+        "exception handling"
+      ]
+    },
+    {
+      "slug": "grade-school",
+      "difficulty": 4,
+      "topics": [
+        "classes",
+        "control-flow (if-else statements)"
+      ]
+    },
+    {
+      "slug": "nth-prime",
+      "difficulty": 4,
+      "topics": [
+        "mathematics",
+        "control-flow (if-else statements)",
+        "control-flow (loops)",
+        "exception handling"
+      ]
+    },
+    {
+      "slug": "diamond",
+      "difficulty": 4,
+      "topics": [
+        "control-flow (loops)",
+        "strings",
+        "text formatting",
+        "algorithms"
+      ]
+    },
+    {
+      "slug": "run-length-encoding",
+      "difficulty": 5,
+      "topics": [
+        "strings",
+        "algorithms",
+        "text formatting",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "sublist",
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "robot-name",
+      "difficulty": 4,
+      "topics": [
+        "strings",
+        "randomness",
+        "text formatting"
+      ]
+    },
+    {
+      "slug": "robot-simulator",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "classes",
+        "exception handling"
+      ]
+    },
+    {
+      "slug": "pythagorean-triplet",
+      "difficulty": 3,
+      "topics": [
+        "mathematics",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "leap",
+      "difficulty": 1,
+      "topics": [
+        "logic",
+        "control-flow (if-else statements)"
+      ]
+    },
+    {
+      "slug": "space-age",
+      "difficulty": 2,
+      "topics": [
+        "classes"
+      ]
+    },
+    {
+      "slug": "pascals-triangle",
+      "difficulty": 5,
+      "topics": [
+        "mathematics",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "sieve",
+      "difficulty": 4,
+      "topics": [
+        "mathematics",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "grains",
+      "difficulty": 2,
+      "topics": [
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "kindergarten-garden",
+      "difficulty": 5,
+      "topics": [
+        "strings",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "custom-set",
+      "difficulty": 6,
+      "topics": [
+        "classes",
+        "sets",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "gigasecond",
+      "difficulty": 2,
+      "topics": [
+        "time"
+      ]
+    },
+    {
+      "slug": "word-search",
+      "difficulty": 7,
+      "topics": [
+        "strings",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "luhn",
+      "difficulty": 4,
+      "topics": [
+        "strings",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "triangle",
+      "difficulty": 3,
+      "topics": [
+        "control-flow (if-else statements)",
+        "exception handling"
+      ]
+    },
+    {
+      "slug": "clock",
+      "difficulty": 3,
+      "topics": [
+        "classes"
+      ]
+    },
+    {
+      "slug": "series",
+      "difficulty": 4,
+      "topics": [
+        "coroutines",
+        "arrays",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "linked-list",
+      "difficulty": 4,
+      "topics": [
+        "classes",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "ocr-numbers",
+      "difficulty": 7,
+      "topics": [
+        "strings",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "pig-latin",
+      "difficulty": 5,
+      "topics": [
+        "strings",
+        "text formatting",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "minesweeper",
+      "difficulty": 7,
+      "topics": [
+        "arrays",
+        "strings",
+        "control-flow (if-else statements)",
+        "control-flow (loops)",
+        "exception handling"
+      ]
+    },
+    {
+      "slug": "crypto-square",
+      "difficulty": 5,
+      "topics": [
+        "strings",
+        "text formatting",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "list-ops",
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "filtering",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "meetup",
+      "difficulty": 6,
+      "topics": [
+        "time",
+        "control-flow (if-statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "atbash-cipher",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "text formatting",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "scrabble-score",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "largest-series-product",
+      "difficulty": 5,
+      "topics": [
+        "control-flow (loops)",
+        "exception handling"
+      ]
+    },
+    {
+      "slug": "rail-fence-cipher",
+      "difficulty": 7,
+      "topics": [
+        "strings",
+        "text formatting",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "roman-numerals",
+      "difficulty": 4,
+      "topics": [
+        "strings",
+        "text formatting",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "transpose",
+      "difficulty": 7,
+      "topics": [
+        "strings",
+        "algorithms",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "tournament",
+      "difficulty": 5,
+      "topics": [
+        "arrays",
+        "strings",
+        "text formatting",
+        "text parsing",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "circular-buffer",
+      "difficulty": 4,
+      "topics": [
+        "classes",
+        "control-flow (if-else statements)",
+        "exception handling"
+      ]
+    },
+    {
+      "slug": "binary-search-tree",
+      "difficulty": 5,
+      "topics": [
+        "coroutines",
+        "trees",
+        "algorithms",
+        "searching",
+        "recursion",
+        "exception handling"
+      ]
+    },
+    {
+      "slug": "bowling",
+      "difficulty": 4,
+      "topics": [
+        "algorithms",
+        "control-flow (if-else statements)",
+        "exception handling"
+      ]
+    },
+    {
+      "slug": "binary",
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "bitwise operations",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "alphametics",
+      "difficulty": 8,
+      "topics": [
+        "strings",
+        "algorithms",
+        "performance",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "prime-factors",
+      "difficulty": 4,
+      "topics": [
+        "mathematics",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "acronym",
+      "difficulty": 4,
+      "topics": [
+        "strings",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "all-your-base",
+      "difficulty": 4,
+      "topics": [
+        "mathematics",
+        "arrays",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "rectangles",
+      "difficulty": 8,
+      "topics": [
+        "strings",
+        "performance",
+        "control-flow (if-else statements)",
+        "control-flow (loops)",
+        "algorithms"
+      ]
+    },
+    {
+      "slug": "allergies",
+      "difficulty": 4,
+      "topics": [
+        "bitwise operations",
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "say",
+      "difficulty": 7,
+      "topics": [
+        "strings",
+        "text formatting",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "pov",
+      "difficulty": 9,
+      "topics": [
+        "graphs",
+        "algorithms",
+        "control-flow (if-else statements)",
+        "control-flow (loops)",
+        "exception handling"
+      ]
+    },
+    {
+      "slug": "change",
+      "difficulty": 4,
+      "topics": [
+        "control-flow (if-else statements)",
+        "control-flow (loops)"
+      ]
+    },
+    {
+      "slug": "secret-handshake",
+      "difficulty": 3,
+      "topics": [
+        "control-flow (if-else statements)",
+        "arrays",
+        "bitwise operations"
+      ]
+    }
+  ],
   "deprecated": [
     "accumulate"
   ],
