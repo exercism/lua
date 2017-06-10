@@ -691,9 +691,6 @@
   "deprecated": [
     "accumulate"
   ],
-  "ignored": [
-    "docs"
-  ],
   "foregone": [
 
   ]
