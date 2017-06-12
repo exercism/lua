@@ -44,23 +44,24 @@ Rename *bob.lua* to *example.lua*, and add the exercise to the [xlua/config.json
 
 ## Contributing Guide
 
-Please be familiar with the [contributing guide][6] in the x-common repository.
-This describes how all the language tracks are put together, as well as details
-about the common metadata, and high-level information about contributing to
-existing problems and adding new problems.
+Please be familiar with the [contributing guide][6] in the docs repository.
+This describes some great ways to get involved. In particular, please read the
+[Pull Request Guidelines][7] before opening a pull request.
 
 ## Other Resources
 
-Pleases see the [Useful Lua Resources][7] page.
+Pleases see the [Useful Lua Resources][8] page.
 
 
 ## Lua icon
-The Lua icon is inspired by the [Lua logo](http://www.lua.org/images/), which was designed by Alexandre Nakonechnyj.
+The Lua icon is inspired by the [Lua logo][9], which was designed by Alexandre Nakonechnyj.
 
 [1]: http://exercism.io/languages/lua/installing
 [2]: https://help.github.com/articles/fork-a-repo/
 [3]: https://help.github.com/articles/creating-a-pull-request/
 [4]: https://github.com/exercism/xlua/tree/master/exercises/bob
 [5]: https://github.com/exercism/xlua/blob/master/config.json
-[6]: https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md
-[7]: http://exercism.io/languages/lua/resources
+[6]: https://github.com/exercism/docs/tree/master/contributing-to-language-tracks
+[7]: https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/pull-request-guidelines.md
+[8]: http://exercism.io/languages/lua/resources
+[9]: http://www.lua.org/images/
