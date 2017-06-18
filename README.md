@@ -1,6 +1,6 @@
-# xLua
+# Lua
 
-[![Build Status](https://travis-ci.org/exercism/xlua.svg?branch=master)](https://travis-ci.org/exercism/xlua)
+[![Build Status](https://travis-ci.org/exercism/lua.svg?branch=master)](https://travis-ci.org/exercism/lua)
 
 Exercism exercises in Lua
 
