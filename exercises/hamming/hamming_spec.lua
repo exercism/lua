@@ -1,7 +1,7 @@
 local compute = require('hamming').compute
 
 describe('hamming', function ()
-  it('no difference between identical strands', function ()
+  it('identical strands', function ()
     assert.are.equal(0, compute('A', 'A'))
   end)
 
@@ -9,20 +9,24 @@ describe('hamming', function ()
     assert.are.equal(0, compute('GGACTGA', 'GGACTGA'))
   end)
 
-  it('complete hamming distance of for single nucleotide strand', function ()
+  it('complete distance in single nucleotide strands', function ()
     assert.are.equal(1, compute('A', 'G'))
   end)
 
-  it('complete hamming distance of for small strand', function ()
+  it('complete distance in small strands', function ()
     assert.are.equal(2, compute('AG', 'CT'))
   end)
 
-  it('small hamming distance', function ()
+  it('small distance in small strands', function ()
     assert.are.equal(1, compute('AT', 'CT'))
   end)
 
-  it('small hamming distance in longer strand', function ()
+  it('small distance', function ()
     assert.are.equal(1, compute('GGACG', 'GGTCG'))
+  end)
+
+  it('small distance in long strands', function ()
+    assert.are.equal(2, compute('ACCAGGG', 'ACTATGG'))
   end)
 
   it('non unique character in first strand', function ()
@@ -33,11 +37,15 @@ describe('hamming', function ()
     assert.are.equal(1, compute('AGG', 'AGA'))
   end)
 
-  it('large hamming distance', function ()
+  it('same nucleotides in different positions', function ()
+    assert.are.equal(2, compute('TAG', 'GAT'))
+  end)
+
+  it('large distance', function ()
     assert.are.equal(4, compute('GATACA', 'GCATAA'))
   end)
 
-  it('hamming distance in very long strand', function ()
+  it('large distance in off-by-one strand', function ()
     assert.are.equal(9, compute('GGACGGATTCTG', 'AGGACGGATTCT'))
   end)
 
