@@ -16,7 +16,7 @@ install:
 
 before_script:
   - bin/fetch-configlet
-  - bin/configlet .
+  - bin/configlet lint .
 
 script:
   - bin/test-all
