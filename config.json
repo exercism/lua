@@ -911,11 +911,6 @@
         "arrays",
         "bitwise operations"
       ]
-    },
-    {
-      "uuid": "121732a1-e3a3-4791-9b83-ec8a61969d85",
-      "slug": "accumulate",
-      "deprecated": true
     }
   ],
   "foregone": [
