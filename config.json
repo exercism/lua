@@ -1,7 +1,5 @@
 {
-  "slug": "lua",
   "language": "Lua",
-  "repository": "https://github.com/exercism/lua",
   "active": true,
   "test_pattern": ".*spec[.]lua$",
   "exercises": [
