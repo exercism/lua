@@ -56,7 +56,7 @@ Pleases see the [Useful Lua Resources][8] page.
 ## Lua icon
 The Lua icon is inspired by the [Lua logo][9], which was designed by Alexandre Nakonechnyj.
 
-[1]: http://exercism.io/languages/lua/installing
+[1]: http://exercism.io/languages/lua/installation
 [2]: https://help.github.com/articles/fork-a-repo/
 [3]: https://help.github.com/articles/creating-a-pull-request/
 [4]: https://github.com/exercism/lua/tree/master/exercises/bob
