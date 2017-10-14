@@ -909,6 +909,19 @@
         "arrays",
         "bitwise operations"
       ]
+    },
+    {
+      "uuid": "beca7d79-9237-4344-b058-66e0fa840691",
+      "slug": "react",
+      "core": false,
+      "unlocked_by": "matrix",
+      "difficulty": 8,
+      "topics": [
+        "control-flow (if-else statements)",
+        "control-flow (loops)",
+        "functions",
+        "graphs"
+      ]
     }
   ],
   "foregone": [
