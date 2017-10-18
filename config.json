@@ -1,930 +1,928 @@
 {
-  "language": "Lua",
   "active": true,
-  "test_pattern": ".*spec[.]lua$",
   "exercises": [
     {
-      "uuid": "9099df24-f9fb-4bd0-8b7f-df52efed7840",
+      "core": true,
+      "difficulty": 1,
       "slug": "hello-world",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 1,
       "topics": [
-        "control-flow (if-statements)",
-        "optional values",
-        "text formatting"
-      ]
+        "control_flow_if_statements",
+        "optional_values",
+        "text_formatting"
+      ],
+      "unlocked_by": null,
+      "uuid": "9099df24-f9fb-4bd0-8b7f-df52efed7840"
     },
     {
-      "uuid": "23fde0b3-c57b-439f-a9ad-3cd6ae286b62",
+      "core": true,
+      "difficulty": 2,
       "slug": "hamming",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 2,
       "topics": [
-        "strings",
-        "control-flow (loops)"
-      ]
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "23fde0b3-c57b-439f-a9ad-3cd6ae286b62"
     },
     {
-      "uuid": "f38cd7b3-e1e6-4bcf-b1fe-c63ed94df636",
+      "core": true,
+      "difficulty": 3,
       "slug": "house",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 3,
       "topics": [
+        "control_flow_loops",
         "strings",
-        "text formatting",
-        "control-flow (loops)"
-      ]
+        "text_formatting"
+      ],
+      "unlocked_by": null,
+      "uuid": "f38cd7b3-e1e6-4bcf-b1fe-c63ed94df636"
     },
     {
-      "uuid": "faaa79ba-ddfa-42dd-8668-4aa811757dee",
-      "slug": "raindrops",
       "core": false,
-      "unlocked_by": "leap",
       "difficulty": 1,
+      "slug": "raindrops",
       "topics": [
-        "strings",
-        "control-flow (if-else statements)"
-      ]
-    },
-    {
-      "uuid": "9646d991-e3ad-475e-9231-c5723a73e57b",
-      "slug": "bob",
-      "core": false,
+        "control_flow_if_else_statements",
+        "strings"
+      ],
       "unlocked_by": "leap",
-      "difficulty": 3,
-      "topics": [
-        "strings",
-        "control-flow (if-else statements)"
-      ]
+      "uuid": "faaa79ba-ddfa-42dd-8668-4aa811757dee"
     },
     {
-      "uuid": "b985299f-c6eb-487e-9900-1b35a6e66dea",
-      "slug": "difference-of-squares",
+      "core": false,
+      "difficulty": 3,
+      "slug": "bob",
+      "topics": [
+        "control_flow_if_else_statements",
+        "strings"
+      ],
+      "unlocked_by": "leap",
+      "uuid": "9646d991-e3ad-475e-9231-c5723a73e57b"
+    },
+    {
       "core": true,
-      "unlocked_by": null,
       "difficulty": 2,
+      "slug": "difference-of-squares",
       "topics": [
         "mathematics"
-      ]
+      ],
+      "unlocked_by": null,
+      "uuid": "b985299f-c6eb-487e-9900-1b35a6e66dea"
     },
     {
-      "uuid": "312d3e2f-ac24-4e06-8e6c-f4651124c516",
+      "core": false,
+      "difficulty": 6,
       "slug": "variable-length-quantity",
-      "core": false,
+      "topics": [
+        "arrays",
+        "bitwise_operations",
+        "control_flow_if_else_statements",
+        "control_flow_loops"
+      ],
       "unlocked_by": "run-length-encoding",
-      "difficulty": 6,
-      "topics": [
-        "control-flow (if-else statements)",
-        "control-flow (loops)",
-        "bitwise operations",
-        "arrays"
-      ]
+      "uuid": "312d3e2f-ac24-4e06-8e6c-f4651124c516"
     },
     {
-      "uuid": "c8ac2fca-fdec-4562-9c60-fdee5b541186",
+      "core": false,
+      "difficulty": 6,
       "slug": "anagram",
-      "core": false,
-      "unlocked_by": "isogram",
-      "difficulty": 6,
       "topics": [
-        "strings",
         "algorithms",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": "isogram",
+      "uuid": "c8ac2fca-fdec-4562-9c60-fdee5b541186"
     },
     {
-      "uuid": "b64e6544-4778-40e8-a216-86df5c366c9c",
+      "core": false,
+      "difficulty": 4,
       "slug": "octal",
-      "core": false,
+      "topics": [
+        "bitwise_operations",
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings"
+      ],
       "unlocked_by": "binary",
-      "difficulty": 4,
-      "topics": [
-        "strings",
-        "bitwise operations",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+      "uuid": "b64e6544-4778-40e8-a216-86df5c366c9c"
     },
     {
-      "uuid": "2c50d23c-c15c-42d5-bc48-48afd21cdcf9",
+      "core": true,
+      "difficulty": 4,
       "slug": "binary-search",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 4,
       "topics": [
-        "arrays",
         "algorithms",
-        "searching",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "arrays",
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "searching"
+      ],
+      "unlocked_by": null,
+      "uuid": "2c50d23c-c15c-42d5-bc48-48afd21cdcf9"
     },
     {
-      "uuid": "25f501e6-40e8-4fd0-9dc3-ce5504d7a7a7",
+      "core": false,
+      "difficulty": 5,
       "slug": "bracket-push",
-      "core": false,
-      "unlocked_by": "binary-search",
-      "difficulty": 5,
       "topics": [
+        "algorithms",
+        "control_flow_if_else_statements",
+        "control_flow_loops",
         "stacks",
-        "strings",
-        "algorithms",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
-    },
-    {
-      "uuid": "c976a2aa-aaa8-42b5-9666-8f9d8b16b27c",
-      "slug": "flatten-array",
-      "core": false,
+        "strings"
+      ],
       "unlocked_by": "binary-search",
-      "difficulty": 5,
-      "topics": [
-        "arrays",
-        "recursion",
-        "algorithms",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+      "uuid": "25f501e6-40e8-4fd0-9dc3-ce5504d7a7a7"
     },
     {
-      "uuid": "a15f48db-7f35-4a20-8830-e3eb91db164f",
+      "core": false,
+      "difficulty": 5,
+      "slug": "flatten-array",
+      "topics": [
+        "algorithms",
+        "arrays",
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "recursion"
+      ],
+      "unlocked_by": "binary-search",
+      "uuid": "c976a2aa-aaa8-42b5-9666-8f9d8b16b27c"
+    },
+    {
+      "core": false,
+      "difficulty": 3,
       "slug": "word-count",
-      "core": false,
-      "unlocked_by": "isogram",
-      "difficulty": 3,
       "topics": [
-        "strings",
-        "control-flow (loops)"
-      ]
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": "isogram",
+      "uuid": "a15f48db-7f35-4a20-8830-e3eb91db164f"
     },
     {
-      "uuid": "32724558-411b-4945-95fe-aaf3eae6daf2",
+      "core": false,
+      "difficulty": 3,
       "slug": "pangram",
-      "core": false,
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings"
+      ],
       "unlocked_by": "isogram",
-      "difficulty": 3,
-      "topics": [
-        "strings",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+      "uuid": "32724558-411b-4945-95fe-aaf3eae6daf2"
     },
     {
-      "uuid": "cfcefc94-cc73-4438-a62f-15c63a70bf5e",
+      "core": true,
+      "difficulty": 3,
       "slug": "matrix",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 3,
       "topics": [
-        "matrices",
         "arrays",
-        "control-flow (loops)"
-      ]
+        "control_flow_loops",
+        "matrices"
+      ],
+      "unlocked_by": null,
+      "uuid": "cfcefc94-cc73-4438-a62f-15c63a70bf5e"
     },
     {
-      "uuid": "38b18de8-d0d9-4a4d-934f-2893b1f1ce45",
+      "core": false,
+      "difficulty": 3,
       "slug": "beer-song",
-      "core": false,
-      "unlocked_by": "house",
-      "difficulty": 3,
       "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
         "strings",
-        "text formatting",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "text_formatting"
+      ],
+      "unlocked_by": "house",
+      "uuid": "38b18de8-d0d9-4a4d-934f-2893b1f1ce45"
     },
     {
-      "uuid": "3e70727a-1839-4ccf-8205-f2c8455cfdd1",
+      "core": true,
+      "difficulty": 2,
       "slug": "isogram",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 2,
       "topics": [
-        "strings",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "3e70727a-1839-4ccf-8205-f2c8455cfdd1"
     },
     {
-      "uuid": "d781a53f-8eb8-44d0-8ded-57d943225604",
+      "core": false,
+      "difficulty": 3,
       "slug": "perfect-numbers",
-      "core": false,
-      "unlocked_by": "difference-of-squares",
-      "difficulty": 3,
       "topics": [
-        "mathematics",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "mathematics"
+      ],
+      "unlocked_by": "difference-of-squares",
+      "uuid": "d781a53f-8eb8-44d0-8ded-57d943225604"
     },
     {
-      "uuid": "c4846231-c68b-46cf-abe0-9e0b9f7c2825",
+      "core": false,
+      "difficulty": 3,
       "slug": "etl",
-      "core": false,
-      "unlocked_by": "list-ops",
-      "difficulty": 3,
       "topics": [
-        "transforming",
-        "control-flow (loops)"
-      ]
+        "control_flow_loops",
+        "transforming"
+      ],
+      "unlocked_by": "list-ops",
+      "uuid": "c4846231-c68b-46cf-abe0-9e0b9f7c2825"
     },
     {
-      "uuid": "903e3be6-cefd-4db5-b3dc-a325c4bcae7a",
+      "core": false,
+      "difficulty": 3,
       "slug": "nucleotide-count",
-      "core": false,
-      "unlocked_by": "hamming",
-      "difficulty": 3,
       "topics": [
-        "strings",
-        "exception handling",
-        "control-flow (loops)"
-      ]
+        "control_flow_loops",
+        "exception_handling",
+        "strings"
+      ],
+      "unlocked_by": "hamming",
+      "uuid": "903e3be6-cefd-4db5-b3dc-a325c4bcae7a"
     },
     {
-      "uuid": "50425ddf-fbec-4740-99eb-14cb7cc8a78a",
+      "core": false,
+      "difficulty": 3,
       "slug": "food-chain",
-      "core": false,
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings"
+      ],
       "unlocked_by": "house",
-      "difficulty": 3,
-      "topics": [
-        "strings",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+      "uuid": "50425ddf-fbec-4740-99eb-14cb7cc8a78a"
     },
     {
-      "uuid": "39bb7747-23e3-4d96-880d-2af302b0c328",
-      "slug": "sum-of-multiples",
       "core": false,
-      "unlocked_by": "difference-of-squares",
       "difficulty": 2,
+      "slug": "sum-of-multiples",
       "topics": [
-        "mathematics",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "mathematics"
+      ],
+      "unlocked_by": "difference-of-squares",
+      "uuid": "39bb7747-23e3-4d96-880d-2af302b0c328"
     },
     {
-      "uuid": "a42ea84d-030a-446b-8537-0bef558320df",
+      "core": false,
+      "difficulty": 3,
       "slug": "rna-transcription",
-      "core": false,
-      "unlocked_by": "hamming",
-      "difficulty": 3,
       "topics": [
+        "control_flow_loops",
         "strings",
-        "transforming",
-        "control-flow (loops)"
-      ]
+        "transforming"
+      ],
+      "unlocked_by": "hamming",
+      "uuid": "a42ea84d-030a-446b-8537-0bef558320df"
     },
     {
-      "uuid": "c2130674-fe39-4e40-a1b5-b6b6ea24e255",
+      "core": false,
+      "difficulty": 3,
       "slug": "phone-number",
-      "core": false,
+      "topics": [
+        "control_flow_if_else_statements",
+        "strings",
+        "text_formatting"
+      ],
       "unlocked_by": "allergies",
-      "difficulty": 3,
-      "topics": [
-        "strings",
-        "text formatting",
-        "control-flow (if-else statements)"
-      ]
+      "uuid": "c2130674-fe39-4e40-a1b5-b6b6ea24e255"
     },
     {
-      "uuid": "ffde0b07-d6b1-4b55-94d9-ec564817cbb8",
+      "core": true,
+      "difficulty": 3,
       "slug": "bank-account",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 3,
       "topics": [
         "classes",
-        "control-flow (if-else statements)"
-      ]
+        "control_flow_if_else_statements"
+      ],
+      "unlocked_by": null,
+      "uuid": "ffde0b07-d6b1-4b55-94d9-ec564817cbb8"
     },
     {
-      "uuid": "7ffbdb77-a0a3-4bcf-8fb7-d3c34bdfcaf5",
+      "core": false,
+      "difficulty": 3,
       "slug": "protein-translation",
-      "core": false,
-      "unlocked_by": "hamming",
-      "difficulty": 3,
       "topics": [
-        "strings",
-        "control-flow (if-else statements)",
-        "control-flow (loops)",
-        "exception handling"
-      ]
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "exception_handling",
+        "strings"
+      ],
+      "unlocked_by": "hamming",
+      "uuid": "7ffbdb77-a0a3-4bcf-8fb7-d3c34bdfcaf5"
     },
     {
-      "uuid": "84f1b842-3c9b-4d96-93f1-e26577dc493f",
-      "slug": "grade-school",
       "core": false,
-      "unlocked_by": "bank-account",
       "difficulty": 4,
+      "slug": "grade-school",
       "topics": [
         "classes",
-        "control-flow (if-else statements)"
-      ]
+        "control_flow_if_else_statements"
+      ],
+      "unlocked_by": "bank-account",
+      "uuid": "84f1b842-3c9b-4d96-93f1-e26577dc493f"
     },
     {
-      "uuid": "f141a9a3-af4b-4257-92b8-f850a987cf49",
+      "core": true,
+      "difficulty": 4,
       "slug": "nth-prime",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 4,
       "topics": [
-        "mathematics",
-        "control-flow (if-else statements)",
-        "control-flow (loops)",
-        "exception handling"
-      ]
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "exception_handling",
+        "mathematics"
+      ],
+      "unlocked_by": null,
+      "uuid": "f141a9a3-af4b-4257-92b8-f850a987cf49"
     },
     {
-      "uuid": "1c624b3f-7cf6-4896-90ff-11aec0d37059",
+      "core": true,
+      "difficulty": 4,
       "slug": "diamond",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 4,
       "topics": [
-        "control-flow (loops)",
-        "strings",
-        "text formatting",
-        "algorithms"
-      ]
-    },
-    {
-      "uuid": "d70fae4a-b8a0-41ab-856f-e078fcb2f85c",
-      "slug": "run-length-encoding",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 5,
-      "topics": [
-        "strings",
         "algorithms",
-        "text formatting",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "control_flow_loops",
+        "strings",
+        "text_formatting"
+      ],
+      "unlocked_by": null,
+      "uuid": "1c624b3f-7cf6-4896-90ff-11aec0d37059"
     },
     {
-      "uuid": "23120234-680d-4505-96e8-e87d669f0234",
-      "slug": "sublist",
+      "core": true,
+      "difficulty": 5,
+      "slug": "run-length-encoding",
+      "topics": [
+        "algorithms",
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings",
+        "text_formatting"
+      ],
+      "unlocked_by": null,
+      "uuid": "d70fae4a-b8a0-41ab-856f-e078fcb2f85c"
+    },
+    {
       "core": false,
-      "unlocked_by": "list-ops",
       "difficulty": 4,
+      "slug": "sublist",
       "topics": [
         "arrays",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "control_flow_if_else_statements",
+        "control_flow_loops"
+      ],
+      "unlocked_by": "list-ops",
+      "uuid": "23120234-680d-4505-96e8-e87d669f0234"
     },
     {
-      "uuid": "4db71417-612a-41d2-9db4-d53fdc7d530c",
-      "slug": "robot-name",
       "core": true,
-      "unlocked_by": null,
       "difficulty": 4,
+      "slug": "robot-name",
       "topics": [
-        "strings",
         "randomness",
-        "text formatting"
-      ]
-    },
-    {
-      "uuid": "c603a44b-c027-4906-aaa9-11522a92e3cb",
-      "slug": "robot-simulator",
-      "core": false,
-      "unlocked_by": "robot-name",
-      "difficulty": 3,
-      "topics": [
         "strings",
-        "classes",
-        "exception handling"
-      ]
-    },
-    {
-      "uuid": "d9fbf011-73ea-4e00-b6e9-85d2418b8565",
-      "slug": "pythagorean-triplet",
-      "core": false,
-      "unlocked_by": "difference-of-squares",
-      "difficulty": 3,
-      "topics": [
-        "mathematics",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
-    },
-    {
-      "uuid": "79c25dc6-d2d5-4089-8016-9c01fc2e53f8",
-      "slug": "leap",
-      "core": true,
+        "text_formatting"
+      ],
       "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "logic",
-        "control-flow (if-else statements)"
-      ]
+      "uuid": "4db71417-612a-41d2-9db4-d53fdc7d530c"
     },
     {
-      "uuid": "b10fd75b-53dd-4220-b76b-a2f1ed2d2ea2",
-      "slug": "space-age",
       "core": false,
-      "unlocked_by": "leap",
+      "difficulty": 3,
+      "slug": "robot-simulator",
+      "topics": [
+        "classes",
+        "exception_handling",
+        "strings"
+      ],
+      "unlocked_by": "robot-name",
+      "uuid": "c603a44b-c027-4906-aaa9-11522a92e3cb"
+    },
+    {
+      "core": false,
+      "difficulty": 3,
+      "slug": "pythagorean-triplet",
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "mathematics"
+      ],
+      "unlocked_by": "difference-of-squares",
+      "uuid": "d9fbf011-73ea-4e00-b6e9-85d2418b8565"
+    },
+    {
+      "core": true,
+      "difficulty": 1,
+      "slug": "leap",
+      "topics": [
+        "control_flow_if_else_statements",
+        "logic"
+      ],
+      "unlocked_by": null,
+      "uuid": "79c25dc6-d2d5-4089-8016-9c01fc2e53f8"
+    },
+    {
+      "core": false,
       "difficulty": 2,
+      "slug": "space-age",
       "topics": [
         "classes"
-      ]
-    },
-    {
-      "uuid": "2a38e35d-04ab-45b1-aaff-dab7c9b60306",
-      "slug": "pascals-triangle",
-      "core": false,
-      "unlocked_by": "diamond",
-      "difficulty": 5,
-      "topics": [
-        "mathematics",
-        "control-flow (loops)"
-      ]
-    },
-    {
-      "uuid": "4b5615e0-5c82-472e-84ed-f91b58ffc5c9",
-      "slug": "sieve",
-      "core": false,
-      "unlocked_by": "nth-prime",
-      "difficulty": 4,
-      "topics": [
-        "mathematics",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
-    },
-    {
-      "uuid": "1430571b-001a-4298-b834-1b6342d1c89a",
-      "slug": "grains",
-      "core": false,
+      ],
       "unlocked_by": "leap",
-      "difficulty": 2,
-      "topics": [
-        "control-flow (loops)"
-      ]
+      "uuid": "b10fd75b-53dd-4220-b76b-a2f1ed2d2ea2"
     },
     {
-      "uuid": "40e73366-3ee5-4190-99bc-fad839c59a40",
-      "slug": "kindergarten-garden",
       "core": false,
-      "unlocked_by": "allergies",
       "difficulty": 5,
+      "slug": "pascals-triangle",
       "topics": [
-        "strings",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "control_flow_loops",
+        "mathematics"
+      ],
+      "unlocked_by": "diamond",
+      "uuid": "2a38e35d-04ab-45b1-aaff-dab7c9b60306"
     },
     {
-      "uuid": "2530da0a-050c-472d-9f0c-cfe9045fb09f",
-      "slug": "custom-set",
+      "core": false,
+      "difficulty": 4,
+      "slug": "sieve",
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "mathematics"
+      ],
+      "unlocked_by": "nth-prime",
+      "uuid": "4b5615e0-5c82-472e-84ed-f91b58ffc5c9"
+    },
+    {
+      "core": false,
+      "difficulty": 2,
+      "slug": "grains",
+      "topics": [
+        "control_flow_loops"
+      ],
+      "unlocked_by": "leap",
+      "uuid": "1430571b-001a-4298-b834-1b6342d1c89a"
+    },
+    {
+      "core": false,
+      "difficulty": 5,
+      "slug": "kindergarten-garden",
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": "allergies",
+      "uuid": "40e73366-3ee5-4190-99bc-fad839c59a40"
+    },
+    {
       "core": true,
-      "unlocked_by": null,
       "difficulty": 6,
+      "slug": "custom-set",
       "topics": [
         "classes",
-        "sets",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "sets"
+      ],
+      "unlocked_by": null,
+      "uuid": "2530da0a-050c-472d-9f0c-cfe9045fb09f"
     },
     {
-      "uuid": "abe93c0d-a99c-4b58-a86a-3f96df09a186",
-      "slug": "gigasecond",
       "core": false,
-      "unlocked_by": "leap",
       "difficulty": 2,
+      "slug": "gigasecond",
       "topics": [
         "time"
-      ]
+      ],
+      "unlocked_by": "leap",
+      "uuid": "abe93c0d-a99c-4b58-a86a-3f96df09a186"
     },
     {
-      "uuid": "d7f4c19a-ac4c-4622-a5dd-e43b883365b8",
-      "slug": "word-search",
       "core": false,
-      "unlocked_by": "matrix",
       "difficulty": 7,
+      "slug": "word-search",
       "topics": [
-        "strings",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": "matrix",
+      "uuid": "d7f4c19a-ac4c-4622-a5dd-e43b883365b8"
     },
     {
-      "uuid": "3f8cc956-0f54-441f-b25a-c97390750bb6",
-      "slug": "luhn",
       "core": false,
-      "unlocked_by": "run-length-encoding",
       "difficulty": 4,
+      "slug": "luhn",
       "topics": [
-        "strings",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": "run-length-encoding",
+      "uuid": "3f8cc956-0f54-441f-b25a-c97390750bb6"
     },
     {
-      "uuid": "f3963d89-aacd-4502-ab60-b2fb127b30a5",
+      "core": false,
+      "difficulty": 3,
       "slug": "triangle",
-      "core": false,
-      "unlocked_by": "difference-of-squares",
-      "difficulty": 3,
       "topics": [
-        "control-flow (if-else statements)",
-        "exception handling"
-      ]
+        "control_flow_if_else_statements",
+        "exception_handling"
+      ],
+      "unlocked_by": "difference-of-squares",
+      "uuid": "f3963d89-aacd-4502-ab60-b2fb127b30a5"
     },
     {
-      "uuid": "a9e467c9-e820-49d8-aa45-542fcee4f112",
-      "slug": "clock",
       "core": false,
-      "unlocked_by": "bank-account",
       "difficulty": 3,
+      "slug": "clock",
       "topics": [
         "classes"
-      ]
+      ],
+      "unlocked_by": "bank-account",
+      "uuid": "a9e467c9-e820-49d8-aa45-542fcee4f112"
     },
     {
-      "uuid": "e96a4a0a-ac81-4969-ac50-93713958f06a",
+      "core": false,
+      "difficulty": 4,
       "slug": "series",
-      "core": false,
+      "topics": [
+        "arrays",
+        "control_flow_loops",
+        "coroutines"
+      ],
       "unlocked_by": "list-ops",
-      "difficulty": 4,
-      "topics": [
-        "coroutines",
-        "arrays",
-        "control-flow (loops)"
-      ]
+      "uuid": "e96a4a0a-ac81-4969-ac50-93713958f06a"
     },
     {
-      "uuid": "530c358d-44e9-4b36-9ced-a1b633591a3d",
+      "core": false,
+      "difficulty": 4,
       "slug": "linked-list",
-      "core": false,
-      "unlocked_by": "custom-set",
-      "difficulty": 4,
       "topics": [
         "classes",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "control_flow_if_else_statements",
+        "control_flow_loops"
+      ],
+      "unlocked_by": "custom-set",
+      "uuid": "530c358d-44e9-4b36-9ced-a1b633591a3d"
     },
     {
-      "uuid": "91cff99a-b182-4a6d-befb-ce716d290996",
+      "core": false,
+      "difficulty": 7,
       "slug": "ocr-numbers",
-      "core": false,
-      "unlocked_by": "matrix",
-      "difficulty": 7,
       "topics": [
-        "strings",
-        "control-flow (loops)"
-      ]
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": "matrix",
+      "uuid": "91cff99a-b182-4a6d-befb-ce716d290996"
     },
     {
-      "uuid": "464ef39f-8991-49f6-b6eb-5d811a262363",
+      "core": true,
+      "difficulty": 5,
       "slug": "pig-latin",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 5,
       "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
         "strings",
-        "text formatting",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "text_formatting"
+      ],
+      "unlocked_by": null,
+      "uuid": "464ef39f-8991-49f6-b6eb-5d811a262363"
     },
     {
-      "uuid": "f41c1b0e-26e7-43d5-b1d2-106c08d6fa4a",
+      "core": false,
+      "difficulty": 7,
       "slug": "minesweeper",
-      "core": false,
-      "unlocked_by": "matrix",
-      "difficulty": 7,
       "topics": [
         "arrays",
-        "strings",
-        "control-flow (if-else statements)",
-        "control-flow (loops)",
-        "exception handling"
-      ]
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "exception_handling",
+        "strings"
+      ],
+      "unlocked_by": "matrix",
+      "uuid": "f41c1b0e-26e7-43d5-b1d2-106c08d6fa4a"
     },
     {
-      "uuid": "058b40fe-9ca7-4082-a525-8b01b5d3a632",
+      "core": false,
+      "difficulty": 5,
       "slug": "crypto-square",
-      "core": false,
-      "unlocked_by": "run-length-encoding",
-      "difficulty": 5,
       "topics": [
+        "control_flow_loops",
         "strings",
-        "text formatting",
-        "control-flow (loops)"
-      ]
+        "text_formatting"
+      ],
+      "unlocked_by": "run-length-encoding",
+      "uuid": "058b40fe-9ca7-4082-a525-8b01b5d3a632"
     },
     {
-      "uuid": "71a6d7d8-938b-4a8f-a216-ec0e8326ea52",
-      "slug": "list-ops",
       "core": true,
+      "difficulty": 4,
+      "slug": "list-ops",
+      "topics": [
+        "arrays",
+        "control_flow_loops",
+        "filtering"
+      ],
       "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "arrays",
-        "filtering",
-        "control-flow (loops)"
-      ]
+      "uuid": "71a6d7d8-938b-4a8f-a216-ec0e8326ea52"
     },
     {
-      "uuid": "bf78cd80-3f8d-4075-b893-ba4ded5bf179",
-      "slug": "meetup",
       "core": false,
-      "unlocked_by": "pig-latin",
       "difficulty": 6,
+      "slug": "meetup",
       "topics": [
-        "time",
-        "control-flow (if-statements)",
-        "control-flow (loops)"
-      ]
+        "control_flow_if_statements",
+        "control_flow_loops",
+        "time"
+      ],
+      "unlocked_by": "pig-latin",
+      "uuid": "bf78cd80-3f8d-4075-b893-ba4ded5bf179"
     },
     {
-      "uuid": "49d08ed0-3a4a-44f6-beb3-ae086255e59f",
+      "core": false,
+      "difficulty": 3,
       "slug": "atbash-cipher",
-      "core": false,
-      "unlocked_by": "run-length-encoding",
-      "difficulty": 3,
       "topics": [
+        "control_flow_loops",
         "strings",
-        "text formatting",
-        "control-flow (loops)"
-      ]
+        "text_formatting"
+      ],
+      "unlocked_by": "run-length-encoding",
+      "uuid": "49d08ed0-3a4a-44f6-beb3-ae086255e59f"
     },
     {
-      "uuid": "4ec23243-6401-4be7-9770-1cd235da0557",
+      "core": false,
+      "difficulty": 3,
       "slug": "scrabble-score",
-      "core": false,
+      "topics": [
+        "control_flow_loops",
+        "strings"
+      ],
       "unlocked_by": "hamming",
-      "difficulty": 3,
-      "topics": [
-        "strings",
-        "control-flow (loops)"
-      ]
+      "uuid": "4ec23243-6401-4be7-9770-1cd235da0557"
     },
     {
-      "uuid": "d2004df3-1cc5-4f78-a564-f66771425fd3",
+      "core": false,
+      "difficulty": 5,
       "slug": "largest-series-product",
-      "core": false,
+      "topics": [
+        "control_flow_loops",
+        "exception_handling"
+      ],
       "unlocked_by": "difference-of-squares",
-      "difficulty": 5,
-      "topics": [
-        "control-flow (loops)",
-        "exception handling"
-      ]
+      "uuid": "d2004df3-1cc5-4f78-a564-f66771425fd3"
     },
     {
-      "uuid": "d1fedc2b-9771-49b5-b253-05e1337448c6",
+      "core": false,
+      "difficulty": 7,
       "slug": "rail-fence-cipher",
-      "core": false,
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings",
+        "text_formatting"
+      ],
       "unlocked_by": "run-length-encoding",
-      "difficulty": 7,
-      "topics": [
-        "strings",
-        "text formatting",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+      "uuid": "d1fedc2b-9771-49b5-b253-05e1337448c6"
     },
     {
-      "uuid": "5e38f418-d279-4d2f-a035-f440e59c4635",
-      "slug": "roman-numerals",
       "core": false,
-      "unlocked_by": "leap",
       "difficulty": 4,
+      "slug": "roman-numerals",
       "topics": [
+        "control_flow_loops",
         "strings",
-        "text formatting",
-        "control-flow (loops)"
-      ]
+        "text_formatting"
+      ],
+      "unlocked_by": "leap",
+      "uuid": "5e38f418-d279-4d2f-a035-f440e59c4635"
     },
     {
-      "uuid": "a54806a0-d17c-4ae9-a48e-bc587eab93ea",
-      "slug": "transpose",
       "core": false,
-      "unlocked_by": "matrix",
       "difficulty": 7,
+      "slug": "transpose",
       "topics": [
-        "strings",
         "algorithms",
-        "control-flow (loops)"
-      ]
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": "matrix",
+      "uuid": "a54806a0-d17c-4ae9-a48e-bc587eab93ea"
     },
     {
-      "uuid": "d4a793a8-bd4a-478d-a4e2-ee20dd4b6085",
-      "slug": "tournament",
       "core": false,
-      "unlocked_by": "allergies",
       "difficulty": 5,
+      "slug": "tournament",
       "topics": [
         "arrays",
+        "control_flow_loops",
         "strings",
-        "text formatting",
-        "text parsing",
-        "control-flow (loops)"
-      ]
+        "text_formatting",
+        "text_parsing"
+      ],
+      "unlocked_by": "allergies",
+      "uuid": "d4a793a8-bd4a-478d-a4e2-ee20dd4b6085"
     },
     {
-      "uuid": "5b636f8a-37ba-412d-b957-633caac86369",
-      "slug": "circular-buffer",
       "core": false,
-      "unlocked_by": "custom-set",
       "difficulty": 4,
+      "slug": "circular-buffer",
       "topics": [
         "classes",
-        "control-flow (if-else statements)",
-        "exception handling"
-      ]
+        "control_flow_if_else_statements",
+        "exception_handling"
+      ],
+      "unlocked_by": "custom-set",
+      "uuid": "5b636f8a-37ba-412d-b957-633caac86369"
     },
     {
-      "uuid": "84715ca7-b4cb-41bd-a5f0-1c45e372d834",
-      "slug": "binary-search-tree",
       "core": false,
-      "unlocked_by": "binary-search",
       "difficulty": 5,
+      "slug": "binary-search-tree",
       "topics": [
+        "algorithms",
         "coroutines",
-        "trees",
-        "algorithms",
-        "searching",
+        "exception_handling",
         "recursion",
-        "exception handling"
-      ]
+        "searching",
+        "trees"
+      ],
+      "unlocked_by": "binary-search",
+      "uuid": "84715ca7-b4cb-41bd-a5f0-1c45e372d834"
     },
     {
-      "uuid": "6132095c-964f-4d58-9555-b4c77818e6d2",
+      "core": false,
+      "difficulty": 4,
       "slug": "bowling",
-      "core": false,
+      "topics": [
+        "algorithms",
+        "control_flow_if_else_statements",
+        "exception_handling"
+      ],
       "unlocked_by": "allergies",
-      "difficulty": 4,
-      "topics": [
-        "algorithms",
-        "control-flow (if-else statements)",
-        "exception handling"
-      ]
+      "uuid": "6132095c-964f-4d58-9555-b4c77818e6d2"
     },
     {
-      "uuid": "90fe2b43-5f4e-42fe-89ad-4fff49ccbb53",
+      "core": true,
+      "difficulty": 3,
       "slug": "binary",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 3,
       "topics": [
-        "strings",
-        "bitwise operations",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "bitwise_operations",
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "90fe2b43-5f4e-42fe-89ad-4fff49ccbb53"
     },
     {
-      "uuid": "26ea07b8-2658-47c2-9218-059c168ba1ea",
+      "core": false,
+      "difficulty": 8,
       "slug": "alphametics",
-      "core": false,
-      "unlocked_by": "matrix",
-      "difficulty": 8,
       "topics": [
-        "strings",
         "algorithms",
+        "control_flow_if_else_statements",
+        "control_flow_loops",
         "performance",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+        "strings"
+      ],
+      "unlocked_by": "matrix",
+      "uuid": "26ea07b8-2658-47c2-9218-059c168ba1ea"
     },
     {
-      "uuid": "0f85f581-0077-447e-a5f4-7b58c1b4b7a8",
+      "core": false,
+      "difficulty": 4,
       "slug": "prime-factors",
-      "core": false,
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "mathematics"
+      ],
       "unlocked_by": "nth-prime",
-      "difficulty": 4,
-      "topics": [
-        "mathematics",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
+      "uuid": "0f85f581-0077-447e-a5f4-7b58c1b4b7a8"
     },
     {
-      "uuid": "3f8c4f1b-b0b7-4f6e-8cd9-d5e252737ebb",
+      "core": false,
+      "difficulty": 4,
       "slug": "acronym",
-      "core": false,
+      "topics": [
+        "control_flow_loops",
+        "strings"
+      ],
       "unlocked_by": "isogram",
-      "difficulty": 4,
-      "topics": [
-        "strings",
-        "control-flow (loops)"
-      ]
+      "uuid": "3f8c4f1b-b0b7-4f6e-8cd9-d5e252737ebb"
     },
     {
-      "uuid": "1ee89535-3e91-4404-9116-adcbf87f2390",
+      "core": false,
+      "difficulty": 4,
       "slug": "all-your-base",
-      "core": false,
+      "topics": [
+        "arrays",
+        "control_flow_loops",
+        "mathematics"
+      ],
       "unlocked_by": "binary",
-      "difficulty": 4,
-      "topics": [
-        "mathematics",
-        "arrays",
-        "control-flow (loops)"
-      ]
+      "uuid": "1ee89535-3e91-4404-9116-adcbf87f2390"
     },
     {
-      "uuid": "6f2e38ae-57d8-4b4e-b1db-ae35c066ece4",
+      "core": false,
+      "difficulty": 8,
       "slug": "rectangles",
-      "core": false,
-      "unlocked_by": "matrix",
-      "difficulty": 8,
       "topics": [
-        "strings",
-        "performance",
-        "control-flow (if-else statements)",
-        "control-flow (loops)",
-        "algorithms"
-      ]
-    },
-    {
-      "uuid": "6e7a0d97-580b-4b21-bcad-e89e0473d507",
-      "slug": "allergies",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "bitwise operations",
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
-    },
-    {
-      "uuid": "7159ffe2-3f5f-4d12-8a38-843452ef5d7e",
-      "slug": "say",
-      "core": false,
-      "unlocked_by": "pig-latin",
-      "difficulty": 7,
-      "topics": [
-        "strings",
-        "text formatting",
-        "control-flow (loops)"
-      ]
-    },
-    {
-      "uuid": "ba763756-e934-473f-a01c-a7c9ea0a971d",
-      "slug": "pov",
-      "core": false,
-      "unlocked_by": "binary-search",
-      "difficulty": 9,
-      "topics": [
-        "graphs",
         "algorithms",
-        "control-flow (if-else statements)",
-        "control-flow (loops)",
-        "exception handling"
-      ]
-    },
-    {
-      "uuid": "790d60b6-a64e-482f-8c2b-3e2442ac0b4e",
-      "slug": "change",
-      "core": false,
-      "unlocked_by": "binary-search",
-      "difficulty": 4,
-      "topics": [
-        "control-flow (if-else statements)",
-        "control-flow (loops)"
-      ]
-    },
-    {
-      "uuid": "a608af44-59df-425d-a652-163635bf740e",
-      "slug": "secret-handshake",
-      "core": false,
-      "unlocked_by": "leap",
-      "difficulty": 3,
-      "topics": [
-        "control-flow (if-else statements)",
-        "arrays",
-        "bitwise operations"
-      ]
-    },
-    {
-      "uuid": "beca7d79-9237-4344-b058-66e0fa840691",
-      "slug": "react",
-      "core": false,
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "performance",
+        "strings"
+      ],
       "unlocked_by": "matrix",
-      "difficulty": 8,
+      "uuid": "6f2e38ae-57d8-4b4e-b1db-ae35c066ece4"
+    },
+    {
+      "core": true,
+      "difficulty": 4,
+      "slug": "allergies",
       "topics": [
-        "control-flow (if-else statements)",
-        "control-flow (loops)",
+        "bitwise_operations",
+        "control_flow_if_else_statements",
+        "control_flow_loops"
+      ],
+      "unlocked_by": null,
+      "uuid": "6e7a0d97-580b-4b21-bcad-e89e0473d507"
+    },
+    {
+      "core": false,
+      "difficulty": 7,
+      "slug": "say",
+      "topics": [
+        "control_flow_loops",
+        "strings",
+        "text_formatting"
+      ],
+      "unlocked_by": "pig-latin",
+      "uuid": "7159ffe2-3f5f-4d12-8a38-843452ef5d7e"
+    },
+    {
+      "core": false,
+      "difficulty": 9,
+      "slug": "pov",
+      "topics": [
+        "algorithms",
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "exception_handling",
+        "graphs"
+      ],
+      "unlocked_by": "binary-search",
+      "uuid": "ba763756-e934-473f-a01c-a7c9ea0a971d"
+    },
+    {
+      "core": false,
+      "difficulty": 4,
+      "slug": "change",
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops"
+      ],
+      "unlocked_by": "binary-search",
+      "uuid": "790d60b6-a64e-482f-8c2b-3e2442ac0b4e"
+    },
+    {
+      "core": false,
+      "difficulty": 3,
+      "slug": "secret-handshake",
+      "topics": [
+        "arrays",
+        "bitwise_operations",
+        "control_flow_if_else_statements"
+      ],
+      "unlocked_by": "leap",
+      "uuid": "a608af44-59df-425d-a652-163635bf740e"
+    },
+    {
+      "core": false,
+      "difficulty": 8,
+      "slug": "react",
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
         "functions",
         "graphs"
-      ]
+      ],
+      "unlocked_by": "matrix",
+      "uuid": "beca7d79-9237-4344-b058-66e0fa840691"
     }
   ],
-  "foregone": [
-
-  ]
+  "foregone": [],
+  "language": "Lua",
+  "test_pattern": ".*spec[.]lua$"
 }
