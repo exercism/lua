@@ -1,4 +1,4 @@
-local react = require 'react'
+local react = require('react')
 
 describe('react', function()
   it('input cells have a value', function()
