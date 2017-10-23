@@ -920,6 +920,18 @@
       ],
       "unlocked_by": "matrix",
       "uuid": "beca7d79-9237-4344-b058-66e0fa840691"
+    },
+    {
+      "core": false,
+      "difficulty": 3,
+      "slug": "collatz-conjecture",
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "mathematics"
+      ],
+      "unlocked_by": "difference-of-squares",
+      "uuid": "bd4cd740-b78d-11e7-abc4-cec278b6b50a"
     }
   ],
   "foregone": [],
