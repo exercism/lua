@@ -932,6 +932,16 @@
       ],
       "unlocked_by": "difference-of-squares",
       "uuid": "bd4cd740-b78d-11e7-abc4-cec278b6b50a"
+    },
+    {
+      "core": false,
+      "difficulty": 3,
+      "slug": "queen-attack",
+      "topics": [
+        "mathematics"
+      ],
+      "unlocked_by": "list-ops",
+      "uuid": "09df8b87-c2cf-44a7-879c-96c9030cf27b"
     }
   ],
   "foregone": [],
