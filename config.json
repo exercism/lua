@@ -942,6 +942,18 @@
       ],
       "unlocked_by": "list-ops",
       "uuid": "09df8b87-c2cf-44a7-879c-96c9030cf27b"
+    },
+    {
+      "core": false,
+      "difficulty": 3,
+      "slug": "isbn-verifier",
+      "topics": [
+        "mathematics",
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": "run-length-encoding",
+      "uuid": "a9a6a2c7-2a58-4090-b538-5a275c521fe0"
     }
   ],
   "foregone": [],
