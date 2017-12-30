@@ -954,6 +954,11 @@
       ],
       "unlocked_by": "run-length-encoding",
       "uuid": "a9a6a2c7-2a58-4090-b538-5a275c521fe0"
+    },
+    {
+      "deprecated": true,
+      "slug": "accumulate",
+      "uuid": "70bc1661-9132-43af-bb44-b51e7d81676b"
     }
   ],
   "foregone": [],
