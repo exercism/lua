@@ -11,7 +11,7 @@
         "text_formatting"
       ],
       "unlocked_by": null,
-      "uuid": "9099df24-f9fb-4bd0-8b7f-df52efed7840"
+      "uuid": "e2909553-add0-46d9-a95d-d687d12ccd32"
     },
     {
       "core": true,
@@ -22,7 +22,7 @@
         "strings"
       ],
       "unlocked_by": null,
-      "uuid": "23fde0b3-c57b-439f-a9ad-3cd6ae286b62"
+      "uuid": "d5fcde07-bcef-4ee1-858b-fa4da55d7e0a"
     },
     {
       "core": true,
@@ -34,7 +34,7 @@
         "text_formatting"
       ],
       "unlocked_by": null,
-      "uuid": "f38cd7b3-e1e6-4bcf-b1fe-c63ed94df636"
+      "uuid": "9c71aea2-ff12-44dc-8d54-c15aff6b4b35"
     },
     {
       "core": false,
@@ -45,7 +45,7 @@
         "strings"
       ],
       "unlocked_by": "leap",
-      "uuid": "faaa79ba-ddfa-42dd-8668-4aa811757dee"
+      "uuid": "29338762-6ae0-4532-9465-bf67442b67d9"
     },
     {
       "core": false,
@@ -56,7 +56,7 @@
         "strings"
       ],
       "unlocked_by": "leap",
-      "uuid": "9646d991-e3ad-475e-9231-c5723a73e57b"
+      "uuid": "3aa77e13-ebc8-41ef-9405-144ef3ae753a"
     },
     {
       "core": true,
@@ -66,7 +66,7 @@
         "mathematics"
       ],
       "unlocked_by": null,
-      "uuid": "b985299f-c6eb-487e-9900-1b35a6e66dea"
+      "uuid": "251d7fd3-ed96-421c-af46-817ad40997e5"
     },
     {
       "core": false,
@@ -79,7 +79,7 @@
         "control_flow_loops"
       ],
       "unlocked_by": "run-length-encoding",
-      "uuid": "312d3e2f-ac24-4e06-8e6c-f4651124c516"
+      "uuid": "baca9366-dee4-4759-98ac-2e76df5dfc49"
     },
     {
       "core": false,
@@ -92,7 +92,7 @@
         "strings"
       ],
       "unlocked_by": "isogram",
-      "uuid": "c8ac2fca-fdec-4562-9c60-fdee5b541186"
+      "uuid": "49c8c8cc-f0e6-49dc-aac0-6c4acffff175"
     },
     {
       "core": false,
@@ -105,7 +105,7 @@
         "strings"
       ],
       "unlocked_by": "binary",
-      "uuid": "b64e6544-4778-40e8-a216-86df5c366c9c"
+      "uuid": "f0ba9767-b0e5-4a80-9980-e135526b6f3f"
     },
     {
       "core": true,
@@ -119,7 +119,7 @@
         "searching"
       ],
       "unlocked_by": null,
-      "uuid": "2c50d23c-c15c-42d5-bc48-48afd21cdcf9"
+      "uuid": "ca4f3b4c-ab14-4a51-9bda-0391ea36e721"
     },
     {
       "core": false,
@@ -133,7 +133,7 @@
         "strings"
       ],
       "unlocked_by": "binary-search",
-      "uuid": "25f501e6-40e8-4fd0-9dc3-ce5504d7a7a7"
+      "uuid": "b9e455a0-688b-4502-aed7-a45536dde5ef"
     },
     {
       "core": false,
@@ -147,7 +147,7 @@
         "recursion"
       ],
       "unlocked_by": "binary-search",
-      "uuid": "c976a2aa-aaa8-42b5-9666-8f9d8b16b27c"
+      "uuid": "9d19c9ca-7e82-40b5-8951-75354eb7991f"
     },
     {
       "core": false,
@@ -158,7 +158,7 @@
         "strings"
       ],
       "unlocked_by": "isogram",
-      "uuid": "a15f48db-7f35-4a20-8830-e3eb91db164f"
+      "uuid": "06613caf-8f73-43e6-9fad-3d6df4c7c344"
     },
     {
       "core": false,
@@ -170,7 +170,7 @@
         "strings"
       ],
       "unlocked_by": "isogram",
-      "uuid": "32724558-411b-4945-95fe-aaf3eae6daf2"
+      "uuid": "e5a5d3ca-af5c-43c9-8f99-f5eb522169af"
     },
     {
       "core": true,
@@ -182,7 +182,7 @@
         "matrices"
       ],
       "unlocked_by": null,
-      "uuid": "cfcefc94-cc73-4438-a62f-15c63a70bf5e"
+      "uuid": "d4de8f02-ba5b-4357-8285-9cb41dc3b72e"
     },
     {
       "core": false,
@@ -195,7 +195,7 @@
         "text_formatting"
       ],
       "unlocked_by": "house",
-      "uuid": "38b18de8-d0d9-4a4d-934f-2893b1f1ce45"
+      "uuid": "242da1b4-c8ad-48c8-bc0f-e43fd654f8ae"
     },
     {
       "core": true,
@@ -207,7 +207,7 @@
         "strings"
       ],
       "unlocked_by": null,
-      "uuid": "3e70727a-1839-4ccf-8205-f2c8455cfdd1"
+      "uuid": "3ae90024-cd9a-4884-836f-3a7ea94cce01"
     },
     {
       "core": false,
@@ -219,7 +219,7 @@
         "mathematics"
       ],
       "unlocked_by": "difference-of-squares",
-      "uuid": "d781a53f-8eb8-44d0-8ded-57d943225604"
+      "uuid": "8b7ce997-ce5f-4968-b661-d3cd9fed0fc9"
     },
     {
       "core": false,
@@ -230,7 +230,7 @@
         "transforming"
       ],
       "unlocked_by": "list-ops",
-      "uuid": "c4846231-c68b-46cf-abe0-9e0b9f7c2825"
+      "uuid": "df4cec80-6850-4197-a65f-2159fbedcbe9"
     },
     {
       "core": false,
@@ -242,7 +242,7 @@
         "strings"
       ],
       "unlocked_by": "hamming",
-      "uuid": "903e3be6-cefd-4db5-b3dc-a325c4bcae7a"
+      "uuid": "a5fb57d1-1a31-43a0-adc4-7f4b8046c9eb"
     },
     {
       "core": false,
@@ -254,7 +254,7 @@
         "strings"
       ],
       "unlocked_by": "house",
-      "uuid": "50425ddf-fbec-4740-99eb-14cb7cc8a78a"
+      "uuid": "68650122-5452-4674-8676-5387cc24fd14"
     },
     {
       "core": false,
@@ -266,7 +266,7 @@
         "mathematics"
       ],
       "unlocked_by": "difference-of-squares",
-      "uuid": "39bb7747-23e3-4d96-880d-2af302b0c328"
+      "uuid": "da6a0c52-5943-412e-8649-8965ae9da5cf"
     },
     {
       "core": false,
@@ -278,7 +278,7 @@
         "transforming"
       ],
       "unlocked_by": "hamming",
-      "uuid": "a42ea84d-030a-446b-8537-0bef558320df"
+      "uuid": "5029a8ed-3766-4632-bdab-964ca4a06e34"
     },
     {
       "core": false,
@@ -290,7 +290,7 @@
         "text_formatting"
       ],
       "unlocked_by": "allergies",
-      "uuid": "c2130674-fe39-4e40-a1b5-b6b6ea24e255"
+      "uuid": "23cfe01b-41ea-4a18-beca-ca1d3c38fb69"
     },
     {
       "core": true,
@@ -301,7 +301,7 @@
         "control_flow_if_else_statements"
       ],
       "unlocked_by": null,
-      "uuid": "ffde0b07-d6b1-4b55-94d9-ec564817cbb8"
+      "uuid": "02407c99-08bf-4ea4-b9df-fdef0ad18fa4"
     },
     {
       "core": false,
@@ -314,7 +314,7 @@
         "strings"
       ],
       "unlocked_by": "hamming",
-      "uuid": "7ffbdb77-a0a3-4bcf-8fb7-d3c34bdfcaf5"
+      "uuid": "8fa0c325-56ca-481f-a2cf-4c3fcffb088f"
     },
     {
       "core": false,
@@ -325,7 +325,7 @@
         "control_flow_if_else_statements"
       ],
       "unlocked_by": "bank-account",
-      "uuid": "84f1b842-3c9b-4d96-93f1-e26577dc493f"
+      "uuid": "d531b625-ac92-4042-9cda-169398b0b296"
     },
     {
       "core": true,
@@ -338,7 +338,7 @@
         "mathematics"
       ],
       "unlocked_by": null,
-      "uuid": "f141a9a3-af4b-4257-92b8-f850a987cf49"
+      "uuid": "b8880be4-02e7-4911-b049-927c028ed8e0"
     },
     {
       "core": true,
@@ -351,7 +351,7 @@
         "text_formatting"
       ],
       "unlocked_by": null,
-      "uuid": "1c624b3f-7cf6-4896-90ff-11aec0d37059"
+      "uuid": "b236519f-987b-4832-a698-b9eeebf29efb"
     },
     {
       "core": true,
@@ -365,7 +365,7 @@
         "text_formatting"
       ],
       "unlocked_by": null,
-      "uuid": "d70fae4a-b8a0-41ab-856f-e078fcb2f85c"
+      "uuid": "f9a5560e-5f84-451a-a8f8-632ea8525e08"
     },
     {
       "core": false,
@@ -377,7 +377,7 @@
         "control_flow_loops"
       ],
       "unlocked_by": "list-ops",
-      "uuid": "23120234-680d-4505-96e8-e87d669f0234"
+      "uuid": "3e2510c0-76ea-40cf-a56c-5f6d2c4a33c2"
     },
     {
       "core": true,
@@ -389,7 +389,7 @@
         "text_formatting"
       ],
       "unlocked_by": null,
-      "uuid": "4db71417-612a-41d2-9db4-d53fdc7d530c"
+      "uuid": "f4369803-07c4-4bbe-9bdc-3f4eea510802"
     },
     {
       "core": false,
@@ -401,7 +401,7 @@
         "strings"
       ],
       "unlocked_by": "robot-name",
-      "uuid": "c603a44b-c027-4906-aaa9-11522a92e3cb"
+      "uuid": "742a010e-85f2-4259-a444-86a7fb73b9bb"
     },
     {
       "core": false,
@@ -413,7 +413,7 @@
         "mathematics"
       ],
       "unlocked_by": "difference-of-squares",
-      "uuid": "d9fbf011-73ea-4e00-b6e9-85d2418b8565"
+      "uuid": "2bee6ff9-3826-4cf8-adc4-c00d4b87bbd7"
     },
     {
       "core": true,
@@ -424,7 +424,7 @@
         "logic"
       ],
       "unlocked_by": null,
-      "uuid": "79c25dc6-d2d5-4089-8016-9c01fc2e53f8"
+      "uuid": "1e9b4ae0-0c07-4ed6-8e31-14682fda1f8a"
     },
     {
       "core": false,
@@ -434,7 +434,7 @@
         "classes"
       ],
       "unlocked_by": "leap",
-      "uuid": "b10fd75b-53dd-4220-b76b-a2f1ed2d2ea2"
+      "uuid": "e41af697-bb33-46f4-a2d0-14c5440ca209"
     },
     {
       "core": false,
@@ -445,7 +445,7 @@
         "mathematics"
       ],
       "unlocked_by": "diamond",
-      "uuid": "2a38e35d-04ab-45b1-aaff-dab7c9b60306"
+      "uuid": "b7a4bd55-7e51-46f1-9bd9-90185b99e238"
     },
     {
       "core": false,
@@ -457,7 +457,7 @@
         "mathematics"
       ],
       "unlocked_by": "nth-prime",
-      "uuid": "4b5615e0-5c82-472e-84ed-f91b58ffc5c9"
+      "uuid": "69cdb196-ac32-4733-b978-a29c43717936"
     },
     {
       "core": false,
@@ -467,7 +467,7 @@
         "control_flow_loops"
       ],
       "unlocked_by": "leap",
-      "uuid": "1430571b-001a-4298-b834-1b6342d1c89a"
+      "uuid": "03e986ce-396f-4243-9df5-edf10d4e7bd8"
     },
     {
       "core": false,
@@ -479,7 +479,7 @@
         "strings"
       ],
       "unlocked_by": "allergies",
-      "uuid": "40e73366-3ee5-4190-99bc-fad839c59a40"
+      "uuid": "d669d338-c3f1-40ea-ae12-c77127c6fcdc"
     },
     {
       "core": true,
@@ -492,7 +492,7 @@
         "sets"
       ],
       "unlocked_by": null,
-      "uuid": "2530da0a-050c-472d-9f0c-cfe9045fb09f"
+      "uuid": "ed37d6db-7cbe-4219-bdb0-f15f28f60f1e"
     },
     {
       "core": false,
@@ -502,7 +502,7 @@
         "time"
       ],
       "unlocked_by": "leap",
-      "uuid": "abe93c0d-a99c-4b58-a86a-3f96df09a186"
+      "uuid": "8276c090-4923-4bce-a42e-94be3a61101a"
     },
     {
       "core": false,
@@ -514,7 +514,7 @@
         "strings"
       ],
       "unlocked_by": "matrix",
-      "uuid": "d7f4c19a-ac4c-4622-a5dd-e43b883365b8"
+      "uuid": "52cd8150-1d95-4f1e-b964-7ec40d64acef"
     },
     {
       "core": false,
@@ -526,7 +526,7 @@
         "strings"
       ],
       "unlocked_by": "run-length-encoding",
-      "uuid": "3f8cc956-0f54-441f-b25a-c97390750bb6"
+      "uuid": "68232a5f-bac4-4390-b13a-aad42aa41e60"
     },
     {
       "core": false,
@@ -537,7 +537,7 @@
         "exception_handling"
       ],
       "unlocked_by": "difference-of-squares",
-      "uuid": "f3963d89-aacd-4502-ab60-b2fb127b30a5"
+      "uuid": "206802f9-7c6c-48d6-985e-73f2ec0290d0"
     },
     {
       "core": false,
@@ -547,7 +547,7 @@
         "classes"
       ],
       "unlocked_by": "bank-account",
-      "uuid": "a9e467c9-e820-49d8-aa45-542fcee4f112"
+      "uuid": "8e2dc8f7-af6d-4c9d-98cb-5560eeb299ca"
     },
     {
       "core": false,
@@ -559,7 +559,7 @@
         "coroutines"
       ],
       "unlocked_by": "list-ops",
-      "uuid": "e96a4a0a-ac81-4969-ac50-93713958f06a"
+      "uuid": "4527f869-1901-4301-88bf-1c6fbb4d5898"
     },
     {
       "core": false,
@@ -571,7 +571,7 @@
         "control_flow_loops"
       ],
       "unlocked_by": "custom-set",
-      "uuid": "530c358d-44e9-4b36-9ced-a1b633591a3d"
+      "uuid": "d5dae487-8d85-4b9c-a218-f6fb8262f81b"
     },
     {
       "core": false,
@@ -582,7 +582,7 @@
         "strings"
       ],
       "unlocked_by": "matrix",
-      "uuid": "91cff99a-b182-4a6d-befb-ce716d290996"
+      "uuid": "f4008921-35cf-4c61-bc3b-aecd20b2f36f"
     },
     {
       "core": true,
@@ -595,7 +595,7 @@
         "text_formatting"
       ],
       "unlocked_by": null,
-      "uuid": "464ef39f-8991-49f6-b6eb-5d811a262363"
+      "uuid": "6d43c48f-47d0-443f-87e0-eeb6e535407f"
     },
     {
       "core": false,
@@ -609,7 +609,7 @@
         "strings"
       ],
       "unlocked_by": "matrix",
-      "uuid": "f41c1b0e-26e7-43d5-b1d2-106c08d6fa4a"
+      "uuid": "fcb9cc16-7690-4ee6-a373-c8476063ec57"
     },
     {
       "core": false,
@@ -621,7 +621,7 @@
         "text_formatting"
       ],
       "unlocked_by": "run-length-encoding",
-      "uuid": "058b40fe-9ca7-4082-a525-8b01b5d3a632"
+      "uuid": "07f03e4f-be9a-411f-9501-efa610b16f7b"
     },
     {
       "core": true,
@@ -633,7 +633,7 @@
         "filtering"
       ],
       "unlocked_by": null,
-      "uuid": "71a6d7d8-938b-4a8f-a216-ec0e8326ea52"
+      "uuid": "309e88ac-2d18-419f-aee6-76d9d3230209"
     },
     {
       "core": false,
@@ -645,7 +645,7 @@
         "time"
       ],
       "unlocked_by": "pig-latin",
-      "uuid": "bf78cd80-3f8d-4075-b893-ba4ded5bf179"
+      "uuid": "528a5545-c0a1-44dc-89dd-efaa39f44a14"
     },
     {
       "core": false,
@@ -657,7 +657,7 @@
         "text_formatting"
       ],
       "unlocked_by": "run-length-encoding",
-      "uuid": "49d08ed0-3a4a-44f6-beb3-ae086255e59f"
+      "uuid": "66aa24ed-373f-46d4-9cfa-a86cad86777a"
     },
     {
       "core": false,
@@ -668,7 +668,7 @@
         "strings"
       ],
       "unlocked_by": "hamming",
-      "uuid": "4ec23243-6401-4be7-9770-1cd235da0557"
+      "uuid": "92b5536c-1129-4c93-875d-df2b4178af70"
     },
     {
       "core": false,
@@ -679,7 +679,7 @@
         "exception_handling"
       ],
       "unlocked_by": "difference-of-squares",
-      "uuid": "d2004df3-1cc5-4f78-a564-f66771425fd3"
+      "uuid": "f4bb526f-8cd6-4435-8fcc-32099553a989"
     },
     {
       "core": false,
@@ -692,7 +692,7 @@
         "text_formatting"
       ],
       "unlocked_by": "run-length-encoding",
-      "uuid": "d1fedc2b-9771-49b5-b253-05e1337448c6"
+      "uuid": "ead29411-43a4-4be0-8e3e-d93d8c6fd411"
     },
     {
       "core": false,
@@ -704,7 +704,7 @@
         "text_formatting"
       ],
       "unlocked_by": "leap",
-      "uuid": "5e38f418-d279-4d2f-a035-f440e59c4635"
+      "uuid": "baa2c87a-aec5-47ef-b92d-d2ca39ce4bf2"
     },
     {
       "core": false,
@@ -716,7 +716,7 @@
         "strings"
       ],
       "unlocked_by": "matrix",
-      "uuid": "a54806a0-d17c-4ae9-a48e-bc587eab93ea"
+      "uuid": "d677e28f-a162-4edf-9e22-b57589540087"
     },
     {
       "core": false,
@@ -730,7 +730,7 @@
         "text_parsing"
       ],
       "unlocked_by": "allergies",
-      "uuid": "d4a793a8-bd4a-478d-a4e2-ee20dd4b6085"
+      "uuid": "6d1ff01a-aee3-4da0-8952-617e7aae86f4"
     },
     {
       "core": false,
@@ -742,7 +742,7 @@
         "exception_handling"
       ],
       "unlocked_by": "custom-set",
-      "uuid": "5b636f8a-37ba-412d-b957-633caac86369"
+      "uuid": "ad81b98a-b9b4-4894-a05b-e7b052de122a"
     },
     {
       "core": false,
@@ -757,7 +757,7 @@
         "trees"
       ],
       "unlocked_by": "binary-search",
-      "uuid": "84715ca7-b4cb-41bd-a5f0-1c45e372d834"
+      "uuid": "83773c82-0df3-4957-9111-68b1143ae7fb"
     },
     {
       "core": false,
@@ -769,7 +769,7 @@
         "exception_handling"
       ],
       "unlocked_by": "allergies",
-      "uuid": "6132095c-964f-4d58-9555-b4c77818e6d2"
+      "uuid": "7ee42679-3ed9-413c-a43b-5e21813e8f62"
     },
     {
       "core": true,
@@ -782,7 +782,7 @@
         "strings"
       ],
       "unlocked_by": null,
-      "uuid": "90fe2b43-5f4e-42fe-89ad-4fff49ccbb53"
+      "uuid": "5d24d945-9f15-450a-bb47-0b9c6a9e8c47"
     },
     {
       "core": false,
@@ -796,7 +796,7 @@
         "strings"
       ],
       "unlocked_by": "matrix",
-      "uuid": "26ea07b8-2658-47c2-9218-059c168ba1ea"
+      "uuid": "4b1c805c-e833-4f84-bf1f-931c640ade6d"
     },
     {
       "core": false,
@@ -808,7 +808,7 @@
         "mathematics"
       ],
       "unlocked_by": "nth-prime",
-      "uuid": "0f85f581-0077-447e-a5f4-7b58c1b4b7a8"
+      "uuid": "b6050415-b980-4d01-8520-ecdf24f40e37"
     },
     {
       "core": false,
@@ -819,7 +819,7 @@
         "strings"
       ],
       "unlocked_by": "isogram",
-      "uuid": "3f8c4f1b-b0b7-4f6e-8cd9-d5e252737ebb"
+      "uuid": "422b08d7-7aa9-4f54-9a1a-ad2a0d90fc6d"
     },
     {
       "core": false,
@@ -831,7 +831,7 @@
         "mathematics"
       ],
       "unlocked_by": "binary",
-      "uuid": "1ee89535-3e91-4404-9116-adcbf87f2390"
+      "uuid": "4fc33e06-6ac0-432c-8bbe-d598c193443e"
     },
     {
       "core": false,
@@ -845,7 +845,7 @@
         "strings"
       ],
       "unlocked_by": "matrix",
-      "uuid": "6f2e38ae-57d8-4b4e-b1db-ae35c066ece4"
+      "uuid": "53cd372b-8e8c-4f95-92fa-588b9ad3140f"
     },
     {
       "core": true,
@@ -857,7 +857,7 @@
         "control_flow_loops"
       ],
       "unlocked_by": null,
-      "uuid": "6e7a0d97-580b-4b21-bcad-e89e0473d507"
+      "uuid": "e3d0e005-6397-4006-92ec-78f86178c684"
     },
     {
       "core": false,
@@ -869,7 +869,7 @@
         "text_formatting"
       ],
       "unlocked_by": "pig-latin",
-      "uuid": "7159ffe2-3f5f-4d12-8a38-843452ef5d7e"
+      "uuid": "8901be3e-f10b-4ab5-a81e-3916cac7138c"
     },
     {
       "core": false,
@@ -883,7 +883,7 @@
         "graphs"
       ],
       "unlocked_by": "binary-search",
-      "uuid": "ba763756-e934-473f-a01c-a7c9ea0a971d"
+      "uuid": "57444e1f-d558-4684-a84e-6622e18771b6"
     },
     {
       "core": false,
@@ -894,7 +894,7 @@
         "control_flow_loops"
       ],
       "unlocked_by": "binary-search",
-      "uuid": "790d60b6-a64e-482f-8c2b-3e2442ac0b4e"
+      "uuid": "6de1c104-16d0-41a3-8bed-a6994b7b2748"
     },
     {
       "core": false,
@@ -906,7 +906,7 @@
         "control_flow_if_else_statements"
       ],
       "unlocked_by": "leap",
-      "uuid": "a608af44-59df-425d-a652-163635bf740e"
+      "uuid": "c0aacfca-82d3-4494-bc38-821dd0613c38"
     },
     {
       "core": false,
@@ -919,7 +919,7 @@
         "graphs"
       ],
       "unlocked_by": "matrix",
-      "uuid": "beca7d79-9237-4344-b058-66e0fa840691"
+      "uuid": "0c6b0312-5415-4c7a-9913-b594542df491"
     },
     {
       "core": false,
@@ -931,7 +931,7 @@
         "mathematics"
       ],
       "unlocked_by": "difference-of-squares",
-      "uuid": "bd4cd740-b78d-11e7-abc4-cec278b6b50a"
+      "uuid": "f01e08a7-c14a-4fc5-9713-8c59f92c9b6c"
     },
     {
       "core": false,
@@ -941,24 +941,35 @@
         "mathematics"
       ],
       "unlocked_by": "list-ops",
-      "uuid": "09df8b87-c2cf-44a7-879c-96c9030cf27b"
+      "uuid": "8e36e8ae-f2c5-4fea-a807-8713b2b23ee4"
     },
     {
       "core": false,
       "difficulty": 3,
       "slug": "isbn-verifier",
       "topics": [
-        "mathematics",
         "control_flow_loops",
+        "mathematics",
         "strings"
       ],
       "unlocked_by": "run-length-encoding",
-      "uuid": "a9a6a2c7-2a58-4090-b538-5a275c521fe0"
+      "uuid": "673d0132-6273-45ae-af27-8beb203bba81"
+    },
+    {
+      "core": false,
+      "difficulty": 3,
+      "slug": "reverse-string",
+      "topics": [
+        "arrays",
+        "strings"
+      ],
+      "unlocked_by": "list-ops",
+      "uuid": "2d443a8f-65de-496e-9527-8a54a840ba69"
     },
     {
       "deprecated": true,
       "slug": "accumulate",
-      "uuid": "70bc1661-9132-43af-bb44-b51e7d81676b"
+      "uuid": "cf3386ef-177c-41f6-8569-040d3a9c9175"
     }
   ],
   "foregone": [],
