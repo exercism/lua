@@ -1,30 +1,30 @@
-# Collatz Conjecture
+# Queen Attack
 
-The Collatz Conjecture or 3x+1 problem can be summarized as follows:
+Given the position of two queens on a chess board, indicate whether or not they
+are positioned so that they can attack each other.
 
-Take any positive integer n. If n is even, divide n by 2 to get n / 2. If n is
-odd, multiply n by 3 and add 1 to get 3n + 1. Repeat the process indefinitely.
-The conjecture states that no matter which number you start with, you will
-always reach 1 eventually.
+In the game of chess, a queen can attack pieces which are on the same
+row, column, or diagonal.
 
-Given a number n, return the number of steps required to reach 1.
+A chessboard can be represented by an 8 by 8 array.
 
-## Examples
+So if you're told the white queen is at (2, 3) and the black queen at
+(5, 6), then you'd know you've got a set-up like so:
 
-Starting with n = 12, the steps would be as follows:
+```text
+_ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _
+_ _ _ W _ _ _ _
+_ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _
+_ _ _ _ _ _ B _
+_ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _
+```
 
-0. 12
-1. 6
-2. 3
-3. 10
-4. 5
-5. 16
-6. 8
-7. 4
-8. 2
-9. 1
-
-Resulting in 9 steps. So for input n = 12, the return value would be 9.
+You'd also be able to answer whether the queens can attack each other.
+In this case, that answer would be yes, they can, because both pieces
+share a diagonal.
 
 ## Running the tests
 
@@ -37,7 +37,7 @@ you're having trouble, please visit the exercism.io [Lua language page](http://e
 
 ## Source
 
-An unsolved problem in mathematics named after mathematician Lothar Collatz [https://en.wikipedia.org/wiki/3x_%2B_1_problem](https://en.wikipedia.org/wiki/3x_%2B_1_problem)
+J Dalbey's Programming Practice problems [http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html](http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
