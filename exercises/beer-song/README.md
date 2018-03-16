@@ -322,7 +322,7 @@ experiment make the code better? Worse? Did you learn anything from it?
 
 ## Running the tests
 
-To run the tests, run the command `busted .` from within the exercise directory.
+To run the tests, run the command `busted` from within the exercise directory.
 
 ## Further information
 

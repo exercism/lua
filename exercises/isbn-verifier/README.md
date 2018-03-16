@@ -42,7 +42,7 @@ Now, it's even trickier since the check digit of an ISBN-10 may be 'X' (represen
 * Generate valid ISBN, maybe even from a given starting ISBN.
 ## Running the tests
 
-To run the tests, run the command `busted .` from within the exercise directory.
+To run the tests, run the command `busted` from within the exercise directory.
 
 ## Further information
 

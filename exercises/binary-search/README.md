@@ -36,7 +36,7 @@ A binary search is a dichotomic divide and conquer search algorithm.
 
 ## Running the tests
 
-To run the tests, run the command `busted .` from within the exercise directory.
+To run the tests, run the command `busted` from within the exercise directory.
 
 ## Further information
 

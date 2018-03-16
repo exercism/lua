@@ -21,7 +21,7 @@ $ luarocks install busted
 Then run your tests:
 
 ```shell
-$ busted .
+$ busted
 ```
 
 #### [Ubuntu](#ubuntu)
@@ -47,7 +47,7 @@ $ sudo luarocks install busted
 Then run your tests:
 
 ```shell
-$ busted .
+$ busted
 ```
 
 #### [Windows](#windows)
@@ -62,7 +62,7 @@ Then install the [Busted][3] testing framework for Lua:
 
 Then run your tests:
 
-    C:\> busted .
+    C:\> busted
 
 [1]: http://brew.sh/
 

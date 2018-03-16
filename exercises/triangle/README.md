@@ -24,7 +24,7 @@ a single line. Feel free to add your own code/tests to check for degenerate tria
 
 ## Running the tests
 
-To run the tests, run the command `busted .` from within the exercise directory.
+To run the tests, run the command `busted` from within the exercise directory.
 
 ## Further information
 

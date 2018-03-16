@@ -19,7 +19,7 @@ See <http://en.wikipedia.org/wiki/Pig_latin> for more details.
 
 ## Running the tests
 
-To run the tests, run the command `busted .` from within the exercise directory.
+To run the tests, run the command `busted` from within the exercise directory.
 
 ## Further information
 

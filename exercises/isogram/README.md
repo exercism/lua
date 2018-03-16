@@ -15,7 +15,7 @@ The word *isograms*, however, is not an isogram, because the s repeats.
 
 ## Running the tests
 
-To run the tests, run the command `busted .` from within the exercise directory.
+To run the tests, run the command `busted` from within the exercise directory.
 
 ## Further information
 

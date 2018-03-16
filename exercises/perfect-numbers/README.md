@@ -19,7 +19,7 @@ Implement a way to determine whether a given number is **perfect**. Depending on
 
 ## Running the tests
 
-To run the tests, run the command `busted .` from within the exercise directory.
+To run the tests, run the command `busted` from within the exercise directory.
 
 ## Further information
 

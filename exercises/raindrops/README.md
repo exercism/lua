@@ -19,7 +19,7 @@ Convert a number to a string, the contents of which depend on the number's facto
 
 ## Running the tests
 
-To run the tests, run the command `busted .` from within the exercise directory.
+To run the tests, run the command `busted` from within the exercise directory.
 
 ## Further information
 
