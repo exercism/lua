@@ -15,7 +15,6 @@ describe('reverse-string', function()
 
   it('a sentence with punctuation', function()
     assert.are.equal("!yrgnuh m'I", reverse_string("I'm hungry!"))
-
   end)
 
   it('a palindrome', function()
