@@ -31,7 +31,7 @@ score is 257, your program should only report the eggs (1) allergy.
 
 ## Running the tests
 
-To run the tests, run the command `busted .` from within the exercise directory.
+To run the tests, run the command `busted` from within the exercise directory.
 
 ## Further information
 

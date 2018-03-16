@@ -28,7 +28,7 @@ Resulting in 9 steps. So for input n = 12, the return value would be 9.
 
 ## Running the tests
 
-To run the tests, run the command `busted .` from within the exercise directory.
+To run the tests, run the command `busted` from within the exercise directory.
 
 ## Further information
 

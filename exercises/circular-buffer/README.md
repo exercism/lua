@@ -52,7 +52,7 @@ the buffer is once again full.
 
 ## Running the tests
 
-To run the tests, run the command `busted .` from within the exercise directory.
+To run the tests, run the command `busted` from within the exercise directory.
 
 ## Further information
 

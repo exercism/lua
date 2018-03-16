@@ -6,7 +6,7 @@ A gigasecond is 10^9 (1,000,000,000) seconds.
 
 ## Running the tests
 
-To run the tests, run the command `busted .` from within the exercise directory.
+To run the tests, run the command `busted` from within the exercise directory.
 
 ## Further information
 

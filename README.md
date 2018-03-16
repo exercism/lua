@@ -31,7 +31,7 @@ For example, for the [Bob][4] exercise:
 
 Run the test
 
-    $ busted .
+    $ busted
 
 Rename *bob.lua* to *example.lua*, and add the exercise to the [lua/config.json][5] file.
 
