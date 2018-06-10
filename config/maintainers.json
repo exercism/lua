@@ -2,34 +2,34 @@
   "docs_url": "https://github.com/exercism/docs/blob/master/maintaining-a-track/maintainer-configuration.md",
   "maintainers": [
     {
-      "alumnus": false,
-      "avatar_url": null,
-      "bio": null,
       "github_username": "aarti",
-      "link_text": null,
-      "link_url": null,
-      "name": null,
-      "show_on_website": false
-    },
-    {
       "alumnus": false,
-      "avatar_url": null,
-      "bio": null,
-      "github_username": "ryanplusplus",
+      "show_on_website": false,
+      "name": null,
       "link_text": null,
       "link_url": null,
-      "name": null,
-      "show_on_website": true
+      "avatar_url": null,
+      "bio": null
     },
     {
-      "alumnus": true,
+      "github_username": "ryanplusplus",
+      "alumnus": false,
+      "show_on_website": true,
+      "name": null,
+      "link_text": null,
+      "link_url": null,
       "avatar_url": null,
-      "bio": null,
+      "bio": null
+    },
+    {
       "github_username": "robphoenix",
+      "alumnus": true,
+      "show_on_website": true,
+      "name": "Rob Phoenix",
       "link_text": "robphoenix.com",
       "link_url": "https://blog.robphoenix.com/",
-      "name": "Rob Phoenix",
-      "show_on_website": true
+      "avatar_url": null,
+      "bio": null
     }
   ]
 }
