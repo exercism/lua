@@ -20,11 +20,11 @@ All subsequent codons after are ignored, like this:
 
 RNA: `"AUGUUUUCUUAAAUG"` =>
 
-Codons: `"AUG", "UUU", "UCU", "UAA", "AUG"` =>
+Codons: `"AUG", "UUU", "UCU", "UAG", "AUG"` =>
 
 Protein: `"Methionine", "Phenylalanine", "Serine"`
 
-Note the stop codon `"UAA"` terminates the translation and the final methionine is not translated into the protein sequence.
+Note the stop codon terminates the translation and the final methionine is not translated into the protein sequence.
 
 Below are the codons and resulting Amino Acids needed for the exercise.
 
@@ -48,7 +48,7 @@ To run the tests, run the command `busted` from within the exercise directory.
 ## Further information
 
 For more detailed information about the Lua track, including how to get help if
-you're having trouble, please visit the exercism.io [Lua language page](http://exercism.io/languages/lua/about).
+you're having trouble, please visit the exercism.io [Lua language page](http://exercism.io/tracks/lua/about).
 
 ## Source
 

@@ -1,4 +1,4 @@
-# ISBN Verifier
+# Isbn Verifier
 
 The [ISBN-10 verification process](https://en.wikipedia.org/wiki/International_Standard_Book_Number) is used to validate book identification
 numbers. These normally contain dashes and look like: `3-598-21508-8`
@@ -47,7 +47,7 @@ To run the tests, run the command `busted` from within the exercise directory.
 ## Further information
 
 For more detailed information about the Lua track, including how to get help if
-you're having trouble, please visit the exercism.io [Lua language page](http://exercism.io/languages/lua/about).
+you're having trouble, please visit the exercism.io [Lua language page](http://exercism.io/tracks/lua/about).
 
 ## Source
 
