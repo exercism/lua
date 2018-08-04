@@ -69,7 +69,7 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -108,6 +108,7 @@
         "bitwise_operations",
         "control_flow_if_else_statements",
         "control_flow_loops",
+        "math",
         "strings"
       ]
     },
@@ -222,7 +223,7 @@
       "topics": [
         "control_flow_if_else_statements",
         "control_flow_loops",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -269,7 +270,7 @@
       "topics": [
         "control_flow_if_else_statements",
         "control_flow_loops",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -341,7 +342,7 @@
         "control_flow_if_else_statements",
         "control_flow_loops",
         "exception_handling",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -416,7 +417,7 @@
       "topics": [
         "control_flow_if_else_statements",
         "control_flow_loops",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -448,7 +449,7 @@
       "difficulty": 5,
       "topics": [
         "control_flow_loops",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -460,7 +461,7 @@
       "topics": [
         "control_flow_if_else_statements",
         "control_flow_loops",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -682,7 +683,8 @@
       "difficulty": 5,
       "topics": [
         "control_flow_loops",
-        "exception_handling"
+        "exception_handling",
+        "math"
       ]
     },
     {
@@ -785,6 +787,7 @@
         "bitwise_operations",
         "control_flow_if_else_statements",
         "control_flow_loops",
+        "math",
         "strings"
       ]
     },
@@ -811,7 +814,7 @@
       "topics": [
         "control_flow_if_else_statements",
         "control_flow_loops",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -834,7 +837,7 @@
       "topics": [
         "arrays",
         "control_flow_loops",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -934,7 +937,7 @@
       "topics": [
         "control_flow_if_else_statements",
         "control_flow_loops",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -943,9 +946,7 @@
       "core": false,
       "unlocked_by": "list-ops",
       "difficulty": 3,
-      "topics": [
-        "mathematics"
-      ]
+      "topics": []
     },
     {
       "slug": "isbn-verifier",
@@ -955,7 +956,6 @@
       "difficulty": 3,
       "topics": [
         "control_flow_loops",
-        "mathematics",
         "strings"
       ]
     },
