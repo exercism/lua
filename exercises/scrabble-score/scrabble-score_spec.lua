@@ -5,8 +5,8 @@ describe('scrabble-score', function()
     assert.are.equal(0, score(''))
   end)
 
-  it('scores a null as zero', function()
-    assert.are.equal(0, score(null))
+  it('scores a nil as zero', function()
+    assert.are.equal(0, score(nil))
   end)
 
   it('scores a very short word', function()
