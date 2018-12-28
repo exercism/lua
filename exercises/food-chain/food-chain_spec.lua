@@ -1,6 +1,6 @@
 local song = require('food-chain')
 
-describe('food-hain', function ()
+describe('food-chain', function ()
   it('fly', function ()
     local expected = "I know an old lady who swallowed a fly.\nI don't know why she swallowed the fly. Perhaps she'll die.\n"
 
