@@ -9,7 +9,7 @@
 First install Lua and [Luarocks][2] using [Homebrew][1]:
 
 ```shell
-$ brew install lua
+$ brew install lua luarocks
 ```
 
 Then install the [Busted][3] testing framework for Lua:
