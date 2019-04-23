@@ -1,6 +1,6 @@
-local brackets = require('bracket-push')
+local brackets = require('matching-brackets')
 
-describe('bracket-push', function()
+describe('matching-brackets', function()
   it('should accept an empty string', function()
     assert.is_true(brackets.valid(''))
   end)
