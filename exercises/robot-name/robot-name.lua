@@ -1,0 +1,3 @@
+local Robot = {}
+
+return Robot

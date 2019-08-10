@@ -1,0 +1,3 @@
+local School = {}
+
+return School
