@@ -1,0 +1,3 @@
+local CircularBuffer = {}
+
+return CircularBuffer

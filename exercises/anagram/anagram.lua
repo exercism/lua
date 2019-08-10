@@ -1,0 +1,3 @@
+local Anagram = {}
+
+return Anagram

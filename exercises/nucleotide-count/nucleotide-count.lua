@@ -1,0 +1,3 @@
+local DNA = {}
+
+return DNA

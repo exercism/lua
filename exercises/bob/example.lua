@@ -12,7 +12,7 @@ local function question(say)
   return string.sub(say, -1) == '?'
 end
 
-function bob.hey( say )
+function bob.hey(say)
   if nothing(say)  then return 'Fine, be that way.' end
   if shouting(say) then return "Whoa, chill out!" end
   if question(say) then return "Sure" end
