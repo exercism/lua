@@ -29,6 +29,16 @@
       ]
     },
     {
+      "slug": "resistor-color-trio",
+      "uuid": "64ecce3b-c7ec-4d15-a723-da5c014167b2",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 1,
+      "topics": [
+        "hash_tables"
+      ]
+    },
+    {
       "slug": "house",
       "uuid": "9c71aea2-ff12-44dc-8d54-c15aff6b4b35",
       "core": true,
