@@ -988,6 +988,17 @@
       "difficulty": 0,
       "topics": null,
       "deprecated": true
+    },
+    {
+      "slug": "rational-numbers",
+      "uuid": "097d3111-c96f-4cf4-b0af-5a4edcf48137",
+      "core": false,
+      "unlocked_by": "leap",
+      "difficulty": 5,
+      "topics": [
+        "math",
+        "structs"
+      ]
     }
   ]
 }
