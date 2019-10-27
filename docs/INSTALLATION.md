@@ -2,7 +2,7 @@
 
 -   [MacOS](#mac)
 -   [Ubuntu](#ubuntu)
--   [Windows](#windows)
+-   [Windows 10 (WSL)](#windows%2010)
 
 #### [MacOS](#mac)
 
@@ -50,19 +50,39 @@ Then run your tests:
 $ busted
 ```
 
-#### [Windows](#windows)
+#### [Windows 10](#windows%2010)
 
-First install Lua and [Luarocks][2] using [Chocolatey][7]:
+First you must enable [WSL (Windows Subsystem for Linux)][7] using [PowerShell][8] (Administrator):
 
-    C:\> choco install lua
+```shell
+PS> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
 
-Then install the [Busted][3] testing framework for Lua:
+This requires a reboot.
 
-    C:\> luarocks install busted
+Next, install Ubuntu from the [Microsoft Store][9], **or** download then install using PowerShell:
 
-Then run your tests:
+```shell
+PS> curl.exe -L -o ubuntu1804.appx https://aka.ms/wsl-ubuntu-1804
+PS> Add-AppxPackage .\ubuntu1804.appx; rm .\ubuntu1804.appx
+PS> ubuntu1804
+```
 
-    C:\> busted
+Then update your package list:
+
+```shell
+PS> wsl
+$ sudo apt-get update
+```
+
+Now you are ready to install [LuaRocks][2] and [Busted][3] by following the [Ubuntu instructions](#ubuntu) above.
+
+Once done you can run your tests directly from any Windows command line:
+
+```cmd
+C:\> wsl busted
+```
+
 
 [1]: http://brew.sh/
 
@@ -76,4 +96,8 @@ Then run your tests:
 
 [6]: https://help.ubuntu.com/lts/serverguide/apt.html
 
-[7]: http://chocolatey.org/
+[7]: https://docs.microsoft.com/en-us/windows/wsl/faq
+
+[8]: https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-6
+
+[9]: https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6
