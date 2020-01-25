@@ -6,7 +6,7 @@ return function(sum)
       local c = sum - a - b
 
       if a ^ 2 + b ^ 2 == c ^ 2 then
-        table.insert(triplets, { a, b, c})
+        table.insert(triplets, { a, b, c })
       end
     end
   end
