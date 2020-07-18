@@ -1,10 +1,11 @@
 ## Installing Lua
 
--   [MacOS](#mac)
--   [Ubuntu](#ubuntu)
--   [Windows 10 (WSL)](#windows%2010)
+- [MacOS](#macos)
+- [Ubuntu](#ubuntu)
+- [Windows 10: WSL](#windows-10%-wsl)
+- [Windows 10: Docker](#windows-10%-docker)
 
-#### [MacOS](#mac)
+#### MacOS
 
 First install Lua and [Luarocks][2] using [Homebrew][1]:
 
@@ -24,7 +25,7 @@ Then run your tests:
 $ busted
 ```
 
-#### [Ubuntu](#ubuntu)
+#### Ubuntu
 
 First install Lua and [Luarocks][2] using [Apt][6]:
 
@@ -50,7 +51,7 @@ Then run your tests:
 $ busted
 ```
 
-#### [Windows 10](#windows%2010)
+#### Windows 10: WSL
 
 First you must enable [WSL (Windows Subsystem for Linux)][7] using [PowerShell][8] (Administrator):
 
@@ -83,6 +84,55 @@ Once done you can run your tests directly from any Windows command line:
 C:\> wsl busted
 ```
 
+#### Windows 10: Docker
+
+##### Install Gitbash
+
+This step is optional. You may have to tweak the following steps slightly if you prefer to use Windows' native CLI or another CLI.
+
+Download [here][10].
+Install Instructions [here][11].
+
+##### Install Docker
+
+Follow the instructions to install [Docker for Windows][12].
+Once you've finished installing, you can run the following command to ensure it's been installed correctly.
+
+```shell
+$ docker --version
+```
+
+_You may encounter an error when trying to run Docker the first time._
+
+`cannot enable hyper-v service`
+
+_If this occurs, you can follow these instructions to [enable Hyper V][13]. You may have to disable the setting, restart your computer and re-enable it after boot._
+
+##### Install busted
+
+Once you have Gitbash and Docker installed, you'll be able to install a busted 'container'.
+
+In Gitbash run the following:
+
+Pull down this widely used Docker container by running the following:
+
+```shell
+$ docker pull imega/busted
+```
+
+Set up an alias, so you don't have to type the whole command every time:
+
+```shell
+$ alias dbusted='f(){ docker run --rm -t -v "/$@":/data imega/busted; unset -f f; }; f'
+```
+
+Now, in your CLI, you can navigate into the directory you want to run your tests in. Run the following:
+
+```shell
+$ dbusted $PWD
+```
+
+You should see the output from your busted tests.
 
 [1]: http://brew.sh/
 
@@ -101,3 +151,11 @@ C:\> wsl busted
 [8]: https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-6
 
 [9]: https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6
+
+[10]: https://git-scm.com/download/win
+
+[11]: https://www.stanleyulili.com/git/how-to-install-git-bash-on-windows/
+
+[12]: https://docs.docker.com/docker-for-windows/install/
+
+[13]: https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
