@@ -1,75 +1,74 @@
+-- canonical test data 2.0.0
+
 local brackets = require('matching-brackets')
 
 describe('matching-brackets', function()
-  it('should accept an empty string', function()
-    assert.is_true(brackets.valid(''))
-  end)
+    it('should accept paired square brackets', function()
+        assert.is_true(brackets.valid('[]'))
+    end)
 
-  it('should accept a matched pair of braces', function()
-    assert.is_true(brackets.valid('{}'))
-  end)
+    it('should accept empty string', function()
+        assert.is_true(brackets.valid(''))
+    end)
 
-  it('should reject an opening brace without a closing brace', function()
-    assert.is_false(brackets.valid('{'))
-  end)
+    it('should reject unpaired brackets', function()
+        assert.is_false(brackets.valid('[['))
+    end)
 
-  it('should reject a closing brace without an opening brace', function()
-    assert.is_false(brackets.valid('}{'))
-  end)
+    it('should reject wrong ordered brackets', function()
+        assert.is_false(brackets.valid('}{'))
+    end)
 
-  it('should accept a matched pair of parens', function()
-    assert.is_true(brackets.valid('()'))
-  end)
+    it('should reject wrong closing bracket', function()
+        assert.is_false(brackets.valid('{]'))
+    end)
 
-  it('should reject an opening paren without a closing paren', function()
-    assert.is_false(brackets.valid('('))
-  end)
+    it('should accept paired with whitespace', function()
+        assert.is_true(brackets.valid('{ }'))
+    end)
 
-  it('should reject a closing paren without an opening paren', function()
-    assert.is_false(brackets.valid(')('))
-  end)
+    it('should reject partially paired brackets', function()
+        assert.is_false(brackets.valid('{[])'))
+    end)
 
-  it('should accept a matched pair of square brackets', function()
-    assert.is_true(brackets.valid('[]'))
-  end)
+    it('should accept simple nested brackets', function()
+        assert.is_true(brackets.valid('{[]}'))
+    end)
 
-  it('should reject an opening square bracket without a closing square bracket', function()
-    assert.is_false(brackets.valid('['))
-  end)
+    it('should accept several paired brackets', function()
+        assert.is_true(brackets.valid('{}[]'))
+    end)
 
-  it('should reject a closing square bracket without an opening square bracket', function()
-    assert.is_false(brackets.valid(']['))
-  end)
+    it('should accept paired and nested brackets', function()
+        assert.is_true(brackets.valid('([{}({}[])])'))
+    end)
 
-  it('should accept more than one pair of brackets', function()
-    assert.is_true(brackets.valid('[]{}()'))
-  end)
+    it('should reject unopened closing brackets', function()
+        assert.is_false(brackets.valid('{[)][]}'))
+    end)
 
-  it('should accept nested brackets', function()
-    assert.is_true(brackets.valid('[{}]'))
-  end)
+    it('should reject unpaired and nested brackets', function()
+        assert.is_false(brackets.valid('([{])'))
+    end)
 
-  it('should reject properly balanced but improperly nested brackets', function()
-    assert.is_false(brackets.valid('[{]}'))
-  end)
-
-  it('should allow deep nesting of brackets', function()
-    assert.is_true(brackets.valid('[{(([{}]))}]'))
-  end)
-
-  it('should accept complicated brackets that are balanced and properly nested', function()
-    assert.is_true(brackets.valid('{[]([()])}'))
-  end)
-
-  it('should reject complicated brackets that are not balanced', function()
-    assert.is_false(brackets.valid('{[]([()]}'))
-  end)
-
-  it('should reject complicated brackets that are not properly nested', function()
-    assert.is_false(brackets.valid('{[]([()]})'))
-  end)
-
-  it('should ignore non-bracket characters', function()
-    assert.is_true(brackets.valid('{hello[]([a()])b}c'))
-  end)
+    it('should reject paired and wrong nested brackets', function()
+        assert.is_false(brackets.valid('[({]})'))
+    end)
+    
+    it('should reject paired and incomplete brackets', function()
+        assert.is_false(brackets.valid('{}['))
+    end)
+    
+    it('should reject too many closing brackets', function()
+        assert.is_false(brackets.valid('[]]'))
+    end)
+    
+    it('should accept math expression', function()
+        assert.is_true(brackets.valid('(((185 + 223.85) * 15) - 543)/2'))
+    end)
+    
+    it('should accept complex latex expression', function()
+        assert.is_true(brackets.valid([[\left(\begin{array}{cc} \frac{1}{3} & x\\ \mathrm{e}^{x} &... x^2 \end{array}\right)]]))
+    end)
+    
 end)
