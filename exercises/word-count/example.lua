@@ -1,6 +1,7 @@
 local function word_count(s)
   local counts = {}
-  for w in s:gmatch('%w+') do
+  s = s:gsub("'([%w%d']+)'", "%1")
+  for w in s:gmatch('[%w%d\']+') do
     local normalized = w:lower()
     counts[normalized] = (counts[normalized] or 0) + 1
   end
