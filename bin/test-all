@@ -2,7 +2,9 @@
 
 RESULT=0
 
-cd exercises
+rm -r test-exercises
+cp -r exercises test-exercises
+cd test-exercises
 
 for i in *
 do
@@ -10,12 +12,11 @@ do
   then
     echo Testing $i...
     cd $i
-    cp example.lua $i.lua
+    mv example.lua $i.lua
     busted --verbose
     if [ $? -ne 0 ]; then
       RESULT=1
     fi
-    rm $i.lua
     cd ..
   fi
 done
