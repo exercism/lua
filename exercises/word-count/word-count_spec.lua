@@ -58,13 +58,13 @@ describe('word-count', function()
     assert.are.same(expected, result)
   end)
 
-  it('counts with quatation', function()
+  it('counts with quotation', function()
     local result = word_count("Joe can't tell between 'large' and large.")
     local expected = { joe = 1, ["can't"] = 1, tell = 1, between = 1, large = 2, ["and"] = 1}
     assert.are.same(expected, result)
   end)
 
-  it('counts with substirngs from the beginning', function()
+  it('counts with substrings from the beginning', function()
     local result = word_count("Joe can't tell between app, apple and a.")
     local expected = { joe = 1, ["can't"] = 1, tell = 1, between = 1, app = 1, apple = 1, ["and"] = 1, a = 1}
     assert.are.same(expected, result)
