@@ -3,7 +3,7 @@ name: Test
 on: [push, pull_request]
 
 jobs:
-  test_5.3:
+  test:
     runs-on: ubuntu-18.04
 
     steps:
