@@ -1,0 +1,24 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@master
+
+    - uses: leafo/gh-actions-lua@v6
+      with:
+        luaVersion: "5.3.5"
+
+    - uses: leafo/gh-actions-luarocks@v2
+
+    - name: build
+      run: |
+        luarocks install busted
+
+    - name: test
+      run: |
+        bin/test-all
