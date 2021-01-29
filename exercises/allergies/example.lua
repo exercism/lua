@@ -12,7 +12,7 @@ local allergens = {
 local function list(score)
   local results = {}
   for i, allergen in ipairs(allergens) do
-    if bit32.band(score, 1 << (i - 1)) > 0 then
+    if score & 1 << (i - 1) > 0 then
       table.insert(results, allergen)
     end
   end
