@@ -16,6 +16,7 @@
   },
   "test_pattern": ".*spec[.]lua$",
   "exercises": {
+    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
