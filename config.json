@@ -1,6 +1,12 @@
 {
   "language": "Lua",
   "active": true,
+  "status": {
+    "concept_exercises": false,
+    "test_runner": false,
+    "representer": false,
+    "analyzer": false
+  },
   "blurb": "Lua is a lightweight scripting language, designed for use within programs. It's popular in gaming, and is a general-purpose language, which can provide a familiar syntax across different applications.",
   "version": 3,
   "test_pattern": ".*spec[.]lua$",
