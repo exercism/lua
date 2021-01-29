@@ -10,6 +10,10 @@
   },
   "blurb": "Lua is a lightweight scripting language, designed for use within programs. It's popular in gaming, and is a general-purpose language, which can provide a familiar syntax across different applications.",
   "version": 3,
+  "online_editor": {
+    "indent_style": "space",
+    "indent_size": 4
+  },
   "test_pattern": ".*spec[.]lua$",
   "exercises": [
     {
