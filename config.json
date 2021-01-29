@@ -19,9 +19,6 @@
     {
       "slug": "hello-world",
       "uuid": "e2909553-add0-46d9-a95d-d687d12ccd32",
-      "core": true,
-      "auto_approve": true,
-      "unlocked_by": null,
       "difficulty": 1,
       "topics": [
         "control_flow_if_statements",
@@ -32,8 +29,6 @@
     {
       "slug": "hamming",
       "uuid": "d5fcde07-bcef-4ee1-858b-fa4da55d7e0a",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 2,
       "topics": [
         "control_flow_loops",
@@ -43,8 +38,6 @@
     {
       "slug": "house",
       "uuid": "9c71aea2-ff12-44dc-8d54-c15aff6b4b35",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 3,
       "topics": [
         "control_flow_loops",
@@ -55,8 +48,6 @@
     {
       "slug": "difference-of-squares",
       "uuid": "251d7fd3-ed96-421c-af46-817ad40997e5",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 2,
       "topics": [
         "math"
@@ -65,8 +56,6 @@
     {
       "slug": "binary-search",
       "uuid": "ca4f3b4c-ab14-4a51-9bda-0391ea36e721",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 4,
       "topics": [
         "algorithms",
@@ -79,8 +68,6 @@
     {
       "slug": "matrix",
       "uuid": "d4de8f02-ba5b-4357-8285-9cb41dc3b72e",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 3,
       "topics": [
         "arrays",
@@ -91,8 +78,6 @@
     {
       "slug": "isogram",
       "uuid": "3ae90024-cd9a-4884-836f-3a7ea94cce01",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 2,
       "topics": [
         "control_flow_if_else_statements",
@@ -103,8 +88,6 @@
     {
       "slug": "bank-account",
       "uuid": "02407c99-08bf-4ea4-b9df-fdef0ad18fa4",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 3,
       "topics": [
         "classes",
@@ -114,8 +97,6 @@
     {
       "slug": "nth-prime",
       "uuid": "b8880be4-02e7-4911-b049-927c028ed8e0",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 4,
       "topics": [
         "control_flow_if_else_statements",
@@ -127,8 +108,6 @@
     {
       "slug": "diamond",
       "uuid": "b236519f-987b-4832-a698-b9eeebf29efb",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 4,
       "topics": [
         "algorithms",
@@ -140,8 +119,6 @@
     {
       "slug": "run-length-encoding",
       "uuid": "f9a5560e-5f84-451a-a8f8-632ea8525e08",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 5,
       "topics": [
         "algorithms",
@@ -154,8 +131,6 @@
     {
       "slug": "robot-name",
       "uuid": "f4369803-07c4-4bbe-9bdc-3f4eea510802",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 4,
       "topics": [
         "randomness",
@@ -166,8 +141,6 @@
     {
       "slug": "leap",
       "uuid": "1e9b4ae0-0c07-4ed6-8e31-14682fda1f8a",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 1,
       "topics": [
         "control_flow_if_else_statements",
@@ -177,8 +150,6 @@
     {
       "slug": "custom-set",
       "uuid": "ed37d6db-7cbe-4219-bdb0-f15f28f60f1e",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 6,
       "topics": [
         "classes",
@@ -190,8 +161,6 @@
     {
       "slug": "pig-latin",
       "uuid": "6d43c48f-47d0-443f-87e0-eeb6e535407f",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 5,
       "topics": [
         "control_flow_if_else_statements",
@@ -203,8 +172,6 @@
     {
       "slug": "list-ops",
       "uuid": "309e88ac-2d18-419f-aee6-76d9d3230209",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -215,8 +182,6 @@
     {
       "slug": "binary",
       "uuid": "5d24d945-9f15-450a-bb47-0b9c6a9e8c47",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 3,
       "topics": [
         "bitwise_operations",
@@ -229,8 +194,6 @@
     {
       "slug": "allergies",
       "uuid": "e3d0e005-6397-4006-92ec-78f86178c684",
-      "core": true,
-      "unlocked_by": null,
       "difficulty": 4,
       "topics": [
         "bitwise_operations",
@@ -241,8 +204,6 @@
     {
       "slug": "resistor-color-trio",
       "uuid": "64ecce3b-c7ec-4d15-a723-da5c014167b2",
-      "core": false,
-      "unlocked_by": "hamming",
       "difficulty": 1,
       "topics": [
         "hash_tables"
@@ -251,8 +212,6 @@
     {
       "slug": "nucleotide-count",
       "uuid": "a5fb57d1-1a31-43a0-adc4-7f4b8046c9eb",
-      "core": false,
-      "unlocked_by": "hamming",
       "difficulty": 3,
       "topics": [
         "control_flow_loops",
@@ -263,8 +222,6 @@
     {
       "slug": "protein-translation",
       "uuid": "8fa0c325-56ca-481f-a2cf-4c3fcffb088f",
-      "core": false,
-      "unlocked_by": "hamming",
       "difficulty": 3,
       "topics": [
         "control_flow_if_else_statements",
@@ -276,8 +233,6 @@
     {
       "slug": "rna-transcription",
       "uuid": "5029a8ed-3766-4632-bdab-964ca4a06e34",
-      "core": false,
-      "unlocked_by": "hamming",
       "difficulty": 3,
       "topics": [
         "control_flow_loops",
@@ -288,8 +243,6 @@
     {
       "slug": "scrabble-score",
       "uuid": "92b5536c-1129-4c93-875d-df2b4178af70",
-      "core": false,
-      "unlocked_by": "hamming",
       "difficulty": 3,
       "topics": [
         "control_flow_loops",
@@ -299,8 +252,6 @@
     {
       "slug": "beer-song",
       "uuid": "242da1b4-c8ad-48c8-bc0f-e43fd654f8ae",
-      "core": false,
-      "unlocked_by": "house",
       "difficulty": 3,
       "topics": [
         "control_flow_if_else_statements",
@@ -312,8 +263,6 @@
     {
       "slug": "food-chain",
       "uuid": "68650122-5452-4674-8676-5387cc24fd14",
-      "core": false,
-      "unlocked_by": "house",
       "difficulty": 3,
       "topics": [
         "control_flow_if_else_statements",
@@ -324,8 +273,6 @@
     {
       "slug": "sum-of-multiples",
       "uuid": "da6a0c52-5943-412e-8649-8965ae9da5cf",
-      "core": false,
-      "unlocked_by": "difference-of-squares",
       "difficulty": 2,
       "topics": [
         "control_flow_if_else_statements",
@@ -336,8 +283,6 @@
     {
       "slug": "collatz-conjecture",
       "uuid": "f01e08a7-c14a-4fc5-9713-8c59f92c9b6c",
-      "core": false,
-      "unlocked_by": "difference-of-squares",
       "difficulty": 3,
       "topics": [
         "control_flow_if_else_statements",
@@ -348,8 +293,6 @@
     {
       "slug": "perfect-numbers",
       "uuid": "8b7ce997-ce5f-4968-b661-d3cd9fed0fc9",
-      "core": false,
-      "unlocked_by": "difference-of-squares",
       "difficulty": 3,
       "topics": [
         "control_flow_if_else_statements",
@@ -360,8 +303,6 @@
     {
       "slug": "pythagorean-triplet",
       "uuid": "2bee6ff9-3826-4cf8-adc4-c00d4b87bbd7",
-      "core": false,
-      "unlocked_by": "difference-of-squares",
       "difficulty": 3,
       "topics": [
         "control_flow_if_else_statements",
@@ -372,8 +313,6 @@
     {
       "slug": "triangle",
       "uuid": "206802f9-7c6c-48d6-985e-73f2ec0290d0",
-      "core": false,
-      "unlocked_by": "difference-of-squares",
       "difficulty": 3,
       "topics": [
         "control_flow_if_else_statements",
@@ -383,8 +322,6 @@
     {
       "slug": "largest-series-product",
       "uuid": "f4bb526f-8cd6-4435-8fcc-32099553a989",
-      "core": false,
-      "unlocked_by": "difference-of-squares",
       "difficulty": 5,
       "topics": [
         "control_flow_loops",
@@ -395,8 +332,6 @@
     {
       "slug": "change",
       "uuid": "6de1c104-16d0-41a3-8bed-a6994b7b2748",
-      "core": false,
-      "unlocked_by": "binary-search",
       "difficulty": 4,
       "topics": [
         "control_flow_if_else_statements",
@@ -406,8 +341,6 @@
     {
       "slug": "binary-search-tree",
       "uuid": "83773c82-0df3-4957-9111-68b1143ae7fb",
-      "core": false,
-      "unlocked_by": "binary-search",
       "difficulty": 5,
       "topics": [
         "algorithms",
@@ -421,8 +354,6 @@
     {
       "slug": "flatten-array",
       "uuid": "9d19c9ca-7e82-40b5-8951-75354eb7991f",
-      "core": false,
-      "unlocked_by": "binary-search",
       "difficulty": 5,
       "topics": [
         "algorithms",
@@ -435,8 +366,6 @@
     {
       "slug": "matching-brackets",
       "uuid": "b9e455a0-688b-4502-aed7-a45536dde5ef",
-      "core": false,
-      "unlocked_by": "binary-search",
       "difficulty": 5,
       "topics": [
         "algorithms",
@@ -449,8 +378,6 @@
     {
       "slug": "pov",
       "uuid": "57444e1f-d558-4684-a84e-6622e18771b6",
-      "core": false,
-      "unlocked_by": "binary-search",
       "difficulty": 9,
       "topics": [
         "algorithms",
@@ -463,8 +390,6 @@
     {
       "slug": "minesweeper",
       "uuid": "fcb9cc16-7690-4ee6-a373-c8476063ec57",
-      "core": false,
-      "unlocked_by": "matrix",
       "difficulty": 7,
       "topics": [
         "arrays",
@@ -477,8 +402,6 @@
     {
       "slug": "ocr-numbers",
       "uuid": "f4008921-35cf-4c61-bc3b-aecd20b2f36f",
-      "core": false,
-      "unlocked_by": "matrix",
       "difficulty": 7,
       "topics": [
         "control_flow_loops",
@@ -488,8 +411,6 @@
     {
       "slug": "transpose",
       "uuid": "d677e28f-a162-4edf-9e22-b57589540087",
-      "core": false,
-      "unlocked_by": "matrix",
       "difficulty": 7,
       "topics": [
         "algorithms",
@@ -500,8 +421,6 @@
     {
       "slug": "word-search",
       "uuid": "52cd8150-1d95-4f1e-b964-7ec40d64acef",
-      "core": false,
-      "unlocked_by": "matrix",
       "difficulty": 7,
       "topics": [
         "control_flow_if_else_statements",
@@ -512,8 +431,6 @@
     {
       "slug": "alphametics",
       "uuid": "4b1c805c-e833-4f84-bf1f-931c640ade6d",
-      "core": false,
-      "unlocked_by": "matrix",
       "difficulty": 8,
       "topics": [
         "algorithms",
@@ -526,8 +443,6 @@
     {
       "slug": "react",
       "uuid": "0c6b0312-5415-4c7a-9913-b594542df491",
-      "core": false,
-      "unlocked_by": "matrix",
       "difficulty": 8,
       "topics": [
         "control_flow_if_else_statements",
@@ -539,8 +454,6 @@
     {
       "slug": "rectangles",
       "uuid": "53cd372b-8e8c-4f95-92fa-588b9ad3140f",
-      "core": false,
-      "unlocked_by": "matrix",
       "difficulty": 8,
       "topics": [
         "algorithms",
@@ -553,8 +466,6 @@
     {
       "slug": "pangram",
       "uuid": "e5a5d3ca-af5c-43c9-8f99-f5eb522169af",
-      "core": false,
-      "unlocked_by": "isogram",
       "difficulty": 3,
       "topics": [
         "control_flow_if_else_statements",
@@ -565,8 +476,6 @@
     {
       "slug": "word-count",
       "uuid": "06613caf-8f73-43e6-9fad-3d6df4c7c344",
-      "core": false,
-      "unlocked_by": "isogram",
       "difficulty": 3,
       "topics": [
         "control_flow_loops",
@@ -576,8 +485,6 @@
     {
       "slug": "acronym",
       "uuid": "422b08d7-7aa9-4f54-9a1a-ad2a0d90fc6d",
-      "core": false,
-      "unlocked_by": "isogram",
       "difficulty": 4,
       "topics": [
         "control_flow_loops",
@@ -587,8 +494,6 @@
     {
       "slug": "anagram",
       "uuid": "49c8c8cc-f0e6-49dc-aac0-6c4acffff175",
-      "core": false,
-      "unlocked_by": "isogram",
       "difficulty": 6,
       "topics": [
         "algorithms",
@@ -600,8 +505,6 @@
     {
       "slug": "clock",
       "uuid": "8e2dc8f7-af6d-4c9d-98cb-5560eeb299ca",
-      "core": false,
-      "unlocked_by": "bank-account",
       "difficulty": 3,
       "topics": [
         "classes"
@@ -610,8 +513,6 @@
     {
       "slug": "grade-school",
       "uuid": "d531b625-ac92-4042-9cda-169398b0b296",
-      "core": false,
-      "unlocked_by": "bank-account",
       "difficulty": 4,
       "topics": [
         "classes",
@@ -621,8 +522,6 @@
     {
       "slug": "prime-factors",
       "uuid": "b6050415-b980-4d01-8520-ecdf24f40e37",
-      "core": false,
-      "unlocked_by": "nth-prime",
       "difficulty": 4,
       "topics": [
         "control_flow_if_else_statements",
@@ -633,8 +532,6 @@
     {
       "slug": "sieve",
       "uuid": "69cdb196-ac32-4733-b978-a29c43717936",
-      "core": false,
-      "unlocked_by": "nth-prime",
       "difficulty": 4,
       "topics": [
         "control_flow_if_else_statements",
@@ -645,8 +542,6 @@
     {
       "slug": "pascals-triangle",
       "uuid": "b7a4bd55-7e51-46f1-9bd9-90185b99e238",
-      "core": false,
-      "unlocked_by": "diamond",
       "difficulty": 5,
       "topics": [
         "control_flow_loops",
@@ -656,8 +551,6 @@
     {
       "slug": "atbash-cipher",
       "uuid": "66aa24ed-373f-46d4-9cfa-a86cad86777a",
-      "core": false,
-      "unlocked_by": "run-length-encoding",
       "difficulty": 3,
       "topics": [
         "control_flow_loops",
@@ -668,8 +561,6 @@
     {
       "slug": "isbn-verifier",
       "uuid": "673d0132-6273-45ae-af27-8beb203bba81",
-      "core": false,
-      "unlocked_by": "run-length-encoding",
       "difficulty": 3,
       "topics": [
         "control_flow_loops",
@@ -679,8 +570,6 @@
     {
       "slug": "luhn",
       "uuid": "68232a5f-bac4-4390-b13a-aad42aa41e60",
-      "core": false,
-      "unlocked_by": "run-length-encoding",
       "difficulty": 4,
       "topics": [
         "control_flow_if_else_statements",
@@ -691,8 +580,6 @@
     {
       "slug": "crypto-square",
       "uuid": "07f03e4f-be9a-411f-9501-efa610b16f7b",
-      "core": false,
-      "unlocked_by": "run-length-encoding",
       "difficulty": 5,
       "topics": [
         "control_flow_loops",
@@ -703,8 +590,6 @@
     {
       "slug": "variable-length-quantity",
       "uuid": "baca9366-dee4-4759-98ac-2e76df5dfc49",
-      "core": false,
-      "unlocked_by": "run-length-encoding",
       "difficulty": 6,
       "topics": [
         "arrays",
@@ -716,8 +601,6 @@
     {
       "slug": "rail-fence-cipher",
       "uuid": "ead29411-43a4-4be0-8e3e-d93d8c6fd411",
-      "core": false,
-      "unlocked_by": "run-length-encoding",
       "difficulty": 7,
       "topics": [
         "control_flow_if_else_statements",
@@ -729,8 +612,6 @@
     {
       "slug": "robot-simulator",
       "uuid": "742a010e-85f2-4259-a444-86a7fb73b9bb",
-      "core": false,
-      "unlocked_by": "robot-name",
       "difficulty": 3,
       "topics": [
         "classes",
@@ -741,8 +622,6 @@
     {
       "slug": "raindrops",
       "uuid": "29338762-6ae0-4532-9465-bf67442b67d9",
-      "core": false,
-      "unlocked_by": "leap",
       "difficulty": 1,
       "topics": [
         "control_flow_if_else_statements",
@@ -752,8 +631,6 @@
     {
       "slug": "gigasecond",
       "uuid": "8276c090-4923-4bce-a42e-94be3a61101a",
-      "core": false,
-      "unlocked_by": "leap",
       "difficulty": 2,
       "topics": [
         "time"
@@ -762,8 +639,6 @@
     {
       "slug": "grains",
       "uuid": "03e986ce-396f-4243-9df5-edf10d4e7bd8",
-      "core": false,
-      "unlocked_by": "leap",
       "difficulty": 2,
       "topics": [
         "control_flow_loops"
@@ -772,8 +647,6 @@
     {
       "slug": "space-age",
       "uuid": "e41af697-bb33-46f4-a2d0-14c5440ca209",
-      "core": false,
-      "unlocked_by": "leap",
       "difficulty": 2,
       "topics": [
         "classes"
@@ -782,8 +655,6 @@
     {
       "slug": "bob",
       "uuid": "3aa77e13-ebc8-41ef-9405-144ef3ae753a",
-      "core": false,
-      "unlocked_by": "leap",
       "difficulty": 3,
       "topics": [
         "control_flow_if_else_statements",
@@ -793,8 +664,6 @@
     {
       "slug": "secret-handshake",
       "uuid": "c0aacfca-82d3-4494-bc38-821dd0613c38",
-      "core": false,
-      "unlocked_by": "leap",
       "difficulty": 3,
       "topics": [
         "arrays",
@@ -805,8 +674,6 @@
     {
       "slug": "roman-numerals",
       "uuid": "baa2c87a-aec5-47ef-b92d-d2ca39ce4bf2",
-      "core": false,
-      "unlocked_by": "leap",
       "difficulty": 4,
       "topics": [
         "control_flow_loops",
@@ -817,8 +684,6 @@
     {
       "slug": "rational-numbers",
       "uuid": "097d3111-c96f-4cf4-b0af-5a4edcf48137",
-      "core": false,
-      "unlocked_by": "leap",
       "difficulty": 5,
       "topics": [
         "math",
@@ -828,8 +693,6 @@
     {
       "slug": "circular-buffer",
       "uuid": "ad81b98a-b9b4-4894-a05b-e7b052de122a",
-      "core": false,
-      "unlocked_by": "custom-set",
       "difficulty": 4,
       "topics": [
         "classes",
@@ -840,8 +703,6 @@
     {
       "slug": "linked-list",
       "uuid": "d5dae487-8d85-4b9c-a218-f6fb8262f81b",
-      "core": false,
-      "unlocked_by": "custom-set",
       "difficulty": 4,
       "topics": [
         "classes",
@@ -852,8 +713,6 @@
     {
       "slug": "meetup",
       "uuid": "528a5545-c0a1-44dc-89dd-efaa39f44a14",
-      "core": false,
-      "unlocked_by": "pig-latin",
       "difficulty": 6,
       "topics": [
         "control_flow_if_statements",
@@ -864,8 +723,6 @@
     {
       "slug": "say",
       "uuid": "8901be3e-f10b-4ab5-a81e-3916cac7138c",
-      "core": false,
-      "unlocked_by": "pig-latin",
       "difficulty": 7,
       "topics": [
         "control_flow_loops",
@@ -876,8 +733,6 @@
     {
       "slug": "etl",
       "uuid": "df4cec80-6850-4197-a65f-2159fbedcbe9",
-      "core": false,
-      "unlocked_by": "list-ops",
       "difficulty": 3,
       "topics": [
         "control_flow_loops",
@@ -887,16 +742,12 @@
     {
       "slug": "queen-attack",
       "uuid": "8e36e8ae-f2c5-4fea-a807-8713b2b23ee4",
-      "core": false,
-      "unlocked_by": "list-ops",
       "difficulty": 3,
       "topics": []
     },
     {
       "slug": "reverse-string",
       "uuid": "2d443a8f-65de-496e-9527-8a54a840ba69",
-      "core": false,
-      "unlocked_by": "list-ops",
       "difficulty": 3,
       "topics": [
         "arrays",
@@ -906,8 +757,6 @@
     {
       "slug": "series",
       "uuid": "4527f869-1901-4301-88bf-1c6fbb4d5898",
-      "core": false,
-      "unlocked_by": "list-ops",
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -918,8 +767,6 @@
     {
       "slug": "sublist",
       "uuid": "3e2510c0-76ea-40cf-a56c-5f6d2c4a33c2",
-      "core": false,
-      "unlocked_by": "list-ops",
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -930,8 +777,6 @@
     {
       "slug": "all-your-base",
       "uuid": "4fc33e06-6ac0-432c-8bbe-d598c193443e",
-      "core": false,
-      "unlocked_by": "binary",
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -942,8 +787,6 @@
     {
       "slug": "octal",
       "uuid": "f0ba9767-b0e5-4a80-9980-e135526b6f3f",
-      "core": false,
-      "unlocked_by": "binary",
       "difficulty": 4,
       "topics": [
         "bitwise_operations",
@@ -956,8 +799,6 @@
     {
       "slug": "phone-number",
       "uuid": "23cfe01b-41ea-4a18-beca-ca1d3c38fb69",
-      "core": false,
-      "unlocked_by": "allergies",
       "difficulty": 3,
       "topics": [
         "control_flow_if_else_statements",
@@ -968,8 +809,6 @@
     {
       "slug": "bowling",
       "uuid": "7ee42679-3ed9-413c-a43b-5e21813e8f62",
-      "core": false,
-      "unlocked_by": "allergies",
       "difficulty": 4,
       "topics": [
         "algorithms",
@@ -980,8 +819,6 @@
     {
       "slug": "kindergarten-garden",
       "uuid": "d669d338-c3f1-40ea-ae12-c77127c6fcdc",
-      "core": false,
-      "unlocked_by": "allergies",
       "difficulty": 5,
       "topics": [
         "control_flow_if_else_statements",
@@ -992,8 +829,6 @@
     {
       "slug": "tournament",
       "uuid": "6d1ff01a-aee3-4da0-8952-617e7aae86f4",
-      "core": false,
-      "unlocked_by": "allergies",
       "difficulty": 5,
       "topics": [
         "arrays",
@@ -1006,11 +841,8 @@
     {
       "slug": "accumulate",
       "uuid": "cf3386ef-177c-41f6-8569-040d3a9c9175",
-      "core": false,
-      "unlocked_by": null,
       "difficulty": 0,
       "topics": null,
-      "deprecated": true,
       "status": "deprecated"
     }
   ]
