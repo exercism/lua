@@ -3,7 +3,7 @@
 RESULT=0
 
 rm -r test-exercises
-cp -r exercises test-exercises
+cp -r exercises/practice test-exercises
 cd test-exercises
 
 for i in *
