@@ -1,23 +1,20 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 RESULT=0
 
 rm -r test-exercises
 cp -r exercises/practice test-exercises
-cd test-exercises
+cd test-exercises || exit 1
 
 for i in *
 do
   if test -d "$i"
   then
-    echo Testing $i...
-    cd $i
-    mv example.lua $i.lua
-    busted --verbose
-    if [ $? -ne 0 ]; then
-      RESULT=1
-    fi
-    cd ..
+    echo "Testing $i..."
+    pushd "$i"
+    mv example.lua "$i.lua"
+    busted --verbose || RESULT=1
+    popd
   fi
 done
 
