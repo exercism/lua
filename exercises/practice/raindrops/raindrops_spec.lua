@@ -34,7 +34,7 @@ describe('raindrops', function()
   end)
 
   it('the sound for 14 is Plong as it has a factor 7', function()
-    assert.equal('Plong', raindrops(7))
+    assert.equal('Plong', raindrops(14))
   end)
 
   it('the sound for 15 is PlingPlang as it has a factor 3 and 5', function()
