@@ -12,7 +12,7 @@ do
   then
     echo "Testing $i..."
     pushd "$i"
-    mv example.lua "$i.lua"
+    mv .meta/example.lua "$i.lua"
     busted --verbose || RESULT=1
     popd
   fi
