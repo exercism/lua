@@ -5,7 +5,7 @@
 - [Windows 10: WSL](#windows-10%-wsl)
 - [Windows 10: Docker](#windows-10%-docker)
 
-#### MacOS
+## MacOS
 
 First install Lua and [Luarocks][2] using [Homebrew][1]:
 
@@ -25,7 +25,7 @@ Then run your tests:
 $ busted
 ```
 
-#### Ubuntu
+## Ubuntu
 
 First install Lua and [Luarocks][2] using [Apt][6]:
 
@@ -51,7 +51,7 @@ Then run your tests:
 $ busted
 ```
 
-#### Windows 10: WSL
+## Windows 10: WSL
 
 First you must enable [WSL (Windows Subsystem for Linux)][7] using [PowerShell][8] (Administrator):
 
@@ -84,16 +84,16 @@ Once done you can run your tests directly from any Windows command line:
 C:\> wsl busted
 ```
 
-#### Windows 10: Docker
+## Windows 10: Docker
 
-##### Install Gitbash
+### Install Gitbash
 
 This step is optional. You may have to tweak the following steps slightly if you prefer to use Windows' native CLI or another CLI.
 
 Download [here][10].
 Install Instructions [here][11].
 
-##### Install Docker
+### Install Docker
 
 Follow the instructions to install [Docker for Windows][12].
 Once you've finished installing, you can run the following command to ensure it's been installed correctly.
@@ -108,7 +108,7 @@ _You may encounter an error when trying to run Docker the first time._
 
 _If this occurs, you can follow these instructions to [enable Hyper V][13]. You may have to disable the setting, restart your computer and re-enable it after boot._
 
-##### Install busted
+### Install busted
 
 Once you have Gitbash and Docker installed, you'll be able to install a busted 'container'.
 
