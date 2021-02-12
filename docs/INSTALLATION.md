@@ -1,4 +1,4 @@
-## Installing Lua
+# Installing Lua
 
 - [MacOS](#macos)
 - [Ubuntu](#ubuntu)
