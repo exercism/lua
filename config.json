@@ -1122,7 +1122,7 @@
     },
     {
       "title": "Cross plattform",
-      "content": "Lua is completly written in ANSI C and therefore builds on any plattform with an ANSI C compiler.",
+      "content": "Lua is completley written in ANSI C and therefore builds on any platform with an ANSI C compiler.",
       "icon": ""
     },
     {
