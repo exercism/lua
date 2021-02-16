@@ -1099,7 +1099,38 @@
     ]
   },
   "concepts": [],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "General-purpose",
+      "content": "Lua is primarily designed for embedded use in applications, but is also widely used on embedded systems, for prototyping, scripting, game, web and backend development.",
+      "icon": ""
+    },
+    {
+      "title": "Multi-paradigm",
+      "content": "Lua can be used for scripting, imperative or functional programming.",
+      "icon": ""
+    },
+    {
+      "title": "Fast and lightweight",
+      "content": "Lua is known to be one of the fastest amongst interpreted dynamic languages and its interpreter, built with all standard libraries, takes under 300K.",
+      "icon": ""
+    },
+    {
+      "title": "Simple",
+      "content": "Lua has a simple, yet powerful syntax which completly fits into the head, which makes it easy and fast to learn.",
+      "icon": ""
+    },
+    {
+      "title": "Cross plattform",
+      "content": "Lua is completley written in ANSI C and therefore builds on any platform with an ANSI C compiler.",
+      "icon": ""
+    },
+    {
+      "title": "Easy to embed and extend",
+      "content": "Lua offers a small, yet flexible C API, which makes it easy to embed it in other applications or extend it with modules written in C.",
+      "icon": ""
+    }
+  ],
   "tags": [
     "paradigm/imperative",
     "paradigm/procedural",
