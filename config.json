@@ -15,6 +15,20 @@
     "indent_size": 4
   },
   "test_pattern": ".*spec[.]lua$",
+  "files": {
+    "solution": [
+      "%{kebab_slug}.lua"
+    ],
+    "test": [
+      "%{kebab_slug}_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lua"
+    ]
+  },
   "exercises": {
     "concept": [],
     "practice": [
