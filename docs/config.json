@@ -1,0 +1,32 @@
+{
+  "docs": [
+    {
+      "uuid": "3184490d-d638-4dd0-a74d-672818c3f64a",
+      "slug": "installation",
+      "path": "docs/INSTALLATION.md",
+      "title": "Installing Lua locally",
+      "blurb": "Learn how to install Lua locally to solve Exercism's exercises on your own machine"
+    },
+    {
+      "uuid": "f6e51cf1-6f86-43fd-a6ab-a653b7fa4604",
+      "slug": "learning",
+      "path": "docs/LEARNING.md",
+      "title": "How to learn Lua",
+      "blurb": "An overview of how to get started from scratch with Lua"
+    },
+    {
+      "uuid": "b5cb8aef-32d4-40f7-9a89-cf28dd2182ab",
+      "slug": "tests",
+      "path": "docs/TESTS.md",
+      "title": "Testing on the Lua track",
+      "blurb": "Learn how to test your Lua exercises on Exercism"
+    },
+    {
+      "uuid": "7d78ec76-ed6b-46ef-80e3-9e13878677db",
+      "slug": "resources",
+      "path": "docs/RESOURCES.md",
+      "title": "Useful Lua resources",
+      "blurb": "A collection of useful resources to help you master Lua"
+    }
+  ]
+}
