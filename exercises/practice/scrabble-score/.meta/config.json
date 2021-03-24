@@ -1,6 +1,13 @@
 {
   "blurb": "Given a word, compute the Scrabble score for that word.",
-  "authors": [],
+  "authors": [
+    "aarti"
+  ],
+  "contributors": [
+    "etandel",
+    "kytrinyx",
+    "ryanplusplus"
+  ],
   "files": {
     "solution": [],
     "test": [],

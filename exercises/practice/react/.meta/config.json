@@ -1,6 +1,8 @@
 {
   "blurb": "Implement a basic reactive system.",
-  "authors": [],
+  "authors": [
+    "ryanplusplus"
+  ],
   "files": {
     "solution": [],
     "test": [],

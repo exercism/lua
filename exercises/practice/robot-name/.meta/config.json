@@ -1,6 +1,12 @@
 {
   "blurb": "Manage robot factory settings.",
-  "authors": [],
+  "authors": [
+    "aarti"
+  ],
+  "contributors": [
+    "etandel",
+    "ryanplusplus"
+  ],
   "files": {
     "solution": [],
     "test": [],
