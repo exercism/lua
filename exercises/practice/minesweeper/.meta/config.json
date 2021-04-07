@@ -2,8 +2,14 @@
   "blurb": "Add the numbers to a minesweeper board",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "minesweeper.lua"
+    ],
+    "test": [
+      "minesweeper_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
   }
 }

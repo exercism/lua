@@ -2,8 +2,14 @@
   "blurb": "Tally the results of a small football competition.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "tournament.lua"
+    ],
+    "test": [
+      "tournament_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
   }
 }
