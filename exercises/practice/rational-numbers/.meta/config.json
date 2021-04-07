@@ -2,9 +2,15 @@
   "blurb": "Implement rational numbers.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "rational-numbers.lua"
+    ],
+    "test": [
+      "rational-numbers_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Rational_number"

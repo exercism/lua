@@ -2,8 +2,14 @@
   "blurb": "Implement a basic reactive system.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "react.lua"
+    ],
+    "test": [
+      "react_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
   }
 }

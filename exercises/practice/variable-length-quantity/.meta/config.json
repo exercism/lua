@@ -2,9 +2,15 @@
   "blurb": "Implement variable length quantity encoding and decoding.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "variable-length-quantity.lua"
+    ],
+    "test": [
+      "variable-length-quantity_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
   },
   "source": "A poor Splice developer having to implement MIDI encoding/decoding.",
   "source_url": "https://splice.com"

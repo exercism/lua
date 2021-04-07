@@ -2,9 +2,15 @@
   "blurb": "Implement a doubly linked list",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "linked-list.lua"
+    ],
+    "test": [
+      "linked-list_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
   },
   "source": "Classic computer science topic"
 }

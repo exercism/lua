@@ -2,8 +2,14 @@
   "blurb": "Create a custom set type.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "custom-set.lua"
+    ],
+    "test": [
+      "custom-set_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
   }
 }
