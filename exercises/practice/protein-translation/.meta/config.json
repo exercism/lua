@@ -1,6 +1,11 @@
 {
   "blurb": "Translate RNA sequences into proteins.",
-  "authors": [],
+  "authors": [
+    "ryanplusplus"
+  ],
+  "contributors": [
+    "aarti"
+  ],
   "files": {
     "solution": [
       "protein-translation.lua"

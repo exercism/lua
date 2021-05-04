@@ -1,6 +1,11 @@
 {
   "blurb": "Create a program to solve a word search puzzle.",
-  "authors": [],
+  "authors": [
+    "ryanplusplus"
+  ],
+  "contributors": [
+    "aarti"
+  ],
   "files": {
     "solution": [
       "word-search.lua"

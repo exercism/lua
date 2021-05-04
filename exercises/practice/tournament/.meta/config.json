@@ -1,6 +1,8 @@
 {
   "blurb": "Tally the results of a small football competition.",
-  "authors": [],
+  "authors": [
+    "ryanplusplus"
+  ],
   "files": {
     "solution": [
       "tournament.lua"

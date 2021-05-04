@@ -1,6 +1,8 @@
 {
   "blurb": "Calculate the date of meetups.",
-  "authors": [],
+  "authors": [
+    "ryanplusplus"
+  ],
   "files": {
     "solution": [
       "meetup.lua"

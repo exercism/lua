@@ -1,6 +1,8 @@
 {
   "blurb": "Convert color codes, as used on resistors, to a human-readable label.",
-  "authors": [],
+  "authors": [
+    "ryanplusplus"
+  ],
   "files": {
     "solution": [
       "resistor-color-trio.lua"

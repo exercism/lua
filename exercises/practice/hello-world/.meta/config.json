@@ -1,6 +1,13 @@
 {
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": [],
+  "authors": [
+    "trayo"
+  ],
+  "contributors": [
+    "aarti",
+    "robphoenix",
+    "ryanplusplus"
+  ],
   "files": {
     "solution": [
       "hello-world.lua"

@@ -1,6 +1,11 @@
 {
   "blurb": "Implement basic list operations",
-  "authors": [],
+  "authors": [
+    "ryanplusplus"
+  ],
+  "contributors": [
+    "aarti"
+  ],
   "files": {
     "solution": [
       "list-ops.lua"

@@ -1,6 +1,14 @@
 {
   "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
-  "authors": [],
+  "authors": [
+    "aarti"
+  ],
+  "contributors": [
+    "austinlyons",
+    "kytrinyx",
+    "ryanplusplus",
+    "vstanifo"
+  ],
   "files": {
     "solution": [
       "bob.lua"

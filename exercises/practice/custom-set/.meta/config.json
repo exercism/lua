@@ -1,6 +1,11 @@
 {
   "blurb": "Create a custom set type.",
-  "authors": [],
+  "authors": [
+    "ryanplusplus"
+  ],
+  "contributors": [
+    "aarti"
+  ],
   "files": {
     "solution": [
       "custom-set.lua"

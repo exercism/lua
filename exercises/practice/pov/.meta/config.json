@@ -1,6 +1,8 @@
 {
   "blurb": "Reparent a graph on a selected node",
-  "authors": [],
+  "authors": [
+    "ryanplusplus"
+  ],
   "files": {
     "solution": [
       "pov.lua"

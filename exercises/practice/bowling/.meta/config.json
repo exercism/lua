@@ -1,6 +1,11 @@
 {
   "blurb": "Score a bowling game",
-  "authors": [],
+  "authors": [
+    "ryanplusplus"
+  ],
+  "contributors": [
+    "aarti"
+  ],
   "files": {
     "solution": [
       "bowling.lua"

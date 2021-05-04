@@ -1,6 +1,8 @@
 {
   "blurb": "Reverse a string",
-  "authors": [],
+  "authors": [
+    "ryanplusplus"
+  ],
   "files": {
     "solution": [
       "reverse-string.lua"

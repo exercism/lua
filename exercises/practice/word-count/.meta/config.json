@@ -1,6 +1,15 @@
 {
   "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
-  "authors": [],
+  "authors": [
+    "aarti"
+  ],
+  "contributors": [
+    "elyashiv",
+    "etandel",
+    "kytrinyx",
+    "ryanplusplus",
+    "trayo"
+  ],
   "files": {
     "solution": [
       "word-count.lua"
