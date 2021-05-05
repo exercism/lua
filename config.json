@@ -1118,7 +1118,7 @@
   "key_features": [
     {
       "title": "General-purpose",
-      "content": "Lua is primarily designed for embedded use in applications, but is also widely used on embedded systems, for prototyping, scripting, game, web and backend development.",
+      "content": "Lua is used in embedded systems, for prototyping, scripting, game, web and backend development.",
       "icon": ""
     },
     {
@@ -1128,12 +1128,12 @@
     },
     {
       "title": "Fast and lightweight",
-      "content": "Lua is known to be one of the fastest amongst interpreted dynamic languages and its interpreter, built with all standard libraries, takes under 300K.",
+      "content": "Lua is one of the fastest interpreted dynamic languages. Its compiler and interpreter fit in 300K.",
       "icon": ""
     },
     {
       "title": "Simple",
-      "content": "Lua has a simple, yet powerful syntax which completly fits into the head, which makes it easy and fast to learn.",
+      "content": "Lua has a simple, yet powerful syntax that is easy to learn and master.",
       "icon": ""
     },
     {
@@ -1143,7 +1143,7 @@
     },
     {
       "title": "Easy to embed and extend",
-      "content": "Lua offers a small, yet flexible C API, which makes it easy to embed it in other applications or extend it with modules written in C.",
+      "content": "Lua offers a small and flexible C API that makes it easy to embed or extend with C modules..",
       "icon": ""
     }
   ],
