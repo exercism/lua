@@ -16,6 +16,9 @@
     "ace_editor_language": "lua",
     "highlightjs_language": "lua"
   },
+  "test_runner": {
+    "average_run_time": 1.0
+  },
   "test_pattern": ".*spec[.]lua$",
   "files": {
     "solution": [
