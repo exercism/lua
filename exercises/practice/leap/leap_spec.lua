@@ -14,6 +14,6 @@ describe('leap', function()
   end)
 
   it('turn of the 21st century', function()
-    assert.is_true(is_leap_year(2400))
+    assert.is_true(is_leap_year(2000))
   end)
 end)
