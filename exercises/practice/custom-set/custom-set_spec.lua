@@ -151,40 +151,6 @@ describe('custom-set', function()
     end)
   end)
 
-  describe('intersection', function()
-    it('should give the empty set as the intersection of two empty sets', function()
-      assert.is_true(Set():intersection(Set()):equals(Set()))
-    end)
-
-    it('should intersect an empty set with a non-empty set', function()
-      assert.is_true(Set():intersection(Set(3, 2, 5)):equals(Set()))
-    end)
-
-    it('should intersect a non-empty set with an empty set', function()
-      assert.is_true(Set(1, 2, 3, 4):intersection(Set()):equals(Set()))
-    end)
-
-    it('should intersect a single element set with itself', function()
-      assert.is_true(Set(3):intersection(Set(3)):equals(Set(3)))
-    end)
-
-    it('should intersect sets with a single element in common', function()
-      assert.is_true(Set(1, 2, 3):intersection(Set(3, 4, 5)):equals(Set(3)))
-    end)
-
-    it('should intersect sets with a multiple elements in common', function()
-      assert.is_true(Set(1, 2, 3, 4):intersection(Set(3, 2, 5)):equals(Set(2, 3)))
-    end)
-
-    it('should intersect a set with a subset', function()
-      assert.is_true(Set(1, 2, 3):intersection(Set(2, 3)):equals(Set(2, 3)))
-    end)
-
-    it('should intersect sets with no elements in common', function()
-      assert.is_true(Set(1, 2, 3):intersection(Set(4, 5, 6)):equals(Set()))
-    end)
-  end)
-
   describe('difference', function()
     it('should give the difference of two empty sets as the empty set', function()
       assert.is_true(Set():difference(Set()):equals(Set()))
