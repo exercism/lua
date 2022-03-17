@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@a12a3943b4bdde767164f792f33f40b04645d846
 
-      - uses: leafo/gh-actions-lua@v8.0.0
+      - uses: leafo/gh-actions-lua@v9.1.0
         with:
           luaVersion: 5.4
 
