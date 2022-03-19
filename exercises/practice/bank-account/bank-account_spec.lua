@@ -76,7 +76,7 @@ describe('bank-account', function()
     account:close()
   end)
 
-  it('should now allow deposits to a closed account', function()
+  it('should not allow deposits to a closed account', function()
     local account = BankAccount:new()
     account:close()
     assert.has.errors(function()
