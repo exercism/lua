@@ -13,7 +13,7 @@ jobs:
         with:
           luaVersion: 5.4
 
-      - uses: leafo/gh-actions-luarocks@v4.2.0
+      - uses: leafo/gh-actions-luarocks@v4.3.0
 
       - name: build
         run: |
