@@ -1,3 +1,6 @@
+local vowel = '[aeiou]'
+local consonant = '[^aeiou]'
+
 local function translate(word)
   local function begins_with_any_of(patterns)
     for _, pattern in ipairs(patterns) do
@@ -5,11 +8,11 @@ local function translate(word)
     end
   end
 
-  if begins_with_any_of({ 'a', 'e', 'i', 'o', 'u', 'yt', 'xr' }) then
+  if begins_with_any_of({ vowel, 'yt', 'xr' }) then
     return word .. 'ay'
-  elseif begins_with_any_of({ '[^aeiou]qu', 'thr', 'sch' }) then
+  elseif begins_with_any_of({ consonant .. 'qu', 'thr', 'sch' }) then
     return word:sub(4) .. word:sub(1, 3) .. 'ay'
-  elseif begins_with_any_of({ 'ch', 'qu', 'th' }) then
+  elseif begins_with_any_of({ 'ch', 'qu', 'th', consonant .. consonant .. 'y' }) then
     return word:sub(3) .. word:sub(1, 2) .. 'ay'
   else
     return word:sub(2) .. word:sub(1, 1) .. 'ay'
