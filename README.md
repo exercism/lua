@@ -1,4 +1,4 @@
-# Luax
+# Exercism Lua Track
 
 [![Build Status](https://travis-ci.org/exercism/lua.svg?branch=master)](https://travis-ci.org/exercism/lua)
 
