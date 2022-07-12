@@ -3,11 +3,12 @@ local PhoneNumber = {}
 function PhoneNumber:new(string_or_number)
   self.__index = self
   local n = string.gsub(string_or_number, '%D', '')
-  n = n:match'^1?(%d%d%d%d%d%d%d%d%d%d)$' or '0000000000'
+  n = n:match'^1?([2-9]%d%d[2-9]%d%d%d%d%d%d)$' or '0000000000'
+
   return setmetatable({ number = n }, self)
 end
 
-function PhoneNumber:areaCode(symbol)
+function PhoneNumber:areaCode()
   return self.number:sub(1, 3)
 end
 
