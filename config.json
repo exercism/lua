@@ -75,7 +75,7 @@
       },
       {
         "slug": "difference-of-squares",
-        "name": "Difference Of Squares",
+        "name": "Difference of Squares",
         "uuid": "251d7fd3-ed96-421c-af46-817ad40997e5",
         "practices": [],
         "prerequisites": [],
@@ -167,7 +167,7 @@
       },
       {
         "slug": "run-length-encoding",
-        "name": "Run Length Encoding",
+        "name": "Run-Length Encoding",
         "uuid": "f9a5560e-5f84-451a-a8f8-632ea8525e08",
         "practices": [],
         "prerequisites": [],
@@ -314,7 +314,7 @@
       },
       {
         "slug": "rna-transcription",
-        "name": "Rna Transcription",
+        "name": "RNA Transcription",
         "uuid": "5029a8ed-3766-4632-bdab-964ca4a06e34",
         "practices": [],
         "prerequisites": [],
@@ -366,7 +366,7 @@
       },
       {
         "slug": "sum-of-multiples",
-        "name": "Sum Of Multiples",
+        "name": "Sum of Multiples",
         "uuid": "da6a0c52-5943-412e-8649-8965ae9da5cf",
         "practices": [],
         "prerequisites": [],
@@ -501,7 +501,7 @@
       },
       {
         "slug": "pov",
-        "name": "Pov",
+        "name": "POV",
         "uuid": "57444e1f-d558-4684-a84e-6622e18771b6",
         "practices": [],
         "prerequisites": [],
@@ -531,7 +531,7 @@
       },
       {
         "slug": "ocr-numbers",
-        "name": "Ocr Numbers",
+        "name": "OCR Numbers",
         "uuid": "f4008921-35cf-4c61-bc3b-aecd20b2f36f",
         "practices": [],
         "prerequisites": [],
@@ -713,7 +713,7 @@
       },
       {
         "slug": "pascals-triangle",
-        "name": "Pascals Triangle",
+        "name": "Pascal's Triangle",
         "uuid": "b7a4bd55-7e51-46f1-9bd9-90185b99e238",
         "practices": [],
         "prerequisites": [],
@@ -738,7 +738,7 @@
       },
       {
         "slug": "isbn-verifier",
-        "name": "Isbn Verifier",
+        "name": "ISBN Verifier",
         "uuid": "673d0132-6273-45ae-af27-8beb203bba81",
         "practices": [],
         "prerequisites": [],
@@ -964,7 +964,7 @@
       },
       {
         "slug": "etl",
-        "name": "Etl",
+        "name": "ETL",
         "uuid": "df4cec80-6850-4197-a65f-2159fbedcbe9",
         "practices": [],
         "prerequisites": [],
