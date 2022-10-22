@@ -13,7 +13,7 @@ describe('nucleotide-count', function()
     local expected = 0
     result = dna:count('A')
     assert.are.same(expected, result)
- end)
+  end)
 
   it('repetitive cytosine gets counts', function()
     local dna = DNA:new('CCCCC')
