@@ -120,10 +120,11 @@ Pull down this widely used Docker container by running the following:
 $ docker pull imega/busted
 ```
 
-Set up an alias, so you don't have to type the whole command every time:
+Create a function so you don't have to type the whole command every time.
+Add this to your `.bashrc`:
 
 ```shell
-$ alias dbusted='f(){ docker run --rm -t -v "/$@":/data imega/busted; unset -f f; }; f'
+dbusted() { docker run --rm -t -v "/$@":/data imega/busted; }
 ```
 
 Now, in your CLI, you can navigate into the directory you want to run your tests in. Run the following:
