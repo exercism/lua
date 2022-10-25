@@ -16,8 +16,19 @@ $ brew install lua luarocks
 Then install the [Busted][3] testing framework for Lua:
 
 ```shell
-$ luarocks install busted
+$ luarocks install --local busted
 ```
+
+Add `~/.luarocks/bin` to your system `$PATH`
+
+```shell
+export PATH="$HOME/.luarocks/bin:$PATH"
+```
+
+Note that this is only temporary.
+To add permanently to your `$PATH` then you
+will have to add it to your `.bashrc`, `.zshrc` or `config.fish` depending on
+which shell you are using.
 
 Then run your tests:
 
@@ -36,14 +47,19 @@ $ sudo apt-get install lua5.3 liblua5.3-dev luarocks
 Then install the [Busted][3] testing framework for Lua:
 
 ```shell
-$ luarocks install busted
+$ luarocks install --local busted
 ```
 
-If this fails, you may need to use `sudo`:
+Add `~/.luarocks/bin` to your system `$PATH`
 
 ```shell
-$ sudo luarocks install busted
+export PATH="$HOME/.luarocks/bin:$PATH"
 ```
+
+Note that this is only temporary.
+To add permanently to your `$PATH` then you
+will have to add it to your `.bashrc`, `.zshrc` or `config.fish` depending on
+which shell you are using.
 
 Then run your tests:
 
@@ -136,27 +152,15 @@ $ dbusted $PWD
 You should see the output from your busted tests.
 
 [1]: http://brew.sh/
-
 [2]: http://luarocks.org/
-
 [3]: http://olivinelabs.com/busted/
-
 [4]: https://github.com/Olivine-Labs/lua-style-guide
-
 [5]: http://tylerneylon.com/a/learn-lua/
-
 [6]: https://help.ubuntu.com/lts/serverguide/apt.html
-
 [7]: https://docs.microsoft.com/en-us/windows/wsl/faq
-
 [8]: https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-6
-
 [9]: https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6
-
 [10]: https://git-scm.com/download/win
-
 [11]: https://www.stanleyulili.com/git/how-to-install-git-bash-on-windows/
-
 [12]: https://docs.docker.com/docker-for-windows/install/
-
 [13]: https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
