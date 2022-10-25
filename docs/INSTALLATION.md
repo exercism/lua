@@ -22,7 +22,7 @@ $ luarocks install --local busted
 Add `~/.luarocks/bin` to your system `$PATH`
 
 ```shell
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.luarocks/bin:$PATH"
 ```
 
 Note that this is only temporary.
@@ -53,7 +53,7 @@ $ luarocks install --local busted
 Add `~/.luarocks/bin` to your system `$PATH`
 
 ```shell
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.luarocks/bin:$PATH"
 ```
 
 Note that this is only temporary.
