@@ -1,5 +1,4 @@
 {
-  "blurb": "Implement variable length quantity encoding and decoding.",
   "authors": [
     "ryanplusplus"
   ],
@@ -14,6 +13,7 @@
       ".meta/example.lua"
     ]
   },
+  "blurb": "Implement variable length quantity encoding and decoding.",
   "source": "A poor Splice developer having to implement MIDI encoding/decoding.",
   "source_url": "https://splice.com"
 }

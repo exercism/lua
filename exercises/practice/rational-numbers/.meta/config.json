@@ -1,5 +1,4 @@
 {
-  "blurb": "Implement rational numbers.",
   "authors": [
     "ryanplusplus"
   ],
@@ -14,6 +13,7 @@
       ".meta/example.lua"
     ]
   },
+  "blurb": "Implement rational numbers.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Rational_number"
 }

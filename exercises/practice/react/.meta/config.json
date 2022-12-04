@@ -1,5 +1,4 @@
 {
-  "blurb": "Implement a basic reactive system.",
   "authors": [
     "ryanplusplus"
   ],
@@ -13,5 +12,6 @@
     "example": [
       ".meta/example.lua"
     ]
-  }
+  },
+  "blurb": "Implement a basic reactive system."
 }

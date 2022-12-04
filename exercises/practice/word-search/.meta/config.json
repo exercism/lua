@@ -1,5 +1,4 @@
 {
-  "blurb": "Create a program to solve a word search puzzle.",
   "authors": [
     "ryanplusplus"
   ],
@@ -16,5 +15,6 @@
     "example": [
       ".meta/example.lua"
     ]
-  }
+  },
+  "blurb": "Create a program to solve a word search puzzle."
 }

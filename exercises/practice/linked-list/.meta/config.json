@@ -1,5 +1,4 @@
 {
-  "blurb": "Implement a doubly linked list",
   "authors": [
     "ryanplusplus"
   ],
@@ -14,5 +13,6 @@
       ".meta/example.lua"
     ]
   },
+  "blurb": "Implement a doubly linked list",
   "source": "Classic computer science topic"
 }

@@ -1,5 +1,4 @@
 {
-  "blurb": "Tally the results of a small football competition.",
   "authors": [
     "ryanplusplus"
   ],
@@ -13,5 +12,6 @@
     "example": [
       ".meta/example.lua"
     ]
-  }
+  },
+  "blurb": "Tally the results of a small football competition."
 }
