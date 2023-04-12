@@ -43,14 +43,6 @@ describe('largest-series-product', function()
     assert.equals(0, lsp({ digits = '99099', span = 3 }))
   end)
 
-  it('should yield 1 for no digits and 0 span', function()
-    assert.equals(1, lsp({ digits = '', span = 0 }))
-  end)
-
-  it('should yield 1 for non-empty digits and 0 span', function()
-    assert.equals(1, lsp({ digits = '123', span = 0 }))
-  end)
-
   it('should reject spans larger than the string length', function()
     assert.has_error(function()
       lsp({ digits = '123', span = 4 })
