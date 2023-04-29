@@ -80,13 +80,13 @@ describe('crypto-square', function()
 
     it('should generate normalized ciphertext with a short segment', function()
       assert.equal(
-        'msemo aanin dnin ndla etlt shui',
+        'msemo aanin dnin  ndla  etlt  shui ',
         cs.normalized_ciphertext('Madness, and then illumination.')
       )
     end)
 
     it('should generate normalized ciphertext when just less than a full square', function()
-      assert.equal('im a', cs.normalized_ciphertext('I am'))
+      assert.equal('im a ', cs.normalized_ciphertext('I am'))
     end)
   end)
 end)
