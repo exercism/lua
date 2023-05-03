@@ -34,14 +34,8 @@ local function normalized_ciphertext(plaintext)
   return normalized_ciphertext:gsub('%s+$', '')
 end
 
-local function ciphertext(plaintext)
-  return normalized_ciphertext(plaintext):gsub('%s', '')
-end
-
 return {
-  normalized_plaintext = normalized_plaintext,
-  size = size,
-  segments = segments,
-  ciphertext = ciphertext,
-  normalized_ciphertext = normalized_ciphertext
+  ciphertext = function(plaintext)
+    return normalized_ciphertext(plaintext):gsub('%s', '')
+  end
 }
