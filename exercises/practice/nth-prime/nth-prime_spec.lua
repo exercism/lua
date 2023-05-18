@@ -19,16 +19,16 @@ describe('nth-prime', function()
     assert.equal(13, nth(6))
   end)
 
-  it('should be able to calculate the nth prime for large n', function()
-    assert.equal(104743, nth(10001))
-  end)
-
   it('should be efficient for large n', function()
     local execution_time = benchmark(function()
       nth(10001)
     end)
 
     assert(execution_time < 1, 'should take less than a second to execute')
+  end)
+
+  it('should be able to calculate the nth prime for large n', function()
+    assert.equal(104743, nth(10001))
   end)
 
   it('should raise an error for n <= 0', function()
