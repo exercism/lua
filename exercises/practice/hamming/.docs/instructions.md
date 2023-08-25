@@ -20,5 +20,4 @@ The Hamming Distance is useful for lots of things in science, not just biology, 
 
 The Hamming distance is only defined for sequences of equal length, so
 an attempt to calculate it between sequences of different lengths should
-not work. The general handling of this situation (e.g., raising an
-exception vs returning a special value) may differ between languages.
+not work. Here we expect a return value of -1 to indicate that an error has occurred.
