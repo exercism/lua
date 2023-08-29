@@ -29,6 +29,10 @@ describe('roman-numerals', function()
     assert.are.equal('IX', to_roman(9))
   end)
 
+  it('converts 16', function()
+    assert.are.equal('XVI', to_roman(16))
+  end)
+
   it('converts 27', function()
     assert.are.equal('XXVII', to_roman(27))
   end)
@@ -39,6 +43,10 @@ describe('roman-numerals', function()
 
   it('converts 59', function()
     assert.are.equal('LIX', to_roman(59))
+  end)
+
+  it('converts 66', function()
+    assert.are.equal('LXVI', to_roman(66))
   end)
 
   it('converts 93', function()
@@ -53,12 +61,20 @@ describe('roman-numerals', function()
     assert.are.equal('CLXIII', to_roman(163))
   end)
 
+  it('converts 166', function()
+    assert.are.equal('CLXVI', to_roman(166))
+  end)
+
   it('converts 402', function()
     assert.are.equal('CDII', to_roman(402))
   end)
 
   it('converts 575', function()
     assert.are.equal('DLXXV', to_roman(575))
+  end)
+
+  it('converts 666', function()
+    assert.are.equal('DCLXVI', to_roman(666))
   end)
 
   it('converts 911', function()
@@ -69,7 +85,19 @@ describe('roman-numerals', function()
     assert.are.equal('MXXIV', to_roman(1024))
   end)
 
+  it('converts 1666', function()
+    assert.are.equal('MDCLXVI', to_roman(1666))
+  end)
+
   it('converts 3000', function()
     assert.are.equal('MMM', to_roman(3000))
+  end)
+
+  it('converts 3001', function()
+    assert.are.equal('MMMI', to_roman(3001))
+  end)
+
+  it('converts 3999', function()
+    assert.are.equal('MMMCMXCIX', to_roman(3999))
   end)
 end)
