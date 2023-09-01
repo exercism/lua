@@ -1,5 +1,5 @@
 return {
-  decode = function(colors)
+  decode = function(c1, c2, c3)
 
   end
 }

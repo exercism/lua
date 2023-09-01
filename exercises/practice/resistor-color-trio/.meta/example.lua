@@ -12,10 +12,7 @@ local value = {
 }
 
 return {
-  decode = function(colors)
-    local c1 = colors[1]
-    local c2 = colors[2]
-    local c3 = colors[3]
+  decode = function(c1, c2, c3)
     local value = (value[c1] * 10 + value[c2]) * 10 ^ value[c3]
 
     if value >= 1e9 then
