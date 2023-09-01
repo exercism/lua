@@ -60,5 +60,4 @@ describe('resistor-color-trio', function()
     assert.are.equal(650, value)
     assert.are.equal('kiloohms', unit)
   end)
-
 end)
