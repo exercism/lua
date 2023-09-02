@@ -15,8 +15,12 @@ return {
   decode = function(c1, c2, c3)
     local value = (value[c1] * 10 + value[c2]) * 10 ^ value[c3]
 
-    if value > 1000 then
-      return value / 1000, 'kiloohms'
+    if value >= 1e9 then
+      return value / 1e9, 'gigaohms'
+    elseif value >=  1e6 then
+      return value / 1e6, 'megaohms'
+    elseif value >= 1e3 then
+      return value / 1e3, 'kiloohms'
     else
       return value, 'ohms'
     end
