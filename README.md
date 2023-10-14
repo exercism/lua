@@ -1,6 +1,6 @@
 # Exercism Lua Track
 
-[![Build Status](https://travis-ci.org/exercism/lua.svg?branch=master)](https://travis-ci.org/exercism/lua)
+[![Test](https://github.com/exercism/lua/actions/workflows/test.yml/badge.svg)](https://github.com/exercism/lua/actions/workflows/test.yml)
 
 Exercism exercises in Lua
 
