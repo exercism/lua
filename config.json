@@ -247,6 +247,17 @@
         ]
       },
       {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "f67b9fbc-b8a5-404f-aee7-e6a304896063",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "hash_tables"
+        ]
+      },
+      {
         "slug": "binary",
         "name": "Binary",
         "uuid": "5d24d945-9f15-450a-bb47-0b9c6a9e8c47",
