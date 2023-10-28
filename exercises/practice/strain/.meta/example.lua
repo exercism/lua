@@ -7,11 +7,9 @@ local function keep(xs, pred)
 end
 
 local function discard(xs, pred)
-  acc = {}
-  for _, x in ipairs(xs) do
-    if not pred(x) then table.insert(acc, x) end
-  end
-  return acc
+  return keep(xs, function(x)
+    return not pred(x)
+  end)
 end
 
 return {
