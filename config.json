@@ -273,6 +273,17 @@
         ]
       },
       {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "2b8928c7-2ace-485c-a52e-e3cd2371b1f0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "hash_tables"
+        ]
+      },
+      {
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "e3d0e005-6397-4006-92ec-78f86178c684",
