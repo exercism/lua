@@ -1,5 +1,5 @@
 local function keep(xs, pred)
-  acc = {}
+  local acc = {}
   for _, x in ipairs(xs) do
     if pred(x) then table.insert(acc, x) end
   end

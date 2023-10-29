@@ -20,27 +20,27 @@ describe('strain', function()
     end)
 
     it('keeps everything', function()
-      assert.same({1, 3, 5}, keep({1, 3, 5}, always_true))
+      assert.same({ 1, 3, 5 }, keep({ 1, 3, 5 }, always_true))
     end)
 
     it('keeps nothing', function()
-      assert.same({}, keep({1, 3, 5}, always_false))
+      assert.same({}, keep({ 1, 3, 5 }, always_false))
     end)
 
     it('keeps first and last', function()
-      assert.same({1, 3}, keep({1, 2, 3}, is_odd))
+      assert.same({ 1, 3 }, keep({ 1, 2, 3 }, is_odd))
     end)
 
     it('keeps neither first nor last', function()
-      assert.same({2}, keep({1, 2, 3}, is_even))
+      assert.same({ 2 }, keep({ 1, 2, 3 }, is_even))
     end)
 
     it('keeps strings', function()
-      assert.same({'zebra', 'zombies', 'zealot'}, keep({'apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot'}, starts_with_z))
+      assert.same({ 'zebra', 'zombies', 'zealot' }, keep({ 'apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot' }, starts_with_z))
     end)
 
     it('keeps lists', function()
-      assert.same({{5, 5, 5}, {5, 1, 2}, {1, 5, 2}, {1, 2, 5}}, keep({{1, 2, 3}, {5, 5, 5}, {5, 1, 2}, {2, 1, 2}, {1, 5, 2}, {2, 2, 1}, {1, 2, 5}}, contains_5))
+      assert.same({ { 5, 5, 5 }, { 5, 1, 2 }, { 1, 5, 2 }, { 1, 2, 5 } }, keep({ { 1, 2, 3 }, { 5, 5, 5 }, { 5, 1, 2 }, { 2, 1, 2 }, { 1, 5, 2 }, { 2, 2, 1 }, { 1, 2, 5 } }, contains_5))
     end)
   end)
 
@@ -50,27 +50,27 @@ describe('strain', function()
     end)
 
     it('discards everything', function()
-      assert.same({}, discard({1, 3, 5}, always_true))
+      assert.same({}, discard({ 1, 3, 5 }, always_true))
     end)
 
     it('discards nothing', function()
-      assert.same({1, 3, 5}, discard({1, 3, 5}, always_false))
+      assert.same({ 1, 3, 5 }, discard({ 1, 3, 5 }, always_false))
     end)
 
     it('discards first and last', function()
-      assert.same({2}, discard({1, 2, 3}, is_odd))
+      assert.same({ 2 }, discard({ 1, 2, 3 }, is_odd))
     end)
 
     it('discards neither first nor last', function()
-      assert.same({1, 3}, discard({1, 2, 3}, is_even))
+      assert.same({ 1, 3 }, discard({ 1, 2, 3 }, is_even))
     end)
 
     it('discards strings', function()
-      assert.same({'apple', 'banana', 'cherimoya'}, discard({'apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot'}, starts_with_z))
+      assert.same({ 'apple', 'banana', 'cherimoya' }, discard({ 'apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot' }, starts_with_z))
     end)
 
     it('discards lists', function()
-      assert.same({{1, 2, 3}, {2, 1, 2}, {2, 2, 1}}, discard({{1, 2, 3}, {5, 5, 5}, {5, 1, 2}, {2, 1, 2}, {1, 5, 2}, {2, 2, 1}, {1, 2, 5}}, contains_5))
+      assert.same({ { 1, 2, 3 }, { 2, 1, 2 }, { 2, 2, 1 } }, discard({ { 1, 2, 3 }, { 5, 5, 5 }, { 5, 1, 2 }, { 2, 1, 2 }, { 1, 5, 2 }, { 2, 2, 1 }, { 1, 2, 5 } }, contains_5))
     end)
   end)
 end)
