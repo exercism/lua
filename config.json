@@ -206,6 +206,19 @@
         ]
       },
       {
+        "slug": "strain",
+        "name": "Strain",
+        "uuid": "0763a8e7-ef20-43e7-86ab-b2b488493b0e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "arrays",
+          "control_flow_loops",
+          "filtering"
+        ]
+      },
+      {
         "slug": "custom-set",
         "name": "Custom Set",
         "uuid": "ed37d6db-7cbe-4219-bdb0-f15f28f60f1e",
