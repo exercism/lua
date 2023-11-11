@@ -70,23 +70,23 @@ describe('dnd', function()
 
   describe('ability', function()
     it('uses 3 largest numbers from scores in descending order', function()
-      assert.equal(9, dnd.ability({4, 3, 2, 1}))
+      assert.equal(9, dnd.ability({ 4, 3, 2, 1 }))
     end)
 
     it('uses 3 largest numbers from scores in ascending order', function()
-      assert.equal(9, dnd.ability({1, 2, 3, 4}))
+      assert.equal(9, dnd.ability({ 1, 2, 3, 4 }))
     end)
 
     it('uses 3 largest numbers from scores in random order', function()
-      assert.equal(9, dnd.ability({2, 4, 3, 1}))
+      assert.equal(9, dnd.ability({ 2, 4, 3, 1 }))
     end)
 
     it('returns 3 with lowest equal numbers', function()
-      assert.equal(3, dnd.ability({1, 1, 1, 1}))
+      assert.equal(3, dnd.ability({ 1, 1, 1, 1 }))
     end)
 
     it('returns 18 with highest equal numbers', function()
-      assert.equal(18, dnd.ability({6, 6, 6, 6}))
+      assert.equal(18, dnd.ability({ 6, 6, 6, 6 }))
     end)
   end)
 
