@@ -13,8 +13,8 @@ local function modifier(input)
 end
 
 return {
-    Character = Character,
-    ability = ability,
-    roll_dice = roll_dice,
-    modifier = modifier
+  Character = Character,
+  ability = ability,
+  roll_dice = roll_dice,
+  modifier = modifier
 }
