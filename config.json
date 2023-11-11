@@ -998,6 +998,20 @@
         ]
       },
       {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "64a74b80-b0e6-46f7-b6fd-c0b613ef14f4",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "control_flow_if_else_statements",
+          "control_flow_loops",
+          "strings",
+          "text_formatting"
+        ]
+      },
+      {
         "slug": "etl",
         "name": "ETL",
         "uuid": "df4cec80-6850-4197-a65f-2159fbedcbe9",
