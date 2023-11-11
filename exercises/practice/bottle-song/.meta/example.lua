@@ -38,7 +38,6 @@ end
 -- @param start_bottles The initial number of bottles on the wall
 -- @param[opt=1] take_down The number of bottles that fall
 function BottleSong.recite(start_bottles, take_down)
-  take_down = take_down or 1
   finish_bottles = start_bottles + 1 - take_down
 
   local verses = ''
