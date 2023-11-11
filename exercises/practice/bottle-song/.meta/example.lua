@@ -8,6 +8,7 @@ local GENERIC_VERSE = table.concat({
 })
 
 local words = {
+  [0] = 'no',
   'one',
   'two',
   'three',
@@ -19,10 +20,9 @@ local words = {
   'nine',
   'ten'
 }
-words[0] = 'no'
 
 local function title_case(word)
-  return word:sub(1,1):upper()..word:sub(2)
+  return word:sub(1,1):upper() .. word:sub(2)
 end
 
 local function verse(number)
