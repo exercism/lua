@@ -33,7 +33,6 @@
     ]
   },
   "exercises": {
-    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
@@ -1040,8 +1039,7 @@
         "uuid": "8e36e8ae-f2c5-4fea-a807-8713b2b23ee4",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "topics": []
+        "difficulty": 3
       },
       {
         "slug": "reverse-string",
@@ -1170,12 +1168,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": null,
         "status": "deprecated"
       }
     ]
   },
-  "concepts": [],
   "key_features": [
     {
       "title": "General-purpose",
@@ -1209,20 +1205,20 @@
     }
   ],
   "tags": [
-    "paradigm/imperative",
-    "paradigm/procedural",
-    "paradigm/object_oriented",
-    "typing/dynamic",
-    "typing/strong",
     "execution_mode/interpreted",
+    "paradigm/imperative",
+    "paradigm/object_oriented",
+    "paradigm/procedural",
     "platform/linux",
     "platform/mac",
     "platform/windows",
     "runtime/language_specific",
+    "typing/dynamic",
+    "typing/strong",
+    "used_for/backends",
+    "used_for/cross_platform_development",
     "used_for/embedded_systems",
     "used_for/games",
-    "used_for/scripts",
-    "used_for/backends",
-    "used_for/cross_platform_development"
+    "used_for/scripts"
   ]
 }
