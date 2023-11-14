@@ -49,6 +49,14 @@
         ]
       },
       {
+        "slug": "pop-count",
+        "name": "Eliud's Eggs",
+        "uuid": "09121a9c-6c8e-4306-8dde-acfa00307715",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "hamming",
         "name": "Hamming",
         "uuid": "d5fcde07-bcef-4ee1-858b-fa4da55d7e0a",
