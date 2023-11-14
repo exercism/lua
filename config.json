@@ -271,6 +271,14 @@
         ]
       },
       {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "35e7b8b4-540e-4388-9282-9a6872cb939c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "binary",
         "name": "Binary",
         "uuid": "5d24d945-9f15-450a-bb47-0b9c6a9e8c47",
