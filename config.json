@@ -61,6 +61,14 @@
         ]
       },
       {
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "uuid": "5f7636cc-d900-412d-9ef7-ccfab41fea17",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "house",
         "name": "House",
         "uuid": "9c71aea2-ff12-44dc-8d54-c15aff6b4b35",
