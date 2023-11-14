@@ -1,6 +1,6 @@
 local Queen = require('queen-attack')
 
-describe('collatz-conjecture', function()
+describe('queen-attack', function()
   it('queen with a valid position', function()
     assert.has_no_error(function()
       Queen({ row = 2, column = 2 })
