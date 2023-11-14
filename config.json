@@ -413,6 +413,14 @@
         ]
       },
       {
+        "slug": "two-fer",
+        "name": "Two Fer",
+        "uuid": "05d91905-042f-49e9-b56b-a454823e19b7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "collatz-conjecture",
         "name": "Collatz Conjecture",
         "uuid": "f01e08a7-c14a-4fc5-9713-8c59f92c9b6c",
