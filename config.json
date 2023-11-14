@@ -99,6 +99,14 @@
         ]
       },
       {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "6931fb54-5298-48e7-9729-b04c316069a0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "matrix",
         "name": "Matrix",
         "uuid": "d4de8f02-ba5b-4357-8285-9cb41dc3b72e",
