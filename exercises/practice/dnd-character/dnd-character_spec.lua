@@ -173,7 +173,7 @@ describe('dnd', function()
     it('creates a character with valid hitpoints', function()
       for i = 1, 10 do
         local character = dnd.Character:new(tostring(i))
-        assert.equal(character.hitpoints, 10 + dnd.modifier(character.constitution))
+        assert.equal(10 + dnd.modifier(character.constitution), character.hitpoints)
       end
     end)
   end)
