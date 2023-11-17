@@ -1,6 +1,6 @@
 local SquareRoot = {}
 
-function SquareRoot.squareRoot(radicand)
+function SquareRoot.square_root(radicand)
     local root = 0
     while root ^ 2 ~= radicand do
         root = root + 1

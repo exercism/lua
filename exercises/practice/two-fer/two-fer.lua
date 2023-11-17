@@ -1,6 +1,6 @@
 local TwoFer = {}
 
-function TwoFer.twoFer(name)
+function TwoFer.two_fer(name)
 
 end
 
