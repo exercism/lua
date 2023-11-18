@@ -1,6 +1,6 @@
 local ArmstrongNumbers = {}
 
-function ArmstrongNumbers.isArmstrongNumber(number)
+function ArmstrongNumbers.is_armstrong_number(number)
 
 end
 

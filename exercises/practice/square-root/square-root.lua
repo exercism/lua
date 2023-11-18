@@ -1,6 +1,6 @@
 local SquareRoot = {}
 
-function SquareRoot.squareRoot(radicand)
+function SquareRoot.square_root(radicand)
 
 end
 

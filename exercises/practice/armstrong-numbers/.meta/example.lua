@@ -1,6 +1,6 @@
 local ArmstrongNumbers = {}
 
-function ArmstrongNumbers.isArmstrongNumber(number)
+function ArmstrongNumbers.is_armstrong_number(number)
     local digits = tostring(number)
     local pow_special = function(digit) return tonumber(digit) ^ string.len(digits) end
 
