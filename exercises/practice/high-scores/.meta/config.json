@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "BNAmdras"
+  ],
+  "files": {
+    "solution": [
+      "high-scores.lua"
+    ],
+    "test": [
+      "high-scores_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
+  },
+  "blurb": "Manage a player's High Score list.",
+  "source": "Tribute to the eighties' arcade game Frogger"
+}
