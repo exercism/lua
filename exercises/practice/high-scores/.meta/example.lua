@@ -7,11 +7,12 @@ local function latest(self)
 end
 
 local function personal_best(self)
-  return math.max(table.unpack(self.values))
+  local values = { table.unpack(self.values) }
+  return math.max(values)
 end
 
 local function personal_top_three(self)
-  local values = {table.unpack(self.values)}
+  local values = { table.unpack(self.values) }
   table.sort(
       values,
       function(a, b)
@@ -19,7 +20,7 @@ local function personal_top_three(self)
       end
   )
   local stop = math.min(3, #values)
-  return {table.unpack(values, 1, stop)}
+  return { table.unpack(values, 1, stop) }
 end
 
 return function(values)
