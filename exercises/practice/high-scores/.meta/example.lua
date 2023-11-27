@@ -1,17 +1,17 @@
-local function Scores(self)
-  return self.scores
+local function scores(self)
+  return self.values
 end
 
-local function Latest(self)
-  return self.scores[#self.scores]
+local function latest(self)
+  return self.values[#self.values]
 end
 
-local function PersonalBest(self)
-  return math.max(table.unpack(self.scores))
+local function personal_best(self)
+  return math.max(table.unpack(self.values))
 end
 
-local function PersonalTopThree(self)
-  local values = {table.unpack(self.scores)}
+local function personal_top_three(self)
+  local values = {table.unpack(self.values)}
   table.sort(
       values,
       function(a, b)
@@ -22,12 +22,12 @@ local function PersonalTopThree(self)
   return {table.unpack(values, 1, stop)}
 end
 
-return function(scores)
+return function(values)
   return {
-    scores = table.unpack(scores),
-    Scores = Scores,
-    Latest = Latest,
-    PersonalBest = PersonalBest,
-    PersonalTopThree = PersonalTopThree
+    values = table.unpack(values),
+    scores = scores,
+    latest = latest,
+    personal_best = personal_best,
+    personal_top_three = personal_top_three
   }
 end
