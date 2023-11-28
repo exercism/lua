@@ -7,7 +7,7 @@ Lua supports procedural, object-oriented, functional, data-driven programming an
 It combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics.
 Lua is dynamically typed, runs by interpreting bytecode with a register-based virtual machine and has automatic memory management with incremental garbage collection, making it ideal for configuration, scripting and rapid prototyping.
 
-Lua has been used in [many industrial applications](https://sites.google.com/site/marbux/home/where-lua-is-used#8S4UcLlroV5fq8i3WSheIA) with an emphasis on embedded systems and games.
+Lua has been used in [many industrial applications](https://en.wikipedia.org/wiki/Category:Lua_(programming_language)-scriptable_software) with an emphasis on embedded systems and games.
 
 The home page for Lua is [Lua.org](https://www.lua.org/).
 Enjoy!

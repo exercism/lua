@@ -151,11 +151,11 @@ $ dbusted $PWD
 
 You should see the output from your busted tests.
 
-[1]: http://brew.sh/
-[2]: http://luarocks.org/
-[3]: http://olivinelabs.com/busted/
+[1]: https://brew.sh/
+[2]: https://luarocks.org/
+[3]: https://lunarmodules.github.io/busted/
 [4]: https://github.com/Olivine-Labs/lua-style-guide
-[5]: http://tylerneylon.com/a/learn-lua/
+[5]: https://tylerneylon.com/a/learn-lua/
 [6]: https://help.ubuntu.com/lts/serverguide/apt.html
 [7]: https://docs.microsoft.com/en-us/windows/wsl/faq
 [8]: https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-6
