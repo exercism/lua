@@ -1,3 +1,1 @@
-return function(scores)
-
-end
+return function(scores) end
