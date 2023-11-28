@@ -41,7 +41,7 @@ $ busted
 First install Lua and [Luarocks][2] using [Apt][6]:
 
 ```shell
-$ sudo apt-get install lua5.3 liblua5.3-dev luarocks
+$ sudo apt-get install lua5.4 liblua5.4-dev luarocks
 ```
 
 Then install the [Busted][3] testing framework for Lua:
