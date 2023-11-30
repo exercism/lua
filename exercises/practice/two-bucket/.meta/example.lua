@@ -73,7 +73,7 @@ return {
     return {
       moves = moves,
       other_bucket_volume = bucket_one.contains(goal_volume) and bucket_two.volume or bucket_one.volume,
-      goal_bucket_volume = bucket_one.contains(goal_volume) and 1 or 2
+      goal_bucket_number = bucket_one.contains(goal_volume) and 1 or 2
     }
   end
 }

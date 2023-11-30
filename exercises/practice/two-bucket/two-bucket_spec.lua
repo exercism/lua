@@ -10,7 +10,7 @@ describe('two-bucket', function()
     }), {
       moves = 4,
       other_bucket_volume = 5,
-      goal_bucket_volume = 1
+      goal_bucket_number = 1
     })
   end)
 
@@ -23,7 +23,7 @@ describe('two-bucket', function()
     }), {
       moves = 8,
       other_bucket_volume = 3,
-      goal_bucket_volume = 2
+      goal_bucket_number = 2
     })
   end)
 
@@ -36,7 +36,7 @@ describe('two-bucket', function()
     }), {
       moves = 14,
       other_bucket_volume = 11,
-      goal_bucket_volume = 1
+      goal_bucket_number = 1
     })
   end)
 
@@ -49,7 +49,7 @@ describe('two-bucket', function()
     }), {
       moves = 18,
       other_bucket_volume = 7,
-      goal_bucket_volume = 2
+      goal_bucket_number = 2
     })
   end)
 
@@ -62,7 +62,7 @@ describe('two-bucket', function()
     }), {
       moves = 1,
       other_bucket_volume = 0,
-      goal_bucket_volume = 2
+      goal_bucket_number = 2
     })
   end)
 
@@ -75,7 +75,7 @@ describe('two-bucket', function()
     }), {
       moves = 2,
       other_bucket_volume = 2,
-      goal_bucket_volume = 2
+      goal_bucket_number = 2
     })
   end)
 
@@ -99,7 +99,7 @@ describe('two-bucket', function()
     }), {
       moves = 10,
       other_bucket_volume = 0,
-      goal_bucket_volume = 2
+      goal_bucket_number = 2
     })
   end)
 
