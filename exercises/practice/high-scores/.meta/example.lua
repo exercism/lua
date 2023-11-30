@@ -21,7 +21,7 @@ end
 
 return function(values)
   return {
-    values = table.unpack(values),
+    values = values,
     scores = scores,
     latest = latest,
     personal_best = personal_best,
