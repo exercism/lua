@@ -12,7 +12,7 @@ Refer to [Installing Lua locally][install] for installing `busted`.
 
 ## Debugging Unit Tests
 
-This guide will show you how to set up [VSCode](https://code.visualstudio.com/) with the [Busted](https://github.com/lunarmodules/busted) test framework and [Local Lua Debugger](https://marketplace.visualstudio.com/items?itemName=tomblind.local-lua-debugger-vscode) so that you can set breakpoints in both the test spec and the file it is testing, facilitating a straightforward [Test Driven Developent](https://en.wikipedia.org/wiki/Test-driven_development) workflow. This is not canonical, there are many methods that may work but this method will at least get you up and running (note: this has been tested and works on Windows 10 and Ubuntu 20.04).
+This guide will show you how to set up [VSCode](https://code.visualstudio.com/) with the [Busted](https://github.com/lunarmodules/busted) test framework and [Local Lua Debugger](https://marketplace.visualstudio.com/items?itemName=tomblind.local-lua-debugger-vscode) so that you can set breakpoints in both the test spec and the file it is testing, facilitating a straightforward [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) workflow. This is not canonical, there are many methods that may work but this method will at least get you up and running (note: this has been tested and works on Windows 10 and Ubuntu 20.04).
 
 With all that jargon out of the way let's get started.
 
