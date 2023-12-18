@@ -1,2 +1,2 @@
 return function(xs, f)
-  end
+end
