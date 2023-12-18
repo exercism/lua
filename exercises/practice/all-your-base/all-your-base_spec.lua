@@ -34,11 +34,11 @@ describe('all-your-base', function()
   end)
 
   it('should convert no digits to 0', function()
-    assert.are.same({ 0 }, all_your_base.convert({ }, 2).to(10))
+    assert.are.same({ 0 }, all_your_base.convert({}, 2).to(10))
   end)
 
   it('should convert no digits to 0', function()
-    assert.are.same({ 0 }, all_your_base.convert({ }, 10).to(2))
+    assert.are.same({ 0 }, all_your_base.convert({}, 10).to(2))
   end)
 
   it('should convert multiple 0 digits to 0', function()

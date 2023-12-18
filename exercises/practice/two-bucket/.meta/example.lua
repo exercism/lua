@@ -1,8 +1,5 @@
 local function Bucket(capacity)
-  local self = {
-    volume = 0,
-    capacity = capacity
-  }
+  local self = { volume = 0, capacity = capacity }
 
   self.empty = function()
     self.volume = 0

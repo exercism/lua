@@ -4,7 +4,9 @@ return function(s)
     letters[c:byte()] = true
   end
   for i = ('a'):byte(), ('z'):byte() do
-    if not letters[i] then return false end
+    if not letters[i] then
+      return false
+    end
   end
   return true
 end

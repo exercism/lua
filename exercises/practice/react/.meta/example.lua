@@ -29,7 +29,8 @@ local function ComputeCell(...)
   local previous_value
   local cell = {}
 
-  local inputs, f do
+  local inputs, f
+  do
     local args = table.pack(...)
     if args.n == 3 then
       inputs = { args[1], args[2] }
@@ -99,10 +100,7 @@ local function ComputeCell(...)
 end
 
 local function Reactor()
-  return {
-    InputCell = InputCell,
-    ComputeCell = ComputeCell
-  }
+  return { InputCell = InputCell, ComputeCell = ComputeCell }
 end
 
 return { Reactor = Reactor }

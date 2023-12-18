@@ -22,10 +22,7 @@ describe('largest-series-product', function()
   end)
 
   it('should be able to get the largest product with a large span', function()
-    assert.equals(23520, lsp({
-      digits = '73167176531330624919225119674426574742355349194934',
-      span = 6
-    }))
+    assert.equals(23520, lsp({ digits = '73167176531330624919225119674426574742355349194934', span = 6 }))
   end)
 
   it('should be able to get the largest product with a really large span', function()

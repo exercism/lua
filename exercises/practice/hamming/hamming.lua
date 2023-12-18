@@ -1,7 +1,6 @@
 local Hamming = {}
 
-function Hamming.compute(a,b)
-
+function Hamming.compute(a, b)
 end
 
 return Hamming

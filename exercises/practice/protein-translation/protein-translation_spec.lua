@@ -44,7 +44,9 @@ describe('protein-translation', function()
     end)
 
     it('should raise an error when an unknown codon is translated', function()
-      assert.has_error(function() translate.codon('MIA') end)
+      assert.has_error(function()
+        translate.codon('MIA')
+      end)
     end)
   end)
 
@@ -59,7 +61,9 @@ describe('protein-translation', function()
     end)
 
     it('should raise an error when an unknown codon is encountered', function()
-      assert.has_error(function() translate.rna_strand('UGUCARROT') end)
+      assert.has_error(function()
+        translate.rna_strand('UGUCARROT')
+      end)
     end)
 
     it('should not raise an error when an unknown codon occurs after a STOP codon', function()

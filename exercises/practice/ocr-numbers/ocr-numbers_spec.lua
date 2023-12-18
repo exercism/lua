@@ -1,5 +1,6 @@
 local ocr = require('ocr-numbers')
 
+-- LuaFormatter off
 describe('ocr-numbers', function()
   it('should recognize zero', function()
     local actual = ocr.convert(
@@ -160,22 +161,23 @@ describe('ocr-numbers', function()
   end)
 
   it('should generate error if input is incorrectly sized', function()
-      assert.has_error(function() ocr.convert(
-        ' _ \n' ..
-        '||\n' ..
-        '|_|\n' ..
-        '   ') end)
+    assert.has_error(function() ocr.convert(
+      ' _ \n' ..
+      '||\n' ..
+      '|_|\n' ..
+      '   ') end)
 
-      assert.has_error(function() ocr.convert(
-        '     _ \n' ..
-        '  | _| _|\n' ..
-        '  |_  _|\n' ..
-        '         \n') end)
+    assert.has_error(function() ocr.convert(
+      '     _ \n' ..
+      '  | _| _|\n' ..
+      '  |_  _|\n' ..
+      '         \n') end)
 
-      assert.has_error(function() ocr.convert(
-        '    _  _ \n' ..
-        '  | _| _|\n' ..
-        '  ||_ \n' ..
-        '         \n') end)
+    assert.has_error(function() ocr.convert(
+      '    _  _ \n' ..
+      '  | _| _|\n' ..
+      '  ||_ \n' ..
+      '         \n') end)
   end)
 end)
+-- LuaFormatter on

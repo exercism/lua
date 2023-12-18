@@ -11,7 +11,7 @@ local mappings = {
   { value = 9, numeral = 'IX' },
   { value = 5, numeral = 'V' },
   { value = 4, numeral = 'IV' },
-  { value = 1, numeral = 'I' },
+  { value = 1, numeral = 'I' }
 }
 
 return {

@@ -1,7 +1,9 @@
 local function keep(xs, pred)
   local acc = {}
   for _, x in ipairs(xs) do
-    if pred(x) then table.insert(acc, x) end
+    if pred(x) then
+      table.insert(acc, x)
+    end
   end
   return acc
 end
@@ -12,7 +14,4 @@ local function discard(xs, pred)
   end)
 end
 
-return {
-  keep = keep,
-  discard = discard
-}
+return { keep = keep, discard = discard }

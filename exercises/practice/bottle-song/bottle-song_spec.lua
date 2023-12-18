@@ -7,7 +7,7 @@ describe('lyrics', function()
         "Ten green bottles hanging on the wall,\n",
         "Ten green bottles hanging on the wall,\n",
         "And if one green bottle should accidentally fall,\n",
-        "There'll be nine green bottles hanging on the wall.\n",
+        "There'll be nine green bottles hanging on the wall.\n"
       })
       assert.equal(expected, BottleSong.recite(10, 1))
     end)
@@ -17,7 +17,7 @@ describe('lyrics', function()
         "Three green bottles hanging on the wall,\n",
         "Three green bottles hanging on the wall,\n",
         "And if one green bottle should accidentally fall,\n",
-        "There'll be two green bottles hanging on the wall.\n",
+        "There'll be two green bottles hanging on the wall.\n"
       })
       assert.equal(expected, BottleSong.recite(3, 1))
     end)
@@ -27,7 +27,7 @@ describe('lyrics', function()
         "Two green bottles hanging on the wall,\n",
         "Two green bottles hanging on the wall,\n",
         "And if one green bottle should accidentally fall,\n",
-        "There'll be one green bottle hanging on the wall.\n",
+        "There'll be one green bottle hanging on the wall.\n"
       })
       assert.equal(expected, BottleSong.recite(2, 1))
     end)
@@ -37,7 +37,7 @@ describe('lyrics', function()
         "One green bottle hanging on the wall,\n",
         "One green bottle hanging on the wall,\n",
         "And if one green bottle should accidentally fall,\n",
-        "There'll be no green bottles hanging on the wall.\n",
+        "There'll be no green bottles hanging on the wall.\n"
       })
       assert.equal(expected, BottleSong.recite(1, 1))
     end)
@@ -54,7 +54,7 @@ describe('lyrics', function()
         "Nine green bottles hanging on the wall,\n",
         "Nine green bottles hanging on the wall,\n",
         "And if one green bottle should accidentally fall,\n",
-        "There'll be eight green bottles hanging on the wall.\n",
+        "There'll be eight green bottles hanging on the wall.\n"
       })
       assert.equal(expected, BottleSong.recite(10, 2))
     end)
@@ -74,7 +74,7 @@ describe('lyrics', function()
         "One green bottle hanging on the wall,\n",
         "One green bottle hanging on the wall,\n",
         "And if one green bottle should accidentally fall,\n",
-        "There'll be no green bottles hanging on the wall.\n",
+        "There'll be no green bottles hanging on the wall.\n"
       })
       assert.equal(expected, BottleSong.recite(3, 3))
     end)
@@ -129,7 +129,7 @@ describe('lyrics', function()
         "One green bottle hanging on the wall,\n",
         "One green bottle hanging on the wall,\n",
         "And if one green bottle should accidentally fall,\n",
-        "There'll be no green bottles hanging on the wall.\n",
+        "There'll be no green bottles hanging on the wall.\n"
       })
       assert.equal(expected, BottleSong.recite(10, 10))
     end)

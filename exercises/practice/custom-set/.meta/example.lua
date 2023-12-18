@@ -31,17 +31,23 @@ end
 
 function Set:is_subset(other)
   for k in pairs(self._contents) do
-    if not other:contains(k) then return false end
+    if not other:contains(k) then
+      return false
+    end
   end
   return true
 end
 
 function Set:is_disjoint(other)
   for k in pairs(self._contents) do
-    if other:contains(k) then return false end
+    if other:contains(k) then
+      return false
+    end
   end
   for k in pairs(other._contents) do
-    if self:contains(k) then return false end
+    if self:contains(k) then
+      return false
+    end
   end
   return true
 end
@@ -49,7 +55,9 @@ end
 function Set:intersection(other)
   local intersection = create()
   for k in pairs(self._contents) do
-    if other:contains(k) then intersection:add(k) end
+    if other:contains(k) then
+      intersection:add(k)
+    end
   end
   return intersection
 end

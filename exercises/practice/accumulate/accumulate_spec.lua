@@ -1,7 +1,9 @@
 local accumulate = require('accumulate')
 
 describe('accumulate', function()
-  local function square(x) return x * x end
+  local function square(x)
+    return x * x
+  end
 
   it('should accumulate over an empty array', function()
     assert.are.same({}, accumulate({}, square))

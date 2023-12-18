@@ -16,7 +16,9 @@ local student_offsets = {
 local plant_abbreviations = { g = 'grass', c = 'clover', r = 'radishes', v = 'violets' }
 
 local function plant_string_for_student(garden, student)
-  if not student_offsets[student] then return '' end
+  if not student_offsets[student] then
+    return ''
+  end
   local _, _, row1, row2 = garden:find('(%w+)\n(%w+)')
   local i = 2 * (student_offsets[student]) + 1
   return row1:sub(i, i + 1) .. row2:sub(i, i + 1)

@@ -60,7 +60,7 @@ describe('binary-search-tree', function()
 
   it('should not allow a tree to be created from an empty list', function()
     assert.has_error(function()
-     BinarySearchTree:from_list({})
+      BinarySearchTree:from_list({})
     end)
   end)
 

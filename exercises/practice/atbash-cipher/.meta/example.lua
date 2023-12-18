@@ -1,5 +1,9 @@
 local alphabet = 'abcdefghijklmnopqrstuvwxyz'
-local decoder_ring = setmetatable({}, { __index = function() return '' end })
+local decoder_ring = setmetatable({}, {
+  __index = function()
+    return ''
+  end
+})
 
 for i = 1, #alphabet do
   decoder_ring[alphabet:sub(i, i)] = alphabet:reverse():sub(i, i)

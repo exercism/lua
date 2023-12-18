@@ -3,11 +3,17 @@ local reduce = require('list-ops').reduce
 local filter = require('list-ops').filter
 
 describe('list-ops', function()
-  local function should_not_be_called() error('unexpected call') end
+  local function should_not_be_called()
+    error('unexpected call')
+  end
 
   describe('map', function()
-    local function identity(x) return x end
-    local function square(x) return x * x end
+    local function identity(x)
+      return x
+    end
+    local function square(x)
+      return x * x
+    end
 
     it('should return an empty array and not call f when the input is an empty array', function()
       assert.same({}, map({}, should_not_be_called))
@@ -61,9 +67,15 @@ describe('list-ops', function()
   end)
 
   describe('filter', function()
-    local function always_true() return true end
-    local function always_false() return false end
-    local function is_even(x) return x % 2 == 0 end
+    local function always_true()
+      return true
+    end
+    local function always_false()
+      return false
+    end
+    local function is_even(x)
+      return x % 2 == 0
+    end
 
     it('should return an empty array and not call the predicate when the input is an empty array', function()
       assert.same({}, filter({}, should_not_be_called))

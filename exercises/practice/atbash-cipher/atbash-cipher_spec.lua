@@ -30,9 +30,7 @@ describe('atbash-cipher', function()
   end)
 
   it('should encode all letters', function()
-    assert.are.equal(
-      'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt',
-      encode('The quick brown fox jumps over the lazy dog.')
-    )
+    assert.are
+      .equal('gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt', encode('The quick brown fox jumps over the lazy dog.'))
   end)
 end)

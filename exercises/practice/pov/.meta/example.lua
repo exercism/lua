@@ -2,7 +2,9 @@ local name = 1
 local children = 2
 
 local function ancestry(which, node)
-  if which == node[name] then return { node } end
+  if which == node[name] then
+    return { node }
+  end
 
   for _, child in ipairs(node[children] or {}) do
     local _ancestry = ancestry(which, child)
@@ -22,7 +24,9 @@ local function remove_child(node, which)
   for i, child in ipairs(node[children]) do
     if which == child then
       table.remove(node[children], i)
-      if #node[children] == 0 then node[children] = nil end
+      if #node[children] == 0 then
+        node[children] = nil
+      end
     end
   end
 end
@@ -70,7 +74,4 @@ local function path_from(source)
   }
 end
 
-return {
-  pov_from = pov_from,
-  path_from = path_from
-}
+return { pov_from = pov_from, path_from = path_from }
