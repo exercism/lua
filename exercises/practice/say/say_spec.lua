@@ -53,8 +53,7 @@ describe('say', function()
   it('should say very large numbers', function()
     assert.are.equal(
       'nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three',
-      say(987654321123)
-    )
+      say(987654321123))
   end)
 
   it('should say all ones', function()

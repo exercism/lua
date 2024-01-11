@@ -1,5 +1,4 @@
 -- canonical test data 2.0.0
-
 local brackets = require('matching-brackets')
 
 describe('matching-brackets', function()
@@ -68,6 +67,7 @@ describe('matching-brackets', function()
   end)
 
   it('should accept complex latex expression', function()
-    assert.is_true(brackets.valid([[\left(\begin{array}{cc} \frac{1}{3} & x\\ \mathrm{e}^{x} &... x^2 \end{array}\right)]]))
+    assert.is_true(brackets.valid(
+                     [[\left(\begin{array}{cc} \frac{1}{3} & x\\ \mathrm{e}^{x} &... x^2 \end{array}\right)]]))
   end)
 end)

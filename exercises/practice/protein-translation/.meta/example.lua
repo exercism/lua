@@ -28,13 +28,12 @@ local function translate_rna_strand(rna_strand)
   local proteins = {}
   for codon in rna_strand:gmatch('...') do
     local protein = translate_codon(codon)
-    if protein == 'STOP' then break end
+    if protein == 'STOP' then
+      break
+    end
     table.insert(proteins, protein)
   end
   return proteins
 end
 
-return {
-  codon = translate_codon,
-  rna_strand = translate_rna_strand
-}
+return { codon = translate_codon, rna_strand = translate_rna_strand }

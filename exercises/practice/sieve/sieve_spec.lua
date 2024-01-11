@@ -1,5 +1,6 @@
 local sieve = require('sieve')
 
+-- LuaFormatter off
 describe('sieve', function()
   local select = select or function(n, ...)
     return table.pack(...)[n]
@@ -9,7 +10,9 @@ describe('sieve', function()
     local primes = {}
     while true do
       local _, prime = coroutine.resume(co)
-      if prime == nil then return primes end
+      if prime == nil then
+        return primes
+      end
       table.insert(primes, prime)
     end
   end
@@ -46,3 +49,4 @@ describe('sieve', function()
     assert.same({}, primes_from(sieve(1)))
   end)
 end)
+-- LuaFormatter on

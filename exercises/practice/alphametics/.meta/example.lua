@@ -21,7 +21,9 @@ local function generate_combinations(a, n, offset)
 end
 
 function combinations(a, n, offset)
-  return coroutine.wrap(function() generate_combinations(a, n, offset or 0) end)
+  return coroutine.wrap(function()
+    generate_combinations(a, n, offset or 0)
+  end)
 end
 
 local function generate_permutations(a, n)
@@ -37,7 +39,9 @@ local function generate_permutations(a, n)
 end
 
 local function permutations(a)
-  return coroutine.wrap(function () generate_permutations(a, #a) end)
+  return coroutine.wrap(function()
+    generate_permutations(a, #a)
+  end)
 end
 
 local function unique_letters(s)
@@ -83,6 +87,4 @@ local function solve(puzzle)
   end
 end
 
-return {
-  solve = solve
-}
+return { solve = solve }

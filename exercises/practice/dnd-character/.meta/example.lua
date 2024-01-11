@@ -12,12 +12,7 @@ local function ability(scores)
 end
 
 local function roll_dice()
-  return {
-    math.random(6),
-    math.random(6),
-    math.random(6),
-    math.random(6)
-  }
+  return { math.random(6), math.random(6), math.random(6), math.random(6) }
 end
 
 local function modifier(input)
@@ -42,9 +37,4 @@ function Character:new(name)
   return setmetatable(meta_tbl, self)
 end
 
-return {
-  Character = Character,
-  ability = ability,
-  roll_dice = roll_dice,
-  modifier = modifier
-}
+return { Character = Character, ability = ability, roll_dice = roll_dice, modifier = modifier }

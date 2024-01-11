@@ -22,7 +22,9 @@ return function(s)
     local row = {}
     for y = 1, grid.height do
       if grid.at(x, y) then
-        while #row < y - 1 do table.insert(row, ' ') end
+        while #row < y - 1 do
+          table.insert(row, ' ')
+        end
         table.insert(row, grid.at(x, y))
       end
     end

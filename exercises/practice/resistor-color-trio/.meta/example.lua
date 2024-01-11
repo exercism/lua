@@ -17,7 +17,7 @@ return {
 
     if value >= 1e9 then
       return value / 1e9, 'gigaohms'
-    elseif value >=  1e6 then
+    elseif value >= 1e6 then
       return value / 1e6, 'megaohms'
     elseif value >= 1e3 then
       return value / 1e3, 'kiloohms'

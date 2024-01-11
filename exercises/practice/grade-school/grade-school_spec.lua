@@ -28,9 +28,9 @@ describe('grade-school', function()
 
   it('adding students to different grades adds them to the roster', function()
     local school = School:new()
-    school:add('Chelsea',3)
-    school:add('Logan',7)
-    local expected = { [3]={ 'Chelsea' }, [7] = { 'Logan'} }
+    school:add('Chelsea', 3)
+    school:add('Logan', 7)
+    local expected = { [3] = { 'Chelsea' }, [7] = { 'Logan' } }
     local result = school:roster()
     assert.are.same(expected, result)
   end)
@@ -58,11 +58,7 @@ describe('grade-school', function()
     school:add('Kareem', 6)
     school:add('Christopher', 4)
     school:add('Kyle', 3)
-    local expected = {
-      [3]={ 'Kyle' },
-      [4]={ 'Christopher', 'Jennifer' },
-      [6]={ 'Kareem' }
-    }
+    local expected = { [3] = { 'Kyle' }, [4] = { 'Christopher', 'Jennifer' }, [6] = { 'Kareem' } }
     local result = school:roster()
     assert.are.same(expected, result)
   end)

@@ -1,3 +1,2 @@
 return function(config)
-
 end

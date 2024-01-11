@@ -1,5 +1,6 @@
 local rectangles = require('rectangles')
 
+-- LuaFormatter off
 describe('rectangles', function()
   it('should find 0 rectangles in an empty grid', function()
     assert.equal(0, rectangles.count({}))
@@ -75,3 +76,4 @@ describe('rectangles', function()
     }))
   end)
 end)
+-- LuaFormatter on

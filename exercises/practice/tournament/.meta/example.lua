@@ -1,3 +1,5 @@
+-- LuaFormatter off
+
 local function pad_right(s, width)
   return s .. (' '):rep(width - #s)
 end
@@ -78,3 +80,5 @@ return function(results)
   finalize(stats)
   return format(stats)
 end
+
+-- LuaFormatter on

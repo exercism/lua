@@ -21,7 +21,9 @@ local function generate_combinations(a, n, offset)
 end
 
 function combinations(a, n, offset)
-  return coroutine.wrap(function() generate_combinations(a, n, offset or 0) end)
+  return coroutine.wrap(function()
+    generate_combinations(a, n, offset or 0)
+  end)
 end
 
 local function normalize_corners(corners)
@@ -33,7 +35,9 @@ local function normalize_corners(corners)
 end
 
 local function horizontal_line_connecting(c1, c2, grid)
-  if c1.y ~= c2.y then return false end
+  if c1.y ~= c2.y then
+    return false
+  end
 
   local horizontal_segment = { ['-'] = true, ['+'] = true }
 
@@ -47,7 +51,9 @@ local function horizontal_line_connecting(c1, c2, grid)
 end
 
 local function vertical_line_connecting(c1, c2, grid)
-  if c1.x ~= c2.x then return false end
+  if c1.x ~= c2.x then
+    return false
+  end
 
   local vertical_segment = { ['|'] = true, ['+'] = true }
 
@@ -62,11 +68,8 @@ end
 
 local function forms_rectangle(corners, grid)
   local c1, c2, c3, c4 = normalize_corners(corners)
-  return
-    vertical_line_connecting(c1, c2, grid) and
-    vertical_line_connecting(c3, c4, grid) and
-    horizontal_line_connecting(c1, c3, grid) and
-    horizontal_line_connecting(c2, c4, grid)
+  return vertical_line_connecting(c1, c2, grid) and vertical_line_connecting(c3, c4, grid) and
+           horizontal_line_connecting(c1, c3, grid) and horizontal_line_connecting(c2, c4, grid)
 end
 
 local function corners(grid)

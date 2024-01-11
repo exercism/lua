@@ -1,5 +1,6 @@
 local WordSearch = require('word-search')
 
+-- LuaFormatter off
 describe('word-search', function()
   local puzzle = {
     'jefblpepre',
@@ -11,7 +12,7 @@ describe('word-search', function()
     'screeaumgr',
     'alxhpburyi',
     'jalaycalmp',
-    'clojurermt',
+    'clojurermt'
   }
 
   it('should find horizontal words written left-to-right', function()
@@ -79,3 +80,4 @@ describe('word-search', function()
     assert.same({ 4, 2 }, last)
   end)
 end)
+-- LuaFormatter on

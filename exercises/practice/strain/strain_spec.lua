@@ -1,15 +1,28 @@
-local keep = require 'strain'.keep
-local discard = require 'strain'.discard
+local keep = require('strain').keep
+local discard = require('strain').discard
 
+-- LuaFormatter off
 describe('strain', function()
-  local function always_true() return true end
-  local function always_false() return false end
-  local function is_even(x) return x % 2 == 0 end
-  local function is_odd(x) return x % 2 == 1 end
-  local function starts_with_z(s) return string.sub(s, 1, 1) == "z" end
+  local function always_true()
+    return true
+  end
+  local function always_false()
+    return false
+  end
+  local function is_even(x)
+    return x % 2 == 0
+  end
+  local function is_odd(x)
+    return x % 2 == 1
+  end
+  local function starts_with_z(s)
+    return string.sub(s, 1, 1) == "z"
+  end
   local function contains_5(xs)
     for _, x in ipairs(xs) do
-      if x == 5 then return true end
+      if x == 5 then
+        return true
+      end
     end
     return false
   end
@@ -74,3 +87,4 @@ describe('strain', function()
     end)
   end)
 end)
+-- LuaFormatter on

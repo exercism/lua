@@ -26,7 +26,28 @@ describe('pascals-triangle', function()
   end)
 
   it('should generate the twentieth row correctly', function()
-    local twentieth = { 1, 19, 171, 969, 3876, 11628, 27132, 50388, 75582, 92378, 92378, 75582, 50388, 27132, 11628, 3876, 969, 171, 19, 1 }
+    local twentieth = {
+      1,
+      19,
+      171,
+      969,
+      3876,
+      11628,
+      27132,
+      50388,
+      75582,
+      92378,
+      92378,
+      75582,
+      50388,
+      27132,
+      11628,
+      3876,
+      969,
+      171,
+      19,
+      1
+    }
     assert.same(twentieth, Triangle(20).last_row)
   end)
 end)

@@ -1,3 +1,2 @@
 return function(puzzle)
-
 end

@@ -1,0 +1,26 @@
+name: Check Formatting
+
+on: [push, pull_request]
+
+jobs:
+  check-formatting:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+
+      - uses: leafo/gh-actions-lua@35bcb06abec04ec87df82e08caa84d545348536e
+        with:
+          luaVersion: 5.4
+
+      - uses: leafo/gh-actions-luarocks@e65774a6386cb4f24e293dca7fc4ff89165b64c5
+
+      - name: install
+        run: |
+          luarocks install --server=https://luarocks.org/dev luaformatter
+
+      - name: check-formatting
+        run: |
+          bin/format
+          git diff
+          git diff-index --quiet HEAD

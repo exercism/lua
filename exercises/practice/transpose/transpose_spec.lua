@@ -1,5 +1,6 @@
 local transpose = require 'transpose'
 
+-- LuaFormatter off
 describe('transpose', function()
   it('should transpose the empty string to the empty string', function()
     assert.are.equal('', transpose(''))
@@ -193,3 +194,4 @@ describe('transpose', function()
     assert.are.equal(expected, transpose(input))
   end)
 end)
+-- LuaFormatter on

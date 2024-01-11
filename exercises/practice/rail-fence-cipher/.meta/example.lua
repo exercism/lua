@@ -13,14 +13,20 @@ local function correspondences(length, rail_count)
   local line_index = 1
   local delta = 1
 
-  for i = 1, rail_count do lines[i] = {} end
+  for i = 1, rail_count do
+    lines[i] = {}
+  end
 
   for i = 1, length do
     table.insert(lines[line_index], i)
 
     line_index = line_index + delta
-    if line_index == rail_count then delta = -1 end
-    if line_index == 1 then delta = 1 end
+    if line_index == rail_count then
+      delta = -1
+    end
+    if line_index == 1 then
+      delta = 1
+    end
   end
 
   return ipairs(flatten(lines))

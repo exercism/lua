@@ -50,16 +50,8 @@ describe('allergies', function()
   end)
 
   it('should be able to list all allergies', function()
-    assert.same({
-      'eggs',
-      'peanuts',
-      'shellfish',
-      'strawberries',
-      'tomatoes',
-      'chocolate',
-      'pollen',
-      'cats'
-    }, allergies.list(255))
+    assert.same({ 'eggs', 'peanuts', 'shellfish', 'strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats' },
+                allergies.list(255))
   end)
 
   it('should indicate that someone with a score of 0 is allergic to nothing', function()

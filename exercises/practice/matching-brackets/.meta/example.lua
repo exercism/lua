@@ -1,14 +1,6 @@
-local opening_bracket = {
-  ['('] = true,
-  ['['] = true,
-  ['{'] = true
-}
+local opening_bracket = { ['('] = true, ['['] = true, ['{'] = true }
 
-local closing_bracket = {
-  [')'] = '(',
-  [']'] = '[',
-  ['}'] = '{'
-}
+local closing_bracket = { [')'] = '(', [']'] = '[', ['}'] = '{' }
 
 return {
   valid = function(s)
@@ -18,7 +10,9 @@ return {
       if opening_bracket[c] then
         table.insert(history, c)
       elseif closing_bracket[c] then
-        if history[#history] ~= closing_bracket[c] then return false end
+        if history[#history] ~= closing_bracket[c] then
+          return false
+        end
         table.remove(history, #history)
       end
     end

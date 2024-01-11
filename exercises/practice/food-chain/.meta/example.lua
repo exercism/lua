@@ -1,45 +1,20 @@
 local data = {
-  {
-    thing = 'fly',
-    why = "I don't know why she swallowed the fly. Perhaps she'll die."
-  },
-  {
-    thing = 'spider',
-    quip = 'It wriggled and jiggled and tickled inside her.'
-  },
+  { thing = 'fly', why = "I don't know why she swallowed the fly. Perhaps she'll die." },
+  { thing = 'spider', quip = 'It wriggled and jiggled and tickled inside her.' },
   {
     thing = 'bird',
     quip = 'How absurd to swallow a bird!',
     why = 'She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.'
   },
-  {
-    thing = 'cat',
-    quip = 'Imagine that, to swallow a cat!'
-  },
-  {
-    thing = 'dog',
-    quip = 'What a hog, to swallow a dog!'
-  },
-  {
-    thing = 'goat',
-    quip = 'Just opened her throat and swallowed a goat!'
-  },
-  {
-    thing = 'cow',
-    quip = "I don't know how she swallowed a cow!"
-  },
-  {
-    thing = 'horse',
-    quip = "She's dead, of course!",
-    terminal = true
-  }
+  { thing = 'cat', quip = 'Imagine that, to swallow a cat!' },
+  { thing = 'dog', quip = 'What a hog, to swallow a dog!' },
+  { thing = 'goat', quip = 'Just opened her throat and swallowed a goat!' },
+  { thing = 'cow', quip = "I don't know how she swallowed a cow!" },
+  { thing = 'horse', quip = "She's dead, of course!", terminal = true }
 }
 
 local function verse(which)
-  local verse = {
-    'I know an old lady who swallowed a ' .. data[which].thing .. '.',
-    data[which].quip
-  }
+  local verse = { 'I know an old lady who swallowed a ' .. data[which].thing .. '.', data[which].quip }
 
   if not data[which].terminal then
     for i = which, 1, -1 do
@@ -63,8 +38,4 @@ local function sing()
   return verses(1, #data)
 end
 
-return {
-  verse = verse,
-  verses = verses,
-  sing = sing
-}
+return { verse = verse, verses = verses, sing = sing }

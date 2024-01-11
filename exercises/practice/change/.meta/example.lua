@@ -6,7 +6,9 @@ return function(amount, values)
     sorted_values[i] = v
   end
 
-  table.sort(sorted_values, function(a, b) return b < a end)
+  table.sort(sorted_values, function(a, b)
+    return b < a
+  end)
 
   for i, value in ipairs(sorted_values) do
     result[index[value]] = amount // value
