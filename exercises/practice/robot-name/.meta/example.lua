@@ -1,11 +1,11 @@
 local Robot = {}
 
 function build_name()
-  return string.char(math.random(65,90))..string.char(math.random(65,90))..math.random(100,999)
+  return string.char(math.random(65, 90)) .. string.char(math.random(65, 90)) .. math.random(100, 999)
 end
 
-function name_exists(names,name)
-  if (names.length ~=nil) then
+function name_exists(names, name)
+  if (names.length ~= nil) then
     for i = 1, #names do
       if names[i] == name then
         return true
@@ -27,7 +27,7 @@ function Robot:new()
 end
 
 function Robot:reset()
-  local name  = build_name()
+  local name = build_name()
   local names = self.names
   if (name_exists(names, name)) then
     name = build_name()

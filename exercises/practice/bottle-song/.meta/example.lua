@@ -7,22 +7,10 @@ local GENERIC_VERSE = table.concat({
   "There'll be M green bottles hanging on the wall.\n"
 })
 
-local words = {
-  [0] = 'no',
-  'one',
-  'two',
-  'three',
-  'four',
-  'five',
-  'six',
-  'seven',
-  'eight',
-  'nine',
-  'ten'
-}
+local words = { [0] = 'no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten' }
 
 local function title_case(word)
-  return word:sub(1,1):upper() .. word:sub(2)
+  return word:sub(1, 1):upper() .. word:sub(2)
 end
 
 local function verse(number)
@@ -43,7 +31,9 @@ function BottleSong.recite(start_bottles, take_down)
   local verses = ''
   for i = start_bottles, finish_bottles, -1 do
     verses = verses .. verse(i)
-    if i ~= finish_bottles then verses = verses .. '\n' end
+    if i ~= finish_bottles then
+      verses = verses .. '\n'
+    end
   end
   return verses
 end

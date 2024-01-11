@@ -9,7 +9,7 @@ describe('alphametics', function()
 
   it('should solve long puzzles', function()
     local actual = alphametics.solve('SEND + MORE == MONEY')
-    local expected = { S = 9, E = 5, N = 6, D = 7, M = 1, O = 0, R = 8,Y = 2 }
+    local expected = { S = 9, E = 5, N = 6, D = 7, M = 1, O = 0, R = 8, Y = 2 }
     assert.same(expected, actual)
   end)
 

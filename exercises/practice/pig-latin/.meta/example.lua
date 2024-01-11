@@ -4,7 +4,9 @@ local consonant = '[^aeiou]'
 local function translate(word)
   local function begins_with_any_of(patterns)
     for _, pattern in ipairs(patterns) do
-      if word:lower():find('^' .. pattern) then return true end
+      if word:lower():find('^' .. pattern) then
+        return true
+      end
     end
   end
 

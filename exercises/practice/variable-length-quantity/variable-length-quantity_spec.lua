@@ -1,5 +1,6 @@
 local vlq = require 'variable-length-quantity'
 
+-- LuaFormatter off
 describe('variable-length-quantity', function()
   it('should decode single bytes', function()
     assert.are.same({ 0x00 }, vlq.decode({ 0x00 }))
@@ -71,3 +72,4 @@ describe('variable-length-quantity', function()
     end, 'incomplete byte sequence')
   end)
 end)
+-- LuaFormatter on

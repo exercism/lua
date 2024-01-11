@@ -22,9 +22,7 @@ function BankAccount:close(amount)
 end
 
 function BankAccount:new()
-  local o = setmetatable({
-    _value = 0
-  }, self)
+  local o = setmetatable({ _value = 0 }, self)
   self.__index = self
   return o
 end

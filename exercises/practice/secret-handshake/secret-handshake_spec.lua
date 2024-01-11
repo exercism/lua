@@ -30,9 +30,6 @@ describe('secret-handshake', function()
   end)
 
   it('should allow all primitives to be used together', function()
-    assert.are.same(
-      { 'jump', 'close your eyes', 'double blink', 'wink' },
-      secret_handshake(tonumber('11111', 2))
-    )
+    assert.are.same({ 'jump', 'close your eyes', 'double blink', 'wink' }, secret_handshake(tonumber('11111', 2)))
   end)
 end)

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+find exercises -iname '*.lua' -print0 | xargs --null lua-format -i

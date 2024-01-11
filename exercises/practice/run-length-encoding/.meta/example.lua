@@ -14,7 +14,9 @@ return {
   decode = function(s)
     local result = ''
     for length, c in s:gmatch('(%d*)(.)') do
-      if length == '' then length = 1 end
+      if length == '' then
+        length = 1
+      end
       result = result .. c:rep(length)
     end
     return result

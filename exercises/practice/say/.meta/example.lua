@@ -20,7 +20,7 @@ local teens = {
   [16] = 'sixteen',
   [17] = 'seventeen',
   [18] = 'eighteen',
-  [19] = 'nineteen',
+  [19] = 'nineteen'
 }
 
 local tens = {
@@ -34,11 +34,7 @@ local tens = {
   [9] = 'ninety'
 }
 
-local group_name = {
-  'thousand',
-  'million',
-  'billion'
-}
+local group_name = { 'thousand', 'million', 'billion' }
 
 local function say_group(n)
   local said = ''
@@ -46,13 +42,17 @@ local function say_group(n)
   if n // 100 > 0 then
     said = said .. ones[n // 100] .. ' hundred'
     n = n - (n // 100) * 100
-    if n > 0 then said = said .. ' ' end
+    if n > 0 then
+      said = said .. ' '
+    end
   end
 
   if tens[n // 10] then
     said = said .. tens[n // 10]
     n = n - (n // 10) * 10
-    if n > 0 then said = said .. '-' end
+    if n > 0 then
+      said = said .. '-'
+    end
   end
 
   if teens[n] then
@@ -65,7 +65,9 @@ local function say_group(n)
 end
 
 return function(n)
-  if n < 0 or n > 999999999999 then return -1 end
+  if n < 0 or n > 999999999999 then
+    return -1
+  end
 
   local groups = {}
   local group_index = 0

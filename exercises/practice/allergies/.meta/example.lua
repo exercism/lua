@@ -1,13 +1,4 @@
-local allergens = {
-  'eggs',
-  'peanuts',
-  'shellfish',
-  'strawberries',
-  'tomatoes',
-  'chocolate',
-  'pollen',
-  'cats'
-}
+local allergens = { 'eggs', 'peanuts', 'shellfish', 'strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats' }
 
 local function list(score)
   local results = {}
@@ -21,12 +12,11 @@ end
 
 local function allergic_to(score, which)
   for _, allergen in ipairs(list(score)) do
-    if allergen == which then return true end
+    if allergen == which then
+      return true
+    end
   end
   return false
 end
 
-return {
-  list = list,
-  allergic_to = allergic_to
-}
+return { list = list, allergic_to = allergic_to }

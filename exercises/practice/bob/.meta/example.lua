@@ -13,10 +13,18 @@ local function question(say)
 end
 
 function bob.hey(say)
-  if nothing(say)  then return 'Fine, be that way.' end
-  if shouting(say) and question(say) then return 'Calm down, I know what I\'m doing!' end
-  if shouting(say) then return "Whoa, chill out!" end
-  if question(say) then return "Sure" end
+  if nothing(say) then
+    return 'Fine, be that way.'
+  end
+  if shouting(say) and question(say) then
+    return 'Calm down, I know what I\'m doing!'
+  end
+  if shouting(say) then
+    return "Whoa, chill out!"
+  end
+  if question(say) then
+    return "Sure"
+  end
   return "Whatever"
 end
 

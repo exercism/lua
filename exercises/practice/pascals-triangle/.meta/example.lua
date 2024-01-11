@@ -9,8 +9,5 @@ return function(n)
     table.insert(rows, row)
   end
 
-  return {
-    rows = rows,
-    last_row = rows[#rows]
-  }
+  return { rows = rows, last_row = rows[#rows] }
 end

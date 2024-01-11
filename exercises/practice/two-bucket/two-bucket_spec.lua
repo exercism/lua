@@ -1,5 +1,6 @@
 local two_bucket = require 'two-bucket'
 
+-- LuaFormatter off
 describe('two-bucket', function()
   it('measure using bucket one of size 3 and bucket two of size 5 - start with bucket one', function()
     assert.are.same(two_bucket.measure({
@@ -114,3 +115,4 @@ describe('two-bucket', function()
     end)
   end)
 end)
+-- LuaFormatter on

@@ -1,6 +1,7 @@
 local pov_from = require('pov').pov_from
 local path_from = require('pov').path_from
 
+-- LuaFormatter off
 describe('pov', function()
   describe('pov_from.of', function()
     it('should give the POV of a singleton as the singleton', function()
@@ -180,3 +181,4 @@ describe('pov', function()
     end)
   end)
 end)
+-- LuaFormatter on

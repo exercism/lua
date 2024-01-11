@@ -2,11 +2,7 @@ local board = {}
 board.__index = board
 
 local function Board(rep)
-  local board = setmetatable({
-    rep = rep,
-    width = #rep[1] - 2,
-    height = #rep - 2
-  }, board)
+  local board = setmetatable({ rep = rep, width = #rep[1] - 2, height = #rep - 2 }, board)
 
   for _, row in ipairs(rep) do
     assert(#row == #rep[1], 'board must be a rectangle')
@@ -22,8 +18,12 @@ local function Board(rep)
 end
 
 function board:at(x, y)
-  if x < 1 or x > self.width then return ' ' end
-  if y < 1 or y > self.height then return ' ' end
+  if x < 1 or x > self.width then
+    return ' '
+  end
+  if y < 1 or y > self.height then
+    return ' '
+  end
   return self.rep[y + 1]:sub(x + 1, x + 1)
 end
 
@@ -47,7 +47,9 @@ function board:empty_spaces()
   return coroutine.wrap(function()
     for x = 1, self.width do
       for y = 1, self.height do
-        if self:at(x, y) == ' ' then coroutine.yield(x, y) end
+        if self:at(x, y) == ' ' then
+          coroutine.yield(x, y)
+        end
       end
     end
   end)
@@ -59,14 +61,16 @@ local function transform(board)
   for x, y in board:empty_spaces() do
     local mines = 0
     for neighbor in board:neighbors(x, y) do
-      if neighbor == '*' then mines = mines + 1 end
+      if neighbor == '*' then
+        mines = mines + 1
+      end
     end
-    if mines > 0 then board:set(x, y, tostring(mines)) end
+    if mines > 0 then
+      board:set(x, y, tostring(mines))
+    end
   end
 
   return board.rep
 end
 
-return {
-  transform = transform
-}
+return { transform = transform }

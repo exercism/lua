@@ -18,16 +18,14 @@ describe('collatz-conjecture', function()
   end)
 
   it('zero is an error', function()
-    assert.has_error(
-      function() conjecture(0) end,
-      'Only positive numbers are allowed'
-    )
+    assert.has_error(function()
+      conjecture(0)
+    end, 'Only positive numbers are allowed')
   end)
 
   it('negative value is an error', function()
-    assert.has_error(
-      function() conjecture(-15) end,
-      'Only positive numbers are allowed'
-    )
+    assert.has_error(function()
+      conjecture(-15)
+    end, 'Only positive numbers are allowed')
   end)
 end)

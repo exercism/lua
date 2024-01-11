@@ -8,6 +8,4 @@ local function word_count(s)
   return counts
 end
 
-return {
-  word_count = word_count,
-}
+return { word_count = word_count }

@@ -2,9 +2,7 @@ local BinarySearchTree = {}
 BinarySearchTree.__index = BinarySearchTree
 
 function BinarySearchTree:new(value)
-  return setmetatable({
-    value = value
-  }, self)
+  return setmetatable({ value = value }, self)
 end
 
 function BinarySearchTree:from_list(list)
@@ -19,11 +17,15 @@ end
 function BinarySearchTree:values()
   return coroutine.wrap(function()
     if self.left then
-      for v in self.left:values() do coroutine.yield(v) end
+      for v in self.left:values() do
+        coroutine.yield(v)
+      end
     end
     coroutine.yield(self.value)
     if self.right then
-      for v in self.right:values() do coroutine.yield(v) end
+      for v in self.right:values() do
+        coroutine.yield(v)
+      end
     end
   end)
 end

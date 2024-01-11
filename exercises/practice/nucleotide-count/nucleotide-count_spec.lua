@@ -2,7 +2,7 @@ local DNA = require('nucleotide-count')
 
 describe('nucleotide-count', function()
   it('has no nucleotides', function()
-    local expected =  { A = 0, T = 0, C = 0, G = 0 }
+    local expected = { A = 0, T = 0, C = 0, G = 0 }
     dna = DNA:new('')
     local result = dna.nucleotideCounts
     assert.are.same(expected, result)
@@ -44,14 +44,22 @@ describe('nucleotide-count', function()
   end)
 
   it('validates dna sequences', function()
-     assert.has.errors(function() DNA:new('INVALID') end)
-     assert.has_error(function() DNA:new('INVALID') end, 'Invalid Sequence')
+    assert.has.errors(function()
+      DNA:new('INVALID')
+    end)
+    assert.has_error(function()
+      DNA:new('INVALID')
+    end, 'Invalid Sequence')
   end)
 
   it('validates counting nucleotides', function()
-     local dna = DNA:new('GGTTGG')
-     assert.has.errors(function() dna:count('X') end)
-     assert.has_error(function() dna:count('X') end, 'Invalid Nucleotide')
+    local dna = DNA:new('GGTTGG')
+    assert.has.errors(function()
+      dna:count('X')
+    end)
+    assert.has_error(function()
+      dna:count('X')
+    end, 'Invalid Nucleotide')
   end)
 
   it('counts all nucleotides', function()

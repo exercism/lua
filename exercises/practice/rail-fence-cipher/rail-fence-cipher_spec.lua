@@ -33,10 +33,8 @@ describe('rail-fence-cipher', function()
     end)
 
     it('should decode with 6 rails', function()
-      assert.equal(
-        '112358132134558914423337761098715972584418167651094617711286',
-        rfc.decode('133714114238148966225439541018335470986172518171757571896261', 6)
-      )
+      assert.equal('112358132134558914423337761098715972584418167651094617711286',
+                   rfc.decode('133714114238148966225439541018335470986172518171757571896261', 6))
     end)
 
     it('should decode with many rails', function()

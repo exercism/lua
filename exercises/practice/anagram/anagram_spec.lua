@@ -31,7 +31,7 @@ describe('anagram', function()
 
   it('does not detect anagram subsets', function()
     local detector = Anagram:new('good')
-    local result = detector:match({'dog', 'goody'})
+    local result = detector:match({ 'dog', 'goody' })
     local expected = {}
     assert.are.same(expected, result)
   end)
