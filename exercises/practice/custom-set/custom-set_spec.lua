@@ -48,10 +48,11 @@ describe('custom-set', function()
       assert.is_true(Set(1, 2, 3):is_subset(Set(4, 1, 2, 3)))
     end)
 
-    it('should indicate that a set is not a subset of another set with different elements but the same element count',
-       function()
+    -- LuaFormatter off
+    it('should indicate that a set is not a subset of another set with different elements but the same element count', function()
       assert.is_false(Set(1, 2, 3):is_subset(Set(4, 1, 3)))
     end)
+    -- LuaFormatter on
   end)
 
   describe('is_disjoint', function()
