@@ -64,7 +64,7 @@ describe('custom-set', function()
       assert.is_true(Set():is_disjoint(Set(1)))
     end)
 
-    it('should indicate that a non-empty set is not disjoint with an empty set', function()
+    it('should indicate that a non-empty set is disjoint with an empty set', function()
       assert.is_true(Set(1):is_disjoint(Set()))
     end)
 
