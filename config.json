@@ -418,13 +418,13 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
+        "status": "deprecated",
         "topics": [
           "control_flow_if_else_statements",
           "control_flow_loops",
           "strings",
           "text_formatting"
-        ],
-        "status": "deprecated"
+        ]
       },
       {
         "slug": "food-chain",
@@ -1229,6 +1229,14 @@
         "prerequisites": [],
         "difficulty": 1,
         "status": "deprecated"
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "c3394972-632b-47d4-a952-78cb8ade96b7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
       }
     ]
   },
