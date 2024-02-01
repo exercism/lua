@@ -418,13 +418,13 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
+        "status": "deprecated",
         "topics": [
           "control_flow_if_else_statements",
           "control_flow_loops",
           "strings",
           "text_formatting"
-        ],
-        "status": "deprecated"
+        ]
       },
       {
         "slug": "food-chain",
@@ -1181,6 +1181,14 @@
           "control_flow_if_else_statements",
           "exception_handling"
         ]
+      },
+      {
+        "slug": "spiral-matrix",
+        "name": "Spiral Matrix",
+        "uuid": "609c659a-d5d7-4252-9ab8-e4c4f3ad88d9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       },
       {
         "slug": "kindergarten-garden",
