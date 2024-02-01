@@ -1,0 +1,2 @@
+return function(size)
+end

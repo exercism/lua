@@ -1183,6 +1183,14 @@
         ]
       },
       {
+        "slug": "spiral-matrix",
+        "name": "Spiral Matrix",
+        "uuid": "609c659a-d5d7-4252-9ab8-e4c4f3ad88d9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "kindergarten-garden",
         "name": "Kindergarten Garden",
         "uuid": "d669d338-c3f1-40ea-ae12-c77127c6fcdc",
