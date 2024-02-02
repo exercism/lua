@@ -1,6 +1,6 @@
-local PopCount = {}
+local EliudsEggs = {}
 
-function PopCount.egg_count(number)
+function EliudsEggs.egg_count(number)
   local eggs = 0
 
   local current = number
@@ -15,4 +15,4 @@ function PopCount.egg_count(number)
   return eggs
 end
 
-return PopCount
+return EliudsEggs

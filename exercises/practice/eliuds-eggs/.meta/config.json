@@ -4,10 +4,10 @@
   ],
   "files": {
     "solution": [
-      "pop-count.lua"
+      "eliuds-eggs.lua"
     ],
     "test": [
-      "pop-count_spec.lua"
+      "eliuds-eggs_spec.lua"
     ],
     "example": [
       ".meta/example.lua"
