@@ -33,6 +33,18 @@
     ]
   },
   "exercises": {
+    "concept": [
+      {
+        "slug": "lasagna",
+        "name": "Lasagna",
+        "uuid": "d3b3cb56-d92d-46b8-bbba-2f0e07d5fc56",
+        "concepts": [
+          "basics"
+        ],
+        "prerequisites": [],
+        "status": "beta"
+      }
+    ],
     "practice": [
       {
         "slug": "hello-world",
@@ -1248,6 +1260,13 @@
       }
     ]
   },
+  "concepts": [
+    {
+      "uuid": "202cb816-2fb7-4134-80a4-e9a676d38073",
+      "slug": "basics",
+      "name": "Basics"
+    }
+  ],
   "key_features": [
     {
       "title": "General-purpose",
