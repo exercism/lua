@@ -4,7 +4,7 @@
 
 ## Comments
 
-Singleline comments in Lua start with `--` and multiline comments start with `--[[` and end with `]]`.
+Single line comments in Lua start with `--` and multiline comments start with `--[[` and end with `]]`.
 ```lua
 -- This is a single line comment.
 
@@ -31,8 +31,8 @@ The scope of a `local` variable is limited to the block where it is declared. A 
 local x = 1
 
 if x == 1 then
-    local x = 2
-    print(x) -- prints 2
+  local x = 2
+  print(x) -- prints 2
 end
 
 print(x) -- prints 1
@@ -40,13 +40,13 @@ print(x) -- prints 1
 
 ## Functions
 
-A function is declared with the keyword `function` and, like variables, is global by default too. A function definition has a name, a list of parameters and a body. The functions exits when the keyword `return` is reached and returns all values listed after it. Without a specified `return`, the function will return `nil`.
+A function is declared with the keyword `function` and, like variables, is global by default. A function definition has a name, a list of parameters and a body. The functions exits when the keyword `return` is reached and returns all values listed after it. Without a specified `return`, the function will return `nil`.
 
 ```lua
 -- Defining a local function which returns "Hello " followed by 
 -- the name which was given as parameter
 local function say_hello(name)
-    return 'Hello ' .. name
+  return 'Hello ' .. name
 end
 ```
 
@@ -57,13 +57,13 @@ Tables are the only data structuring mechanism in Lua and very powerful. They ar
 -- create a table and assign its reference to tbl
 local tbl = {}
 
--- new entry with key "x" and value 1
+-- new entry with key 'x' and value 1
 tbl['x'] = 1
 
 -- printing the value
 print(tbl['x'])  --> 1
 
--- not initialized table fields evalute to nil
+-- uninitialized table fields evaluate to nil
 print(tbl['y'])  --> nil
 
 -- there is also syntactic sugar - the following is the same as above
@@ -71,7 +71,7 @@ tbl.y = 1
 print(tbl.y)    --> 1
 ```
 
-This is just a tiny insight which is needed for the next section. We come back to this topic is detail later.
+This is just a tiny insight which is needed for the next section. We come back to this topic in detail later.
 
 ## Modules
 
@@ -81,13 +81,13 @@ A module is a collection of code which is stored in a `.lua` source file. Everyt
 local say = {}
 
 function say.hello()
-    print('Hello!')
+  print('Hello!')
 end
 
 return say
 ```
 
-That module can then be loaded into another codebase through the function `require`, that returns the table.
+That module can then be loaded into another file through the function `require`, that returns the table.
 ```lua
 -- lets_say_hello.lua
 local say = require('say-hello')
@@ -101,7 +101,7 @@ Although it is good practice for a module to return a table, it is just as possi
 ```lua
 --- say-bye.lua
 local function bye()
-    print('Bye!')
+  print('Bye!')
 end
 
 return bye
