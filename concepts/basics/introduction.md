@@ -78,12 +78,17 @@ This is just a tiny insight which is needed for the next section. We come back t
 A module is a collection of code which is stored in a `.lua` source file. Everything that the modules exports is stored in a table and this table is returned at the end of the file. So the table basically acts as a kind of namespace.
 ```lua
 -- say-hello.lua
+
+-- defining the table 'say' which is exported at the end
 local say = {}
 
+-- defining the function 'hello' as a table field
+-- this is syntax sugar for: say.hello = function() print('Hello!') end
 function say.hello()
   print('Hello!')
 end
 
+-- returning (exporting) the table 'say'
 return say
 ```
 
