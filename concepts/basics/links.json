@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://www.lua.org/manual/5.4/manual.html#3.2",
+    "description": "Lua Reference Manual: Variables"
+  },
+  {
+    "url": "https://www.lua.org/manual/5.4/manual.html#6.3",
+    "description": "Lua Reference Manual: Modules"
+  },
+  {
+    "url": "https://www.lua.org/manual/5.4/manual.html#3.4.11",
+    "description": "Lua Reference Manual: Function Definitions"
+  },
+  {
+    "url": "https://www.lua.org/manual/5.4/manual.html#3.4.9",
+    "description": "Lua Reference Manual: Table Constructors"
+  },
+  {
+    "url": "https://www.lua.org/pil/contents.html",
+    "description": "First edition of Programming in Lua (5.0)"
+  },
+  {
+    "url": "https://tylerneylon.com/a/learn-lua/",
+    "description": "Learn Lua in 15 Minutes"
+  }
+]

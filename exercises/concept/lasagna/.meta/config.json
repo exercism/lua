@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "imolein"
+  ],
+  "files": {
+    "solution": [
+      "lasagna.lua"
+    ],
+    "test": [
+      "lasagna_spec.lua"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lua"
+    ]
+  },
+  "forked_from": [
+    "go/lasagna"
+  ],
+  "blurb": "Learn about the basics of Lua by following a lasagna recipe."
+}
