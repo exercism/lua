@@ -1,7 +1,7 @@
 local lasagna = require('lasagna')
 
 describe('lasagna', function()
-  it('should have a oven_time field with the correct value', function()
+  it('should have an oven_time field with the correct value', function()
     assert.are.equal(40, lasagna.oven_time)
   end)
 
