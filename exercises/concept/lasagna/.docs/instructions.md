@@ -33,7 +33,7 @@ lasagna.preparation_time(2)
 
 ## 4. Calculate the elapsed working time in minutes
 
-Define the `lasagna.elapsed_time` function that takes two arguments: the first argument is the number of layers you added to the lasagna, and the second argument is the number of minutes the lasagna has been in the oven. The function should return how many minutes in total you've worked on cooking the lasagna, which is the sum of the preparation time in minutes, and the time in minutes the lasagna has spent in the oven at the moment.
+Define the `lasagna.elapsed_time` function that takes two arguments: the first argument is the number of layers you added to the lasagna, and the second argument is the number of minutes the lasagna has been in the oven. The function should return how many minutes in total you've worked on cooking the lasagna, which is the sum of the preparation time in minutes and the time in minutes the lasagna has spent in the oven at the moment.
 
 ```lua
 lasagna.elapsed_time(3, 20)
