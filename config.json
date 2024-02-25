@@ -43,6 +43,17 @@
         ],
         "prerequisites": [],
         "status": "beta"
+      },
+      {
+        "slug": "cars-assemble",
+        "name": "cars-assemble",
+        "uuid": "ecffdbda-bbfb-4e2d-8d52-bb5e6c55716d",
+        "concepts": [
+          "numbers"
+        ],
+        "prerequisites": [
+          "basics"
+        ]
       }
     ],
     "practice": [
@@ -1265,6 +1276,11 @@
       "uuid": "202cb816-2fb7-4134-80a4-e9a676d38073",
       "slug": "basics",
       "name": "Basics"
+    },
+    {
+      "uuid": "e7018146-7678-4b7a-96f2-5554aa63d34c",
+      "slug": "numbers",
+      "name": "Numbers"
     }
   ],
   "key_features": [
