@@ -1,8 +1,10 @@
-# About
+# Introduction
+
+## Basics
 
 [Lua](https://lua.org) is a simple yet powerful, efficient, lightweight, embeddable scripting language. It is designed, implemented, and maintained at [PUC-RIO](https://www.puc-rio.br/) in Brazil since 1993 by the team of Roberto Ierusalimschy, Waldemar Celes and Luiz Henrique de Figueiredo.
 
-## Comments
+### Comments
 
 Single line comments in Lua start with `--` and multiline comments start with `--[[` and end with `]]`.
 ```lua
@@ -14,7 +16,7 @@ comment
 ]]
 ```
 
-## Variables
+### Variables
 
 There are three types of variables in Lua: global variables, local variables and table fields. To keep things simple only local variables are explained here. By default all variables are global so we have to declare local variables as such with the keyword `local`.
 ```lua
@@ -38,7 +40,7 @@ end
 print(x) -- prints 1
 ```
 
-## Functions
+### Functions
 
 A function is declared with the keyword `function` and, like variables, is global by default. A function definition has a name, a list of parameters and a body. The functions exits when the keyword `return` is reached and returns all values listed after it. Without a specified `return`, the function will return `nil`.
 
@@ -50,7 +52,7 @@ local function say_hello(name)
 end
 ```
 
-## Tables
+### Tables
 
 Tables are the only data structuring mechanism in Lua and very powerful. They are used to represent arrays, sets, object, modules and many more. Essentially a table in Lua is an associative array.
 ```lua
@@ -73,7 +75,7 @@ print(tbl.y)    --> 1
 
 This is just a tiny insight which is needed for the next section. We come back to this topic in detail later.
 
-## Modules
+### Modules
 
 A module is a collection of code which is stored in a `.lua` source file. Everything that the modules exports is stored in a table and this table is returned at the end of the file. So the table basically acts as a kind of namespace.
 ```lua
