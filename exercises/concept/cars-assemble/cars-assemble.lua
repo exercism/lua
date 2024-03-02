@@ -11,7 +11,7 @@ function cars.calculate_working_cars_per_minute(production_rate, success_rate)
 end
 
 -- returns the cost of producing the given number of cars
-function cars.calculate_cost(production_rate, success_rate)
+function cars.calculate_cost(cars_count)
   -- calculate_cost body
 end
 
