@@ -99,6 +99,9 @@ Modulo is used to get the remainder of the division of two operands.
 ```lua
 8 % 2      --> 0
 13 % 9     --> 4
+-13 % -9   --> -4
+-13 % 9    --> 5
+13 % -9    --> -5
 0.3 % 0.2  --> 0.1
 ```
 
