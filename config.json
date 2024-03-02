@@ -1269,6 +1269,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
+      },
+      {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "38338cbd-69e1-4b6e-ad68-59090d923ae0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
