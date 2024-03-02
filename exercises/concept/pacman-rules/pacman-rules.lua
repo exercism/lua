@@ -1,4 +1,4 @@
-local rules  = {}
+local rules = {}
 
 -- returns if Pac-Man was able to eat the ghost or not
 function rules.eat_ghost(power_pellet_active, touching_ghost)

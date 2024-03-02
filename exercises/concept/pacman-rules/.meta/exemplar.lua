@@ -1,4 +1,4 @@
-local rules  = {}
+local rules = {}
 
 function rules.eat_ghost(power_pellet_active, touching_ghost)
   return power_pellet_active and touching_ghost
