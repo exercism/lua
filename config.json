@@ -53,7 +53,8 @@
         ],
         "prerequisites": [
           "basics"
-        ]
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
