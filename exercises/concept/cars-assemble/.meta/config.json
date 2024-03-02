@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "imolein"
+  ],
+  "files": {
+    "solution": [
+      "cars-assemble.lua"
+    ],
+    "test": [
+      "cars-assemble_spec.lua"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lua"
+    ]
+  },
+  "forked_from": [
+    "go/cars-assemble"
+  ],
+  "blurb": "Learn about numbers in Lua by analyzing an assembly line in a car factory."
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://www.lua.org/manual/5.4/manual.html#3.4.1",
+    "description": "Lua Reference Manual: Arithmetic Operators"
+  },
+  {
+    "url": "https://www.lua.org/manual/5.4/manual.html#6.7",
+    "description": "Lua Reference Manual: Mathematical Functions"
+  },
+  {
+    "url": "https://www.lua.org/manual/5.4/manual.html#3.4.3",
+    "description": "Lua Reference Manual: Coercions and Conversions"
+  }
+]
