@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "imolein"
+  ],
+  "files": {
+    "solution": [
+      "pacman-rules.lua"
+    ],
+    "test": [
+      "pacman-rules_spec.lua"
+    ],
+    "exemplar": [
+      ".meta/exemplar.lua"
+    ]
+  },
+  "forked_from": [
+    "elixir/pacman-rules"
+  ],
+  "blurb": "Learn about booleans by implementing the rules of the Pac-Man game."
+}

@@ -55,6 +55,18 @@
           "basics"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "pacman-rules",
+        "name": "pacman-rules",
+        "uuid": "ec88bd8b-55d9-4636-9fec-afdc1f0eba37",
+        "concepts": [
+          "booleans"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -1285,6 +1297,11 @@
       "uuid": "202cb816-2fb7-4134-80a4-e9a676d38073",
       "slug": "basics",
       "name": "Basics"
+    },
+    {
+      "uuid": "388a9d29-24d2-4985-bb23-eac3970fb3ef",
+      "slug": "booleans",
+      "name": "Booleans"
     },
     {
       "uuid": "e7018146-7678-4b7a-96f2-5554aa63d34c",
