@@ -38,9 +38,7 @@ describe('rotational-cipher', function()
   end)
 
   it('rotate all letters', function()
-    assert.are.equal(
-      'Gur dhvpx oebja sbk whzcf bire gur ynml qbt.',
-      rotational_cipher.rotate('The quick brown fox jumps over the lazy dog.', 13)
-    )
+    assert.are.equal('Gur dhvpx oebja sbk whzcf bire gur ynml qbt.',
+                     rotational_cipher.rotate('The quick brown fox jumps over the lazy dog.', 13))
   end)
 end)
