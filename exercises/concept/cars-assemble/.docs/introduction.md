@@ -2,7 +2,7 @@
 
 ## Numbers
 
-Lua uses two representations for numbers: 64-bit integer numbers and double-precision floating-point numbers. It supports the usual set of arithmetic operators: additon, subtraction, muliplication, divison and negation. Additional it supports floor division, modulo and exponentiation.
+Lua uses two representations for numbers: 64-bit integer numbers and double-precision floating-point numbers. It supports the usual set of arithmetic operators: addition, subtraction, multiplication, division and negation. Additionally it supports floor division, modulo and exponentiation.
 
 | Operator | Example             |
 | -------- | ------------------- |
