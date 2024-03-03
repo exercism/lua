@@ -1,0 +1,25 @@
+local rules = require('pacman-rules')
+
+describe('pacman-rules', function()
+  it('should return if Pac-Man was able to eat the ghost or not', function()
+    assert.is_true(rules.eat_ghost(true, true))
+    assert.is_false(rules.eat_ghost(false, true))
+  end)
+
+  it('should return if Pac-Man ate a power pellet or a dot', function()
+    assert.is_true(rules.score(true, false))
+    assert.is_true(rules.score(false, true))
+    assert.is_false(rules.score(false, false))
+  end)
+
+  it('should return if Pac-Man lost by touching a ghost without a power pellet', function()
+    assert.is_true(rules.lose(false, true))
+    assert.is_false(rules.lose(true, true))
+  end)
+
+  it('should return if Pac-Man won by eating all dots and has not touched a ghost without a power pellet', function()
+    assert.is_true(rules.win(true, true, true))
+    assert.is_false(rules.win(false, true, true))
+    assert.is_false(rules.win(true, false, true))
+  end)
+end)
