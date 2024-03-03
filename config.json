@@ -264,7 +264,9 @@
         "slug": "leap",
         "name": "Leap",
         "uuid": "1e9b4ae0-0c07-4ed6-8e31-14682fda1f8a",
-        "practices": [],
+        "practices": [
+          "booleans"
+        ],
         "prerequisites": [],
         "difficulty": 1,
         "topics": [
@@ -539,7 +541,9 @@
         "slug": "triangle",
         "name": "Triangle",
         "uuid": "206802f9-7c6c-48d6-985e-73f2ec0290d0",
-        "practices": [],
+        "practices": [
+          "booleans"
+        ],
         "prerequisites": [],
         "difficulty": 3,
         "topics": [
