@@ -87,7 +87,9 @@
         "slug": "eliuds-eggs",
         "name": "Eliud's Eggs",
         "uuid": "09121a9c-6c8e-4306-8dde-acfa00307715",
-        "practices": [],
+        "practices": [
+          "numbers"
+        ],
         "prerequisites": [],
         "difficulty": 2
       },
@@ -107,7 +109,9 @@
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "5f7636cc-d900-412d-9ef7-ccfab41fea17",
-        "practices": [],
+        "practices": [
+          "numbers"
+        ],
         "prerequisites": [],
         "difficulty": 2
       },
@@ -343,7 +347,9 @@
         "slug": "square-root",
         "name": "Square Root",
         "uuid": "35e7b8b4-540e-4388-9282-9a6872cb939c",
-        "practices": [],
+        "practices": [
+          "numbers"
+        ],
         "prerequisites": [],
         "difficulty": 2
       },
@@ -502,7 +508,9 @@
         "slug": "collatz-conjecture",
         "name": "Collatz Conjecture",
         "uuid": "f01e08a7-c14a-4fc5-9713-8c59f92c9b6c",
-        "practices": [],
+        "practices": [
+          "numbers"
+        ],
         "prerequisites": [],
         "difficulty": 3,
         "topics": [
@@ -965,7 +973,9 @@
         "slug": "grains",
         "name": "Grains",
         "uuid": "03e986ce-396f-4243-9df5-edf10d4e7bd8",
-        "practices": [],
+        "practices": [
+          "numbers"
+        ],
         "prerequisites": [],
         "difficulty": 2,
         "topics": [
