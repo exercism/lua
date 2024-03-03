@@ -1,6 +1,6 @@
 local rules = require('pacman-rules')
 
-describe('lasagna', function()
+describe('pacman-rules', function()
   it('should return if Pac-Man was able to eat the ghost or not', function()
     assert.is_true(rules.eat_ghost(true, true))
     assert.is_false(rules.eat_ghost(false, true))

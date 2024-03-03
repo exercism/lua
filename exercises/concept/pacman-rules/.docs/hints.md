@@ -18,4 +18,4 @@
 ## 4. Define if Pac-Man wins
 
 * The function must return a boolean value.
-* You can use the boolean operators `and` and `not` to combine the arguments and results of one of the previously implemented functions.
+* You can use the boolean operators `and` and `not` to combine the arguments and the results of one of the previously implemented functions.

@@ -15,9 +15,9 @@ not true       --> false
 
 -- prints 0
 if is_true == true then
-    print(0)
+  print(0)
 else
-    print(1)
+  print(1)
 end
 ```
 
@@ -31,9 +31,9 @@ false or 'hello' --> "hello"
 nil or false     --> false
 ```
 
-Both `and` and `or` uses *short-circuit evaluation*, which means they evaluate their second operand only when necessary. All operations are evaluated according to the [operator precedence](https://www.lua.org/manual/5.4/manual.html#3.4.8), where `not` is avaluated before `and` and `or`.
+Both `and` and `or` uses *short-circuit evaluation*, which means they evaluate their second operand only when necessary. All operations are evaluated according to the [operator precedence](https://www.lua.org/manual/5.4/manual.html#3.4.8), where `not` is evaluated before `and` and `or`.
 
-Given that only `false` and `nil` are considered false and everything else is true a common idom in Lua is:
+Given that only `false` and `nil` are considered false and everything else is true a common idiom in Lua is:
 ```lua
 x = x or y
 ```
@@ -45,11 +45,11 @@ if not x then
 end
 ```
 
-It is pretty common to use this in functions, to assign a default value if a parameter is has no value (is `nil`):
+It is pretty common to use this in functions, to assign a default value if a parameter has no value (is `nil`):
 ```lua
 local function hello(name)
-    name = name or "World"
-    print("Hello " .. name)
+  name = name or "World"
+  print("Hello " .. name)
 end
 
 hello()       --> "Hello World"
