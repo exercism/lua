@@ -10,7 +10,7 @@ Numbers can be written with an optional decimal part, plus an optional decimal e
 ```lua
 1               --> 1
 0.2             --> 0.2
-0.3e4           --> 2000.0
+0.3e4           --> 3000.0
 4.0e-3          --> 0.004
 5.0e+20         --> 5e+20
 ```
