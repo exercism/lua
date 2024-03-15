@@ -123,7 +123,7 @@ All operations are evaluated according to the [operator precedence](https://www.
 
 ## Rounding
 
-The `math` module provides three rounding functions: `floor` rounds "up" (toward negative infinity), `ceil` rounds "up" (toward postive infinity) and `modf` rounds towards zero.
+The `math` module provides three rounding functions: `floor` rounds "down" (toward negative infinity), `ceil` rounds "up" (toward postive infinity) and `modf` rounds towards zero.
 
 ### `math.floor`
 
