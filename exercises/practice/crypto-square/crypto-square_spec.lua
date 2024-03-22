@@ -30,9 +30,8 @@ describe('crypto-square', function()
   end)
 
   it('54 character plaintext results in 7 chunks, the last two with trailing spaces', function()
-    assert.are.equal(
-        'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau ',
-        crypto_square.ciphertext('If man was meant to stay on the ground, god would have given us roots.')
+    assert.are.equal('imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau ',
+                     crypto_square.ciphertext('If man was meant to stay on the ground, god would have given us roots.')
     )
   end)
 end)
