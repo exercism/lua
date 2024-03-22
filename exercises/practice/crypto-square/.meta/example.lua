@@ -12,7 +12,11 @@ local function segments(plaintext)
   local segments = {}
 
   while #normalized_plaintext > 0 do
-    table.insert(segments, normalized_plaintext:sub(1, segment_size))
+    local segment = normalized_plaintext:sub(1, segment_size)
+    while #segment < segment_size do
+      segment = segment .. " "
+    end
+    table.insert(segments, segment)
     normalized_plaintext = normalized_plaintext:sub(segment_size + 1)
   end
 
@@ -20,22 +24,22 @@ local function segments(plaintext)
 end
 
 local function normalized_ciphertext(plaintext)
-  local normalized_ciphertext = ''
   local segments = segments(plaintext)
+  local enciphered = {}
 
   for i = 1, size(plaintext) do
+    local normalized_ciphertext = ''
     for _, segment in ipairs(segments) do
       normalized_ciphertext = normalized_ciphertext .. segment:sub(i, i)
     end
-
-    normalized_ciphertext = normalized_ciphertext .. ' '
+    table.insert(enciphered, normalized_ciphertext)
   end
 
-  return normalized_ciphertext:gsub('%s+$', '')
+  return table.concat(enciphered, ' ')
 end
 
 return {
   ciphertext = function(plaintext)
-    return normalized_ciphertext(plaintext):gsub('%s', '')
+    return normalized_ciphertext(plaintext)
   end
 }
