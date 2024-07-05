@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://web.archive.org/web/20240104094707/http://lua-users.org/wiki/ObjectOrientationTutorial",
+    "description": "OOP Tutorial"
+  },
+  {
+    "url": "https://www.lua.org/manual/5.4/manual.html#2.4",
+    "description": "Metatables in the Lua manual"
+  },
+  {
+    "url": "https://www.reddit.com/r/lua/comments/1al74ry/why_dont_more_people_suggest_closures_for_classes",
+    "description": "Comparing metatable-based vs closure-based classes"
+  }
+]
