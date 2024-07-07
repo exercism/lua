@@ -1,0 +1,13 @@
+{
+  "articles": [
+    {
+      "uuid": "e7d1d34b-ace8-4cf6-88d3-e59643190a6b",
+      "slug": "oop",
+      "title": "Object Oriented Programming in Lua",
+      "blurb": "A brief OOP tutorial",
+      "authors": [
+        "glennj"
+      ]
+    }
+  ]
+}
