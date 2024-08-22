@@ -1311,6 +1311,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
+      },
+      {
+        "slug": "grep",
+        "name": "Grep",
+        "uuid": "a1a880ef-cead-4b3d-879d-c5f1fab15a21",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
