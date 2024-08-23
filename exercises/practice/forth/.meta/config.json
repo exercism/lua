@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "ryanplusplus"
+  ],
+  "files": {
+    "solution": [
+      "forth.lua"
+    ],
+    "test": [
+      "forth_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
+  },
+  "blurb": "Implement an evaluator for a very simple subset of Forth."
+}
