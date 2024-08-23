@@ -32,7 +32,7 @@ local function eval_code(code, stack, user_words)
         local divisor = pop(stack)
         local dividend = pop(stack)
         assert(divisor ~= 0)
-        push(stack, math.floor(dividend / divisor))
+        push(stack, dividend // divisor)
       elseif element == 'dup' then
         push(stack, stack[#stack])
       elseif element == 'drop' then
