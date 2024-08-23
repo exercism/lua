@@ -1,5 +1,5 @@
 local function eval_definition(definition, user_words)
-  for name, body in definition:gmatch(': (%S+)%s+(.+)') do
+  for name, body in definition:gmatch(': (%S+)%s+(.+) ;') do
     assert(not tonumber(name))
     user_words[name:lower()] = body:gsub('%S+', function(s)
       return user_words[s] or s
@@ -50,7 +50,7 @@ local function eval_code(code, stack, user_words)
   end
 end
 
-local function eval_chunk(chunk, stack, user_words)
+local function eval_instruction(chunk, stack, user_words)
   if chunk:sub(1, 1) == ':' then
     eval_definition(chunk, user_words)
   else
@@ -58,11 +58,11 @@ local function eval_chunk(chunk, stack, user_words)
   end
 end
 
-local function evaluate(s)
+local function evaluate(instructions)
   local stack = {}
   local user_words = {}
-  for chunk in s:gmatch('[^;]+') do
-    eval_chunk(chunk, stack, user_words)
+  for _, instruction in ipairs(instructions) do
+    eval_instruction(instruction, stack, user_words)
   end
   return stack
 end

@@ -1,4 +1,4 @@
-local function evaluate(s)
+local function evaluate(instructions)
 
 end
 
