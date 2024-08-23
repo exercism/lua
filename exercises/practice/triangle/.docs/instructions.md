@@ -26,4 +26,9 @@ a + c ≥ b
 
 See [Triangle Inequality][triangle-inequality]
 
+### Error handling
+
+If the shape is no triangle at all, throw an error using the [Error Keyword][error-keyword]
+
 [triangle-inequality]: https://en.wikipedia.org/wiki/Triangle_inequality
+[error-keyword]: https://www.lua.org/manual/5.4/manual.html#pdf-error
