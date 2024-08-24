@@ -1319,6 +1319,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "slug": "forth",
+        "name": "Forth",
+        "uuid": "9c362b0b-5ef0-4371-9f63-637dd35cb07e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
       }
     ]
   },
