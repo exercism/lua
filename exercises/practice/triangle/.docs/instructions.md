@@ -26,9 +26,13 @@ a + c ≥ b
 
 See [Triangle Inequality][triangle-inequality]
 
-### Error handling
+### Error handling & Assertion
 
-If the shape is no triangle at all, throw an error using the [Error Keyword][error-keyword]
+Use error handling or assertion to check if the shape is a triangle at all:
+
+- [Error Keyword][error-keyword]
+- [Assertion][assertion]
 
 [triangle-inequality]: https://en.wikipedia.org/wiki/Triangle_inequality
 [error-keyword]: https://www.lua.org/manual/5.4/manual.html#pdf-error
+[assertion]: https://www.lua.org/manual/5.4/manual.html#pdf-assert
