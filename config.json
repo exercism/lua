@@ -116,14 +116,6 @@
         "difficulty": 2
       },
       {
-        "slug": "high-scores",
-        "name": "High Scores",
-        "uuid": "7a7f05bd-16d1-4103-90c7-f3c8f7a08af0",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3
-      },
-      {
         "slug": "house",
         "name": "House",
         "uuid": "9c71aea2-ff12-44dc-8d54-c15aff6b4b35",
@@ -161,6 +153,14 @@
           "control_flow_loops",
           "searching"
         ]
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "7a7f05bd-16d1-4103-90c7-f3c8f7a08af0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       },
       {
         "slug": "darts",
