@@ -4,7 +4,7 @@
 
 Exercism exercises in Lua
 
-## Setup dev environment for contributing
+## Configuring a Development Development and Contributing
 
 Install Lua and Luarocks according to the [installation instructions][1] for your platform.
 Then, install all additional development dependencies with:
