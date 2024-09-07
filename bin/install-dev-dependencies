@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -e
+
+luarocks install --server=https://luarocks.org/dev --only-deps dev-dependencies-git-0.rockspec
