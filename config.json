@@ -1043,6 +1043,14 @@
         ]
       },
       {
+        "slug": "wordy",
+        "name": "Wordy",
+        "uuid": "37165dd0-bb19-4606-acfb-2a382c8bb274",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "rational-numbers",
         "name": "Rational Numbers",
         "uuid": "097d3111-c96f-4cf4-b0af-5a4edcf48137",
