@@ -67,7 +67,7 @@ describe('wordy', function()
     end, 'Invalid question')
   end)
 
-  it('Non math question', function()
+  it('non math question', function()
     assert.has_error(function()
       wordy.answer('Who is the President of the United States?')
     end, 'Invalid question')
