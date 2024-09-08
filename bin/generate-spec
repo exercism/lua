@@ -1,0 +1,72 @@
+#!/usr/bin/env lua
+
+local json = require 'dkjson'
+
+local function read_file(path)
+  local f = assert(io.open(path, 'r'))
+  local contents = f:read('*a')
+  f:close()
+  return contents
+end
+
+local function write_file(path, contents)
+  local f = assert(io.open(path, 'w'))
+  f:write(contents)
+  f:close()
+end
+
+local exercise_name = arg[1]
+
+local exercise_directory = 'exercises/practice/' .. exercise_name
+
+package.path = package.path .. ';' .. exercise_directory .. '/.meta/?.lua'
+
+local canonical_data_url = 'https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/' .. exercise_name .. '/canonical-data.json'
+local canonical_data_path = 'canonical-data/' .. exercise_name .. '.json'
+local spec_path = exercise_directory .. '/' .. exercise_name .. '_spec.lua'
+
+assert(os.execute('mkdir -p `dirname ' .. canonical_data_path .. '`'))
+assert(os.execute('curl ' .. canonical_data_url .. ' -s -o ' .. canonical_data_path))
+
+local canonical_data_json = read_file(canonical_data_path)
+local canonical_data = json.decode(canonical_data_json)
+
+local spec_generator = require('spec_generator')
+
+local function process(node)
+  if node.cases then
+    local output = {}
+
+    if node.description then
+      table.insert(output, "describe('" .. node.description:lower() .. "', function()")
+    else
+      table.insert(output, "describe('" .. exercise_name .. "', function()")
+    end
+
+    local cases = {}
+    for _, case in ipairs(node.cases) do
+      table.insert(cases, process(case))
+    end
+    table.insert(output, table.concat(cases, '\n\n'))
+
+    table.insert(output, 'end)')
+
+    return table.concat(output, '\n')
+  else
+    local template = [[
+      it('%s', function()
+        %s
+      end)]]
+
+    return template:format(node.description:lower(), spec_generator.generate_test(node))
+  end
+end
+
+local spec = ([[
+  local %s = require('%s')
+
+  %s
+]]):format(spec_generator.module_name, exercise_name, process(canonical_data))
+
+write_file(spec_path, spec)
+os.execute('lua-format -i ' .. spec_path)

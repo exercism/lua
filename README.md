@@ -4,10 +4,14 @@
 
 Exercism exercises in Lua
 
-## Setup dev environment for contributing
+## Configuring a Development Development and Contributing
 
-Install Lua, Luarocks, and the Busted testing framework according to the
-[installation instructions][1] for your platform.
+Install Lua and Luarocks according to the [installation instructions][1] for your platform.
+Then, install all additional development dependencies with:
+
+```shell
+$ ./bin/install-dev-dependencies
+```
 
 To contribute a patch you will need a GitHub account and you will need to fork
 the *exercism/lua* repo to your account.
@@ -42,6 +46,20 @@ Rename *bob.lua* to *example.lua*, and add the exercise to the [lua/config.json]
 
     0 directories, 2 files
 
+Optionally, you can generate the spec from the upstream canonical data.
+To use the spec generator, create a file called `spec_generator.lua` in the `.meta/` directory of the exercise.
+This file should be a Lua module returning a table with two fields:
+- `module_name` - A string containing the name of the Lua variable to which the module under test will be bound
+- `generate_test` - A function that returns a string representation of a test given the corresponding case from the canonical data.
+
+To use the test generator, run:
+
+```shell
+$ ./bin/generate-spec <exercise name>
+```
+
+This will use `curl` to fetch the canonical data from the upstream repository, generate the spec file, and format it.
+
 ## Contributing Guide
 
 Please be familiar with the [contributing guide][6] in the docs repository.
@@ -51,7 +69,6 @@ This describes some great ways to get involved. In particular, please read the
 ## Other Resources
 
 Pleases see the [Useful Lua Resources][8] page.
-
 
 ## Lua icon
 The Lua icon is inspired by the [Lua logo][9], which was designed by Alexandre Nakonechnyj.
