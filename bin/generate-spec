@@ -41,6 +41,10 @@ local function process(node)
       table.insert(output, "describe('" .. node.description:lower() .. "', function()")
     else
       table.insert(output, "describe('" .. exercise_name .. "', function()")
+
+      if spec_generator.test_helpers then
+        table.insert(output, spec_generator.test_helpers)
+      end
     end
 
     local cases = {}
