@@ -49,8 +49,11 @@ Rename *bob.lua* to *example.lua*, and add the exercise to the [lua/config.json]
 Optionally, you can generate the spec from the upstream canonical data.
 To use the spec generator, create a file called `spec_generator.lua` in the `.meta/` directory of the exercise.
 This file should be a Lua module returning a table with two fields:
-- `module_name` - A string containing the name of the Lua variable to which the module under test will be bound
+- `module_name` - A string containing the name of the Lua variable to which the module under test will be bound.
 - `generate_test` - A function that returns a string representation of a test given the corresponding case from the canonical data.
+
+Optionally, a third field can be included:
+- `test_helpers` - A string that will be injected at the top of the outermost `describe` block. This can include helper functions that are used in multiple tests or other setup code.
 
 To use the test generator, run:
 
