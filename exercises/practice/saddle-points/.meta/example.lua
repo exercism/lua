@@ -6,14 +6,14 @@ return function(matrix)
   local row_max = {}
   local column_min = {}
 
-  for i, row in ipairs(matrix) do
-    row_max[i] = math.max(table.unpack(row))
+  for row, row_values in ipairs(matrix) do
+    row_max[row] = math.max(table.unpack(row_values))
   end
 
   for column = 1, #matrix[1] do
     local column_values = {}
-    for _, row in ipairs(matrix) do
-      table.insert(column_values, row[column])
+    for _, row_values in ipairs(matrix) do
+      table.insert(column_values, row_values[column])
     end
     column_min[column] = math.min(table.unpack(column_values))
   end
