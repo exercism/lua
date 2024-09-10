@@ -1,5 +1,7 @@
 {
-  "authors": ["ryanplusplus"],
+  "authors": [
+    "ryanplusplus"
+  ],
   "files": {
     "solution": [
       "yacht.lua"
