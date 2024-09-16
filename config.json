@@ -1161,6 +1161,14 @@
         ]
       },
       {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "eae82e30-b6c8-4414-8b56-902da5d61f32",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "series",
         "name": "Series",
         "uuid": "4527f869-1901-4301-88bf-1c6fbb4d5898",
