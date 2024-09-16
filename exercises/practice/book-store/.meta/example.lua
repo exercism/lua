@@ -9,7 +9,7 @@ local function total(basket)
     { counts[5] - counts[4], counts[4] - counts[3], counts[3] - counts[2], counts[2] - counts[1], counts[1] }
 
   -- Two groups of four are cheaper than a group of five plus a group of three.
-  adjustment = math.min(groups[3], groups[5])
+  local adjustment = math.min(groups[3], groups[5])
   groups[5] = groups[5] - adjustment
   groups[3] = groups[3] - adjustment
   groups[4] = groups[4] + 2 * adjustment
