@@ -1,13 +1,18 @@
 local saddle_points = require('saddle-points')
 
 describe('saddle-points', function()
-  local function assert_saddle_points_are_equal(expected, actual)
+  local function saddle_points_are_equal(expected, actual)
     if #expected ~= #actual then
       return false
     end
     for i = 1, #expected do
-      if expected[i].row ~= actual[i].row or expected[i].column ~= actual[i].column then
-        return false
+      for j = 1, #actual do
+        if expected[i].row == actual[j].row and expected[i].column == actual[j].column then
+          break
+        end
+        if j == #actual then
+          return false
+        end
       end
     end
     return true
@@ -22,7 +27,7 @@ describe('saddle-points', function()
     local expected = {
       { row = 2, column = 1 } --
     }
-    assert_saddle_points_are_equal(expected, saddle_points(matrix))
+    assert(saddle_points_are_equal(expected, saddle_points(matrix)))
   end)
 
   it('can identify that empty matrix has no saddle points', function()
@@ -30,7 +35,7 @@ describe('saddle-points', function()
       {} --
     }
     local expected = {}
-    assert_saddle_points_are_equal(expected, saddle_points(matrix))
+    assert(saddle_points_are_equal(expected, saddle_points(matrix)))
   end)
 
   it('can identify lack of saddle points when there are none', function()
@@ -40,7 +45,7 @@ describe('saddle-points', function()
       { 2, 3, 1 } --
     }
     local expected = {}
-    assert_saddle_points_are_equal(expected, saddle_points(matrix))
+    assert(saddle_points_are_equal(expected, saddle_points(matrix)))
   end)
 
   it('can identify multiple saddle points in a column', function()
@@ -54,7 +59,7 @@ describe('saddle-points', function()
       { row = 2, column = 2 }, --
       { row = 3, column = 2 } --
     }
-    assert_saddle_points_are_equal(expected, saddle_points(matrix))
+    assert(saddle_points_are_equal(expected, saddle_points(matrix)))
   end)
 
   it('can identify multiple saddle points in a row', function()
@@ -68,7 +73,7 @@ describe('saddle-points', function()
       { row = 2, column = 2 }, --
       { row = 2, column = 3 } --
     }
-    assert_saddle_points_are_equal(expected, saddle_points(matrix))
+    assert(saddle_points_are_equal(expected, saddle_points(matrix)))
   end)
 
   it('can identify saddle point in bottom right corner', function()
@@ -80,7 +85,7 @@ describe('saddle-points', function()
     local expected = {
       { row = 3, column = 3 } --
     }
-    assert_saddle_points_are_equal(expected, saddle_points(matrix))
+    assert(saddle_points_are_equal(expected, saddle_points(matrix)))
   end)
 
   it('can identify saddle points in a non square matrix', function()
@@ -92,7 +97,7 @@ describe('saddle-points', function()
       { row = 1, column = 3 }, --
       { row = 1, column = 1 } --
     }
-    assert_saddle_points_are_equal(expected, saddle_points(matrix))
+    assert(saddle_points_are_equal(expected, saddle_points(matrix)))
   end)
 
   it('can identify that saddle points in a single column matrix are those with the minimum value', function()
@@ -106,7 +111,7 @@ describe('saddle-points', function()
       { row = 2, column = 1 }, --
       { row = 4, column = 1 } --
     }
-    assert_saddle_points_are_equal(expected, saddle_points(matrix))
+    assert(saddle_points_are_equal(expected, saddle_points(matrix)))
   end)
 
   it('can identify that saddle points in a single row matrix are those with the maximum value', function()
@@ -117,6 +122,6 @@ describe('saddle-points', function()
       { row = 1, column = 2 }, --
       { row = 1, column = 4 } --
     }
-    assert_saddle_points_are_equal(expected, saddle_points(matrix))
+    assert(saddle_points_are_equal(expected, saddle_points(matrix)))
   end)
 end)
