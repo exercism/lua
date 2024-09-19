@@ -22,13 +22,18 @@ return {
   module_name = 'saddle_points',
 
   test_helpers = [[
-    local function assert_saddle_points_are_equal(expected, actual)
+    local function saddle_points_are_equal(expected, actual)
       if #expected ~= #actual then
         return false
       end
       for i = 1, #expected do
-        if expected[i].row ~= actual[i].row or expected[i].column ~= actual[i].column then
-          return false
+        for j = 1, #actual do
+          if expected[i].row == actual[j].row and expected[i].column == actual[j].column then
+            break
+          end
+          if j == #actual then
+            return false
+          end
         end
       end
       return true
@@ -43,7 +48,7 @@ return {
       local expected = {
         %s
       }
-      assert_saddle_points_are_equal(expected, saddle_points(matrix))]]
+      assert(saddle_points_are_equal(expected, saddle_points(matrix)))]]
     return template:format(render_matrix(case.input.matrix), render_result(case.expected))
   end
 }
