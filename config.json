@@ -796,6 +796,14 @@
         "difficulty": 4
       },
       {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "2e07e358-7432-484d-83b5-ea813577e1a1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "linked-list",
         "name": "Linked List",
         "uuid": "d5dae487-8d85-4b9c-a218-f6fb8262f81b",
