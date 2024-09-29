@@ -25,7 +25,11 @@ local function smallest(min, max)
     for j = i, max do
       local n = i * j
 
-      if n <= value and is_palindrome(n) then
+      if n > value then
+        break
+      end
+
+      if is_palindrome(n) then
         if n ~= value then
           value = n
           factors = {}
@@ -48,7 +52,11 @@ local function largest(min, max)
     for j = i, min, -1 do
       local n = i * j
 
-      if n >= value and is_palindrome(n) then
+      if n < value then
+        break
+      end
+
+      if is_palindrome(n) then
         if n ~= value then
           value = n
           factors = {}
