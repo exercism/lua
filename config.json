@@ -1172,6 +1172,14 @@
         ]
       },
       {
+        "slug": "palindrome-products",
+        "name": "Palindrome Products",
+        "uuid": "928d3505-7780-4d2d-8fd8-7c8f0aac4033",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "anagram",
         "name": "Anagram",
         "uuid": "49c8c8cc-f0e6-49dc-aac0-6c4acffff175",

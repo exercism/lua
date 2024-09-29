@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "ryanplusplus"
+  ],
+  "files": {
+    "solution": [
+      "palindrome-products.lua"
+    ],
+    "test": [
+      "palindrome-products_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
+  },
+  "blurb": "Detect palindrome products in a given range.",
+  "source": "Problem 4 at Project Euler",
+  "source_url": "https://projecteuler.net/problem=4"
+}
