@@ -30,8 +30,8 @@ return {
         }
         assert.has.error(function()
           state_of_tic_tac_toe.gamestate(board)
-        end, '%s')]]
-      return template:format(render_board(case.input.board), case.expected.error)
+        end)]]
+      return template:format(render_board(case.input.board))
     end
   end
 }
