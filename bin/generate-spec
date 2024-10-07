@@ -15,6 +15,24 @@ local function write_file(path, contents)
   f:close()
 end
 
+local function included_tests_from_toml(path)
+  local included = {}
+  local last_uuid
+
+  for line in io.lines(path) do
+    for uuid in line:gmatch('%[(.+)%]') do
+      last_uuid = uuid
+      included[uuid] = true
+    end
+
+    if line:match('^include%s*=%s*false') then
+      included[last_uuid] = nil
+    end
+  end
+
+  return included
+end
+
 local exercise_name = arg[1]
 
 local exercise_directory = 'exercises/practice/' .. exercise_name
@@ -33,6 +51,8 @@ local canonical_data = json.decode(canonical_data_json)
 
 local spec_generator = require('spec_generator')
 
+local included_tests = included_tests_from_toml(exercise_directory .. '/.meta/tests.toml')
+
 local function process(node)
   if node.cases then
     local output = {}
@@ -49,7 +69,9 @@ local function process(node)
 
     local cases = {}
     for _, case in ipairs(node.cases) do
-      table.insert(cases, process(case))
+      if not case.uuid or included_tests[case.uuid] then
+        table.insert(cases, process(case))
+      end
     end
     table.insert(output, table.concat(cases, '\n\n'))
 
