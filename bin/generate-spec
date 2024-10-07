@@ -42,6 +42,7 @@ package.path = package.path .. ';' .. exercise_directory .. '/.meta/?.lua'
 local canonical_data_url = 'https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/' .. exercise_name .. '/canonical-data.json'
 local canonical_data_path = 'canonical-data/' .. exercise_name .. '.json'
 local spec_path = exercise_directory .. '/' .. exercise_name .. '_spec.lua'
+local tests_toml_path = exercise_directory .. '/.meta/tests.toml'
 
 assert(os.execute('mkdir -p `dirname ' .. canonical_data_path .. '`'))
 assert(os.execute('curl ' .. canonical_data_url .. ' -s -o ' .. canonical_data_path))
@@ -51,7 +52,7 @@ local canonical_data = json.decode(canonical_data_json)
 
 local spec_generator = require('spec_generator')
 
-local included_tests = included_tests_from_toml(exercise_directory .. '/.meta/tests.toml')
+local included_tests = included_tests_from_toml(tests_toml_path)
 
 local function process(node)
   if node.cases then
