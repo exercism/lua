@@ -20,7 +20,7 @@ local function included_tests_from_toml(path)
   local last_uuid
 
   for line in io.lines(path) do
-    for uuid in line:gmatch('%[(.+)%]') do
+    for uuid in line:gmatch('%[([%x%-]+)%]') do
       last_uuid = uuid
       included[uuid] = true
     end
