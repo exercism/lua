@@ -67,15 +67,6 @@ describe('state-of-tic-tac-toe', function()
 
     it('finished game where x won via middle row victory', function()
       local board = {
-        'O O', --
-        'XXX', --
-        ' O ' --
-      }
-      assert.are.same('win', state_of_tic_tac_toe.gamestate(board))
-    end)
-
-    it('finished game where x won via middle row victory', function()
-      local board = {
         'O  ', --
         'XXX', --
         ' O ' --

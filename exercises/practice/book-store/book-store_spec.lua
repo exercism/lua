@@ -76,12 +76,11 @@ describe('book-store', function()
     assert.are.same(10240, book_store.total(basket))
   end)
 
-  -- LuaFormatter off
-  it('check that groups of four are created properly even when there are more groups of three than groups of five', function()
+  it('check that groups of four are created properly even when there are more groups of three than groups of five',
+     function()
     local basket = { 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5 }
     assert.are.same(14560, book_store.total(basket))
   end)
-  -- LuaFormatter on
 
   it('one group of one and four is cheaper than one group of two and three', function()
     local basket = { 1, 1, 2, 3, 4 }
