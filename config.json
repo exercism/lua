@@ -987,6 +987,14 @@
         "difficulty": 4
       },
       {
+        "slug": "dominoes",
+        "name": "Dominoes",
+        "uuid": "0ea6977c-5032-40ab-bd67-be23e052c69f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "affine-cipher",
         "name": "Affine Cipher",
         "uuid": "e3a84895-fb1b-4d03-b56a-84cb00b3cf93",

@@ -85,7 +85,10 @@ local function process(node)
         %s
       end)]]
 
-    return template:format(node.description:lower(), spec_generator.generate_test(node))
+    return template:format(
+      node.description:lower():gsub('\'', '\\\''),
+      spec_generator.generate_test(node)
+    )
   end
 end
 
