@@ -13,6 +13,10 @@ local function without_domino(dominoes, target)
 end
 
 local function can_chain(dominoes)
+  if #dominoes == 0 then
+    return true
+  end
+
   local function recur(left, dominoes, right)
     if #dominoes == 0 then
       return left == right
@@ -29,7 +33,7 @@ local function can_chain(dominoes)
     return false
   end
 
-  return recur((dominoes[1] or {})[1], without_domino(dominoes, 1), (dominoes[1] or {})[2])
+  return recur(dominoes[1][1], without_domino(dominoes, 1), dominoes[1][2])
 end
 
 return { can_chain = can_chain }
