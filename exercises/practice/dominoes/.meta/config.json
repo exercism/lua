@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "ryanplusplus"
+  ],
+  "files": {
+    "solution": [
+      "dominoes.lua"
+    ],
+    "test": [
+      "dominoes_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
+  },
+  "blurb": "Make a chain of dominoes."
+}
