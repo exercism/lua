@@ -7,29 +7,29 @@ describe('complex-numbers', function()
 
   describe('real part', function()
     it('real part of a purely real number', function()
-      assert.equal(Complex(1), Complex(1, 0).real())
+      assert.equal(1, Complex(1, 0).r)
     end)
 
     it('real part of a purely imaginary number', function()
-      assert.equal(Complex(0), Complex(0, 1).real())
+      assert.equal(0, Complex(0, 1).r)
     end)
 
     it('real part of a number with real and imaginary part', function()
-      assert.equal(Complex(1), Complex(1, 2).real())
+      assert.equal(1, Complex(1, 2).r)
     end)
   end)
 
   describe('imaginary part', function()
     it('imaginary part of a purely real number', function()
-      assert.equal(Complex(0), Complex(1, 0).imaginary())
+      assert.equal(0, Complex(1, 0).i)
     end)
 
     it('imaginary part of a purely imaginary number', function()
-      assert.equal(Complex(1), Complex(0, 1).imaginary())
+      assert.equal(1, Complex(0, 1).i)
     end)
 
     it('imaginary part of a number with real and imaginary part', function()
-      assert.equal(Complex(2), Complex(1, 2).imaginary())
+      assert.equal(2, Complex(1, 2).i)
     end)
   end)
 
@@ -97,37 +97,37 @@ describe('complex-numbers', function()
 
   describe('absolute value', function()
     it('absolute value of a positive purely real number', function()
-      assert.equal(Complex(5), Complex(5, 0).abs())
+      assert.equal(5, Complex(5, 0).abs())
     end)
 
     it('absolute value of a negative purely real number', function()
-      assert.equal(Complex(5), Complex(-5, 0).abs())
+      assert.equal(5, Complex(-5, 0).abs())
     end)
 
     it('absolute value of a purely imaginary number with positive imaginary part', function()
-      assert.equal(Complex(5), Complex(0, 5).abs())
+      assert.equal(5, Complex(0, 5).abs())
     end)
 
     it('absolute value of a purely imaginary number with negative imaginary part', function()
-      assert.equal(Complex(5), Complex(0, -5).abs())
+      assert.equal(5, Complex(0, -5).abs())
     end)
 
     it('absolute value of a number with real and imaginary part', function()
-      assert.equal(Complex(5), Complex(3, 4).abs())
+      assert.equal(5, Complex(3, 4).abs())
     end)
   end)
 
   describe('complex conjugate', function()
     it('conjugate a purely real number', function()
-      assert.equal(Complex(5, 0), Complex(5, 0).conjugate())
+      assert.equal(Complex(5, 0), Complex(5, 0).conj())
     end)
 
     it('conjugate a purely imaginary number', function()
-      assert.equal(Complex(0, -5), Complex(0, 5).conjugate())
+      assert.equal(Complex(0, -5), Complex(0, 5).conj())
     end)
 
     it('conjugate a number with real and imaginary part', function()
-      assert.equal(Complex(1, -1), Complex(1, 1).conjugate())
+      assert.equal(Complex(1, -1), Complex(1, 1).conj())
     end)
   end)
 
