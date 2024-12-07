@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "ryanplusplus"
+  ],
+  "files": {
+    "solution": [
+      "complex-numbers.lua"
+    ],
+    "test": [
+      "complex-numbers_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
+  },
+  "blurb": "Implement complex numbers.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Complex_number"
+}

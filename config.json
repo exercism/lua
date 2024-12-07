@@ -1286,6 +1286,14 @@
         ]
       },
       {
+        "slug": "complex-numbers",
+        "name": "Complex Numbers",
+        "uuid": "ed6b5073-e3b1-4787-8551-ffffa9e7313d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "slug": "minesweeper",
         "name": "Minesweeper",
         "uuid": "fcb9cc16-7690-4ee6-a373-c8476063ec57",
