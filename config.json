@@ -342,7 +342,8 @@
           "control_flow_loops",
           "math",
           "strings"
-        ]
+        ],
+        "status": "deprecated"
       },
       {
         "slug": "bob",
@@ -869,7 +870,8 @@
           "control_flow_loops",
           "math",
           "strings"
-        ]
+        ],
+        "status": "deprecated"
       },
       {
         "slug": "prime-factors",
