@@ -18,7 +18,7 @@ jobs:
         with:
           luaVersion: 5.4
 
-      - uses: leafo/gh-actions-luarocks@e65774a6386cb4f24e293dca7fc4ff89165b64c5
+      - uses: leafo/gh-actions-luarocks@4c082a5fad45388feaeb0798dbd82dbd7dc65bca
 
       - name: build
         run: |
