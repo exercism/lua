@@ -283,7 +283,7 @@
       },
       {
         "slug": "two-fer",
-        "name": "Two Fer",
+        "name": "Two-Fer",
         "uuid": "05d91905-042f-49e9-b56b-a454823e19b7",
         "practices": [],
         "prerequisites": [],
@@ -336,14 +336,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
+        "status": "deprecated",
         "topics": [
           "bitwise_operations",
           "control_flow_if_else_statements",
           "control_flow_loops",
           "math",
           "strings"
-        ],
-        "status": "deprecated"
+        ]
       },
       {
         "slug": "bob",
@@ -399,7 +399,7 @@
       },
       {
         "slug": "dnd-character",
-        "name": "Dnd Character",
+        "name": "D&D Character",
         "uuid": "201c47df-6336-465d-91d9-9d1d7489fc4a",
         "practices": [],
         "prerequisites": [],
@@ -864,14 +864,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
+        "status": "deprecated",
         "topics": [
           "bitwise_operations",
           "control_flow_if_else_statements",
           "control_flow_loops",
           "math",
           "strings"
-        ],
-        "status": "deprecated"
+        ]
       },
       {
         "slug": "prime-factors",
