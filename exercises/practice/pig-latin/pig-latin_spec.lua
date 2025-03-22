@@ -43,6 +43,10 @@ describe('pig-latin', function()
     it('word beginning with q without a following u', function()
       assert.equal('atqay', translate('qat'))
     end)
+
+    it('word beginning with consonant and vowel containing qu', function()
+      assert.equal('iquidlay', translate('liquid'))
+    end)
   end)
 
   describe('some letter clusters are treated like a single consonant', function()
