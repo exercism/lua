@@ -16,7 +16,7 @@ describe('leap', function()
   it('year divisible by 4 and 5 is still a leap year', function()
     assert.is_true(is_leap_year(1960))
   end)
-    
+
   it('year divisible by 100, not divisible by 400 is common year', function()
     assert.is_false(is_leap_year(2100))
   end)
