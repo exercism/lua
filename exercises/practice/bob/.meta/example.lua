@@ -1,11 +1,11 @@
 local bob = {}
 
 local function shouting(say)
-  return string.upper(say) == say
+  return string.upper(say) == say and string.lower(say) ~= say
 end
 
 local function nothing(say)
-  return say == nil or string.len(say) == 0
+  return not say:match("%w")
 end
 
 local function question(say)
@@ -13,9 +13,7 @@ local function question(say)
 end
 
 function bob.hey(say)
-  if nothing(say) then
-    return 'Fine, be that way.'
-  end
+  say = say:gsub("%s+", "")
   if shouting(say) and question(say) then
     return 'Calm down, I know what I\'m doing!'
   end
@@ -24,6 +22,9 @@ function bob.hey(say)
   end
   if question(say) then
     return "Sure"
+  end
+  if nothing(say) then
+    return 'Fine, be that way.'
   end
   return "Whatever"
 end
