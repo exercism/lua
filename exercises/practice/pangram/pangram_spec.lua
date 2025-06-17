@@ -49,4 +49,8 @@ describe('pangram', function()
   it('should not consider non-ASCII characters to be letters', function()
     assert.is_false(is_pangram('äbcdefghijklmnopqrstuvwxyz'))
   end)
+
+  it('should not consider a-m and A-M to be a pangram', function()
+    assert.is_false(is_pangram('abcdefghijklm ABCDEFGHIJKLM'))
+  end)
 end)
