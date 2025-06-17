@@ -5,8 +5,24 @@ describe('wordy', function()
     assert.are.same(5, wordy.answer('What is 5?'))
   end)
 
+  it('just a zero', function()
+    assert.are.same(0, wordy.answer('What is 0?'))
+  end)
+
+  it('just a negative number', function()
+    assert.are.same(-123, wordy.answer('What is -123?'))
+  end)
+
   it('addition', function()
     assert.are.same(2, wordy.answer('What is 1 plus 1?'))
+  end)
+
+  it('addition with a left hand zero', function()
+    assert.are.same(2, wordy.answer('What is 0 plus 2?'))
+  end)
+
+  it('addition with a right hand zero', function()
+    assert.are.same(3, wordy.answer('What is 3 plus 0?'))
   end)
 
   it('more addition', function()
