@@ -73,7 +73,8 @@ describe('queen-attack', function()
     assert.is_true(q1.can_attack(q2))
   end)
 
-  it('cannot attack if falling diagonals are only the same when reflected across the longest falling diagonal', function()
+  it('cannot attack if falling diagonals are only the same when reflected across the longest falling diagonal',
+     function()
     local q1 = Queen({ row = 4, column = 1 })
     local q2 = Queen({ row = 2, column = 5 })
     assert.is_false(q1.can_attack(q2))
