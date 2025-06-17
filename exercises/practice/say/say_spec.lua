@@ -22,12 +22,28 @@ describe('say', function()
     assert.are.equal('twenty-two', say(22))
   end)
 
+  it('should say 30', function()
+    assert.are.equal('thirty', say(30))
+  end)
+
+  it('should say 99', function()
+    assert.are.equal('ninety-nine', say(99))
+  end)
+
   it('should say 100', function()
     assert.are.equal('one hundred', say(100))
   end)
 
   it('should say 123', function()
     assert.are.equal('one hundred twenty-three', say(123))
+  end)
+
+  it('should say 200', function()
+    assert.are.equal('two hundred', say(200))
+  end)
+
+  it('should say 999', function()
+    assert.are.equal('nine hundred ninety-nine', say(999))
   end)
 
   it('should say 1,000', function()
