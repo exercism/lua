@@ -54,12 +54,24 @@ describe('matching-brackets', function()
     assert.is_false(brackets.valid('[({]})'))
   end)
 
+  it('should reject paired and wrong nested brackets but innermost are correct', function()
+    assert.is_false(brackets.valid('[({}])'))
+  end)
+
   it('should reject paired and incomplete brackets', function()
     assert.is_false(brackets.valid('{}['))
   end)
 
   it('should reject too many closing brackets', function()
     assert.is_false(brackets.valid('[]]'))
+  end)
+
+  it('should reject early unexpected brackets', function()
+    assert.is_false(brackets.valid(')()'))
+  end)
+
+  it('should reject early mismatched brackets', function()
+    assert.is_false(brackets.valid('{)()'))
   end)
 
   it('should accept math expression', function()
