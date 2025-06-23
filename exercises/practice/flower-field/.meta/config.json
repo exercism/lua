@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "ryanplusplus"
+  ],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "flower-field.lua"
+    ],
+    "test": [
+      "flower-field_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
+  },
+  "blurb": "Mark all the flowers in a garden."
+}

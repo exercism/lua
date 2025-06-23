@@ -1308,6 +1308,22 @@
           "control_flow_loops",
           "exception_handling",
           "strings"
+        ],
+        "status": "deprecated"
+      },
+      {
+        "slug": "flower-field",
+        "name": "flower-field",
+        "uuid": "7915cf5b-bd42-45aa-abd7-21dfb0059169",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7,
+        "topics": [
+          "arrays",
+          "control_flow_if_else_statements",
+          "control_flow_loops",
+          "exception_handling",
+          "strings"
         ]
       },
       {
