@@ -1,79 +1,112 @@
 local rectangles = require('rectangles')
 
--- LuaFormatter off
 describe('rectangles', function()
-  it('should find 0 rectangles in an empty grid', function()
+  it('no rows', function()
     assert.equal(0, rectangles.count({}))
   end)
 
-  it('should find 0 rectangles in a non-empty grid', function()
+  it('no columns', function()
     assert.equal(0, rectangles.count({
-      '   ',
-      '   '
+      '' --
     }))
   end)
 
-  it('should find a single rectangle', function()
+  it('no rectangles', function()
+    assert.equal(0, rectangles.count({
+      ' ' --
+    }))
+  end)
+
+  it('one rectangle', function()
     assert.equal(1, rectangles.count({
-      '+-+',
-      '| |',
-      '+-+'
+      '+-+', -- ,
+      '| |', -- ,
+      '+-+' --
     }))
   end)
 
-  it('should find connected rectangles', function()
+  it('two rectangles without shared parts', function()
     assert.equal(2, rectangles.count({
-      '  +-+',
-      '  | |',
-      '+-+-+',
-      '| |  ',
-      '+-+  '
+      '  +-+', -- ,
+      '  | |', -- ,
+      '+-+-+', -- ,
+      '| |  ', -- ,
+      '+-+  ' --
     }))
   end)
 
-  it('should find nested rectangles', function()
+  it('five rectangles with shared parts', function()
     assert.equal(5, rectangles.count({
-      '  +-+',
-      '  | |',
-      '+-+-+',
-      '| | |',
-      '+-+-+'
+      '  +-+', -- ,
+      '  | |', -- ,
+      '+-+-+', -- ,
+      '| | |', -- ,
+      '+-+-+' --
     }))
   end)
 
-  it('should not count incomplete rectangles', function()
+  it('rectangle of height 1 is counted', function()
     assert.equal(1, rectangles.count({
-      '  +-+',
-      '    |',
-      '+-+-+',
-      '| | -',
-      '+-+-+'
+      '+--+', -- ,
+      '+--+' --
     }))
   end)
 
-  it('should not count rectangles without 4 corners', function()
+  it('rectangle of width 1 is counted', function()
+    assert.equal(1, rectangles.count({
+      '++', -- ,
+      '||', -- ,
+      '++' --
+    }))
+  end)
+
+  it('1x1 square is counted', function()
+    assert.equal(1, rectangles.count({
+      '++', -- ,
+      '++' --
+    }))
+  end)
+
+  it('only complete rectangles are counted', function()
+    assert.equal(1, rectangles.count({
+      '  +-+', -- ,
+      '    |', -- ,
+      '+-+-+', -- ,
+      '| | -', -- ,
+      '+-+-+' --
+    }))
+  end)
+
+  it('rectangles can be of different sizes', function()
+    assert.equal(3, rectangles.count({
+      '+------+----+', -- ,
+      '|      |    |', -- ,
+      '+---+--+    |', -- ,
+      '|   |       |', -- ,
+      '+---+-------+' --
+    }))
+  end)
+
+  it('corner is required for a rectangle to be complete', function()
     assert.equal(2, rectangles.count({
-      '+------+----+',
-      '|      |    |',
-      '+------+    |',
-      '|   |       |',
-      '+---+-------+'
+      '+------+----+', -- ,
+      '|      |    |', -- ,
+      '+------+    |', -- ,
+      '|   |       |', -- ,
+      '+---+-------+' --
     }))
   end)
 
-  it('should find rectangles in large input', function()
+  it('large input with many rectangles', function()
     assert.equal(60, rectangles.count({
-      '               ',
-      ' +---+--+----+ ',
-      ' |   +--+----+ ',
-      ' +---+--+    | ',
-      ' |   +--+----+ ',
-      ' +---+--+--+-+ ',
-      ' +---+--+--+-+ ',
-      ' +------+  | | ',
-      '           +-+ ',
-      '               '
+      '+---+--+----+', -- ,
+      '|   +--+----+', -- ,
+      '+---+--+    |', -- ,
+      '|   +--+----+', -- ,
+      '+---+--+--+-+', -- ,
+      '+---+--+--+-+', -- ,
+      '+------+  | |', -- ,
+      '          +-+' --
     }))
   end)
 end)
--- LuaFormatter on
