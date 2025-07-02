@@ -193,5 +193,24 @@ describe('transpose', function()
 
     assert.are.equal(expected, transpose(input))
   end)
+
+  it('should transpose a jagged triangle', function()
+    local input =
+      '11\n' ..
+      '2\n' ..
+      '3333\n' ..
+      '444\n' ..
+      '555555\n' ..
+      '66666'
+    local expected =
+      '123456\n' ..
+      '1 3456\n' ..
+      '  3456\n' ..
+      '  3 56\n' ..
+      '    56\n' ..
+      '    5'
+
+    assert.are.equal(expected, transpose(input))
+  end)
 end)
 -- LuaFormatter on
