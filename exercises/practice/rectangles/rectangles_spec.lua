@@ -109,4 +109,16 @@ describe('rectangles', function()
       '          +-+' --
     }))
   end)
+
+  it('rectangles must have four sides', function()
+    assert.equal(5, rectangles.count({
+      '+-+ +-+', -- ,
+      '| | | |', -- ,
+      '+-+-+-+', -- ,
+      '  | |  ', -- ,
+      '+-+-+-+', -- ,
+      '| | | |', -- ,
+      '+-+ +-+' --
+    }))
+  end)
 end)
