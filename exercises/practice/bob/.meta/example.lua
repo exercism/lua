@@ -21,12 +21,12 @@ function bob.hey(say)
     return "Whoa, chill out!"
   end
   if question(say) then
-    return "Sure"
+    return "Sure."
   end
   if nothing(say) then
-    return 'Fine, be that way.'
+    return 'Fine. Be that way!'
   end
-  return "Whatever"
+  return "Whatever."
 end
 
 return bob

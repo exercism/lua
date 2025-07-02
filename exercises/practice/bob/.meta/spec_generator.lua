@@ -7,6 +7,6 @@ return {
       assert.are.equals("%s", result)]]
     return template:format(
       case.input.heyBob:gsub("\n", "\\n"):gsub("\r", "\\r"):gsub("\t", "\\t"),
-      case.expected:gsub("Sure.", "Sure"):gsub("Whatever.", "Whatever"):gsub("Fine. Be that way!", "Fine, be that way."))
+      case.expected)
   end
 }
