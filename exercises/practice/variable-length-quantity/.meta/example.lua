@@ -8,7 +8,7 @@ local function decode(bytes)
       table.insert(values, n)
       n = 0
     end
-    assert((i ~= #bytes) or (byte & 0x80 == 0), 'incomplete byte sequence')
+    assert((i ~= #bytes) or (byte & 0x80 == 0), 'incomplete sequence')
   end
   return values
 end
