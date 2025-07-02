@@ -11,13 +11,16 @@ describe('triangle', function()
 
   it('isosceles triangles have last two sides equal', function()
     assert.are.equals('isosceles', triangle.kind(3, 4, 4))
+    assert.are.equals('isosceles', triangle.kind(4, 3, 3))
   end)
 
   it('isosceles trianges have first and last sides equal', function()
+    assert.are.equals('isosceles', triangle.kind(3, 4, 3))
     assert.are.equals('isosceles', triangle.kind(4, 3, 4))
   end)
 
   it('isosceles triangles have two first sides equal', function()
+    assert.are.equals('isosceles', triangle.kind(3, 3, 4))
     assert.are.equals('isosceles', triangle.kind(4, 4, 3))
   end)
 
