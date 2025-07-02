@@ -1,5 +1,5 @@
 return function(n)
-  assert(n > 0, 'Only positive numbers are allowed')
+  assert(n > 0, 'Only positive integers are allowed')
 
   local steps = 0
 
