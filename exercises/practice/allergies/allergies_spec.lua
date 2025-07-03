@@ -46,6 +46,7 @@ describe('allergies', function()
   end)
 
   it('should ignore components of the score that do not correspond to an allergy', function()
+    assert.same({ 'eggs' }, allergies.list(257))
     assert.same({ 'eggs', 'peanuts' }, allergies.list(259))
   end)
 
