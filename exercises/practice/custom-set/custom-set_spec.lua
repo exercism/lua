@@ -97,6 +97,10 @@ describe('custom-set', function()
     it('should consider different sets to be different', function()
       assert.is_false(Set(1, 2, 3):equals(Set(1, 2, 4)))
     end)
+
+    it('should ignore duplicates', function()
+      assert.is_true(Set(1):equals(Set(1, 1)))
+    end)
   end)
 
   describe('add', function()
@@ -168,6 +172,10 @@ describe('custom-set', function()
 
     it('should give the difference of two sets with an intersection', function()
       assert.is_true(Set(3, 2, 1):difference(Set(2, 4)):equals(Set(1, 3)))
+    end)
+
+    it('should remove all duplicates in the first set', function()
+      assert.is_true(Set(1, 1):difference(Set(1)):equals(Set()))
     end)
   end)
 
