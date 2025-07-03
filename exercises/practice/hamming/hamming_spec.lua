@@ -1,63 +1,47 @@
-local compute = require('hamming').compute
+local hamming = require('hamming')
 
 describe('hamming', function()
-  it('identical strands', function()
-    assert.are.equal(0, compute('A', 'A'))
+  it('empty strands', function()
+    assert.are.equal(0, hamming.compute("", ""))
+  end)
+
+  it('single letter identical strands', function()
+    assert.are.equal(0, hamming.compute("A", "A"))
+  end)
+
+  it('single letter different strands', function()
+    assert.are.equal(1, hamming.compute("G", "T"))
   end)
 
   it('long identical strands', function()
-    assert.are.equal(0, compute('GGACTGA', 'GGACTGA'))
+    assert.are.equal(0, hamming.compute("GGACTGAAATCTG", "GGACTGAAATCTG"))
   end)
 
-  it('complete distance in single nucleotide strands', function()
-    assert.are.equal(1, compute('A', 'G'))
-  end)
-
-  it('complete distance in small strands', function()
-    assert.are.equal(2, compute('AG', 'CT'))
-  end)
-
-  it('small distance in small strands', function()
-    assert.are.equal(1, compute('AT', 'CT'))
-  end)
-
-  it('small distance', function()
-    assert.are.equal(1, compute('GGACG', 'GGTCG'))
-  end)
-
-  it('small distance in long strands', function()
-    assert.are.equal(2, compute('ACCAGGG', 'ACTATGG'))
-  end)
-
-  it('non unique character in first strand', function()
-    assert.are.equal(1, compute('AGA', 'AGG'))
-  end)
-
-  it('non unique character in second strand', function()
-    assert.are.equal(1, compute('AGG', 'AGA'))
-  end)
-
-  it('same nucleotides in different positions', function()
-    assert.are.equal(2, compute('TAG', 'GAT'))
-  end)
-
-  it('large distance', function()
-    assert.are.equal(4, compute('GATACA', 'GCATAA'))
-  end)
-
-  it('large distance in off-by-one strand', function()
-    assert.are.equal(9, compute('GGACGGATTCTG', 'AGGACGGATTCT'))
-  end)
-
-  it('empty strands', function()
-    assert.are.equal(0, compute('', ''))
+  it('long different strands', function()
+    assert.are.equal(9, hamming.compute("GGACGGATTCTG", "AGGACGGATTCT"))
   end)
 
   it('disallow first strand longer', function()
-    assert.are.equal(-1, compute('AATG', 'AAA'))
+    assert.has_error(function()
+      hamming.compute("AATG", "AAA")
+    end, "strands must be of equal length")
   end)
 
   it('disallow second strand longer', function()
-    assert.are.equal(-1, compute('ATA', 'AGTG'))
+    assert.has_error(function()
+      hamming.compute("ATA", "AGTG")
+    end, "strands must be of equal length")
+  end)
+
+  it('disallow empty first strand', function()
+    assert.has_error(function()
+      hamming.compute("", "G")
+    end, "strands must be of equal length")
+  end)
+
+  it('disallow empty second strand', function()
+    assert.has_error(function()
+      hamming.compute("G", "")
+    end, "strands must be of equal length")
   end)
 end)
