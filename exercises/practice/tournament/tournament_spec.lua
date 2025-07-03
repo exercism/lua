@@ -62,6 +62,24 @@ describe('tournament', function()
     assert.are.same(expected, tournament(results))
   end)
 
+  it('should ensure points are sorted numerically', function()
+    local results = {
+      'Devastating Donkeys;Blithering Badgers;win',
+      'Devastating Donkeys;Blithering Badgers;win',
+      'Devastating Donkeys;Blithering Badgers;win',
+      'Devastating Donkeys;Blithering Badgers;win',
+      'Blithering Badgers;Devastating Donkeys;win'
+    }
+
+    local expected = {
+      'Team                           | MP |  W |  D |  L |  P',
+      'Devastating Donkeys            |  5 |  4 |  0 |  1 | 12',
+      'Blithering Badgers             |  5 |  1 |  0 |  4 |  3'
+    }
+
+    assert.are.same(expected, tournament(results))
+  end)
+
   it('should ignore blank lines', function()
     local results = {
       'Allegoric Alaskans;Blithering Badgers;win',
