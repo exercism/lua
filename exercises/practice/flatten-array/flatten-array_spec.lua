@@ -25,6 +25,10 @@ describe('flatten-array', function()
   end)
 
   it('should flatten arrays with no elements to an empty array', function()
+    assert.are.same({}, flatten({}))
+
+    assert.are.same({}, flatten({ { {} } }))
+
     assert.are.same({}, flatten({ { { {} } }, { {} } }))
   end)
 end)
