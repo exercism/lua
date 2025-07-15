@@ -15,7 +15,6 @@ local function ability()
   return total - smallest
 end
 
-
 local function modifier(input)
   return (input - 10) // 2
 end
