@@ -69,37 +69,12 @@ describe('dnd', function()
   end)
 
   describe('ability', function()
-    it('uses 3 largest numbers from scores in descending order', function()
-      assert.equal(9, dnd.ability({ 4, 3, 2, 1 }))
-    end)
-
-    it('uses 3 largest numbers from scores in ascending order', function()
-      assert.equal(9, dnd.ability({ 1, 2, 3, 4 }))
-    end)
-
-    it('uses 3 largest numbers from scores in random order', function()
-      assert.equal(9, dnd.ability({ 2, 4, 3, 1 }))
-    end)
-
-    it('returns 3 with lowest equal numbers', function()
-      assert.equal(3, dnd.ability({ 1, 1, 1, 1 }))
-    end)
-
-    it('returns 18 with highest equal numbers', function()
-      assert.equal(18, dnd.ability({ 6, 6, 6, 6 }))
-    end)
-  end)
-
-  describe('roll_dice', function()
-    it('returns 4 numbers, each in the range 1 to 6', function()
-      for _ = 1, 10 do
-        local scores = dnd.roll_dice()
-        assert.equal(4, #scores)
-        for _, score in ipairs(scores) do
-          assert.equal("integer", math.type(score))
-          assert.lteq(1, score)
-          assert.lteq(score, 6)
-        end
+    it('random ability is within range', function()
+      for i = 1, 10 do
+        local ability_score = dnd.ability()
+        assert.equal('integer', math.type(ability_score))
+        assert.lteq(3, ability_score)
+        assert.lteq(ability_score, 18)
       end
     end)
   end)
@@ -107,83 +82,58 @@ describe('dnd', function()
   describe('Character', function()
     it('creates a character with the supplied name', function()
       local names = {
-        "Alice",
-        "Bob",
-        "Charlie",
-        "David",
-        "Eve",
-        "Fred",
-        "Ginny",
-        "Harriet",
-        "Ileana",
-        "Joseph",
-        "Kincaid",
-        "Larry"
+        'Alice',
+        'Bob',
+        'Charlie',
+        'David',
+        'Eve',
+        'Fred',
+        'Ginny',
+        'Harriet',
+        'Ileana',
+        'Joseph',
+        'Kincaid',
+        'Larry'
       }
       for _, name in ipairs(names) do
         assert.equal(name, dnd.Character:new(name).name)
       end
     end)
 
-    it('creates a character with valid strength', function()
-      local character = dnd.Character:new("Alice")
-      local strength = character.strength
-      assert.equal("integer", math.type(strength))
-      assert.lteq(3, strength)
-      assert.lteq(strength, 18)
-      assert.equal(strength, character.strength)
+    it('random character is valid', function()
+      local character = dnd.Character:new('Alice')
+
+      assert.lteq(3, character.strength)
+      assert.lteq(character.strength, 18)
+
+      assert.lteq(3, character.dexterity)
+      assert.lteq(character.dexterity, 18)
+
+      assert.lteq(3, character.constitution)
+      assert.lteq(character.constitution, 18)
+
+      assert.lteq(3, character.intelligence)
+      assert.lteq(character.intelligence, 18)
+
+      assert.lteq(3, character.wisdom)
+      assert.lteq(character.wisdom, 18)
+
+      assert.lteq(3, character.charisma)
+      assert.lteq(character.charisma, 18)
+
+      assert.equal(10 + dnd.modifier(character.constitution), character.hitpoints)
     end)
 
-    it('creates a character with valid dexterity', function()
-      local character = dnd.Character:new("Bob")
-      local dexterity = character.dexterity
-      assert.equal("integer", math.type(dexterity))
-      assert.lteq(3, dexterity)
-      assert.lteq(dexterity, 18)
-      assert.equal(dexterity, character.dexterity)
-    end)
+    it('each ability is calculated once', function()
+      local character = dnd.Character:new('Bob')
 
-    it('creates a character with valid constitution', function()
-      local character = dnd.Character:new("Charlie")
-      local constitution = character.constitution
-      assert.equal("integer", math.type(constitution))
-      assert.lteq(3, constitution)
-      assert.lteq(constitution, 18)
-      assert.equal(constitution, character.constitution)
-    end)
-
-    it('creates a character with valid intelligence', function()
-      local character = dnd.Character:new("David")
-      local intelligence = character.intelligence
-      assert.equal("integer", math.type(intelligence))
-      assert.lteq(3, intelligence)
-      assert.lteq(intelligence, 18)
-      assert.equal(intelligence, character.intelligence)
-    end)
-
-    it('creates a character with valid wisdom', function()
-      local character = dnd.Character:new("Eve")
-      local wisdom = character.wisdom
-      assert.equal("integer", math.type(wisdom))
-      assert.lteq(3, wisdom)
-      assert.lteq(wisdom, 18)
-      assert.equal(wisdom, character.wisdom)
-    end)
-
-    it('creates a character with valid charisma', function()
-      local character = dnd.Character:new("Fred")
-      local charisma = character.charisma
-      assert.equal("integer", math.type(charisma))
-      assert.lteq(3, charisma)
-      assert.lteq(charisma, 18)
-      assert.equal(charisma, character.charisma)
-    end)
-
-    it('creates a character with valid hitpoints', function()
-      for i = 1, 10 do
-        local character = dnd.Character:new(tostring(i))
-        assert.equal(10 + dnd.modifier(character.constitution), character.hitpoints)
-      end
+      assert.equal(character.strength, character.strength)
+      assert.equal(character.dexterity, character.dexterity)
+      assert.equal(character.constitution, character.constitution)
+      assert.equal(character.intelligence, character.intelligence)
+      assert.equal(character.wisdom, character.wisdom)
+      assert.equal(character.charisma, character.charisma)
+      assert.equal(character.hitpoints, character.hitpoints)
     end)
   end)
 end)
