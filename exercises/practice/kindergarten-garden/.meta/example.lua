@@ -27,13 +27,13 @@ end
 return function(s)
   s = s:lower()
 
-  return setmetatable({}, {
-    __index = function(_, student)
+  return {
+    plants = function(student)
       local result = {}
       plant_string_for_student(s, student:lower()):gsub('.', function(c)
         table.insert(result, plant_abbreviations[c])
       end)
       return result
     end
-  })
+  }
 end
