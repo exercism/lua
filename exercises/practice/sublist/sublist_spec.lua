@@ -1,44 +1,75 @@
-local is_sublist = require('sublist')
+local sublist = require('sublist')
 
 describe('sublist', function()
-  it('should consider an empty list to be a sublist of an empty list', function()
-    assert.equal(true, is_sublist({}, {}))
+  it('empty lists', function()
+    assert.equal('equal', sublist({}, {}))
   end)
 
-  it('should consider an empty list to be a sublist of a non-empty list', function()
-    assert.equal(true, is_sublist({}, { 1, 2, 3 }))
+  it('empty list within non empty list', function()
+    assert.equal('sublist', sublist({}, { 1, 2, 3 }))
   end)
 
-  it('should consider a list to be a sublist of itself', function()
-    assert.equal(true, is_sublist({ 1, 2, 3 }, { 1, 2, 3 }))
+  it('non empty list contains empty list', function()
+    assert.equal('superlist', sublist({ 1, 2, 3 }, {}))
   end)
 
-  it('should not consider a subset to be a sublist', function()
-    assert.equal(false, is_sublist({ 1, 2, 3 }, { 2, 1, 3 }))
+  it('list equals itself', function()
+    assert.equal('equal', sublist({ 1, 2, 3 }, { 1, 2, 3 }))
   end)
 
-  it('should find a sublist at the beginning of a list', function()
-    assert.equal(true, is_sublist({ 11, 22, 33 }, { 11, 22, 33, 44, 55 }))
+  it('different lists', function()
+    assert.equal('unequal', sublist({ 1, 2, 3 }, { 2, 3, 4 }))
   end)
 
-  it('should find a sublist in the middle of a list', function()
-    assert.equal(true, is_sublist({ 12, 13, 14 }, { 11, 12, 13, 14, 15 }))
+  it('false start', function()
+    assert.equal('sublist', sublist({ 1, 2, 5 }, { 0, 1, 2, 3, 1, 2, 5, 6 }))
   end)
 
-  it('should find a sublist at the end of a list', function()
-    assert.equal(true, is_sublist({ 30, 40, 50 }, { 10, 20, 30, 40, 50 }))
+  it('consecutive', function()
+    assert.equal('sublist', sublist({ 1, 1, 2 }, { 0, 1, 1, 1, 2, 1, 2 }))
   end)
 
-  it('should be able to determine when a list is not a sublist', function()
-    assert.equal(false, is_sublist({ 1, 2, 3 }, { 5, 6, 7, 8, 9 }))
+  it('sublist at start', function()
+    assert.equal('sublist', sublist({ 0, 1, 2 }, { 0, 1, 2, 3, 4, 5 }))
   end)
 
-  it('should not consider almost sublists to be sublists', function()
-    assert.equal(false, is_sublist({ 3, 4, 5 }, { 1, 2, 4, 5, 6 }))
-    assert.equal(false, is_sublist({ 3, 4, 5 }, { 1, 2, 3, 4, 6 }))
+  it('sublist in middle', function()
+    assert.equal('sublist', sublist({ 2, 3, 4 }, { 0, 1, 2, 3, 4, 5 }))
   end)
 
-  it('should find a sublist when there are multiple instances of the sublist', function()
-    assert.equal(true, is_sublist({ 1, 2, 3 }, { 0, 1, 2, 3, 4, 1, 2, 3, 6 }))
+  it('sublist at end', function()
+    assert.equal('sublist', sublist({ 3, 4, 5 }, { 0, 1, 2, 3, 4, 5 }))
+  end)
+
+  it('at start of superlist', function()
+    assert.equal('superlist', sublist({ 0, 1, 2, 3, 4, 5 }, { 0, 1, 2 }))
+  end)
+
+  it('in middle of superlist', function()
+    assert.equal('superlist', sublist({ 0, 1, 2, 3, 4, 5 }, { 2, 3 }))
+  end)
+
+  it('at end of superlist', function()
+    assert.equal('superlist', sublist({ 0, 1, 2, 3, 4, 5 }, { 3, 4, 5 }))
+  end)
+
+  it('first list missing element from second list', function()
+    assert.equal('unequal', sublist({ 1, 3 }, { 1, 2, 3 }))
+  end)
+
+  it('second list missing element from first list', function()
+    assert.equal('unequal', sublist({ 1, 2, 3 }, { 1, 3 }))
+  end)
+
+  it('first list missing additional digits from second list', function()
+    assert.equal('unequal', sublist({ 1, 2 }, { 1, 22 }))
+  end)
+
+  it('order matters to a list', function()
+    assert.equal('unequal', sublist({ 1, 2, 3 }, { 3, 2, 1 }))
+  end)
+
+  it('same digits but different numbers', function()
+    assert.equal('unequal', sublist({ 1, 0, 1 }, { 10, 1 }))
   end)
 end)
