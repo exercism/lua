@@ -1,28 +1,36 @@
 local BankAccount = {}
 
+function BankAccount:open()
+  assert(not self._open)
+  self._open = true
+  self._balance = 0
+end
+
 function BankAccount:balance()
-  return self._value
+  assert(self._open)
+  return self._balance
 end
 
 function BankAccount:deposit(amount)
-  assert(not self._closed)
+  assert(self._open)
   assert(amount > 0)
-  self._value = self._value + amount
+  self._balance = self._balance + amount
 end
 
 function BankAccount:withdraw(amount)
-  assert(not self._closed)
+  assert(self._open)
   assert(amount > 0)
-  assert(self._value - amount > 0)
-  self._value = self._value - amount
+  assert(self._balance - amount >= 0)
+  self._balance = self._balance - amount
 end
 
 function BankAccount:close(amount)
-  self._closed = true
+  assert(self._open)
+  self._open = false
 end
 
 function BankAccount:new()
-  local o = setmetatable({ _value = 0 }, self)
+  local o = setmetatable({ _balance = 0, _open = false }, self)
   self.__index = self
   return o
 end
