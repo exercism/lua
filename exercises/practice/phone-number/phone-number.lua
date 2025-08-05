@@ -1,3 +1,5 @@
-local PhoneNumber = {}
+local function clean(s)
 
-return PhoneNumber
+end
+
+return { clean = clean }

@@ -1,21 +1,18 @@
-local PhoneNumber = {}
+local function clean(s)
+  s = s:gsub('[()-. ]', '')
 
-function PhoneNumber:new(string_or_number)
-  self.__index = self
-  local n = string.gsub(string_or_number, '%D', '')
-  n = n:match '^1?([2-9]%d%d[2-9]%d%d%d%d%d%d)$' or '0000000000'
+  assert(not s:match('%D'))
+  assert(#s == 10 or #s == 11)
+  assert(#s ~= 11 or s:sub(1, 1) == '1')
 
-  return setmetatable({ number = n }, self)
+  s = s:sub(#s - 9)
+
+  local area_code, exchange_code, line_number = s:match('(...)(...)(....)')
+
+  assert(not area_code:match('^[01]'))
+  assert(not exchange_code:match('^[01]'))
+
+  return area_code .. exchange_code .. line_number
 end
 
-function PhoneNumber:areaCode()
-  return self.number:sub(1, 3)
-end
-
-function PhoneNumber:__tostring()
-  local phone_format = '(%d) %d-%d'
-  local area_code, central_office_code, station_number = self:areaCode(), self.number:sub(4, 6), self.number:sub(7, 10)
-  return phone_format:format(area_code, central_office_code, station_number)
-end
-
-return PhoneNumber
+return { clean = clean }
