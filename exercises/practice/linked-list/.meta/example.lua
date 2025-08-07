@@ -15,7 +15,9 @@ end
 function LinkedList:pop()
   local v = self._head.v
   self._head = self._head.next
-  if not self._head then
+  if self._head then
+    self._head.prev = nil
+  else
     self._tail = nil
   end
   return v
@@ -37,6 +39,8 @@ function LinkedList:shift()
   self._tail = self._tail.prev
   if self._tail then
     self._tail.next = nil
+  else
+    self._head = nil
   end
   return v
 end
@@ -52,21 +56,21 @@ function LinkedList:count()
 end
 
 function LinkedList:delete(v)
+  if self._head.v == v then
+    self:pop()
+    return
+  end
+
   local current = self._head
   while current do
     if current.v == v then
-      if self._head == current then
-        self._head = current.next
-      end
-      if self._tail == current then
-        self._tail = current.prev
-      end
       if current.prev then
         current.prev.next = current.next
       end
       if current.next then
         current.next.prev = current.prev
       end
+      return
     end
     current = current.next
   end
