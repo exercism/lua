@@ -1,7 +1,5 @@
-local function translate_codon(codon)
+local function proteins(strand)
+
 end
 
-local function translate_rna_strand(rna_strand)
-end
-
-return { codon = translate_codon, rna_strand = translate_rna_strand }
+return { proteins = proteins }

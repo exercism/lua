@@ -18,16 +18,16 @@ local codon_to_protein = {
   UGA = 'STOP'
 }
 
-local function translate_codon(codon)
+local function protein_for_codon(codon)
   local protein = codon_to_protein[codon]
   assert(protein ~= nil, 'Unknown codon')
   return protein
 end
 
-local function translate_rna_strand(rna_strand)
+local function proteins(strand)
   local proteins = {}
-  for codon in rna_strand:gmatch('...') do
-    local protein = translate_codon(codon)
+  for codon in strand:gmatch('...') do
+    local protein = protein_for_codon(codon)
     if protein == 'STOP' then
       break
     end
@@ -36,4 +36,4 @@ local function translate_rna_strand(rna_strand)
   return proteins
 end
 
-return { codon = translate_codon, rna_strand = translate_rna_strand }
+return { proteins = proteins }
