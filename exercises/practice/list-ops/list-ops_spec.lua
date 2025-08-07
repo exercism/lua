@@ -1,102 +1,165 @@
-local map = require('list-ops').map
-local reduce = require('list-ops').reduce
-local filter = require('list-ops').filter
+local list_ops = require('list-ops')
 
 describe('list-ops', function()
-  local function should_not_be_called()
-    error('unexpected call')
-  end
-
-  describe('map', function()
-    local function identity(x)
-      return x
-    end
-    local function square(x)
-      return x * x
-    end
-
-    it('should return an empty array and not call f when the input is an empty array', function()
-      assert.same({}, map({}, should_not_be_called))
+  describe('append entries to a list and return the new list', function()
+    it('empty lists', function()
+      local expected = {}
+      local actual = list_ops.append({}, {})
+      assert.are.same(expected, actual)
     end)
 
-    it('should return an array identical to the input when f is identity', function()
-      assert.same({ 1, 2, 3, 4 }, map({ 1, 2, 3, 4 }, identity))
+    it('list to empty list', function()
+      local expected = { 1, 2, 3, 4 }
+      local actual = list_ops.append({}, { 1, 2, 3, 4 })
+      assert.are.same(expected, actual)
     end)
 
-    it('should return an array of the same length where each element in the output is f(x_i)', function()
-      assert.same({ 1, 4, 9, 16 }, map({ 1, 2, 3, 4 }, square))
-    end)
-
-    it('should not mutate the input', function()
-      local xs = { 1, 2, 3, 4 }
-      map(xs, square)
-      assert.same({ 1, 2, 3, 4 }, xs)
+    it('non-empty lists', function()
+      local expected = { 1, 2, 2, 3, 4, 5 }
+      local actual = list_ops.append({ 1, 2 }, { 2, 3, 4, 5 })
+      assert.are.same(expected, actual)
     end)
   end)
 
-  describe('reduce', function()
-    local function sum(x, acc)
-      return x + acc
-    end
-
-    local function first_even(x, acc)
-      return (acc % 2 == 0) and acc or x
-    end
-
-    it('should reduce the input array using the provided accumulator and reduction function', function()
-      assert.equal(10, reduce({ 1, 2, 3, 4 }, 0, sum))
+  describe('concatenate a list of lists', function()
+    it('empty list', function()
+      local expected = {}
+      local actual = list_ops.concat()
+      assert.are.same(expected, actual)
     end)
 
-    it('should begin reduction with the provided initial value', function()
-      assert.equal(15, reduce({ 1, 2, 3, 4 }, 5, sum))
+    it('list of lists', function()
+      local expected = { 1, 2, 3, 4, 5, 6 }
+      local actual = list_ops.concat({ 1, 2 }, { 3 }, {}, { 4, 5, 6 })
+      assert.are.same(expected, actual)
     end)
 
-    it('should reduce from left to right', function()
-      assert.equal(2, reduce({ 1, 2, 3, 4 }, 1, first_even))
-    end)
-
-    it('should return the initial accumulator and not call the reduction function when the array is empty', function()
-      assert.equal(55, reduce({}, 55, should_not_be_called))
-    end)
-
-    it('should not mutate the input', function()
-      local xs = { 1, 2, 3, 4 }
-      reduce(xs, 0, sum)
-      assert.same({ 1, 2, 3, 4 }, xs)
+    it('list of nested lists', function()
+      local expected = { { 1 }, { 2 }, { 3 }, {}, { 4, 5, 6 } }
+      local actual = list_ops.concat({ { 1 }, { 2 } }, { { 3 } }, { {} }, { { 4, 5, 6 } })
+      assert.are.same(expected, actual)
     end)
   end)
 
-  describe('filter', function()
-    local function always_true()
-      return true
-    end
-    local function always_false()
-      return false
-    end
-    local function is_even(x)
-      return x % 2 == 0
-    end
-
-    it('should return an empty array and not call the predicate when the input is an empty array', function()
-      assert.same({}, filter({}, should_not_be_called))
+  describe('filter list returning only values that satisfy the filter function', function()
+    it('empty list', function()
+      local expected = {}
+      local actual = list_ops.filter({}, function(x)
+        return x % 2 == 1
+      end)
+      assert.are.same(expected, actual)
     end)
 
-    it('should return the entire input when the predicate is always true', function()
-      assert.same({ 1, 2, 3, 4 }, filter({ 1, 2, 3, 4 }, always_true))
+    it('non-empty list', function()
+      local expected = { 1, 3, 5 }
+      local actual = list_ops.filter({ 1, 2, 3, 5 }, function(x)
+        return x % 2 == 1
+      end)
+      assert.are.same(expected, actual)
+    end)
+  end)
+
+  describe('returns the length of a list', function()
+    it('empty list', function()
+      local expected = 0
+      local actual = list_ops.length({})
+      assert.are.same(expected, actual)
     end)
 
-    it('should return an empty array when the predicate is always false', function()
-      assert.same({}, filter({ 1, 2, 3, 4 }, always_false))
+    it('non-empty list', function()
+      local expected = 4
+      local actual = list_ops.length({ 1, 2, 3, 4 })
+      assert.are.same(expected, actual)
+    end)
+  end)
+
+  describe('return a list of elements whose values equal the list value transformed by the mapping function', function()
+    it('empty list', function()
+      local expected = {}
+      local actual = list_ops.map({}, function(x)
+        return x + 1
+      end)
+      assert.are.same(expected, actual)
     end)
 
-    it('should filter out elements for which the predicate is false', function()
-      assert.same({ 2, 4 }, filter({ 1, 2, 3, 4 }, is_even))
+    it('non-empty list', function()
+      local expected = { 2, 4, 6, 8 }
+      local actual = list_ops.map({ 1, 3, 5, 7 }, function(x)
+        return x + 1
+      end)
+      assert.are.same(expected, actual)
+    end)
+  end)
+
+  describe('folds (reduces) the given list from the left with a function', function()
+    it('empty list', function()
+      local expected = 2
+      local actual = list_ops.foldl({}, 2, function(acc, el)
+        return el * acc
+      end)
+      assert.are.same(expected, actual)
     end)
 
-    it('should not mutate the input', function()
-      local xs = { 1, 2, 3, 4 }
-      filter(xs, is_even)
-      assert.same({ 1, 2, 3, 4 }, xs)
+    it('direction independent function applied to non-empty list', function()
+      local expected = 15
+      local actual = list_ops.foldl({ 1, 2, 3, 4 }, 5, function(acc, el)
+        return el + acc
+      end)
+      assert.are.same(expected, actual)
+    end)
+
+    it('direction dependent function applied to non-empty list', function()
+      local expected = 64
+      local actual = list_ops.foldl({ 1, 2, 3, 4 }, 24, function(acc, el)
+        return el / acc
+      end)
+      assert.are.same(expected, actual)
+    end)
+  end)
+
+  describe('folds (reduces) the given list from the right with a function', function()
+    it('empty list', function()
+      local expected = 2
+      local actual = list_ops.foldr({}, 2, function(acc, el)
+        return el * acc
+      end)
+      assert.are.same(expected, actual)
+    end)
+
+    it('direction independent function applied to non-empty list', function()
+      local expected = 15
+      local actual = list_ops.foldr({ 1, 2, 3, 4 }, 5, function(acc, el)
+        return el + acc
+      end)
+      assert.are.same(expected, actual)
+    end)
+
+    it('direction dependent function applied to non-empty list', function()
+      local expected = 9
+      local actual = list_ops.foldr({ 1, 2, 3, 4 }, 24, function(acc, el)
+        return el / acc
+      end)
+      assert.are.same(expected, actual)
+    end)
+  end)
+
+  describe('reverse the elements of the list', function()
+    it('empty list', function()
+      local expected = {}
+      local actual = list_ops.reverse({})
+      assert.are.same(expected, actual)
+    end)
+
+    it('non-empty list', function()
+      local expected = { 7, 5, 3, 1 }
+      local actual = list_ops.reverse({ 1, 3, 5, 7 })
+      assert.are.same(expected, actual)
+    end)
+
+    it('list of lists is not flattened', function()
+      local expected = { { 4, 5, 6 }, {}, { 3 }, { 1, 2 } }
+      local actual = list_ops.reverse({ { 1, 2 }, { 3 }, {}, { 4, 5, 6 } })
+      assert.are.same(expected, actual)
     end)
   end)
 end)
