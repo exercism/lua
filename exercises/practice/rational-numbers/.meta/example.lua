@@ -47,7 +47,11 @@ local function abs(a)
 end
 
 local function exp_rational(a, p)
-  return reduce({ a[1] ^ p, a[2] ^ p })
+  if p >= 0 then
+    return reduce({ a[1] ^ p, a[2] ^ p })
+  else
+    return reduce({ a[2] ^ -p, a[1] ^ -p })
+  end
 end
 
 local function exp_real(p, a)

@@ -93,12 +93,28 @@ describe('rational-numbers', function()
     assert.are.same({ 0, 1 }, rational_numbers.abs({ 0, 1 }))
   end)
 
-  -- it('raise a positive rational number to a positive integer power', function()
-  --   assert.are.same({ 1, 8 }, rational_numbers.exp_rational({ 1, 2 }, 3))
-  -- end)
+  it('absolute value of a rational number is reduced to lowest terms', function()
+    assert.are.same({ 1, 2 }, rational_numbers.abs({ 2, 4 }))
+  end)
+
+  it('raise a positive rational number to a positive integer power', function()
+    assert.are.same({ 1, 8 }, rational_numbers.exp_rational({ 1, 2 }, 3))
+  end)
 
   it('raise a negative rational number to a positive integer power', function()
     assert.are.same({ -1, 8 }, rational_numbers.exp_rational({ -1, 2 }, 3))
+  end)
+
+  it('raise a positive rational number to a negative integer power', function()
+    assert.are.same({ 25, 9 }, rational_numbers.exp_rational({ 3, 5 }, -2))
+  end)
+
+  it('raise a negative rational number to an even negative integer power', function()
+    assert.are.same({ 25, 9 }, rational_numbers.exp_rational({ -3, 5 }, -2))
+  end)
+
+  it('raise a negative rational number to an odd negative integer power', function()
+    assert.are.same({ -125, 27 }, rational_numbers.exp_rational({ -3, 5 }, -3))
   end)
 
   it('raise zero to an integer power', function()
@@ -131,6 +147,10 @@ describe('rational-numbers', function()
 
   it('reduce a positive rational number to lowest terms', function()
     assert.are.same({ 1, 2 }, rational_numbers.reduce({ 2, 4 }))
+  end)
+
+  it('reduce a positive rational number to lowest terms', function()
+    assert.are.same({ -3, 4 }, rational_numbers.reduce({ 3, -4 }))
   end)
 
   it('reduce a negative rational number to lowest terms', function()
