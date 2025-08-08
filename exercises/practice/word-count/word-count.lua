@@ -1,4 +1,4 @@
-local function word_count(s)
+local function count_words(s)
 end
 
-return { word_count = word_count }
+return { count_words = count_words }
