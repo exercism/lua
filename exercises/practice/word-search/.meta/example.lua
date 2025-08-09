@@ -42,15 +42,23 @@ end
 
 local deltas = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 }, { 1, 1 }, { 1, -1 }, { -1, 1 }, { -1, -1 } }
 
-return function(puzzle)
+return function(grid)
+  grid = Grid(grid)
+
   return {
-    find = function(word)
-      for _, delta in ipairs(deltas) do
-        local first, last = find(Grid(puzzle), word, delta[1], delta[2])
-        if first then
-          return first, last
+    search = function(words)
+      local result = {}
+
+      for _, word in ipairs(words) do
+        for _, delta in ipairs(deltas) do
+          local first, last = find(grid, word, delta[1], delta[2])
+          if first and last then
+            result[word] = { start = first, ['end'] = last }
+          end
         end
       end
+
+      return result
     end
   }
 end

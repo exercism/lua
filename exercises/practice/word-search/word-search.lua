@@ -1,2 +1,2 @@
-return function(puzzle)
+return function(grid)
 end
