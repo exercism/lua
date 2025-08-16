@@ -14,6 +14,12 @@ describe('list-ops', function()
       assert.are.same(expected, actual)
     end)
 
+    it('empty list to list', function()
+      local expected = { 1, 2, 3, 4 }
+      local actual = list_ops.append({ 1, 2, 3, 4 }, {})
+      assert.are.same(expected, actual)
+    end)
+
     it('non-empty lists', function()
       local expected = { 1, 2, 2, 3, 4, 5 }
       local actual = list_ops.append({ 1, 2 }, { 2, 3, 4, 5 })

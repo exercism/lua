@@ -15,6 +15,9 @@ description = "append entries to a list and return the new list -> empty lists"
 [2c894696-b609-4569-b149-8672134d340a]
 description = "append entries to a list and return the new list -> list to empty list"
 
+[e842efed-3bf6-4295-b371-4d67a4fdf19c]
+description = "append entries to a list and return the new list -> empty list to list"
+
 [71dcf5eb-73ae-4a0e-b744-a52ee387922f]
 description = "append entries to a list and return the new list -> non-empty lists"
 
