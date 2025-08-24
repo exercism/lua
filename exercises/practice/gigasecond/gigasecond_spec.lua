@@ -14,8 +14,8 @@ describe('gigasecond', function()
   end)
 
   it('test 3', function()
-    local actual = gigasecond.anniversary(os.time({ year = 1959, month = 7, day = 19 }))
-    local expectedDate = os.date('%x', os.time({ year = 1991, month = 3, day = 27 }))
+    local actual = gigasecond.anniversary(os.time({ year = 2009, month = 1, day = 19 }))
+    local expectedDate = os.date('%x', os.time({ year = 2040, month = 9, day = 27 }))
     assert.are.equals(expectedDate, actual)
   end)
 
