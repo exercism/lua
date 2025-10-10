@@ -2,7 +2,6 @@
   "authors": [
     "ryanplusplus"
   ],
-  "contributors": [],
   "files": {
     "solution": [
       "flower-field.lua"

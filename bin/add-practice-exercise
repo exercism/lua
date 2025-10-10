@@ -67,7 +67,7 @@ fi
 ./bin/fetch-configlet
 ./bin/configlet create --practice-exercise "${slug}" --author "${author}" --difficulty "${difficulty}"
 
-filter='.exercises.practice = (.exercises.practice | sort_by(.difficulty, .slug))'
+filter='.exercises.practice = (.exercises.practice | sort_by(.difficulty, (.name|ascii_upcase))'
 jq "${filter}" config.json > config.sorted && mv config.sorted config.json
 
 exercise_dir="exercises/practice/${slug}"
