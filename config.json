@@ -459,6 +459,14 @@
         ]
       },
       {
+        "slug": "line-up",
+        "name": "Line Up",
+        "uuid": "2a4e105e-5545-4baf-aba5-75cbc5aee498",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "matrix",
         "name": "Matrix",
         "uuid": "d4de8f02-ba5b-4357-8285-9cb41dc3b72e",
@@ -567,6 +575,18 @@
         "difficulty": 3
       },
       {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "2d443a8f-65de-496e-9527-8a54a840ba69",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "arrays",
+          "strings"
+        ]
+      },
+      {
         "slug": "rna-transcription",
         "name": "RNA Transcription",
         "uuid": "5029a8ed-3766-4632-bdab-964ca4a06e34",
@@ -577,18 +597,6 @@
           "control_flow_loops",
           "strings",
           "transforming"
-        ]
-      },
-      {
-        "slug": "reverse-string",
-        "name": "Reverse String",
-        "uuid": "2d443a8f-65de-496e-9527-8a54a840ba69",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3,
-        "topics": [
-          "arrays",
-          "strings"
         ]
       },
       {
@@ -775,6 +783,14 @@
           "strings",
           "text_formatting"
         ]
+      },
+      {
+        "slug": "dominoes",
+        "name": "Dominoes",
+        "uuid": "0ea6977c-5032-40ab-bd67-be23e052c69f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       },
       {
         "slug": "grade-school",
@@ -989,14 +1005,6 @@
         "difficulty": 4
       },
       {
-        "slug": "dominoes",
-        "name": "Dominoes",
-        "uuid": "0ea6977c-5032-40ab-bd67-be23e052c69f",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4
-      },
-      {
         "slug": "affine-cipher",
         "name": "Affine Cipher",
         "uuid": "e3a84895-fb1b-4d03-b56a-84cb00b3cf93",
@@ -1114,6 +1122,14 @@
         ]
       },
       {
+        "slug": "palindrome-products",
+        "name": "Palindrome Products",
+        "uuid": "928d3505-7780-4d2d-8fd8-7c8f0aac4033",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "pascals-triangle",
         "name": "Pascal's Triangle",
         "uuid": "b7a4bd55-7e51-46f1-9bd9-90185b99e238",
@@ -1190,14 +1206,6 @@
         ]
       },
       {
-        "slug": "palindrome-products",
-        "name": "Palindrome Products",
-        "uuid": "928d3505-7780-4d2d-8fd8-7c8f0aac4033",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
         "slug": "anagram",
         "name": "Anagram",
         "uuid": "49c8c8cc-f0e6-49dc-aac0-6c4acffff175",
@@ -1215,6 +1223,14 @@
         "slug": "book-store",
         "name": "Book Store",
         "uuid": "82953d9b-f104-4813-a980-f471de6ce40e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
+        "slug": "complex-numbers",
+        "name": "Complex Numbers",
+        "uuid": "ed6b5073-e3b1-4787-8551-ffffa9e7313d",
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
@@ -1288,17 +1304,9 @@
         ]
       },
       {
-        "slug": "complex-numbers",
-        "name": "Complex Numbers",
-        "uuid": "ed6b5073-e3b1-4787-8551-ffffa9e7313d",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 6
-      },
-      {
-        "slug": "minesweeper",
-        "name": "Minesweeper",
-        "uuid": "fcb9cc16-7690-4ee6-a373-c8476063ec57",
+        "slug": "flower-field",
+        "name": "Flower Field",
+        "uuid": "7915cf5b-bd42-45aa-abd7-21dfb0059169",
         "practices": [],
         "prerequisites": [],
         "difficulty": 7,
@@ -1308,16 +1316,16 @@
           "control_flow_loops",
           "exception_handling",
           "strings"
-        ],
-        "status": "deprecated"
+        ]
       },
       {
-        "slug": "flower-field",
-        "name": "Flower Field",
-        "uuid": "7915cf5b-bd42-45aa-abd7-21dfb0059169",
+        "slug": "minesweeper",
+        "name": "Minesweeper",
+        "uuid": "fcb9cc16-7690-4ee6-a373-c8476063ec57",
         "practices": [],
         "prerequisites": [],
         "difficulty": 7,
+        "status": "deprecated",
         "topics": [
           "arrays",
           "control_flow_if_else_statements",
