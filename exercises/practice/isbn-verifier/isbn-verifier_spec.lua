@@ -29,6 +29,14 @@ describe('isbn-verifier', function()
     assert.is_false(isbn_verifier.valid('3-598-2X507-9'))
   end)
 
+  it('only one check digit is allowed', function()
+    assert.is_false(isbn_verifier.valid('3-598-21508-96'))
+  end)
+
+  it('x is not substituted by the value 10', function()
+    assert.is_false(isbn_verifier.valid('3-598-2X507-5'))
+  end)
+
   it('valid isbn without separating dashes', function()
     assert.is_true(isbn_verifier.valid('3598215088'))
   end)

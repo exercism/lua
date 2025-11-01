@@ -166,4 +166,14 @@ describe('flower-field', function()
     }
     assert.same(expected, flower_field.annotate(garden))
   end)
+
+  it('multiple adjacent flowers', function()
+    local garden = {
+      ' ** ' --
+    }
+    local expected = {
+      '1**1' --
+    }
+    assert.same(expected, flower_field.annotate(garden))
+  end)
 end)
