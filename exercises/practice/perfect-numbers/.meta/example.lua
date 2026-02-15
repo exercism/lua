@@ -9,6 +9,8 @@ local function aliquot_sum(n)
 end
 
 local function classify(n)
+  assert(n > 0)
+
   local sum = aliquot_sum(n)
   if sum < n then
     return 'deficient'
@@ -19,4 +21,4 @@ local function classify(n)
   return 'perfect'
 end
 
-return { aliquot_sum = aliquot_sum, classify = classify }
+return { classify = classify }

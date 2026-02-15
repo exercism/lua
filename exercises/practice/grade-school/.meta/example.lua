@@ -6,9 +6,15 @@ function School:new()
 end
 
 function School:roster()
+  local grades = {}
+  for grade, _ in pairs(self.db) do
+    table.insert(grades, grade)
+  end
+  table.sort(grades)
+
   local roster = {}
-  for _, grade in pairs(self.db) do
-    for _, student in ipairs(grade) do
+  for _, grade in ipairs(grades) do
+    for _, student in ipairs(self.db[grade]) do
       table.insert(roster, student)
     end
   end
