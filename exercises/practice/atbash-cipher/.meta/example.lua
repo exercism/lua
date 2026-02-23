@@ -1,32 +1,17 @@
-local alphabet = 'abcdefghijklmnopqrstuvwxyz'
-local decoder_ring = setmetatable({}, {
-  __index = function()
-    return ''
-  end
-})
-
-for i = 1, #alphabet do
-  decoder_ring[alphabet:sub(i, i)] = alphabet:reverse():sub(i, i)
+local function inverse_char(char)
+  return string.char(219 - string.byte(char))
 end
 
-for i = 0, 9 do
-  decoder_ring[tostring(i)] = tostring(i)
+local function encode(phrase)
+  local clean = string.gsub(string.lower(phrase), "[^a-z0-9]", "")
+  local decoded = string.gsub(clean, "[a-z]", inverse_char)
+  local spaced = string.gsub(decoded, ".....", "%0 ")
+  return string.match(spaced, "^%s*(.-)%s*$") or spaced
 end
 
-local function transcribe(plaintext)
-  return plaintext:lower():gsub('.', decoder_ring)
+local function decode(phrase)
+  local clean = string.gsub(string.lower(phrase), "[^a-z0-9]", "")
+  return string.gsub(clean, "[a-z]", inverse_char)
 end
 
-local function split_chunks(s)
-  local chunks = {}
-  s:gsub('..?.?.?.?', function(chunk)
-    table.insert(chunks, chunk)
-  end)
-  return table.concat(chunks, ' ')
-end
-
-return {
-  encode = function(plaintext)
-    return split_chunks(transcribe(plaintext))
-  end
-}
+return { encode = encode, decode = decode }
