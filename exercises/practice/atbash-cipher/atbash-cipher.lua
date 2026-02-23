@@ -1,4 +1,7 @@
-return {
-  encode = function(plaintext)
-  end
-}
+local function encode(phrase)
+end
+
+local function decode(phrase)
+end
+
+return { encode = encode, decode = decode }
