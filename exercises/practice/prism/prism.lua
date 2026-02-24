@@ -1,5 +1,5 @@
-local function findSequence(start, prisms)
+local function find_sequence(start, prisms)
 
 end
 
-return { findSequence = findSequence }
+return { find_sequence = find_sequence }

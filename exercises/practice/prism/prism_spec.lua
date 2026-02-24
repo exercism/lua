@@ -5,7 +5,7 @@ describe('prism', function()
     local start = { x = 0, y = 0, angle = 0 }
     local prisms = {}
     local expected = {}
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -13,7 +13,7 @@ describe('prism', function()
     local start = { x = 0, y = 0, angle = 0 }
     local prisms = { { id = 1, x = 10, y = 0, angle = 0 } }
     local expected = { 1 }
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -21,7 +21,7 @@ describe('prism', function()
     local start = { x = 0, y = 0, angle = 0 }
     local prisms = { { id = 1, x = -10, y = 0, angle = 0 } }
     local expected = {}
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -33,7 +33,7 @@ describe('prism', function()
       { id = 2, x = 10, y = 0, angle = 0 }
     }
     local expected = {}
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -45,7 +45,7 @@ describe('prism', function()
       { id = 3, x = -10, y = 0, angle = 0 }
     }
     local expected = {}
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -57,7 +57,7 @@ describe('prism', function()
       { id = 1, x = 0, y = -10, angle = 0 }
     }
     local expected = {}
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -69,7 +69,7 @@ describe('prism', function()
       { id = 3, x = 10, y = 0, angle = 0 }
     }
     local expected = {}
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -77,7 +77,7 @@ describe('prism', function()
     local start = { x = 0, y = 0, angle = 2340 }
     local prisms = { { id = 1, x = 10, y = 0, angle = 0 } }
     local expected = {}
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -85,7 +85,7 @@ describe('prism', function()
     local start = { x = 0, y = 0, angle = 0 }
     local prisms = { { id = 1, x = 10, y = 10, angle = 0 }, { id = 2, x = 10, y = 0, angle = 90 } }
     local expected = { 2, 1 }
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -93,7 +93,7 @@ describe('prism', function()
     local start = { x = 0, y = 0, angle = 0 }
     local prisms = { { id = 1, x = 10, y = 0, angle = -90 }, { id = 2, x = 10, y = -10, angle = 0 } }
     local expected = { 1, 2 }
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -101,7 +101,7 @@ describe('prism', function()
     local start = { x = 0, y = 0, angle = 0 }
     local prisms = { { id = 2, x = 10, y = 0, angle = 0 }, { id = 1, x = 20, y = 0, angle = -180 } }
     local expected = { 2, 1, 2 }
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -114,7 +114,7 @@ describe('prism', function()
       { id = 4, x = 20, y = 0, angle = 0 }
     }
     local expected = { 2, 1, 3 }
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -200,7 +200,7 @@ describe('prism', function()
       3,
       12
     }
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 
@@ -362,7 +362,7 @@ describe('prism', function()
       48,
       53
     }
-    local result = prism.findSequence(start, prisms)
+    local result = prism.find_sequence(start, prisms)
     assert.are.same(expected, result)
   end)
 end)

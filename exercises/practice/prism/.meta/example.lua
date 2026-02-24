@@ -1,4 +1,4 @@
-local function findSequence(start, prisms)
+local function find_sequence(start, prisms)
   local x, y, angle = start.x, start.y, start.angle
   local sequence = {}
 
@@ -42,4 +42,4 @@ local function findSequence(start, prisms)
   return sequence
 end
 
-return { findSequence = findSequence }
+return { find_sequence = find_sequence }
