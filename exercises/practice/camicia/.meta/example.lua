@@ -32,7 +32,7 @@ local function simulate_game(playerA, playerB)
 
   while true do
     if #pile == 0 then
-      local round = table.concat(handA, ",") .. "|" .. table.concat(handB, ",") .. "|" .. turn
+      local round = table.concat(handA, ',') .. '|' .. table.concat(handB, ',') .. '|' .. turn
       if seen[round] then
         return { status = 'loop', tricks = totalTricks, cards = cardsPlayed }
       end
