@@ -1,4 +1,4 @@
-local function getCardValue(card)
+local function get_value(card)
   if card == 'J' then
     return 1
   elseif card == 'Q' then
@@ -12,15 +12,15 @@ local function getCardValue(card)
   end
 end
 
-local function simulateGame(playerA, playerB)
+local function simulate_game(playerA, playerB)
   local handA = {}
   for _, card in ipairs(playerA) do
-    table.insert(handA, getCardValue(card))
+    table.insert(handA, get_value(card))
   end
 
   local handB = {}
   for _, card in ipairs(playerB) do
-    table.insert(handB, getCardValue(card))
+    table.insert(handB, get_value(card))
   end
 
   local turn = 'A'
@@ -58,36 +58,34 @@ local function simulateGame(playerA, playerB)
       else
         turn = 'A'
       end
-    else
-      if currentDebt > 0 then
-        currentDebt = currentDebt - 1
-        if currentDebt == 0 then
-          for _, p in ipairs(pile) do
-            table.insert(otherHand, p)
-          end
-          pile = {}
-          totalTricks = totalTricks + 1
-          currentDebt = 0
-
-          if #handA == 0 or #handB == 0 then
-            return { status = 'finished', tricks = totalTricks, cards = cardsPlayed }
-          end
-
-          if turn == 'A' then
-            turn = 'B'
-          else
-            turn = 'A'
-          end
+    elseif currentDebt > 0 then
+      currentDebt = currentDebt - 1
+      if currentDebt == 0 then
+        for _, p in ipairs(pile) do
+          table.insert(otherHand, p)
         end
-      else
+        pile = {}
+        totalTricks = totalTricks + 1
+        currentDebt = 0
+
+        if #handA == 0 or #handB == 0 then
+          return { status = 'finished', tricks = totalTricks, cards = cardsPlayed }
+        end
+
         if turn == 'A' then
           turn = 'B'
         else
           turn = 'A'
         end
       end
+    else
+      if turn == 'A' then
+        turn = 'B'
+      else
+        turn = 'A'
+      end
     end
   end
 end
 
-return { simulateGame = simulateGame }
+return { simulate_game = simulate_game }

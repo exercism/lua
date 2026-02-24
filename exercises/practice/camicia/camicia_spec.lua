@@ -5,7 +5,7 @@ describe('camicia', function()
     local playerA = { '2' }
     local playerB = { '3' }
     local expected = { status = 'finished', tricks = 1, cards = 2 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -13,7 +13,7 @@ describe('camicia', function()
     local playerA = { '2', '4' }
     local playerB = { '3' }
     local expected = { status = 'finished', tricks = 1, cards = 3 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -21,7 +21,7 @@ describe('camicia', function()
     local playerA = { '2', '4' }
     local playerB = { '3', '5', '6' }
     local expected = { status = 'finished', tricks = 1, cards = 4 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -29,7 +29,7 @@ describe('camicia', function()
     local playerA = { '2', 'A' }
     local playerB = { '3', '4', '5', '6', '7' }
     local expected = { status = 'finished', tricks = 1, cards = 7 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -37,7 +37,7 @@ describe('camicia', function()
     local playerA = { '2', 'A' }
     local playerB = { '3', '4', '5', '6', 'K' }
     local expected = { status = 'finished', tricks = 1, cards = 7 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -45,7 +45,7 @@ describe('camicia', function()
     local playerA = { '2', 'A', '7', '8', 'Q' }
     local playerB = { '3', '4', '5', '6', 'K' }
     local expected = { status = 'finished', tricks = 1, cards = 10 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -53,7 +53,7 @@ describe('camicia', function()
     local playerA = { '2', 'A', '7', '8', 'Q' }
     local playerB = { '3', '4', '5', '6', 'K', '9', 'J' }
     local expected = { status = 'finished', tricks = 1, cards = 12 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -61,7 +61,7 @@ describe('camicia', function()
     local playerA = { '2', 'A', '7', '8', 'Q', '10' }
     local playerB = { '3', '4', '5', '6', 'K', '9', 'J' }
     local expected = { status = 'finished', tricks = 1, cards = 13 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -69,7 +69,7 @@ describe('camicia', function()
     local playerA = { 'J', '2', '3' }
     local playerB = { '4', 'J', '5' }
     local expected = { status = 'loop', tricks = 3, cards = 8 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -440,7 +440,7 @@ describe('camicia', function()
       'K'
     }
     local expected = { status = 'finished', tricks = 1, cards = 361 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -448,7 +448,7 @@ describe('camicia', function()
     local playerA = { 'J' }
     local playerB = { '3', 'J' }
     local expected = { status = 'finished', tricks = 2, cards = 5 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -456,7 +456,7 @@ describe('camicia', function()
     local playerA = { 'J', '2', '4' }
     local playerB = { '3', 'J', 'A' }
     local expected = { status = 'finished', tricks = 4, cards = 12 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -464,7 +464,7 @@ describe('camicia', function()
     local playerA = { '2', '3', 'J', '6' }
     local playerB = { 'K', '5', 'J', '7' }
     local expected = { status = 'loop', tricks = 4, cards = 16 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -526,7 +526,7 @@ describe('camicia', function()
       'J'
     }
     local expected = { status = 'finished', tricks = 4, cards = 40 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -588,7 +588,7 @@ describe('camicia', function()
       '9'
     }
     local expected = { status = 'finished', tricks = 4, cards = 40 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -650,7 +650,7 @@ describe('camicia', function()
       '5'
     }
     local expected = { status = 'finished', tricks = 4, cards = 59 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -712,7 +712,7 @@ describe('camicia', function()
       '5'
     }
     local expected = { status = 'finished', tricks = 21, cards = 151 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -774,7 +774,7 @@ describe('camicia', function()
       '6'
     }
     local expected = { status = 'finished', tricks = 76, cards = 542 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -836,7 +836,7 @@ describe('camicia', function()
       '6'
     }
     local expected = { status = 'finished', tricks = 42, cards = 327 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -898,7 +898,7 @@ describe('camicia', function()
       'Q'
     }
     local expected = { status = 'finished', tricks = 805, cards = 5790 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -960,7 +960,7 @@ describe('camicia', function()
       '9'
     }
     local expected = { status = 'finished', tricks = 960, cards = 6913 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -1022,7 +1022,7 @@ describe('camicia', function()
       '2'
     }
     local expected = { status = 'finished', tricks = 1007, cards = 7157 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -1084,7 +1084,7 @@ describe('camicia', function()
       '7'
     }
     local expected = { status = 'finished', tricks = 1015, cards = 7207 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -1146,7 +1146,7 @@ describe('camicia', function()
       '2'
     }
     local expected = { status = 'finished', tricks = 1016, cards = 7225 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -1208,7 +1208,7 @@ describe('camicia', function()
       'K'
     }
     local expected = { status = 'finished', tricks = 1122, cards = 7959 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -1270,7 +1270,7 @@ describe('camicia', function()
       'Q'
     }
     local expected = { status = 'finished', tricks = 1106, cards = 7972 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -1332,7 +1332,7 @@ describe('camicia', function()
       '6'
     }
     local expected = { status = 'finished', tricks = 1164, cards = 8344 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 
@@ -1394,7 +1394,7 @@ describe('camicia', function()
       'A'
     }
     local expected = { status = 'loop', tricks = 66, cards = 474 }
-    local result = camicia.simulateGame(playerA, playerB)
+    local result = camicia.simulate_game(playerA, playerB)
     assert.are.same(expected, result)
   end)
 end)

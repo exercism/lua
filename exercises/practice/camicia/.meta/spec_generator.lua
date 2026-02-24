@@ -3,6 +3,15 @@ return {
 
   generate_test = function(case)
     local lines = {}
+    local function snake_case(str)
+      local s = str:gsub('%u', function(c)
+        return '_' .. c:lower()
+      end)
+      if s:sub(1, 1) == '_' then
+        s = s:sub(2)
+      end
+      return s
+    end
     local function string_array(arr)
       if #arr == 0 then
         return "{}"
@@ -21,7 +30,8 @@ return {
                                    case.expected.tricks, case.expected.cards)
 
     table.insert(lines, string.format("local expected = %s", expected))
-    table.insert(lines, string.format("local result = camicia.%s(playerA, playerB)", case.property))
+
+    table.insert(lines, string.format("local result = camicia.%s(playerA, playerB)", snake_case(case.property)))
     table.insert(lines, "assert.are.same(expected, result)")
 
     return table.concat(lines, "\n")
