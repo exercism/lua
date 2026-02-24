@@ -903,6 +903,14 @@
         ]
       },
       {
+        "slug": "prism",
+        "name": "Prism",
+        "uuid": "bd71935a-a63a-4be3-b0ec-982240515b59",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "robot-name",
         "name": "Robot Name",
         "uuid": "f4369803-07c4-4bbe-9bdc-3f4eea510802",
