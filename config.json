@@ -1029,6 +1029,14 @@
         ]
       },
       {
+        "slug": "camicia",
+        "name": "Camicia",
+        "uuid": "08b9ebde-ca0a-4ba5-bd89-8bbc1e007036",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "connect",
         "name": "Connect",
         "uuid": "650a57ad-9a43-4338-a1ec-55a7c842d842",
