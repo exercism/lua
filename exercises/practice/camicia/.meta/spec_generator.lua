@@ -4,7 +4,9 @@ return {
   generate_test = function(case)
     local lines = {}
     local function string_array(arr)
-      if #arr == 0 then return "{}" end
+      if #arr == 0 then
+        return "{}"
+      end
       local formatted = {}
       for _, v in ipairs(arr) do
         table.insert(formatted, string.format("'%s'", v))
