@@ -3,7 +3,7 @@
 local gigasecond = {}
 
 function gigasecond.anniversary(any_date)
-  return os.date('%x', any_date + math.pow(10, 9))
+  return os.date('!%x', any_date + math.pow(10, 9))
 end
 
 return gigasecond
