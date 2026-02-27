@@ -3,7 +3,7 @@ local function components(moment)
 end
 
 local function map_to_num(...)
-  local t = {...}
+  local t = { ... }
   for i, str in ipairs(t) do
     if str ~= nil and str ~= '' then
       t[i] = tonumber(str)
@@ -28,9 +28,6 @@ return {
       local expected = os.date('!%%x', momentB)
       assert.are.equals(expected, actual)]]
 
-    return template:format(
-      year, month, day, hour, min, sec,
-      e_year, e_month, e_day, e_hour, e_min, e_sec
-    )
+    return template:format(year, month, day, hour, min, sec, e_year, e_month, e_day, e_hour, e_min, e_sec)
   end
 }
