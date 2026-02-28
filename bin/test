@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Runs tests for all provided slugs
+
+RESULT=0
+
+rm -r test-exercises
+cp -r exercises/practice test-exercises
+cd test-exercises || exit 1
+
+for i in "$@"
+do
+  if test -d "$i"
+  then
+    echo "Testing $i..."
+    pushd "$i"
+    mv .meta/example.lua "$i.lua"
+    busted --verbose || RESULT=1
+    popd
+  fi
+done
+
+exit $RESULT
