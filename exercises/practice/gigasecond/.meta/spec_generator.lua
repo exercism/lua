@@ -22,10 +22,10 @@ return {
     local e_year, e_month, e_day, e_hour, e_min, e_sec = map_to_num(components(case.expected))
 
     local template = [[
-      local momentA = os.time({ year = %d, month = %d, day = %d, hour = %d, min = %d, sec = %d })
-      local momentB = os.time({ year = %d, month = %d, day = %d, hour = %d, min = %d, sec = %d })
-      local actual = gigasecond.anniversary(momentA)
-      local expected = os.date('!%%x', momentB)
+      local moment_a = os.time({ year = %d, month = %d, day = %d, hour = %d, min = %d, sec = %d })
+      local moment_b = os.time({ year = %d, month = %d, day = %d, hour = %d, min = %d, sec = %d })
+      local actual = gigasecond.anniversary(moment_a)
+      local expected = os.date('!%%x', moment_b)
       assert.are.equals(expected, actual)]]
 
     return template:format(year, month, day, hour, min, sec, e_year, e_month, e_day, e_hour, e_min, e_sec)
