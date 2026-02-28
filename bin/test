@@ -4,7 +4,7 @@
 
 RESULT=0
 
-rm -r test-exercises
+rm -rf test-exercises
 cp -r exercises/practice test-exercises
 cd test-exercises || exit 1
 
