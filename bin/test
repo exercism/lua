@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
+# Runs tests for all provided slugs
+
 RESULT=0
 
 rm -rf test-exercises
 cp -r exercises/practice test-exercises
 cd test-exercises || exit 1
 
-for i in *
+for i in "$@"
 do
   if test -d "$i"
   then

@@ -1,27 +1,57 @@
 local acronym = require('acronym')
 
 describe('acronym', function()
-  it('should generate single-letter acronyms', function()
-    assert.equal('L', acronym('Lua'))
+  it('basic', function()
+    local input = "Portable Network Graphics"
+    local expected = 'PNG'
+    assert.equal(expected, acronym(input))
   end)
 
-  it('should generate multi-letter acronyms', function()
-    assert.equal('LUA', acronym('Lua Ultimate Acronym'))
+  it('lowercase words', function()
+    local input = "Ruby on Rails"
+    local expected = 'ROR'
+    assert.equal(expected, acronym(input))
   end)
 
-  it('should include lowercase words', function()
-    assert.equal('ROR', acronym('Ruby on Rails'))
+  it('punctuation', function()
+    local input = "First In, First Out"
+    local expected = 'FIFO'
+    assert.equal(expected, acronym(input))
   end)
 
-  it('should ignore punctuation', function()
-    assert.equal('FIFO', acronym('First In, First Out'))
+  it('all caps word', function()
+    local input = "GNU Image Manipulation Program"
+    local expected = 'GIMP'
+    assert.equal(expected, acronym(input))
   end)
 
-  it('should split words with internal capitalization', function()
-    assert.equal('HTML', acronym('HyperText Markup Language'))
+  it('punctuation without whitespace', function()
+    local input = "Complementary metal-oxide semiconductor"
+    local expected = 'CMOS'
+    assert.equal(expected, acronym(input))
   end)
 
-  it('should not split words that are all uppercase', function()
-    assert.equal('PHP', acronym('PHP: Hypertext Processor'))
+  it('very long abbreviation', function()
+    local input = "Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me"
+    local expected = 'ROTFLSHTMDCOALM'
+    assert.equal(expected, acronym(input))
+  end)
+
+  it('consecutive delimiters', function()
+    local input = "Something - I made up from thin air"
+    local expected = 'SIMUFTA'
+    assert.equal(expected, acronym(input))
+  end)
+
+  it('apostrophes', function()
+    local input = "Halley's Comet"
+    local expected = 'HC'
+    assert.equal(expected, acronym(input))
+  end)
+
+  it('underscore emphasis', function()
+    local input = "The Road _Not_ Taken"
+    local expected = 'TRNT'
+    assert.equal(expected, acronym(input))
   end)
 end)
