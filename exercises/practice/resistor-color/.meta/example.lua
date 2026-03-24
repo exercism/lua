@@ -1,18 +1,26 @@
-local value = {
-  black = 0,
-  brown = 1,
-  red = 2,
-  orange = 3,
-  yellow = 4,
-  green = 5,
-  blue = 6,
-  violet = 7,
-  grey = 8,
-  white = 9
+local colors = {
+  'black', --
+  'brown', --
+  'red', --
+  'orange', --
+  'yellow', --
+  'green', --
+  'blue', --
+  'violet', --
+  'grey', --
+  'white'
 }
 
 return {
+  colors = function()
+    return colors
+  end,
+
   color_code = function(color)
-    return value[color]
+    for i, v in ipairs(colors) do
+      if v == color then
+        return i - 1
+      end
+    end
   end
 }

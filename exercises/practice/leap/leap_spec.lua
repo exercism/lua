@@ -1,15 +1,15 @@
 local is_leap_year = require('leap')
 
 describe('leap', function()
-  it('year not divisible by 4 is common year', function()
+  it('year not divisible by 4 in common year', function()
     assert.is_false(is_leap_year(2015))
   end)
 
-  it('year divisible by 2, not divisible by 4 is common year', function()
+  it('year divisible by 2, not divisible by 4 in common year', function()
     assert.is_false(is_leap_year(1970))
   end)
 
-  it('year divisible by 4, not divisible by 100 is leap year', function()
+  it('year divisible by 4, not divisible by 100 in leap year', function()
     assert.is_true(is_leap_year(1996))
   end)
 
@@ -17,7 +17,7 @@ describe('leap', function()
     assert.is_true(is_leap_year(1960))
   end)
 
-  it('year divisible by 100, not divisible by 400 is common year', function()
+  it('year divisible by 100, not divisible by 400 in common year', function()
     assert.is_false(is_leap_year(2100))
   end)
 
@@ -33,7 +33,7 @@ describe('leap', function()
     assert.is_true(is_leap_year(2400))
   end)
 
-  it('year divisible by 200, not divisible by 400 is common year', function()
+  it('year divisible by 200, not divisible by 400 in common year', function()
     assert.is_false(is_leap_year(1800))
   end)
 end)
