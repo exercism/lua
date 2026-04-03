@@ -12,7 +12,7 @@ local value = {
 }
 
 return {
-  decode = function(c1, c2, c3)
+  label = function(c1, c2, c3)
     local value = (value[c1] * 10 + value[c2]) * 10 ^ value[c3]
 
     if value >= 1e9 then

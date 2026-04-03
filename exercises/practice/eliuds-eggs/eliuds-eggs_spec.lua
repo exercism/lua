@@ -1,4 +1,4 @@
-local EliudsEggs = require 'eliuds-eggs'
+local EliudsEggs = require('eliuds-eggs')
 
 describe('eliuds-eggs', function()
   it('0 eggs', function()
