@@ -9,7 +9,7 @@ end
 local function render_garden(garden)
   return table.concat(map(garden, function(row)
     return "'" .. row .. "', --"
-  end), ',\n      ')
+  end), '\n      ')
 end
 
 return {
