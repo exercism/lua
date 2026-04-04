@@ -9,7 +9,7 @@ end
 local function render_strings(strings)
   return table.concat(map(strings, function(row)
     return "'" .. row .. "', --"
-  end), ',\n      ')
+  end), '\n      ')
 end
 
 return {
