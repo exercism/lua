@@ -3,10 +3,10 @@ local connect = require('connect')
 describe('connect', function()
   it('an empty board has no winner', function()
     local board = {
-      '. . . . .', -- ,
-      ' . . . . .', -- ,
-      '  . . . . .', -- ,
-      '   . . . . .', -- ,
+      '. . . . .', --
+      ' . . . . .', --
+      '  . . . . .', --
+      '   . . . . .', --
       '    . . . . .' --
     }
     assert.are.same('', connect.winner(board))
@@ -28,9 +28,9 @@ describe('connect', function()
 
   it('only edges does not make a winner', function()
     local board = {
-      'O O O X', -- ,
-      ' X . . X', -- ,
-      '  X . . X', -- ,
+      'O O O X', --
+      ' X . . X', --
+      '  X . . X', --
       '   X O O O' --
     }
     assert.are.same('', connect.winner(board))
@@ -38,10 +38,10 @@ describe('connect', function()
 
   it('illegal diagonal does not make a winner', function()
     local board = {
-      'X O . .', -- ,
-      ' O X X X', -- ,
-      '  O X O .', -- ,
-      '   . O X .', -- ,
+      'X O . .', --
+      ' O X X X', --
+      '  O X O .', --
+      '   . O X .', --
       '    X X O O' --
     }
     assert.are.same('', connect.winner(board))
@@ -49,10 +49,10 @@ describe('connect', function()
 
   it('nobody wins crossing adjacent angles', function()
     local board = {
-      'X . . .', -- ,
-      ' . X O .', -- ,
-      '  O . X O', -- ,
-      '   . O . X', -- ,
+      'X . . .', --
+      ' . X O .', --
+      '  O . X O', --
+      '   . O . X', --
       '    . . O .' --
     }
     assert.are.same('', connect.winner(board))
@@ -60,10 +60,10 @@ describe('connect', function()
 
   it('x wins crossing from left to right', function()
     local board = {
-      '. O . .', -- ,
-      ' O X X X', -- ,
-      '  O X O .', -- ,
-      '   X X O X', -- ,
+      '. O . .', --
+      ' O X X X', --
+      '  O X O .', --
+      '   X X O X', --
       '    . O X .' --
     }
     assert.are.same('X', connect.winner(board))
@@ -71,9 +71,9 @@ describe('connect', function()
 
   it('x wins with left-hand dead end fork', function()
     local board = {
-      '. . X .', -- ,
-      ' X X . .', -- ,
-      '  . X X X', -- ,
+      '. . X .', --
+      ' X X . .', --
+      '  . X X X', --
       '   O O O O' --
     }
     assert.are.same('X', connect.winner(board))
@@ -81,9 +81,9 @@ describe('connect', function()
 
   it('x wins with right-hand dead end fork', function()
     local board = {
-      '. . X X', -- ,
-      ' X X . .', -- ,
-      '  . X X .', -- ,
+      '. . X X', --
+      ' X X . .', --
+      '  . X X .', --
       '   O O O O' --
     }
     assert.are.same('X', connect.winner(board))
@@ -91,10 +91,10 @@ describe('connect', function()
 
   it('o wins crossing from top to bottom', function()
     local board = {
-      '. O . .', -- ,
-      ' O X X X', -- ,
-      '  O O O .', -- ,
-      '   X X O X', -- ,
+      '. O . .', --
+      ' O X X X', --
+      '  O O O .', --
+      '   X X O X', --
       '    . O X .' --
     }
     assert.are.same('O', connect.winner(board))
@@ -102,10 +102,10 @@ describe('connect', function()
 
   it('x wins using a convoluted path', function()
     local board = {
-      '. X X . .', -- ,
-      ' X . X . X', -- ,
-      '  . X . X .', -- ,
-      '   . X X . .', -- ,
+      '. X X . .', --
+      ' X . X . X', --
+      '  . X . X .', --
+      '   . X X . .', --
       '    O O O O O' --
     }
     assert.are.same('X', connect.winner(board))
@@ -113,14 +113,14 @@ describe('connect', function()
 
   it('x wins using a spiral path', function()
     local board = {
-      'O X X X X X X X X', -- ,
-      ' O X O O O O O O O', -- ,
-      '  O X O X X X X X O', -- ,
-      '   O X O X O O O X O', -- ,
-      '    O X O X X X O X O', -- ,
-      '     O X O O O X O X O', -- ,
-      '      O X X X X X O X O', -- ,
-      '       O O O O O O O X O', -- ,
+      'O X X X X X X X X', --
+      ' O X O O O O O O O', --
+      '  O X O X X X X X O', --
+      '   O X O X O O O X O', --
+      '    O X O X X X O X O', --
+      '     O X O O O X O X O', --
+      '      O X X X X X O X O', --
+      '       O O O O O O O X O', --
       '        X X X X X X X X O' --
     }
     assert.are.same('X', connect.winner(board))

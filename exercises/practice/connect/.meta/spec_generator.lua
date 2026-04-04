@@ -9,7 +9,7 @@ end
 local function render_board(board)
   return table.concat(map(board, function(row)
     return "'" .. row .. "', --"
-  end), ',\n      ')
+  end), '\n      ')
 end
 
 return {
