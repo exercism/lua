@@ -1,9 +1,19 @@
+local function snake_case(str)
+  local s = str:gsub('%u', function(c)
+    return '_' .. c:lower()
+  end)
+  if s:sub(1, 1) == '_' then
+    s = s:sub(2)
+  end
+  return s
+end
+
 return {
   module_name = 'zebra_puzzle',
 
   generate_test = function(case)
     local template = [[
       assert.equal('%s', zebra_puzzle.%s())]]
-    return template:format(case.expected, case.property)
+    return template:format(case.expected, snake_case(case.property))
   end
 }

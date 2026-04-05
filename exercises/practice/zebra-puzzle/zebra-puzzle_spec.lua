@@ -2,10 +2,10 @@ local zebra_puzzle = require('zebra-puzzle')
 
 describe('zebra-puzzle', function()
   it('resident who drinks water', function()
-    assert.equal('Norwegian', zebra_puzzle.drinksWater())
+    assert.equal('Norwegian', zebra_puzzle.drinks_water())
   end)
 
   it('resident who owns zebra', function()
-    assert.equal('Japanese', zebra_puzzle.ownsZebra())
+    assert.equal('Japanese', zebra_puzzle.owns_zebra())
   end)
 end)

@@ -107,12 +107,12 @@ local function ensure_solved()
   end
 end
 
-function zebra_puzzle.drinksWater()
+function zebra_puzzle.drinks_water()
   ensure_solved()
   return water_drinker
 end
 
-function zebra_puzzle.ownsZebra()
+function zebra_puzzle.owns_zebra()
   ensure_solved()
   return zebra_owner
 end
