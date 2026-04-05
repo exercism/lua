@@ -1460,6 +1460,14 @@
         ]
       },
       {
+        "slug": "zebra-puzzle",
+        "name": "Zebra Puzzle",
+        "uuid": "87be2159-daf5-4a6f-b7e1-61dc93edb1e7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8
+      },
+      {
         "slug": "pov",
         "name": "POV",
         "uuid": "57444e1f-d558-4684-a84e-6622e18771b6",
