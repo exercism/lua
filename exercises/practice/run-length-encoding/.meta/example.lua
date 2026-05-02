@@ -14,10 +14,8 @@ return {
   decode = function(s)
     local result = ''
     for length, c in s:gmatch('(%d*)(.)') do
-      if length == '' then
-        length = 1
-      end
-      result = result .. c:rep(length)
+      local n = (length == '') and 1 or tonumber(length)
+      result = result .. c:rep(n)
     end
     return result
   end
