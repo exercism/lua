@@ -1481,6 +1481,14 @@
           "exception_handling",
           "graphs"
         ]
+      },
+      {
+        "slug": "baffling-birthdays",
+        "name": "Baffling Birthdays",
+        "uuid": "54dd8d8f-b58c-47d0-8c77-22dd5fcdf14f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },

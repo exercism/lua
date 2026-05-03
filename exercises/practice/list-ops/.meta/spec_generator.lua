@@ -1,17 +1,11 @@
-local function map(t, f)
-  local result = {}
-  for i, v in ipairs(t) do
-    result[i] = f(v)
-  end
-  return result
-end
+local utils = require 'utils'
 
 local function render_list(list)
   if type(list) ~= 'table' then
     return list
   end
 
-  return '{' .. table.concat(map(list, render_list), ', ') .. '}'
+  return '{' .. table.concat(utils.map(list, render_list), ', ') .. '}'
 end
 
 local function render_function(s)
@@ -31,7 +25,7 @@ return {
         assert.are.same(expected, actual)]]
 
       return template:format(render_list(case.expected), case.property,
-                             render_list(table.concat(map(case.input.lists, render_list), ', ')))
+                             render_list(table.concat(utils.map(case.input.lists, render_list), ', ')))
     elseif case.input.list1 and case.input.list2 then
       local template = [[
         local expected = %s

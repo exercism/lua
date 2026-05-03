@@ -2,6 +2,32 @@
 
 local json = require 'dkjson'
 
+local utils = {}
+
+utils.map = function(t, f)
+  local mapped = {}
+  for i, v in ipairs(t) do
+    mapped[i] = f(v)
+  end
+  return mapped
+end
+
+utils.stringify = function(x)
+  return ("'%s'"):format(x)
+end
+
+utils.snake_case = function(str)
+  local s = str:gsub('%u', function(c)
+    return '_' .. c:lower()
+  end)
+  if s:sub(1, 1) == '_' then
+    s = s:sub(2)
+  end
+  return s
+end
+
+package.loaded['utils'] = utils
+
 local function read_file(path)
   local f = assert(io.open(path, 'r'))
   local contents = f:read('*a')

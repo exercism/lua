@@ -1,13 +1,7 @@
-local map = function(t, f)
-  local mapped = {}
-  for i, v in ipairs(t) do
-    mapped[i] = f(v)
-  end
-  return mapped
-end
+local utils = require 'utils'
 
 local function render_song(lines)
-  return table.concat(map(lines, function(line)
+  return table.concat(utils.map(lines, function(line)
     return '\'' .. line .. '\''
   end), ',\n')
 end

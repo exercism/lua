@@ -1,13 +1,7 @@
-local map = function(t, f)
-  local mapped = {}
-  for i, v in ipairs(t) do
-    mapped[i] = f(v)
-  end
-  return mapped
-end
+local utils = require 'utils'
 
 local function render_board(board)
-  return table.concat(map(board, function(row)
+  return table.concat(utils.map(board, function(row)
     return "'" .. row .. "', --"
   end), '\n      ')
 end
