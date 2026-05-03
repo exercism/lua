@@ -17,7 +17,7 @@ baffling_birthdays.random_birthdates = function(count)
 
   local non_leap_year = 2026
   local seconds_per_day = 24 * 60 * 60
-  local start = os.time { year = non_leap_year, month = 1, day = 1, hour = 12 }
+  local start = os.time({ year = non_leap_year, month = 1, day = 1, hour = 12 })
   for i = 1, count do
     local offset = math.random(0, 364)
     local t = start + offset * seconds_per_day

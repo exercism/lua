@@ -12,8 +12,13 @@ utils.map = function(t, f)
   return mapped
 end
 
-utils.stringify = function(x)
-  return ("'%s'"):format(x)
+utils.stringify = function(s)
+  s = s:gsub('\n', '\\n')
+  if s:match("'") and not s:match('"') then
+    return '"' .. s .. '"'
+  else
+    return "'" .. s:gsub("'", "\\'") .. "'"
+  end
 end
 
 utils.snake_case = function(str)
@@ -107,12 +112,12 @@ local function process(node)
     return table.concat(output, '\n')
   else
     local template = [[
-      it('%s', function()
+      it(%s, function()
         %s
       end)]]
 
     return template:format(
-      node.description:lower():gsub('\'', '\\\''),
+      utils.stringify(node.description:lower()),
       spec_generator.generate_test(node)
     )
   end
