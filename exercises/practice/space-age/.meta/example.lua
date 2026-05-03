@@ -18,14 +18,19 @@ local function round(val, decimal)
 end
 
 function SpaceAge:new(seconds)
-  self.__index = self
-  local meta_tbl = { seconds = seconds }
+  local o = {}
   for k, v in pairs(SpaceAge.ORBITAL_PERIODS) do
     local val = round(seconds / SpaceAge.EARTH_ORBITAL_PERIOD / v, 2)
-    meta_tbl['on_' .. k] = load('return ' .. val)
+    o['on_' .. k] = load('return ' .. val)
   end
 
-  return setmetatable(meta_tbl, self)
+  return setmetatable(o, {
+    __index = function(_, key)
+      return function()
+        error('not a planet')
+      end
+    end
+  })
 end
 
 return SpaceAge
