@@ -1,16 +1,9 @@
-local function stringify(s)
-  s = s:gsub('\n', '\\n')
-  if s:match("'") and not s:match('"') then
-    return '"' .. s .. '"'
-  else
-    return "'" .. s:gsub("'", "\\'") .. "'"
-  end
-end
+local utils = require 'utils'
 
 local function format_hash(t)
   local key_value_pairs = {}
   for key in pairs(t) do
-    table.insert(key_value_pairs, "[" .. stringify(key) .. "] = " .. t[key])
+    table.insert(key_value_pairs, "[" .. utils.stringify(key) .. "] = " .. t[key])
   end
 
   table.sort(key_value_pairs)
@@ -27,6 +20,6 @@ return {
       local expected = %s
       assert.are.same(expected, result)]]
 
-    return template:format(stringify(case.input.sentence), format_hash(case.expected))
+    return template:format(utils.stringify(case.input.sentence), format_hash(case.expected))
   end
 }

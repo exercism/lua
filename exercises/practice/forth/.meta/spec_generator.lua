@@ -1,10 +1,4 @@
-local function map(t, f)
-  local mapped = {}
-  for i, v in ipairs(t) do
-    mapped[i] = f(v)
-  end
-  return mapped
-end
+local utils = require 'utils'
 
 local function stringify(x)
   return ("'%s'"):format(x)
@@ -20,22 +14,22 @@ return {
           forth.evaluate({ %s })
         end)]]
 
-      return template:format(table.concat(map(case.input.instructions, stringify), ' '), case.expected.error)
+      return template:format(table.concat(utils.map(case.input.instructions, stringify), ' '), case.expected.error)
     elseif case.input.instructions then
       local template = [[
         assert.are.same({ %s }, forth.evaluate({ %s }))]]
 
-      return template:format(table.concat(map(case.expected, tostring), ', '),
-                             table.concat(map(case.input.instructions, stringify), ', '))
+      return template:format(table.concat(utils.map(case.expected, tostring), ', '),
+                             table.concat(utils.map(case.input.instructions, stringify), ', '))
     else
       local template = [[
         assert.are.same({ %s }, forth.evaluate({ %s }))
         assert.are.same({ %s }, forth.evaluate({ %s }))]]
 
-      return template:format(table.concat(map(case.expected[1], tostring), ', '),
-                             table.concat(map(case.input.instructionsFirst, stringify), ', '),
-                             table.concat(map(case.expected[2], tostring), ', '),
-                             table.concat(map(case.input.instructionsSecond, stringify), ', '))
+      return template:format(table.concat(utils.map(case.expected[1], tostring), ', '),
+                             table.concat(utils.map(case.input.instructionsFirst, stringify), ', '),
+                             table.concat(utils.map(case.expected[2], tostring), ', '),
+                             table.concat(utils.map(case.input.instructionsSecond, stringify), ', '))
     end
   end
 }

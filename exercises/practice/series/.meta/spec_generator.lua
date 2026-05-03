@@ -1,13 +1,7 @@
-local map = function(t, f)
-  local mapped = {}
-  for i, v in ipairs(t) do
-    mapped[i] = f(v)
-  end
-  return mapped
-end
+local utils = require 'utils'
 
 local function render_substrings(substrings)
-  return table.concat(map(substrings, function(substring)
+  return table.concat(utils.map(substrings, function(substring)
     return string.format('"%s"', substring)
   end), ', ')
 end

@@ -1,10 +1,4 @@
-local function map(t, f)
-  local mapped = {}
-  for i, v in ipairs(t) do
-    mapped[i] = f(v)
-  end
-  return mapped
-end
+local utils = require 'utils'
 
 local function stringify(s)
   return "'" .. s .. "'"
@@ -16,6 +10,6 @@ return {
   generate_test = function(case)
     local template = [[
         assert.equal(%d, rcd.value({ %s }))]]
-    return template:format(case.expected, table.concat(map(case.input.colors, stringify), ', '))
+    return template:format(case.expected, table.concat(utils.map(case.input.colors, stringify), ', '))
   end
 }

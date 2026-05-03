@@ -1,14 +1,4 @@
-local function map(t, f)
-  local mapped = {}
-  for i, v in ipairs(t) do
-    mapped[i] = f(v)
-  end
-  return mapped
-end
-
-local function stringify(x)
-  return ("'%s'"):format(x)
-end
+local utils = require 'utils'
 
 return {
   module_name = 'School',
@@ -19,11 +9,12 @@ return {
     if case.property == 'grade' or case.property == 'roster' then
       for _, input in ipairs(case.input.students) do
         local student, grade = table.unpack(input)
-        table.insert(lines, ('school:add(%s, %d)'):format(stringify(student), grade))
+        table.insert(lines, ('school:add(%s, %d)'):format(utils.stringify(student), grade))
       end
       table.insert(lines,
-                   ('assert.are.same({ %s }, school:%s(%s))'):format(table.concat(map(case.expected, stringify), ', '),
-                                                                     case.property, case.input.desiredGrade or ''))
+                   ('assert.are.same({ %s }, school:%s(%s))'):format(
+                     table.concat(utils.map(case.expected, utils.stringify), ', '), case.property,
+                     case.input.desiredGrade or ''))
     elseif case.property == 'add' then
       for i, input in ipairs(case.input.students) do
         local student, grade = table.unpack(input)
@@ -35,7 +26,7 @@ return {
             expected = case.expected
           end
         end
-        table.insert(lines, ('assert.is_%s(school:add(%s, %d))'):format(expected, stringify(student), grade))
+        table.insert(lines, ('assert.is_%s(school:add(%s, %d))'):format(expected, utils.stringify(student), grade))
       end
     else
       error("Unknown property: " .. case.property)

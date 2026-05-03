@@ -1,10 +1,4 @@
-local function map(t, f)
-  local mapped = {}
-  for i, v in ipairs(t) do
-    mapped[i] = f(v)
-  end
-  return mapped
-end
+local utils = require 'utils'
 
 local function stringify(s)
   return "'" .. s .. "'"
@@ -20,7 +14,7 @@ return {
         assert.are.equal('%s', unit)]]
     return template:format(table.unpack({
       case.property,
-      table.concat(map(case.input.colors, stringify), ', '),
+      table.concat(utils.map(case.input.colors, stringify), ', '),
       case.expected.value,
       case.expected.unit
     }))

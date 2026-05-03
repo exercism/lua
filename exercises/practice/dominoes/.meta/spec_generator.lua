@@ -1,13 +1,7 @@
-local map = function(t, f)
-  local mapped = {}
-  for i, v in ipairs(t) do
-    mapped[i] = f(v)
-  end
-  return mapped
-end
+local utils = require 'utils'
 
 local function render_dominoes(dominoes)
-  return table.concat(map(dominoes, function(domino)
+  return table.concat(utils.map(dominoes, function(domino)
     return ('{ %s }'):format(table.concat(domino, ', '))
   end), ', ')
 end

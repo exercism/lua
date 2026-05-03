@@ -2,6 +2,37 @@
 
 local json = require 'dkjson'
 
+local utils = {}
+
+utils.map = function(t, f)
+  local mapped = {}
+  for i, v in ipairs(t) do
+    mapped[i] = f(v)
+  end
+  return mapped
+end
+
+utils.stringify = function(s)
+  s = s:gsub('\n', '\\n')
+  if s:match("'") and not s:match('"') then
+    return '"' .. s .. '"'
+  else
+    return "'" .. s:gsub("'", "\\'") .. "'"
+  end
+end
+
+utils.snake_case = function(str)
+  local s = str:gsub('%u', function(c)
+    return '_' .. c:lower()
+  end)
+  if s:sub(1, 1) == '_' then
+    s = s:sub(2)
+  end
+  return s
+end
+
+package.loaded['utils'] = utils
+
 local function read_file(path)
   local f = assert(io.open(path, 'r'))
   local contents = f:read('*a')
@@ -81,12 +112,12 @@ local function process(node)
     return table.concat(output, '\n')
   else
     local template = [[
-      it('%s', function()
+      it(%s, function()
         %s
       end)]]
 
     return template:format(
-      node.description:lower():gsub('\'', '\\\''),
+      utils.stringify(node.description:lower()),
       spec_generator.generate_test(node)
     )
   end

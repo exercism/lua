@@ -1,10 +1,4 @@
-local map = function(t, f)
-  local mapped = {}
-  for i, v in ipairs(t) do
-    mapped[i] = f(v)
-  end
-  return mapped
-end
+local utils = require 'utils'
 
 local function stringify(v)
   return ("'%s'"):format(tostring(v))
@@ -25,7 +19,7 @@ return {
       local template = [[
         assert.are.same({ %s }, protein_translation.%s('%s'))]]
 
-      return template:format(table.concat(map(case.expected, stringify), ', '), case.property, case.input.strand)
+      return template:format(table.concat(utils.map(case.expected, stringify), ', '), case.property, case.input.strand)
     end
   end
 }

@@ -1,14 +1,4 @@
-local function map(t, f)
-  local result = {}
-  for i, v in ipairs(t) do
-    result[i] = f(v)
-  end
-  return result
-end
-
-local function stringify(x)
-  return ("'%s'"):format(x)
-end
+local utils = require 'utils'
 
 local function render_expected(expected)
   local key_value_pairs = {}
@@ -40,8 +30,8 @@ return {
       local expected = %s
       assert.are.same(expected, WordSearch(grid).search(words))]]
 
-    local grid = table.concat(map(case.input.grid, stringify), ', --\n')
-    local words = table.concat(map(case.input.wordsToSearchFor, stringify), ', --\n')
+    local grid = table.concat(utils.map(case.input.grid, utils.stringify), ', --\n')
+    local words = table.concat(utils.map(case.input.wordsToSearchFor, utils.stringify), ', --\n')
     local expected = render_expected(case.expected)
 
     return template:format(grid, words, expected)
