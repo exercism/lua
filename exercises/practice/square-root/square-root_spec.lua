@@ -1,4 +1,4 @@
-local SquareRoot = require 'square-root'
+local SquareRoot = require('square-root')
 
 describe('square-root', function()
   it('root of 1', function()
