@@ -23,6 +23,18 @@ describe('collatz-conjecture', function()
     end)
   end)
 
+  it('zero is an error', function()
+    assert.has_error(function()
+      conjecture(0)
+    end)
+  end)
+
+  it('negative value is an error', function()
+    assert.has_error(function()
+      conjecture(-15)
+    end)
+  end)
+
   it('negative value is an error', function()
     assert.has_error(function()
       conjecture(-15)
