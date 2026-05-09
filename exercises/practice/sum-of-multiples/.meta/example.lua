@@ -6,7 +6,7 @@ return function(numbers)
 
       for candidate = 1, limit - 1 do
         for _, number in ipairs(numbers) do
-          if candidate % number == 0 then
+          if number ~= 0 and candidate % number == 0 then
             multiples[candidate] = true
           end
         end

@@ -1,4 +1,4 @@
-local TwoFer = require 'two-fer'
+local TwoFer = require('two-fer')
 
 describe('two-fer', function()
   it('no name given', function()

@@ -2,8 +2,6 @@ return {
   module_name = 'SpaceAge',
 
   generate_test = function(case)
-    require'pl.pretty'.dump(case)
-
     if type(case.expected) == 'table' then
       local template = [[
       local age = SpaceAge:new(%s)
