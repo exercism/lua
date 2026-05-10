@@ -1489,6 +1489,19 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "split-second-stopwatch",
+        "name": "Split-Second Stopwatch",
+        "uuid": "49a0daf5-ecf8-41ad-8517-f969b770bf32",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "strings",
+          "text-formatting",
+          "time"
+        ]
       }
     ]
   },

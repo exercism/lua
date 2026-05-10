@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "ryanplusplus"
+  ],
+  "files": {
+    "solution": [
+      "split-second-stopwatch.lua"
+    ],
+    "test": [
+      "split-second-stopwatch_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
+  },
+  "blurb": "Keep track of time through a digital stopwatch.",
+  "source": "Erik Schierboom",
+  "source_url": "https://github.com/exercism/problem-specifications/pull/2547"
+}
