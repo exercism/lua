@@ -680,6 +680,27 @@
         ]
       },
       {
+        "slug": "baffling-birthdays",
+        "name": "Baffling Birthdays",
+        "uuid": "54dd8d8f-b58c-47d0-8c77-22dd5fcdf14f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "split-second-stopwatch",
+        "name": "Split-Second Stopwatch",
+        "uuid": "49a0daf5-ecf8-41ad-8517-f969b770bf32",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "strings",
+          "text-formatting",
+          "time"
+        ]
+      },
+      {
         "slug": "acronym",
         "name": "Acronym",
         "uuid": "422b08d7-7aa9-4f54-9a1a-ad2a0d90fc6d",
@@ -1320,6 +1341,17 @@
         ]
       },
       {
+        "slug": "intergalactic-transmission",
+        "name": "Intergalactic Transmission",
+        "uuid": "de43c93f-f2be-42f8-a883-4b13ee336ccb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6,
+        "topics": [
+          "bitwise_operations"
+        ]
+      },
+      {
         "slug": "flower-field",
         "name": "Flower Field",
         "uuid": "7915cf5b-bd42-45aa-abd7-21dfb0059169",
@@ -1480,27 +1512,6 @@
           "control_flow_loops",
           "exception_handling",
           "graphs"
-        ]
-      },
-      {
-        "slug": "baffling-birthdays",
-        "name": "Baffling Birthdays",
-        "uuid": "54dd8d8f-b58c-47d0-8c77-22dd5fcdf14f",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3
-      },
-      {
-        "slug": "split-second-stopwatch",
-        "name": "Split-Second Stopwatch",
-        "uuid": "49a0daf5-ecf8-41ad-8517-f969b770bf32",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3,
-        "topics": [
-          "strings",
-          "text-formatting",
-          "time"
         ]
       }
     ]
