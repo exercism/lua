@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "ryanplusplus"
+  ],
+  "files": {
+    "solution": [
+      "intergalactic-transmission.lua"
+    ],
+    "test": [
+      "intergalactic-transmission_spec.lua"
+    ],
+    "example": [
+      ".meta/example.lua"
+    ]
+  },
+  "blurb": "Add parity bits to a message for transmission",
+  "source": "Kah Goh",
+  "source_url": "https://github.com/exercism/problem-specifications/pull/2543"
+}
