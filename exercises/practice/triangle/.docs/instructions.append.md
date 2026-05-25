@@ -1,6 +1,6 @@
 # Instructions append
 
-### Error handling & Assertion
+## Error handling & Assertion
 
 Use error handling or assertion to check if the shape is a triangle at all:
 
