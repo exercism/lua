@@ -22,6 +22,8 @@ jobs:
 
       - name: install
         run: |
+          export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
+          export MAKEFLAGS=-j$(nproc)
           luarocks install --server=https://luarocks.org/dev luaformatter
 
       - name: check-formatting
