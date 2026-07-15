@@ -33,7 +33,12 @@ local function gamestate(board)
     end
   end
 
-  assert(#win_x == 0 or #win_o == 0, 'Impossible board: game should have ended after the game was won')
+  local x_won = #win_x > 0
+  local o_won = #win_o > 0
+
+  if (x_won and o_won) or (x_won and count_o == count_x) or (o_won and count_x > count_o) then
+    error('Impossible board: game should have ended after the game was won')
+  end
 
   if #win_x > 0 or #win_o > 0 then
     return 'win'
