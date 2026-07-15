@@ -258,5 +258,27 @@ describe('state-of-tic-tac-toe', function()
         state_of_tic_tac_toe.gamestate(board)
       end)
     end)
+
+    it('invalid board: o kept playing after x wins', function()
+      local board = {
+        'OO ', --
+        'XXX', --
+        ' O ' --
+      }
+      assert.has.error(function()
+        state_of_tic_tac_toe.gamestate(board)
+      end)
+    end)
+
+    it('invalid board: x kept playing after o wins', function()
+      local board = {
+        'XX ', --
+        'OOO', --
+        ' XX' --
+      }
+      assert.has.error(function()
+        state_of_tic_tac_toe.gamestate(board)
+      end)
+    end)
   end)
 end)
