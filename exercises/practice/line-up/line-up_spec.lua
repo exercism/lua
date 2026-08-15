@@ -71,9 +71,34 @@ describe('line-up', function()
     assert.are.same(expected, line_up.format('Washi', 21))
   end)
 
+  it('format exceptional ordinal numeral 22 ending in nd even though it is a multiple of 11', function()
+    local expected = 'Ingrid, you are the 22nd customer we serve today. Thank you!'
+    assert.are.same(expected, line_up.format('Ingrid', 22))
+  end)
+
+  it('format exceptional ordinal numeral 33 ending in rd even though it is a multiple of 11', function()
+    local expected = 'Mario, you are the 33rd customer we serve today. Thank you!'
+    assert.are.same(expected, line_up.format('Mario', 33))
+  end)
+
+  it('format exceptional ordinal numeral 52 ending in nd even though it is a multiple of 13', function()
+    local expected = 'Quentin, you are the 52nd customer we serve today. Thank you!'
+    assert.are.same(expected, line_up.format('Quentin', 52))
+  end)
+
   it('format exceptional ordinal numeral 62', function()
     local expected = 'Nayra, you are the 62nd customer we serve today. Thank you!'
     assert.are.same(expected, line_up.format('Nayra', 62))
+  end)
+
+  it('format non-exceptional ordinal numeral 72 ending in nd even though it is a multiple of 12', function()
+    local expected = 'Ugo, you are the 72nd customer we serve today. Thank you!'
+    assert.are.same(expected, line_up.format('Ugo', 72))
+  end)
+
+  it('format exceptional ordinal numeral 91 ending in st even though it is a multiple of 13', function()
+    local expected = 'Boris, you are the 91st customer we serve today. Thank you!'
+    assert.are.same(expected, line_up.format('Boris', 91))
   end)
 
   it('format exceptional ordinal numeral 100', function()
@@ -94,5 +119,10 @@ describe('line-up', function()
   it('format exceptional ordinal numeral 123', function()
     local expected = 'Yma, you are the 123rd customer we serve today. Thank you!'
     assert.are.same(expected, line_up.format('Yma', 123))
+  end)
+
+  it('format large number 972 ending in nd even though it is a multiple of 12', function()
+    local expected = 'Elias, you are the 972nd customer we serve today. Thank you!'
+    assert.are.same(expected, line_up.format('Elias', 972))
   end)
 end)
