@@ -156,9 +156,15 @@ describe('list-ops', function()
       assert.are.same(expected, actual)
     end)
 
-    it('non-empty list', function()
+    it('non-empty even-length list', function()
       local expected = { 7, 5, 3, 1 }
       local actual = list_ops.reverse({ 1, 3, 5, 7 })
+      assert.are.same(expected, actual)
+    end)
+
+    it('non-empty odd-length list', function()
+      local expected = { 13, 11, 9, 7, 5, 3, 1 }
+      local actual = list_ops.reverse({ 1, 3, 5, 7, 9, 11, 13 })
       assert.are.same(expected, actual)
     end)
 
