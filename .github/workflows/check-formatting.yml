@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
 
-      - uses: leafo/gh-actions-lua@6919171ccf181b826f44b9bca76307b577217377
+      - uses: leafo/gh-actions-lua@32909a2dea0a48c433aec79e7fcd31b4cd55800f
         with:
           luaVersion: 5.5
 
