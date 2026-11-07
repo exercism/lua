@@ -1,0 +1,11 @@
+local function most_common_word(text)
+  local counts = {}
+  local best = ""
+  for word in text:lower():gmatch("%S+") do
+    counts[word] = (counts[word] or 0) + 1
+    if counts[word] > (counts[best] or 0) then
+      best = word
+    end
+  end
+  return string.format('"%s" appears %d times', best, counts[best])
+end
