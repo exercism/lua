@@ -14,11 +14,4 @@ function DNA:new(str)
   return setmetatable({ nucleotideCounts = nc, NUCLEOTIDES = n }, self)
 end
 
-function DNA:count(symbol)
-  if self.nucleotideCounts[symbol] then
-    return self.nucleotideCounts[symbol]
-  end
-  return error('Invalid Nucleotide')
-end
-
 return DNA
