@@ -20,4 +20,8 @@ describe('reverse-string', function()
   it('a palindrome', function()
     assert.are.equal('racecar', reverse_string('racecar'))
   end)
+
+  it('an even-sized word', function()
+    assert.are.equal('reward', reverse_string('drawer'))
+  end)
 end)

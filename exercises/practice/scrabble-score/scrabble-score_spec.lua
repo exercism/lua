@@ -1,27 +1,47 @@
-local score = require('scrabble-score').score
+local scrabble_score = require('scrabble-score')
 
 describe('scrabble-score', function()
-  it('scores an empty word as zero', function()
-    assert.are.equal(0, score(''))
+  it('lowercase letter', function()
+    assert.are.equal(1, scrabble_score.score('a'))
   end)
 
-  it('scores a nil as zero', function()
-    assert.are.equal(0, score(nil))
+  it('uppercase letter', function()
+    assert.are.equal(1, scrabble_score.score('A'))
   end)
 
-  it('scores a very short word', function()
-    assert.are.equal(1, score('a'))
+  it('valuable letter', function()
+    assert.are.equal(4, scrabble_score.score('f'))
   end)
 
-  it('scores the word by the number of letters', function()
-    assert.are.equal(6, score('street'))
+  it('short word', function()
+    assert.are.equal(2, scrabble_score.score('at'))
   end)
 
-  it('scores more complicated words with more', function()
-    assert.are.equal(22, score('quirky'))
+  it('short, valuable word', function()
+    assert.are.equal(12, scrabble_score.score('zoo'))
   end)
 
-  it('scores case insensitive words', function()
-    assert.are.equal(41, score('OXYPHENBUTAZONE'))
+  it('medium word', function()
+    assert.are.equal(6, scrabble_score.score('street'))
+  end)
+
+  it('medium, valuable word', function()
+    assert.are.equal(22, scrabble_score.score('quirky'))
+  end)
+
+  it('long, mixed-case word', function()
+    assert.are.equal(41, scrabble_score.score('OxyphenButazone'))
+  end)
+
+  it('english-like word', function()
+    assert.are.equal(8, scrabble_score.score('pinata'))
+  end)
+
+  it('empty input', function()
+    assert.are.equal(0, scrabble_score.score(''))
+  end)
+
+  it('entire alphabet available', function()
+    assert.are.equal(87, scrabble_score.score('abcdefghijklmnopqrstuvwxyz'))
   end)
 end)

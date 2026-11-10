@@ -1,71 +1,33 @@
 local DNA = require('nucleotide-count')
 
 describe('nucleotide-count', function()
-  it('has no nucleotides', function()
-    local expected = { A = 0, T = 0, C = 0, G = 0 }
-    dna = DNA:new('')
-    local result = dna.nucleotideCounts
-    assert.are.same(expected, result)
-  end)
-
-  it('has no adenosine', function()
+  it('empty strand', function()
     local dna = DNA:new('')
-    local expected = 0
-    result = dna:count('A')
-    assert.are.same(expected, result)
+    local expected = { A = 0, C = 0, G = 0, T = 0 }
+    assert.are.same(expected, dna.nucleotideCounts)
   end)
 
-  it('repetitive cytosine gets counts', function()
-    local dna = DNA:new('CCCCC')
-    local expected = 5
-    result = dna:count('C')
-    assert.are.same(expected, result)
+  it('can count one nucleotide in single-character input', function()
+    local dna = DNA:new('G')
+    local expected = { A = 0, C = 0, G = 1, T = 0 }
+    assert.are.same(expected, dna.nucleotideCounts)
   end)
 
-  it('repetitive sequence has only guanosine', function()
-    local dna = DNA:new('GGGGGGGG')
-    expected = { A = 0, T = 0, C = 0, G = 8 }
-    result = dna.nucleotideCounts
-    assert.are.same(expected, result)
+  it('strand with repeated nucleotide', function()
+    local dna = DNA:new('GGGGGGG')
+    local expected = { A = 0, C = 0, G = 7, T = 0 }
+    assert.are.same(expected, dna.nucleotideCounts)
   end)
 
-  it('counts only thymine', function()
-    local dna = DNA:new('GGGGTAACCCGG')
-    expected = 1
-    result = dna:count('T')
-    assert.are.same(expected, result)
-  end)
-
-  it('counts a nucleotide only once', function()
-    local dna = DNA:new('GGTTGG')
-    expected = 2
-    result = dna:count('T')
-    assert.are.same(expected, result)
-  end)
-
-  it('validates dna sequences', function()
-    assert.has.errors(function()
-      DNA:new('INVALID')
-    end)
-    assert.has_error(function()
-      DNA:new('INVALID')
-    end, 'Invalid Sequence')
-  end)
-
-  it('validates counting nucleotides', function()
-    local dna = DNA:new('GGTTGG')
-    assert.has.errors(function()
-      dna:count('X')
-    end)
-    assert.has_error(function()
-      dna:count('X')
-    end, 'Invalid Nucleotide')
-  end)
-
-  it('counts all nucleotides', function()
+  it('strand with multiple nucleotides', function()
     local dna = DNA:new('AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC')
-    expected = { A = 20, T = 21, G = 17, C = 12 }
-    result = dna.nucleotideCounts
-    assert.are.same(expected, result)
+    local expected = { A = 20, C = 12, G = 17, T = 21 }
+    assert.are.same(expected, dna.nucleotideCounts)
+  end)
+
+  it('strand with invalid nucleotides', function()
+    assert.has_error(function()
+      DNA:new('AGXXACT')
+    end)
   end)
 end)
