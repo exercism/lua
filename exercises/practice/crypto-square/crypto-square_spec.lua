@@ -9,15 +9,15 @@ describe('crypto-square', function()
     assert.are.equal('', crypto_square.ciphertext('... --- ...'))
   end)
 
-  it('Lowercase', function()
+  it('lowercase', function()
     assert.are.equal('a', crypto_square.ciphertext('A'))
   end)
 
-  it('Remove spaces', function()
+  it('remove spaces', function()
     assert.are.equal('b', crypto_square.ciphertext('  b '))
   end)
 
-  it('Remove punctuation', function()
+  it('remove punctuation', function()
     assert.are.equal('1', crypto_square.ciphertext('@1,%!'))
   end)
 
