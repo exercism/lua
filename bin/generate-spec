@@ -13,7 +13,7 @@ utils.map = function(t, f)
 end
 
 utils.stringify = function(s)
-  s = s:gsub('\n', '\\n')
+  s = s:gsub('\\', '\\\\'):gsub('\n', '\\n')
   if s:match("'") and not s:match('"') then
     return '"' .. s .. '"'
   else

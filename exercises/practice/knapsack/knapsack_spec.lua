@@ -1,20 +1,21 @@
-local knapsack = require 'knapsack'
+local knapsack = require('knapsack')
 
 describe('knapsack', function()
   it('no items', function()
     local items = {}
     local maximum_weight = 100
+
     assert.are.equal(0, knapsack.maximum_value(maximum_weight, items))
   end)
 
-  it('one item too heavy', function()
+  it('one item, too heavy', function()
     local items = { { weight = 100, value = 1 } }
     local maximum_weight = 10
 
     assert.are.equal(0, knapsack.maximum_value(maximum_weight, items))
   end)
 
-  it('five items cannot be greedy by weight', function()
+  it('five items (cannot be greedy by weight)', function()
     local items = {
       { weight = 2, value = 5 },
       { weight = 2, value = 5 },
@@ -27,7 +28,7 @@ describe('knapsack', function()
     assert.are.equal(21, knapsack.maximum_value(maximum_weight, items))
   end)
 
-  it('five items cannot be greedy by value', function()
+  it('five items (cannot be greedy by value)', function()
     local items = {
       { weight = 2, value = 20 },
       { weight = 2, value = 20 },
@@ -52,9 +53,8 @@ describe('knapsack', function()
     assert.are.equal(90, knapsack.maximum_value(maximum_weight, items))
   end)
 
-  it('eight items', function()
+  it('8 items', function()
     local items = {
-      { weight = 5, value = 10 },
       { weight = 25, value = 350 },
       { weight = 35, value = 400 },
       { weight = 45, value = 450 },
@@ -69,7 +69,7 @@ describe('knapsack', function()
     assert.are.equal(900, knapsack.maximum_value(maximum_weight, items))
   end)
 
-  it('fifteen items', function()
+  it('15 items', function()
     local items = {
       { weight = 70, value = 135 },
       { weight = 73, value = 139 },

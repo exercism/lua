@@ -1,31 +1,61 @@
 local rle = require('run-length-encoding')
 
 describe('run-length-encoding', function()
-  it('should encode simple strings', function()
-    assert.equal('2A3B4C', rle.encode('AABBBCCCC'))
+  describe('run-length encode a string', function()
+    it('empty string', function()
+      assert.equal('', rle.encode(''))
+    end)
+
+    it('single characters only are encoded without count', function()
+      assert.equal('XYZ', rle.encode('XYZ'))
+    end)
+
+    it('string with no single characters', function()
+      assert.equal('2A3B4C', rle.encode('AABBBCCCC'))
+    end)
+
+    it('single characters mixed with repeated characters', function()
+      assert.equal('12WB12W3B24WB', rle.encode('WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB'))
+    end)
+
+    it('multiple whitespace mixed in string', function()
+      assert.equal('2 hs2q q2w2 ', rle.encode('  hsqq qww  '))
+    end)
+
+    it('lowercase characters', function()
+      assert.equal('2a3b4c', rle.encode('aabbbcccc'))
+    end)
   end)
 
-  it('should encode strings with multi-digit run lengths', function()
-    assert.equal('2A10B4C', rle.encode('AABBBBBBBBBBCCCC'))
+  describe('run-length decode a string', function()
+    it('empty string', function()
+      assert.equal('', rle.decode(''))
+    end)
+
+    it('single characters only', function()
+      assert.equal('XYZ', rle.decode('XYZ'))
+    end)
+
+    it('string with no single characters', function()
+      assert.equal('AABBBCCCC', rle.decode('2A3B4C'))
+    end)
+
+    it('single characters with repeated characters', function()
+      assert.equal('WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB', rle.decode('12WB12W3B24WB'))
+    end)
+
+    it('multiple whitespace mixed in string', function()
+      assert.equal('  hsqq qww  ', rle.decode('2 hs2q q2w2 '))
+    end)
+
+    it('lowercase string', function()
+      assert.equal('aabbbcccc', rle.decode('2a3b4c'))
+    end)
   end)
 
-  it('should decode simple strings', function()
-    assert.equal('AABBBCCCC', rle.decode('2A3B4C'))
-  end)
-
-  it('should decode strings with multi-digit run lengths', function()
-    assert.equal('AABBBBBBBBBBCCCC', rle.decode('2A10B4C'))
-  end)
-
-  it('should not encode characters with a run length of 1', function()
-    assert.equal('2AB4CD', rle.encode('AABCCCCD'))
-  end)
-
-  it('should successfully decode characters with a run length of 1', function()
-    assert.equal('AABCCCCD', rle.decode('2AB4CD'))
-  end)
-
-  it('should decode an encoded string back to the original string', function()
-    assert.equal('zzz ZZ  zZ', rle.decode(rle.encode('zzz ZZ  zZ')))
+  describe('encode and then decode', function()
+    it('encode followed by decode gives original string', function()
+      assert.equal('zzz ZZ  zZ', rle.decode(rle.encode('zzz ZZ  zZ')))
+    end)
   end)
 end)
