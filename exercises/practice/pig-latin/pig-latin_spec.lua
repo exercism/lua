@@ -101,7 +101,7 @@ describe('pig-latin', function()
 
   describe('phrases are translated', function()
     it('a whole phrase', function()
-      assert.equal('ickquay astfay unray', translate('quick fast run'))
+      assert.equal('ywhay oday idssquay enjoyay xraysay', translate('why do squids enjoy xrays'))
     end)
   end)
 end)
