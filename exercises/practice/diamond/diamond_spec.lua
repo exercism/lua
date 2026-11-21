@@ -1,65 +1,100 @@
-local diamond = require 'diamond'
+local diamond = require('diamond')
 
--- LuaFormatter off
 describe('diamond', function()
-  it('should generate the diamond for A', function()
-    assert.are.equal('A\n', diamond('A'))
+  it("degenerate case with a single 'a' row", function()
+    local expected = '' --
+    .. 'A\n' --
+
+    assert.are.equal(expected, diamond('A'))
   end)
 
-  it('should generate the diamond for B', function()
-    local expected =
-      ' A \n' ..
-      'B B\n' ..
-      ' A \n'
+  it('degenerate case with no row containing 3 distinct groups of spaces', function()
+    local expected = '' --
+    .. ' A \n' --
+    .. 'B B\n' --
+    .. ' A \n' --
 
     assert.are.equal(expected, diamond('B'))
   end)
 
-  it('should generate the diamond for C', function()
-    local expected =
-      '  A  \n' ..
-      ' B B \n' ..
-      'C   C\n' ..
-      ' B B \n' ..
-      '  A  \n'
+  it('smallest non-degenerate case with odd diamond side length', function()
+    local expected = '' --
+    .. '  A  \n' --
+    .. ' B B \n' --
+    .. 'C   C\n' --
+    .. ' B B \n' --
+    .. '  A  \n' --
 
     assert.are.equal(expected, diamond('C'))
   end)
 
-  it('should generate the diamond for E', function()
-    local expected =
-      '    A    \n' ..
-      '   B B   \n' ..
-      '  C   C  \n' ..
-      ' D     D \n' ..
-      'E       E\n' ..
-      ' D     D \n' ..
-      '  C   C  \n' ..
-      '   B B   \n' ..
-      '    A    \n'
+  it('smallest non-degenerate case with even diamond side length', function()
+    local expected = '' --
+    .. '   A   \n' --
+    .. '  B B  \n' --
+    .. ' C   C \n' --
+    .. 'D     D\n' --
+    .. ' C   C \n' --
+    .. '  B B  \n' --
+    .. '   A   \n' --
 
-    assert.are.equal(expected, diamond('E'))
+    assert.are.equal(expected, diamond('D'))
   end)
 
-  it('should generate the diamond for H', function()
-    local expected =
-      '       A       \n' ..
-      '      B B      \n' ..
-      '     C   C     \n' ..
-      '    D     D    \n' ..
-      '   E       E   \n' ..
-      '  F         F  \n' ..
-      ' G           G \n' ..
-      'H             H\n' ..
-      ' G           G \n' ..
-      '  F         F  \n' ..
-      '   E       E   \n' ..
-      '    D     D    \n' ..
-      '     C   C     \n' ..
-      '      B B      \n' ..
-      '       A       \n'
+  it('largest possible diamond', function()
+    local expected = '' --
+    .. '                         A                         \n' --
+    .. '                        B B                        \n' --
+    .. '                       C   C                       \n' --
+    .. '                      D     D                      \n' --
+    .. '                     E       E                     \n' --
+    .. '                    F         F                    \n' --
+    .. '                   G           G                   \n' --
+    .. '                  H             H                  \n' --
+    .. '                 I               I                 \n' --
+    .. '                J                 J                \n' --
+    .. '               K                   K               \n' --
+    .. '              L                     L              \n' --
+    .. '             M                       M             \n' --
+    .. '            N                         N            \n' --
+    .. '           O                           O           \n' --
+    .. '          P                             P          \n' --
+    .. '         Q                               Q         \n' --
+    .. '        R                                 R        \n' --
+    .. '       S                                   S       \n' --
+    .. '      T                                     T      \n' --
+    .. '     U                                       U     \n' --
+    .. '    V                                         V    \n' --
+    .. '   W                                           W   \n' --
+    .. '  X                                             X  \n' --
+    .. ' Y                                               Y \n' --
+    .. 'Z                                                 Z\n' --
+    .. ' Y                                               Y \n' --
+    .. '  X                                             X  \n' --
+    .. '   W                                           W   \n' --
+    .. '    V                                         V    \n' --
+    .. '     U                                       U     \n' --
+    .. '      T                                     T      \n' --
+    .. '       S                                   S       \n' --
+    .. '        R                                 R        \n' --
+    .. '         Q                               Q         \n' --
+    .. '          P                             P          \n' --
+    .. '           O                           O           \n' --
+    .. '            N                         N            \n' --
+    .. '             M                       M             \n' --
+    .. '              L                     L              \n' --
+    .. '               K                   K               \n' --
+    .. '                J                 J                \n' --
+    .. '                 I               I                 \n' --
+    .. '                  H             H                  \n' --
+    .. '                   G           G                   \n' --
+    .. '                    F         F                    \n' --
+    .. '                     E       E                     \n' --
+    .. '                      D     D                      \n' --
+    .. '                       C   C                       \n' --
+    .. '                        B B                        \n' --
+    .. '                         A                         \n' --
 
-    assert.are.equal(expected, diamond('H'))
+    assert.are.equal(expected, diamond('Z'))
   end)
 end)
--- LuaFormatter on
