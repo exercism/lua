@@ -1,90 +1,139 @@
-local keep = require('strain').keep
-local discard = require('strain').discard
+local strain = require('strain')
 
--- LuaFormatter off
 describe('strain', function()
-  local function always_true()
-    return true
-  end
-  local function always_false()
-    return false
-  end
-  local function is_even(x)
-    return x % 2 == 0
-  end
-  local function is_odd(x)
-    return x % 2 == 1
-  end
-  local function starts_with_z(s)
-    return string.sub(s, 1, 1) == "z"
-  end
-  local function contains_5(xs)
-    for _, x in ipairs(xs) do
-      if x == 5 then
-        return true
-      end
+  it('keep on empty list returns empty list', function()
+    local predicate = function(x)
+      return true
     end
-    return false
-  end
-
-  describe('keep', function()
-    it('keep on empty list returns empty list', function()
-      assert.same({}, keep({}, always_true))
-    end)
-
-    it('keeps everything', function()
-      assert.same({ 1, 3, 5 }, keep({ 1, 3, 5 }, always_true))
-    end)
-
-    it('keeps nothing', function()
-      assert.same({}, keep({ 1, 3, 5 }, always_false))
-    end)
-
-    it('keeps first and last', function()
-      assert.same({ 1, 3 }, keep({ 1, 2, 3 }, is_odd))
-    end)
-
-    it('keeps neither first nor last', function()
-      assert.same({ 2 }, keep({ 1, 2, 3 }, is_even))
-    end)
-
-    it('keeps strings', function()
-      assert.same({ 'zebra', 'zombies', 'zealot' }, keep({ 'apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot' }, starts_with_z))
-    end)
-
-    it('keeps lists', function()
-      assert.same({ { 5, 5, 5 }, { 5, 1, 2 }, { 1, 5, 2 }, { 1, 2, 5 } }, keep({ { 1, 2, 3 }, { 5, 5, 5 }, { 5, 1, 2 }, { 2, 1, 2 }, { 1, 5, 2 }, { 2, 2, 1 }, { 1, 2, 5 } }, contains_5))
-    end)
+    local list = {}
+    local expected = {}
+    assert.are.same(expected, strain.keep(list, predicate))
   end)
 
-  describe('discard', function()
-    it('discard on empty list returns empty list', function()
-      assert.same({}, discard({}, always_true))
-    end)
+  it('keeps everything', function()
+    local predicate = function(x)
+      return true
+    end
+    local list = { 1, 3, 5 }
+    local expected = { 1, 3, 5 }
+    assert.are.same(expected, strain.keep(list, predicate))
+  end)
 
-    it('discards everything', function()
-      assert.same({}, discard({ 1, 3, 5 }, always_true))
-    end)
+  it('keeps nothing', function()
+    local predicate = function(x)
+      return false
+    end
+    local list = { 1, 3, 5 }
+    local expected = {}
+    assert.are.same(expected, strain.keep(list, predicate))
+  end)
 
-    it('discards nothing', function()
-      assert.same({ 1, 3, 5 }, discard({ 1, 3, 5 }, always_false))
-    end)
+  it('keeps first and last', function()
+    local predicate = function(x)
+      return x % 2 == 1
+    end
+    local list = { 1, 2, 3 }
+    local expected = { 1, 3 }
+    assert.are.same(expected, strain.keep(list, predicate))
+  end)
 
-    it('discards first and last', function()
-      assert.same({ 2 }, discard({ 1, 2, 3 }, is_odd))
-    end)
+  it('keeps neither first nor last', function()
+    local predicate = function(x)
+      return x % 2 == 0
+    end
+    local list = { 1, 2, 3 }
+    local expected = { 2 }
+    assert.are.same(expected, strain.keep(list, predicate))
+  end)
 
-    it('discards neither first nor last', function()
-      assert.same({ 1, 3 }, discard({ 1, 2, 3 }, is_even))
-    end)
+  it('keeps strings', function()
+    local predicate = function(x)
+      return x:sub(1, 1) == 'z'
+    end
+    local list = { 'apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot' }
+    local expected = { 'zebra', 'zombies', 'zealot' }
+    assert.are.same(expected, strain.keep(list, predicate))
+  end)
 
-    it('discards strings', function()
-      assert.same({ 'apple', 'banana', 'cherimoya' }, discard({ 'apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot' }, starts_with_z))
-    end)
+  it('keeps lists', function()
+    local predicate = function(x)
+      for _, value in ipairs(x) do
+        if value == 5 then
+          return true
+        end
+      end
+      return false
+    end
+    local list = { { 1, 2, 3 }, { 5, 5, 5 }, { 5, 1, 2 }, { 2, 1, 2 }, { 1, 5, 2 }, { 2, 2, 1 }, { 1, 2, 5 } }
+    local expected = { { 5, 5, 5 }, { 5, 1, 2 }, { 1, 5, 2 }, { 1, 2, 5 } }
+    assert.are.same(expected, strain.keep(list, predicate))
+  end)
 
-    it('discards lists', function()
-      assert.same({ { 1, 2, 3 }, { 2, 1, 2 }, { 2, 2, 1 } }, discard({ { 1, 2, 3 }, { 5, 5, 5 }, { 5, 1, 2 }, { 2, 1, 2 }, { 1, 5, 2 }, { 2, 2, 1 }, { 1, 2, 5 } }, contains_5))
-    end)
+  it('discard on empty list returns empty list', function()
+    local predicate = function(x)
+      return true
+    end
+    local list = {}
+    local expected = {}
+    assert.are.same(expected, strain.discard(list, predicate))
+  end)
+
+  it('discards everything', function()
+    local predicate = function(x)
+      return true
+    end
+    local list = { 1, 3, 5 }
+    local expected = {}
+    assert.are.same(expected, strain.discard(list, predicate))
+  end)
+
+  it('discards nothing', function()
+    local predicate = function(x)
+      return false
+    end
+    local list = { 1, 3, 5 }
+    local expected = { 1, 3, 5 }
+    assert.are.same(expected, strain.discard(list, predicate))
+  end)
+
+  it('discards first and last', function()
+    local predicate = function(x)
+      return x % 2 == 1
+    end
+    local list = { 1, 2, 3 }
+    local expected = { 2 }
+    assert.are.same(expected, strain.discard(list, predicate))
+  end)
+
+  it('discards neither first nor last', function()
+    local predicate = function(x)
+      return x % 2 == 0
+    end
+    local list = { 1, 2, 3 }
+    local expected = { 1, 3 }
+    assert.are.same(expected, strain.discard(list, predicate))
+  end)
+
+  it('discards strings', function()
+    local predicate = function(x)
+      return x:sub(1, 1) == 'z'
+    end
+    local list = { 'apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot' }
+    local expected = { 'apple', 'banana', 'cherimoya' }
+    assert.are.same(expected, strain.discard(list, predicate))
+  end)
+
+  it('discards lists', function()
+    local predicate = function(x)
+      for _, value in ipairs(x) do
+        if value == 5 then
+          return true
+        end
+      end
+      return false
+    end
+    local list = { { 1, 2, 3 }, { 5, 5, 5 }, { 5, 1, 2 }, { 2, 1, 2 }, { 1, 5, 2 }, { 2, 2, 1 }, { 1, 2, 5 } }
+    local expected = { { 1, 2, 3 }, { 2, 1, 2 }, { 2, 2, 1 } }
+    assert.are.same(expected, strain.discard(list, predicate))
   end)
 end)
--- LuaFormatter on
