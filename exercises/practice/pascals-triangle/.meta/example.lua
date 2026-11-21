@@ -1,10 +1,15 @@
 return function(n)
-  local rows = { { 1 } }
+  local rows = {}
 
-  for i = 1, n - 1 do
+  for i = 1, n do
     local row = {}
-    for j = 1, i + 1 do
-      row[j] = (rows[i][j - 1] or 0) + (rows[i][j] or 0)
+    local previous = rows[i - 1]
+    for j = 1, i do
+      if j == 1 or j == i then
+        row[j] = 1
+      else
+        row[j] = previous[j - 1] + previous[j]
+      end
     end
     table.insert(rows, row)
   end
