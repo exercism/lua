@@ -66,7 +66,7 @@ end
 
 return function(n)
   if n < 0 or n > 999999999999 then
-    return -1
+    error('input out of range')
   end
 
   local groups = {}

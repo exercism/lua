@@ -123,11 +123,18 @@ local function process(node)
   end
 end
 
+local module_load
+if spec_generator.module_loader then
+  module_load = spec_generator.module_loader
+else
+  module_load = ("require('%s')"):format(exercise_name)
+end
+
 local spec = ([[
-  local %s = require('%s')
+  local %s = %s
 
   %s
-]]):format(spec_generator.module_name, exercise_name, process(canonical_data))
+]]):format(spec_generator.module_name, module_load, process(canonical_data))
 
 write_file(spec_path, spec)
 os.execute('lua-format -i ' .. spec_path)
