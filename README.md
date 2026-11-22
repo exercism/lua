@@ -55,6 +55,9 @@ This file should be a Lua module returning a table with two fields:
 Optionally, a third field can be included:
 - `test_helpers` - A string that will be injected at the top of the outermost `describe` block. This can include helper functions that are used in multiple tests or other setup code.
 
+Optionally, a fourth field can be included:
+- `module_loader` - A Lua expression that returns the module under test, used in place of `require('<exercise name>')` in the generated spec.
+
 To use the test generator, run:
 
 ```shell
