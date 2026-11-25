@@ -64,14 +64,30 @@ local function included_tests_from_toml(path)
   return included
 end
 
+-- An exercise's slug can differ from its slug in problem-specifications
+-- (for example, say-numbers uses the canonical data for say)
+local function problem_specifications_slug_for(slug)
+  local config = json.decode(read_file('config.json'))
+
+  for _, exercise in ipairs(config.exercises.practice) do
+    if exercise.slug == slug then
+      return exercise.problem_specifications_slug or slug
+    end
+  end
+
+  return slug
+end
+
 local exercise_name = arg[1]
 
 local exercise_directory = 'exercises/practice/' .. exercise_name
 
 package.path = package.path .. ';' .. exercise_directory .. '/.meta/?.lua'
 
-local canonical_data_url = 'https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/' .. exercise_name .. '/canonical-data.json'
-local canonical_data_path = 'canonical-data/' .. exercise_name .. '.json'
+local problem_specifications_slug = problem_specifications_slug_for(exercise_name)
+
+local canonical_data_url = 'https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/' .. problem_specifications_slug .. '/canonical-data.json'
+local canonical_data_path = 'canonical-data/' .. problem_specifications_slug .. '.json'
 local spec_path = exercise_directory .. '/' .. exercise_name .. '_spec.lua'
 local tests_toml_path = exercise_directory .. '/.meta/tests.toml'
 
@@ -123,18 +139,11 @@ local function process(node)
   end
 end
 
-local module_load
-if spec_generator.module_loader then
-  module_load = spec_generator.module_loader
-else
-  module_load = ("require('%s')"):format(exercise_name)
-end
-
 local spec = ([[
-  local %s = %s
+  local %s = require('%s')
 
   %s
-]]):format(spec_generator.module_name, module_load, process(canonical_data))
+]]):format(spec_generator.module_name, exercise_name, process(canonical_data))
 
 write_file(spec_path, spec)
 os.execute('lua-format -i ' .. spec_path)
