@@ -3,8 +3,6 @@ local utils = require 'utils'
 return {
   module_name = 'say',
 
-  module_loader = "(loadfile 'say.lua')() -- busted has a built-in 'say' module; load the file directly",
-
   generate_test = function(case)
     if type(case.expected) == 'table' then
       local template = [[

@@ -1410,8 +1410,23 @@
       },
       {
         "slug": "say",
-        "name": "Say",
+        "name": "Say (Deprecated)",
         "uuid": "8901be3e-f10b-4ab5-a81e-3916cac7138c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7,
+        "status": "deprecated",
+        "topics": [
+          "control_flow_loops",
+          "strings",
+          "text_formatting"
+        ]
+      },
+      {
+        "slug": "say-numbers",
+        "name": "Say",
+        "problem_specifications_slug": "say",
+        "uuid": "7dd7ee97-b6f5-4507-b5c7-5eab2119555a",
         "practices": [],
         "prerequisites": [],
         "difficulty": 7,
