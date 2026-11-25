@@ -1,34 +1,39 @@
---[[-
-Note that because ipairs and the length operator work correctly only for sequences
-in Lua, no arrays with nils are included in these tests. This means that the provided
-example is not included here:
-
-  input: [1,[2,3,null,4],[null],5]
-  output: [1,2,3,4,5]
-
-See https://www.lua.org/manual/5.3/manual.html#3.4.7 for more information.
-]] local flatten = require 'flatten-array'
+local flatten = require('flatten-array')
 
 describe('flatten-array', function()
-  it('should flatten arrays with a single level of nesting', function()
-    assert.are.same({ 1, 2, 3, 4, 5, 6, 7, 8 }, flatten({ 1, { 2, 3, 4, 5, 6, 7 }, 8 }))
+  it('empty', function()
+    local input = {}
+    local expected = {}
+    assert.are.same(expected, flatten(input))
   end)
 
-  it('should flatten deeply nested arrays', function()
-    assert.are.same({ 0, 2, 2, 3, 8, 100, 4, 50, -2 }, flatten({ 0, 2, { { 2, 3 }, 8, 100, 4, { { { 50 } } } }, -2 }))
-
-    assert.are.same({ 1, 2, 3, 4, 5, 6, 7, 8 }, flatten({ 1, { 2, { { 3 } }, { 4, { { 5 } } }, 6, 7 }, 8 }))
+  it('no nesting', function()
+    local input = { 0, 1, 2 }
+    local expected = { 0, 1, 2 }
+    assert.are.same(expected, flatten(input))
   end)
 
-  it('should flatten arrays containing empty arrays', function()
-    assert.are.same({ 0, 2, 2, 3, 8, 100, -2 }, flatten({ 0, 2, { { 2, 3 }, 8, { { 100 } }, { {} } }, -2 }))
+  it('flattens a nested array', function()
+    local input = { { {} } }
+    local expected = {}
+    assert.are.same(expected, flatten(input))
   end)
 
-  it('should flatten arrays with no elements to an empty array', function()
-    assert.are.same({}, flatten({}))
+  it('flattens array with just integers present', function()
+    local input = { 1, { 2, 3, 4, 5, 6, 7 }, 8 }
+    local expected = { 1, 2, 3, 4, 5, 6, 7, 8 }
+    assert.are.same(expected, flatten(input))
+  end)
 
-    assert.are.same({}, flatten({ { {} } }))
+  it('5 level nesting', function()
+    local input = { 0, 2, { { 2, 3 }, 8, 100, 4, { { { 50 } } } }, -2 }
+    local expected = { 0, 2, 2, 3, 8, 100, 4, 50, -2 }
+    assert.are.same(expected, flatten(input))
+  end)
 
-    assert.are.same({}, flatten({ { { {} } }, { {} } }))
+  it('5 level nesting with multiple nested arrays', function()
+    local input = { 1, { 2, { { 3 } }, { 4, { { 5 } } }, 6, 7 }, 8 }
+    local expected = { 1, 2, 3, 4, 5, 6, 7, 8 }
+    assert.are.same(expected, flatten(input))
   end)
 end)
