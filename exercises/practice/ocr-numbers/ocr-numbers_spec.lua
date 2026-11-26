@@ -1,183 +1,167 @@
 local ocr = require('ocr-numbers')
 
--- LuaFormatter off
 describe('ocr-numbers', function()
-  it('should recognize zero', function()
-    local actual = ocr.convert(
-      ' _ \n' ..
-      '| |\n' ..
-      '|_|\n' ..
-      '   '
-    )
-    assert.equal('0', actual)
+  it('recognizes 0', function()
+    local input = '' --
+    .. ' _ \n' --
+    .. '| |\n' --
+    .. '|_|\n' --
+    .. '   '
+    assert.equal('0', ocr.convert(input))
   end)
 
-  it('should recognize one', function()
-    local actual = ocr.convert(
-      '   \n' ..
-      '  |\n' ..
-      '  |\n' ..
-      '   '
-    )
-    assert.equal('1', actual)
+  it('recognizes 1', function()
+    local input = '' --
+    .. '   \n' --
+    .. '  |\n' --
+    .. '  |\n' --
+    .. '   '
+    assert.equal('1', ocr.convert(input))
   end)
 
-  it('should recognize two', function()
-    local actual = ocr.convert(
-      ' _ \n' ..
-      ' _|\n' ..
-      '|_ \n' ..
-      '   '
-    )
-    assert.equal('2', actual)
+  it('unreadable but correctly sized inputs return ?', function()
+    local input = '' --
+    .. '   \n' --
+    .. '  _\n' --
+    .. '  |\n' --
+    .. '   '
+    assert.equal('?', ocr.convert(input))
   end)
 
-  it('should recognize three', function()
-    local actual = ocr.convert(
-      ' _ \n' ..
-      ' _|\n' ..
-      ' _|\n' ..
-      '   '
-    )
-    assert.equal('3', actual)
+  it('input with a number of lines that is not a multiple of four raises an error', function()
+    local input = '' --
+    .. ' _ \n' --
+    .. '| |\n' --
+    .. '   '
+    assert.has_error(function()
+      ocr.convert(input)
+    end)
   end)
 
-  it('should recognize four', function()
-    local actual = ocr.convert(
-      '   \n' ..
-      '|_|\n' ..
-      '  |\n' ..
-      '   '
-    )
-    assert.equal('4', actual)
+  it('input with a number of columns that is not a multiple of three raises an error', function()
+    local input = '' --
+    .. '    \n' --
+    .. '   |\n' --
+    .. '   |\n' --
+    .. '    '
+    assert.has_error(function()
+      ocr.convert(input)
+    end)
   end)
 
-  it('should recognize five', function()
-    local actual = ocr.convert(
-      ' _ \n' ..
-      '|_ \n' ..
-      ' _|\n' ..
-      '   '
-    )
-    assert.equal('5', actual)
+  it('recognizes 110101100', function()
+    local input = '' --
+    .. '       _     _        _  _ \n' --
+    .. '  |  || |  || |  |  || || |\n' --
+    .. '  |  ||_|  ||_|  |  ||_||_|\n' --
+    .. '                           '
+    assert.equal('110101100', ocr.convert(input))
   end)
 
-  it('should recognize six', function()
-    local actual = ocr.convert(
-      ' _ \n' ..
-      '|_ \n' ..
-      '|_|\n' ..
-      '   '
-    )
-    assert.equal('6', actual)
+  it('garbled numbers in a string are replaced with ?', function()
+    local input = '' --
+    .. '       _     _           _ \n' --
+    .. '  |  || |  || |     || || |\n' --
+    .. '  |  | _|  ||_|  |  ||_||_|\n' --
+    .. '                           '
+    assert.equal('11?10?1?0', ocr.convert(input))
   end)
 
-  it('should recognize seven', function()
-    local actual = ocr.convert(
-      ' _ \n' ..
-      '  |\n' ..
-      '  |\n' ..
-      '   '
-    )
-    assert.equal('7', actual)
+  it('recognizes 2', function()
+    local input = '' --
+    .. ' _ \n' --
+    .. ' _|\n' --
+    .. '|_ \n' --
+    .. '   '
+    assert.equal('2', ocr.convert(input))
   end)
 
-  it('should recognize eight', function()
-    local actual = ocr.convert(
-      ' _ \n' ..
-      '|_|\n' ..
-      '|_|\n' ..
-      '   '
-    )
-    assert.equal('8', actual)
+  it('recognizes 3', function()
+    local input = '' --
+    .. ' _ \n' --
+    .. ' _|\n' --
+    .. ' _|\n' --
+    .. '   '
+    assert.equal('3', ocr.convert(input))
   end)
 
-  it('should recognize nine', function()
-    local actual = ocr.convert(
-      ' _ \n' ..
-      '|_|\n' ..
-      ' _|\n' ..
-      '   '
-    )
-    assert.equal('9', actual)
+  it('recognizes 4', function()
+    local input = '' --
+    .. '   \n' --
+    .. '|_|\n' --
+    .. '  |\n' --
+    .. '   '
+    assert.equal('4', ocr.convert(input))
   end)
 
-  it('should identify garble', function()
-    local actual = ocr.convert(
-      '   \n' ..
-      '| |\n' ..
-      '| |\n' ..
-      '   '
-    )
-    assert.equal('?', actual)
+  it('recognizes 5', function()
+    local input = '' --
+    .. ' _ \n' --
+    .. '|_ \n' --
+    .. ' _|\n' --
+    .. '   '
+    assert.equal('5', ocr.convert(input))
   end)
 
-  it('should recognize two numbers on the same line', function()
-    local actual = ocr.convert(
-      '    _ \n' ..
-      '  || |\n' ..
-      '  ||_|\n' ..
-      '      '
-    )
-    assert.equal('10', actual)
+  it('recognizes 6', function()
+    local input = '' --
+    .. ' _ \n' --
+    .. '|_ \n' --
+    .. '|_|\n' --
+    .. '   '
+    assert.equal('6', ocr.convert(input))
   end)
 
-  it('should recognize multiple numbers on the same line', function()
-    local actual = ocr.convert(
-      '    _  _     _  _  _  _  _  _ \n' ..
-      '  | _| _||_||_ |_   ||_||_|| |\n' ..
-      '  ||_  _|  | _||_|  ||_| _||_|\n' ..
-      '                              '
-    )
-    assert.equal('1234567890', actual)
+  it('recognizes 7', function()
+    local input = '' --
+    .. ' _ \n' --
+    .. '  |\n' --
+    .. '  |\n' --
+    .. '   '
+    assert.equal('7', ocr.convert(input))
   end)
 
-  it('should identify garble mixed into a line of numbers', function()
-    local actual = ocr.convert(
-      '       _     _           _ \n' ..
-      '  |  || |  || |     || || |\n' ..
-      '  |  | _|  ||_|  |  ||_||_|\n' ..
-      '                           '
-    )
-    assert.equal('11?10?1?0', actual)
+  it('recognizes 8', function()
+    local input = '' --
+    .. ' _ \n' --
+    .. '|_|\n' --
+    .. '|_|\n' --
+    .. '   '
+    assert.equal('8', ocr.convert(input))
   end)
 
-  it('should convert multiple lines of numbers as comma separated values', function()
-    local actual = ocr.convert(
-      '    _  _ \n' ..
-      '  | _| _|\n' ..
-      '  ||_  _|\n' ..
-      '         \n' ..
-      '    _  _ \n' ..
-      '|_||_ |_ \n' ..
-      '  | _||_|\n' ..
-      '         \n' ..
-      ' _  _  _ \n' ..
-      '  ||_||_|\n' ..
-      '  ||_| _|\n' ..
-      '         '
-    )
-    assert.equal('123,456,789', actual)
+  it('recognizes 9', function()
+    local input = '' --
+    .. ' _ \n' --
+    .. '|_|\n' --
+    .. ' _|\n' --
+    .. '   '
+    assert.equal('9', ocr.convert(input))
   end)
 
-  it('should generate error if input is incorrectly sized', function()
-    assert.has_error(function() ocr.convert(
-      ' _ \n' ..
-      '||\n' ..
-      '|_|\n' ..
-      '   ') end)
+  it('recognizes string of decimal numbers', function()
+    local input = '' --
+    .. '    _  _     _  _  _  _  _  _ \n' --
+    .. '  | _| _||_||_ |_   ||_||_|| |\n' --
+    .. '  ||_  _|  | _||_|  ||_| _||_|\n' --
+    .. '                              '
+    assert.equal('1234567890', ocr.convert(input))
+  end)
 
-    assert.has_error(function() ocr.convert(
-      '     _ \n' ..
-      '  | _| _|\n' ..
-      '  |_  _|\n' ..
-      '         \n') end)
-
-    assert.has_error(function() ocr.convert(
-      '    _  _ \n' ..
-      '  | _| _|\n' ..
-      '  ||_ \n' ..
-      '         \n') end)
+  it('numbers separated by empty lines are recognized. lines are joined by commas.', function()
+    local input = '' --
+    .. '    _  _ \n' --
+    .. '  | _| _|\n' --
+    .. '  ||_  _|\n' --
+    .. '         \n' --
+    .. '    _  _ \n' --
+    .. '|_||_ |_ \n' --
+    .. '  | _||_|\n' --
+    .. '         \n' --
+    .. ' _  _  _ \n' --
+    .. '  ||_||_|\n' --
+    .. '  ||_| _|\n' --
+    .. '         '
+    assert.equal('123,456,789', ocr.convert(input))
   end)
 end)
--- LuaFormatter on
