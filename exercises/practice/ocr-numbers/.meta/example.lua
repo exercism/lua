@@ -90,6 +90,9 @@ end
 
 return {
   convert = function(s)
+    local _, newlines = s:gsub('\n', '')
+    assert((newlines + 1) % 4 == 0)
+
     local results = {}
     for row in s:gmatch(row_pattern) do
       table.insert(results, parse(row))
